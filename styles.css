@@ -2206,7 +2206,7 @@ button.coverage-item.is-active {
 /* Hero Gunma map */
 .hero-inner {
   align-items: stretch;
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(16px, 2.5vw, 28px);
 }
 
 .app-header__main {
@@ -2214,7 +2214,7 @@ button.coverage-item.is-active {
   flex-direction: column;
   justify-content: center;
   gap: 18px;
-  flex: 0 1 420px;
+  flex: 0 1 360px;
   min-width: 0;
 }
 
@@ -2225,8 +2225,8 @@ button.coverage-item.is-active {
   max-width: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 4px 0 0;
+  gap: 8px;
+  padding: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -2284,12 +2284,12 @@ button.coverage-item.is-active {
   user-select: none;
   paint-order: stroke fill;
   stroke: rgba(3, 57, 92, 0.62);
-  stroke-width: 2.6px;
+  stroke-width: 2.4px;
   stroke-linejoin: round;
 }
 
 .gunma-label.is-callout {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .gunma-label.is-active {
@@ -2337,10 +2337,10 @@ button.coverage-item.is-active {
 
   .gunma-label {
     font-size: 9.5px;
-    stroke-width: 2.2px;
+    stroke-width: 2px;
   }
 
   .gunma-label.is-callout {
-    font-size: 9px;
+    font-size: 8.5px;
   }
 }

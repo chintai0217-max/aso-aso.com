@@ -157,7 +157,6 @@ function bindElements() {
     "categoryChips",
     "sortDateButton",
     "sortAreaButton",
-    "insights",
     "eventList",
     "eventDialog",
     "closeDialog",
@@ -345,7 +344,6 @@ function render() {
   renderCategoryChips();
   renderCoverage();
   renderMapSelection();
-  renderInsights(sorted);
   renderList(sorted);
 }
 
@@ -452,64 +450,6 @@ function renderCoverage() {
     .join("");
 }
 
-function renderInsights(records) {
-  const next = records[0];
-  const municipalities = new Set(records.map((record) => record.municipality).filter(Boolean)).size;
-
-  if (state.mode === "places") {
-    const indoor = records.filter((place) => place.indoor_outdoor === "indoor" || place.indoor_outdoor === "both").length;
-    const free = records.filter((place) => /無料/.test(place.price_note || "")).length;
-    els.insights.innerHTML = [
-      {
-        title: "表示中の遊び場",
-        text: `${records.length}件。小学生以下が楽しめる場所を集めました。`,
-      },
-      {
-        title: "雨の日OK（屋内）",
-        text: `${indoor}件。天気を気にせず行ける場所です。`,
-      },
-      {
-        title: "無料で遊べる",
-        text: `${free}件。お財布にやさしいスポット。`,
-      },
-    ]
-      .map(insightCard)
-      .join("");
-    return;
-  }
-
-  const weekendCount = records.filter((event) => matchesWeekend(event)).length;
-  const freeCount = records.filter((event) => /無料/.test(event.price_note || "")).length;
-  const upcomingNext = state.dateScope === "past"
-    ? next
-    : records.find((event) => (event.start_date || "") >= TODAY) || next;
-  els.insights.innerHTML = [
-    {
-      title: state.dateScope === "past" ? "直近の開催" : "次の開催",
-      text: upcomingNext ? `${formatDate(upcomingNext.start_date)}／${upcomingNext.title}` : "該当なし",
-    },
-    {
-      title: "今週末のイベント",
-      text: `${weekendCount}件。${municipalities}市町村で開催予定。`,
-    },
-    {
-      title: "入場無料",
-      text: `${freeCount}件。気軽に立ち寄れます。`,
-    },
-  ]
-    .map(insightCard)
-    .join("");
-}
-
-function insightCard(item) {
-  return `
-    <article class="insight-card">
-      <strong>${escapeHtml(item.title)}</strong>
-      <span>${escapeHtml(item.text)}</span>
-    </article>
-  `;
-}
-
 function renderList(records) {
   els.resultCount.textContent = `${records.length}件`;
 
@@ -592,7 +532,6 @@ function eventCard(event) {
       </div>
       <div class="event-actions">
         <a class="primary-button detail-icon-button" href="./events/${encodeURIComponent(event.id)}.html" aria-label="${escapeHtml(event.title)}の詳細ページを見る">詳細</a>
-        ${event.canonical_url ? `<a class="secondary-button" href="${escapeHtml(event.canonical_url)}" target="_blank" rel="noreferrer">公式</a>` : ""}
       </div>
     </article>
   `;
@@ -620,7 +559,6 @@ function placeCard(place) {
       </div>
       <div class="event-actions">
         <a class="primary-button detail-icon-button" href="./places/${encodeURIComponent(place.id)}.html" aria-label="${escapeHtml(place.name)}の詳細ページを見る">詳細</a>
-        ${place.official_url ? `<a class="secondary-button" href="${escapeHtml(place.official_url)}" target="_blank" rel="noreferrer">公式</a>` : ""}
       </div>
     </article>
   `;
