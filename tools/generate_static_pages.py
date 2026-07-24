@@ -353,6 +353,7 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
         <p class="site-footer-brand">群馬イベントナビ</p>
         <nav class="site-footer-nav" aria-label="フッター">
           <a href="https://forms.gle/dvMZU7xV8vetDgLHA" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+          <a href="https://forms.gle/2fLgxWBXKD75u6Kx5" target="_blank" rel="noopener noreferrer">サイト掲載について</a>
         </nav>
       </div>
     </footer>
