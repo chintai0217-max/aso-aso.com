@@ -2218,8 +2218,8 @@ button.coverage-item.is-active {
 }
 
 .hero-map {
-  width: min(100%, 560px);
-  flex: 0 1 560px;
+  width: min(100%, 730px);
+  flex: 0 1 730px;
   display: flex;
   flex-direction: column;
   gap: 10px;
