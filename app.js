@@ -151,7 +151,6 @@ function bindElements() {
     "resetButton",
     "coverageList",
     "gunmaMap",
-    "mapSelection",
     "clearMapSelection",
     "resultCount",
     "dateChips",
@@ -351,7 +350,7 @@ function render() {
 }
 
 function renderMapSelection() {
-  if (!els.gunmaMap || !els.mapSelection) return;
+  if (!els.gunmaMap) return;
   const selected = state.municipality;
   els.gunmaMap.querySelectorAll(".gunma-region").forEach((region) => {
     region.classList.toggle("is-active", region.dataset.municipality === selected);
@@ -359,7 +358,6 @@ function renderMapSelection() {
   els.gunmaMap.querySelectorAll(".gunma-label").forEach((label) => {
     label.classList.toggle("is-active", label.dataset.municipality === selected);
   });
-  els.mapSelection.textContent = selected === "all" ? "全市町村" : selected;
   if (els.clearMapSelection) {
     els.clearMapSelection.hidden = selected === "all";
   }
