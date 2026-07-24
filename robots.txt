@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aso-aso.com/sitemap.xml
