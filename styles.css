@@ -1663,23 +1663,30 @@ select:focus {
 
 /* Card readability pass: make imagery and title the primary scan path. */
 .event-list {
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.event-list > .date-group-heading,
+.event-list > .empty-state {
+  grid-column: 1 / -1;
 }
 
 .event-card {
   position: relative;
   align-items: stretch;
-  min-height: 136px;
-  padding: 14px 14px 14px 16px;
+  min-height: 120px;
+  padding: 12px;
   border-color: #d8e3ec;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.98));
 }
 
 .event-card.has-image {
-  grid-template-columns: 184px minmax(0, 1fr) 64px;
-  gap: 16px;
-  padding-left: 14px;
+  grid-template-columns: 128px minmax(0, 1fr) 52px;
+  gap: 12px;
+  padding-left: 12px;
 }
 
 .event-card:hover {
@@ -1707,11 +1714,11 @@ select:focus {
 .event-card.has-image .date-box {
   position: absolute;
   z-index: 3;
-  top: 22px;
-  left: 22px;
-  width: 72px;
-  min-height: 60px;
-  padding: 8px 9px;
+  top: 18px;
+  left: 18px;
+  width: 58px;
+  min-height: 50px;
+  padding: 6px 7px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
@@ -1732,13 +1739,13 @@ select:focus {
 }
 
 .event-card.has-image .date-box strong {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .event-card.has-image .date-box span {
-  margin-top: 3px;
+  margin-top: 2px;
   color: #334155;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .event-main {
@@ -1756,16 +1763,20 @@ select:focus {
 }
 
 .event-title {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #0f172a;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.42;
+  line-height: 1.35;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .event-meta {
   gap: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .pill {
@@ -1776,8 +1787,12 @@ select:focus {
 
 .summary {
   color: #475569;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.55;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .event-actions {
@@ -2841,6 +2856,7 @@ video {
   }
 
   .event-list {
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 
