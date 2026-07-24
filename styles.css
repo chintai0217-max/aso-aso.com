@@ -1488,6 +1488,11 @@ select:focus {
   margin-right: auto;
 }
 
+.hero-inner {
+  width: min(1480px, calc(100% - 48px));
+  max-width: 1480px;
+}
+
 .topbar-inner,
 .hero-inner {
   display: flex;
@@ -2218,8 +2223,8 @@ button.coverage-item.is-active {
 }
 
 .hero-map {
-  width: min(100%, 730px);
-  flex: 0 1 730px;
+  width: min(100%, 949px);
+  flex: 0 1 949px;
   display: flex;
   flex-direction: column;
   gap: 10px;
