@@ -348,6 +348,14 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
         {body}
       </article>
     </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-brand">群馬イベントナビ</p>
+        <nav class="site-footer-nav" aria-label="フッター">
+          <a href="https://forms.gle/dvMZU7xV8vetDgLHA" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
 """
