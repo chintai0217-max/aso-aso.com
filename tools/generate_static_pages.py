@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import re
 import shutil
 from datetime import date
 from html import escape
@@ -324,7 +325,8 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
         </a>
         <div class="topbar-links">
           <a href="../#eventList">一覧へ戻る</a>
-          <a href="../sitemap.xml">サイトマップ</a>
+          <a href="../areas/">地域</a>
+          <a href="../themes/">テーマ</a>
         </div>
       </div>
     </nav>
@@ -599,8 +601,283 @@ def render_place(place):
     )
 
 
-def render_sitemap(events, places):
+AREA_HUBS = [
+    {
+        "slug": "takasaki",
+        "municipality": "高崎市",
+        "title": "高崎市のイベント・遊び場",
+        "lead": "高崎市のもてなし広場周辺イベントや、親子で行ける遊び場をまとめています。",
+    },
+    {
+        "slug": "maebashi",
+        "municipality": "前橋市",
+        "title": "前橋市のイベント・遊び場",
+        "lead": "前橋市のイベントと子どもの遊び場を一覧で探せます。",
+    },
+    {
+        "slug": "ota",
+        "municipality": "太田市",
+        "title": "太田市のイベント・遊び場",
+        "lead": "太田市のイベントと、ぐんまこどもの国など親子向けの遊び場をまとめています。",
+    },
+]
+
+THEME_HUBS = [
+    {
+        "slug": "indoor",
+        "title": "雨の日の屋内遊び",
+        "lead": "屋内または屋内外対応の遊び場を中心にまとめました。雨の日でも出かけやすい候補です。",
+        "decision": "rain",
+        "mode": "places",
+    },
+    {
+        "slug": "free",
+        "title": "無料で行けるおでかけ",
+        "lead": "料金メモに「無料」とあるイベント・遊び場を集めました。詳細は公式でご確認ください。",
+        "decision": "free",
+        "mode": "events",
+    },
+    {
+        "slug": "infant",
+        "title": "乳幼児向けのおでかけ",
+        "lead": "乳幼児・未就園の記述がある遊び場・イベントを中心にまとめています。",
+        "decision": "infant",
+        "mode": "places",
+    },
+]
+
+INFANT_RE = re.compile(r"乳児|乳幼児|0歳|1歳|2歳|6か月|生後|未就園|よちよち|ベビー|赤ちゃん")
+FREE_RE = re.compile(r"無料")
+
+
+def is_upcoming_event(event):
+    end = event.get("end_date") or event.get("start_date") or ""
+    return bool(end) and end >= TODAY
+
+
+def is_indoor_place(place):
+    return place.get("indoor_outdoor") in {"indoor", "both"}
+
+
+def is_free_record(record):
+    return bool(FREE_RE.search(str(record.get("price_note") or "")))
+
+
+def is_infant_record(record):
+    text = " ".join(
+        str(record.get(key) or "")
+        for key in ("target_age_note", "features", "name", "title", "summary", "notes", "category")
+    )
+    return bool(INFANT_RE.search(text))
+
+
+def hub_card_event(event):
+    href = f"../events/{event['id']}.html"
+    meta = " / ".join(
+        part
+        for part in [
+            event.get("municipality"),
+            CATEGORY_LABELS.get(event.get("category"), event.get("category")),
+            date_text_compact(event),
+        ]
+        if part
+    )
+    return (
+        f'<a class="hub-card" href="{html(href)}">'
+        f"<strong>{html(event.get('title'))}</strong>"
+        f"<span>{html(meta)}</span>"
+        f"<small>{html(compact_text(event.get('summary') or event.get('venue_name'), 70))}</small>"
+        "</a>"
+    )
+
+
+def hub_card_place(place):
+    href = f"../places/{place['id']}.html"
+    meta = " / ".join(
+        part
+        for part in [
+            place.get("municipality"),
+            PLACE_TYPE_LABELS.get(place.get("place_type"), place.get("place_type")),
+            INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), place.get("indoor_outdoor")),
+        ]
+        if part
+    )
+    return (
+        f'<a class="hub-card" href="{html(href)}">'
+        f"<strong>{html(place.get('name'))}</strong>"
+        f"<span>{html(meta)}</span>"
+        f"<small>{html(compact_text(place.get('features') or place.get('target_age_note'), 70))}</small>"
+        "</a>"
+    )
+
+
+def hub_section(title, cards, empty_text):
+    if not cards:
+        return (
+            f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>'
+            f'<p class="detail-copy">{html(empty_text)}</p></section>'
+        )
+    return (
+        f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>'
+        f'<div class="hub-card-grid">{"".join(cards)}</div></section>'
+    )
+
+
+def render_area_hub(hub, events, places):
+    muni = hub["municipality"]
+    event_items = [e for e in events if e.get("municipality") == muni and is_upcoming_event(e)]
+    event_items.sort(key=lambda e: (e.get("start_date") or "", e.get("title") or ""))
+    place_items = [p for p in places if p.get("municipality") == muni]
+    place_items.sort(key=lambda p: (p.get("place_type") or "", p.get("name") or ""))
+    canonical = f"{BASE_URL}/areas/{hub['slug']}.html"
+    list_href = f"../?municipality={url_quote(muni)}#eventList"
+    description = compact(
+        f"群馬県{muni}のイベント{len(event_items)}件、子どもの遊び場{len(place_items)}件。"
+        f"{hub['lead']}",
+        155,
+    )
+    body = (
+        '<div class="static-detail-head">'
+        f'<p class="eyebrow">地域からさがす</p><h1>{html(hub["title"])}</h1>'
+        f'<p class="lead">{html(hub["lead"])}</p>'
+        f'<div class="detail-fact-strip">'
+        f'<span><b>イベント</b>{len(event_items)}件</span>'
+        f'<span><b>遊び場</b>{len(place_items)}件</span>'
+        f"<span><b>対象</b>{html(muni)}</span>"
+        f"</div></div><div class=\"static-detail-body\">"
+        + hub_section("開催予定のイベント", [hub_card_event(e) for e in event_items], "現在、掲載中の開催予定イベントはありません。")
+        + hub_section("子どもの遊び場", [hub_card_place(p) for p in place_items], "現在、掲載中の遊び場はありません。")
+        + f'<div class="dialog-actions static-detail-actions">'
+        f'<a class="primary-button" href="{html(list_href)}">一覧で絞り込む</a>'
+        f'<a class="secondary-button" href="../themes/">テーマから探す</a>'
+        f"</div></div>"
+    )
+    return layout(
+        f"{hub['title']}｜群馬イベントナビ",
+        description,
+        canonical,
+        None,
+        "地域",
+        hub["title"],
+        hub["lead"],
+        body,
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": hub["title"],
+            "url": canonical,
+            "description": description,
+            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+            "about": {"@type": "Place", "name": muni, "address": {"@type": "PostalAddress", "addressRegion": "群馬県"}},
+        },
+    )
+
+
+def render_theme_hub(hub, events, places):
+    slug = hub["slug"]
+    if slug == "indoor":
+        event_items = []
+        place_items = [p for p in places if is_indoor_place(p)]
+    elif slug == "free":
+        event_items = [e for e in events if is_upcoming_event(e) and is_free_record(e)]
+        place_items = [p for p in places if is_free_record(p)]
+    else:  # infant
+        event_items = [e for e in events if is_upcoming_event(e) and is_infant_record(e)]
+        place_items = [p for p in places if is_infant_record(p)]
+
+    event_items.sort(key=lambda e: (e.get("start_date") or "", e.get("title") or ""))
+    place_items.sort(key=lambda p: (p.get("municipality") or "", p.get("name") or ""))
+    canonical = f"{BASE_URL}/themes/{hub['slug']}.html"
+    list_href = f"../?decision={url_quote(hub['decision'])}&mode={url_quote(hub['mode'])}#eventList"
+    description = compact(
+        f"{hub['title']}。イベント{len(event_items)}件、遊び場{len(place_items)}件。"
+        f"{hub['lead']}",
+        155,
+    )
+    body = (
+        '<div class="static-detail-head">'
+        f'<p class="eyebrow">テーマからさがす</p><h1>{html(hub["title"])}</h1>'
+        f'<p class="lead">{html(hub["lead"])}</p>'
+        f'<div class="detail-fact-strip">'
+        f'<span><b>イベント</b>{len(event_items)}件</span>'
+        f'<span><b>遊び場</b>{len(place_items)}件</span>'
+        f"</div></div><div class=\"static-detail-body\">"
+        + hub_section("イベント", [hub_card_event(e) for e in event_items], "条件に合う開催予定イベントは現在ありません。")
+        + hub_section("遊び場", [hub_card_place(p) for p in place_items], "条件に合う遊び場は現在ありません。")
+        + f'<div class="dialog-actions static-detail-actions">'
+        f'<a class="primary-button" href="{html(list_href)}">一覧で同じ条件を開く</a>'
+        f'<a class="secondary-button" href="../areas/">地域から探す</a>'
+        f"</div></div>"
+    )
+    return layout(
+        f"{hub['title']}｜群馬イベントナビ",
+        description,
+        canonical,
+        None,
+        "テーマ",
+        hub["title"],
+        hub["lead"],
+        body,
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": hub["title"],
+            "url": canonical,
+            "description": description,
+            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+        },
+    )
+
+
+def render_hub_index(kind, hubs, description):
+    canonical = f"{BASE_URL}/{kind}/"
+    cards = []
+    for hub in hubs:
+        href = f"./{hub['slug']}.html"
+        cards.append(
+            f'<a class="hub-card" href="{html(href)}">'
+            f"<strong>{html(hub['title'])}</strong>"
+            f"<span>{html(hub.get('municipality') or 'テーマ')}</span>"
+            f"<small>{html(hub['lead'])}</small>"
+            "</a>"
+        )
+    label = "地域" if kind == "areas" else "テーマ"
+    body = (
+        '<div class="static-detail-head">'
+        f'<p class="eyebrow">群馬イベントナビ</p><h1>{html(label)}からさがす</h1>'
+        f'<p class="lead">{html(description)}</p>'
+        "</div><div class=\"static-detail-body\">"
+        f'<div class="hub-card-grid">{"".join(cards)}</div>'
+        '<div class="dialog-actions static-detail-actions">'
+        '<a class="primary-button" href="../#eventList">トップの一覧へ</a>'
+        "</div></div>"
+    )
+    # hub index uses ./ links; layout assumes ../ for assets — keep ../ for css from areas/index
+    return layout(
+        f"{label}からさがす｜群馬イベントナビ",
+        description,
+        canonical,
+        None,
+        label,
+        f"{label}からさがす",
+        description,
+        body,
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": f"{label}からさがす",
+            "url": canonical,
+            "description": description,
+        },
+    )
+
+
+def render_sitemap(events, places, area_hubs, theme_hubs):
     urls = [(f"{BASE_URL}/", "1.0", "daily")]
+    urls.append((f"{BASE_URL}/areas/", "0.8", "weekly"))
+    urls.append((f"{BASE_URL}/themes/", "0.8", "weekly"))
+    urls.extend((f"{BASE_URL}/areas/{hub['slug']}.html", "0.8", "weekly") for hub in area_hubs)
+    urls.extend((f"{BASE_URL}/themes/{hub['slug']}.html", "0.8", "weekly") for hub in theme_hubs)
     urls.extend((event_url(event), "0.8", "weekly") for event in events)
     urls.extend((place_url(place), "0.8", "monthly") for place in places)
     items = []
@@ -623,12 +900,29 @@ def main():
     places = data.get("child_play_places", [])
     clean_dir("events")
     clean_dir("places")
+    clean_dir("areas")
+    clean_dir("themes")
     for event in events:
         write(ROOT / "events" / f"{event['id']}.html", render_event(event))
     for place in places:
         write(ROOT / "places" / f"{place['id']}.html", render_place(place))
-    write(ROOT / "sitemap.xml", render_sitemap(events, places))
-    print(f"generated {len(events)} event pages and {len(places)} place pages")
+    for hub in AREA_HUBS:
+        write(ROOT / "areas" / f"{hub['slug']}.html", render_area_hub(hub, events, places))
+    for hub in THEME_HUBS:
+        write(ROOT / "themes" / f"{hub['slug']}.html", render_theme_hub(hub, events, places))
+    write(
+        ROOT / "areas" / "index.html",
+        render_hub_index("areas", AREA_HUBS, "高崎・前橋・太田など、主要都市のイベントと遊び場をまとめています。"),
+    )
+    write(
+        ROOT / "themes" / "index.html",
+        render_hub_index("themes", THEME_HUBS, "雨の日屋内、無料、乳幼児向けなど、予定が決まりやすいテーマから探せます。"),
+    )
+    write(ROOT / "sitemap.xml", render_sitemap(events, places, AREA_HUBS, THEME_HUBS))
+    print(
+        f"generated {len(events)} events, {len(places)} places, "
+        f"{len(AREA_HUBS)} area hubs, {len(THEME_HUBS)} theme hubs"
+    )
 
 
 if __name__ == "__main__":

@@ -144,10 +144,27 @@ async function loadOptionalConfig() {
 }
 
 function applyInitialSearchQuery() {
-  const query = new URLSearchParams(window.location.search).get("q");
-  if (!query) return;
-  state.query = query.trim().toLowerCase();
-  els.searchInput.value = query.trim();
+  const params = new URLSearchParams(window.location.search);
+  const query = params.get("q");
+  if (query) {
+    state.query = query.trim().toLowerCase();
+    els.searchInput.value = query.trim();
+  }
+
+  const municipality = params.get("municipality");
+  if (municipality) {
+    state.municipality = municipality;
+  }
+
+  const mode = params.get("mode");
+  if (mode === "events" || mode === "places") {
+    state.mode = mode;
+  }
+
+  const decision = params.get("decision");
+  if (decision) {
+    applyDecision(decision, { toggle: false, scroll: false });
+  }
 }
 
 async function loadData() {
@@ -421,7 +438,7 @@ function render() {
   renderList(sorted);
 }
 
-function applyDecision(decision, { toggle = true } = {}) {
+function applyDecision(decision, { toggle = true, scroll = true } = {}) {
   const next = toggle && state.decision === decision ? "none" : decision;
   state.decision = next;
   state.freeOnly = false;
@@ -448,13 +465,19 @@ function applyDecision(decision, { toggle = true } = {}) {
     if (state.dateScope === "weekend") state.dateScope = "upcoming";
   }
 
-  els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
-  els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
-  els.ageSelect.value = state.age;
-  els.categorySelect.value = state.category;
-  populateFilters();
-  render();
-  document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (els.modeEventsButton && els.modePlacesButton) {
+    els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
+    els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
+  }
+  if (els.ageSelect) els.ageSelect.value = state.age;
+  if (els.categorySelect) els.categorySelect.value = state.category;
+  if (state.data) {
+    populateFilters();
+    render();
+  }
+  if (scroll) {
+    document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function renderDecisionChips() {
