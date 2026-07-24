@@ -825,14 +825,11 @@ function openRecordById(id) {
 }
 
 function eventCard(event) {
-  const dateRange = event.end_date && event.end_date !== event.start_date
-    ? `${formatDate(event.start_date)} - ${formatDate(event.end_date)}`
-    : formatDate(event.start_date);
   const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
   const image = mediaThumb(event.primary_image_url, event.title, categoryLabel(event.category), event.images, event);
-  const venue = event.venue_name || event.area_label || event.address || "";
+  const venue = event.venue_name || event.area_label || "";
+  const placeLine = [event.municipality || event.prefecture, venue].filter(Boolean).join(" / ");
   const price = event.price_note || "";
-  const dateLabel = formatDateRangeCompact(event) || dateRange;
 
   return `
     <article class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
@@ -842,20 +839,12 @@ function eventCard(event) {
         <span>${escapeHtml(time || "時間は公式")}</span>
       </div>
       <div class="event-main">
-        <p class="card-kicker">${escapeHtml(event.municipality || event.prefecture || "地域未設定")}</p>
         <h3 class="event-title">${escapeHtml(event.title)}</h3>
-        <ul class="card-facts">
-          <li><b>日程</b>${escapeHtml(dateLabel || "公式で確認")}</li>
-          <li><b>時間</b>${escapeHtml(displayOrConfirm(time))}</li>
-          <li><b>会場</b>${escapeHtml(displayOrConfirm(venue))}</li>
-          <li><b>料金</b>${escapeHtml(displayOrConfirm(price))}</li>
-        </ul>
+        <p class="card-kicker">${escapeHtml(placeLine || "地域未設定")}</p>
         <div class="event-meta">
-          <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
+          <span class="pill neutral">${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(event)}
         </div>
-        <p class="summary">${escapeHtml(event.summary || "")}</p>
-        <p class="card-trust">${escapeHtml(trustLine(event))}</p>
       </div>
     </article>
   `;
@@ -863,10 +852,9 @@ function eventCard(event) {
 
 function placeCard(place) {
   const image = mediaThumb(place.primary_image_url, place.name, placeTypeLabel(place.place_type), place.images, place);
-  const age = place.target_age_note || "";
-  const price = place.price_note || "";
-  const hours = place.hours_note || "";
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
+  const placeLine = [place.municipality || place.prefecture, indoorOutdoor].filter(Boolean).join(" / ");
+  const price = place.price_note || "";
   return `
     <article class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
       ${image}
@@ -874,20 +862,12 @@ function placeCard(place) {
         <strong>${escapeHtml(indoorOutdoor)}</strong>
       </div>
       <div class="event-main">
-        <p class="card-kicker">${escapeHtml(place.municipality || place.prefecture || "地域未設定")}</p>
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
-        <ul class="card-facts">
-          <li><b>対象</b>${escapeHtml(displayOrConfirm(compactText(age, 36)))}</li>
-          <li><b>時間</b>${escapeHtml(displayOrConfirm(compactText(hours, 36)))}</li>
-          <li><b>料金</b>${escapeHtml(displayOrConfirm(compactText(price, 36)))}</li>
-          <li><b>駐車場</b>${escapeHtml(displayOrConfirm(compactText(place.parking_note, 36)))}</li>
-        </ul>
+        <p class="card-kicker">${escapeHtml(placeLine || "地域未設定")}</p>
         <div class="event-meta">
-          <span class="pill category">${escapeHtml(placeTypeLabel(place.place_type))}</span>
+          <span class="pill neutral">${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(place)}
         </div>
-        <p class="summary">${escapeHtml(place.features || "")}</p>
-        <p class="card-trust">${escapeHtml(trustLine(place))}</p>
       </div>
     </article>
   `;

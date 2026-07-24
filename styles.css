@@ -1688,7 +1688,7 @@ select:focus {
   gap: 10px;
   align-items: stretch;
   height: 100%;
-  min-height: 164px;
+  min-height: 120px;
   padding: 10px;
   border-color: #d8e3ec;
   background:
@@ -1707,7 +1707,7 @@ select:focus {
   align-self: stretch;
   width: 112px;
   height: 100%;
-  min-height: 144px;
+  min-height: 100px;
   aspect-ratio: auto;
 }
 
@@ -1768,58 +1768,26 @@ select:focus {
   min-width: 0;
   min-height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0;
 }
 
 .card-kicker {
-  margin: 0 0 2px;
+  margin: 0 0 6px;
   color: #64748b;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.card-facts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  margin: 0 0 4px;
-  padding: 0;
-  list-style: none;
-  min-height: 0;
-}
-
-.card-facts li {
-  display: grid;
-  grid-template-columns: 2.4em minmax(0, 1fr);
-  gap: 6px;
-  color: #334155;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.35;
-  min-width: 0;
-}
-
-.card-facts li > :not(b) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-facts b {
-  color: #64748b;
-  font-weight: 800;
-}
-
 .event-title {
   margin: 0 0 4px;
   color: #0f172a;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
   min-height: 0;
   display: -webkit-box;
   overflow: hidden;
@@ -1828,8 +1796,10 @@ select:focus {
 }
 
 .event-meta {
+  display: flex;
+  flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 4px;
+  margin: 0;
   min-height: 0;
 }
 
@@ -1839,28 +1809,10 @@ select:focus {
   font-size: 11px;
 }
 
-.summary {
-  color: #475569;
-  font-size: 12px;
-  line-height: 1.45;
-  min-height: 0;
-  margin: 0;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-
-.card-trust {
-  margin: 4px 0 0;
-  padding-top: 0;
-  color: #64748b;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.event-card .summary,
+.event-card .card-facts,
+.event-card .card-trust {
+  display: none;
 }
 
 .event-actions {
@@ -2936,7 +2888,7 @@ video {
     gap: 8px 10px;
     align-items: stretch;
     height: 100%;
-    min-height: 112px;
+    min-height: 88px;
     padding: 8px;
     border-radius: 10px;
   }
@@ -2945,7 +2897,7 @@ video {
     grid-column: 1;
     grid-row: 1;
     width: 76px;
-    min-height: 96px;
+    min-height: 72px;
     height: 100%;
     aspect-ratio: auto;
     border-radius: 8px;
@@ -3008,29 +2960,15 @@ video {
   }
 
   .card-kicker {
-    margin: 0;
+    margin: 0 0 4px;
     font-size: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .card-facts {
-    gap: 2px;
-    margin-bottom: 4px;
-  }
-
-  .card-facts li {
-    font-size: 10px;
-    grid-template-columns: 2.2em minmax(0, 1fr);
-  }
-
-  .card-facts li:nth-child(n + 4) {
-    display: none;
-  }
-
   .event-title {
-    margin: 0;
+    margin: 0 0 2px;
     font-size: 13.5px;
     line-height: 1.3;
     display: -webkit-box;
@@ -3041,17 +2979,13 @@ video {
 
   .event-meta {
     gap: 4px;
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .pill {
     min-height: 18px;
     padding: 0 6px;
     font-size: 10px;
-  }
-
-  .summary {
-    display: none;
   }
 
   .detail-icon-button {
@@ -3387,7 +3321,7 @@ video {
   gap: 10px;
   align-items: stretch;
   height: 100%;
-  min-height: 164px;
+  min-height: 120px;
   padding: 10px;
   border: 1px solid #d8e3ec;
   border-radius: 14px;
@@ -3408,7 +3342,7 @@ video {
   align-self: stretch;
   width: 112px;
   height: 100%;
-  min-height: 144px;
+  min-height: 100px;
   overflow: hidden;
   border-radius: 8px;
   aspect-ratio: auto;
@@ -3430,10 +3364,12 @@ video {
 .hub-card__badge {
   position: absolute;
   z-index: 2;
-  top: 18px;
-  left: 18px;
-  min-width: 48px;
-  padding: 6px 8px;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  gap: 2px;
+  min-width: 54px;
+  padding: 5px 6px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.92);
@@ -3443,6 +3379,11 @@ video {
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
+}
+
+.hub-card__badge span {
+  color: #334155;
+  font-size: 10px;
 }
 
 .hub-card__badge--place {
@@ -3456,19 +3397,19 @@ video {
   min-width: 0;
   min-height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .hub-card__body .card-kicker {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 
 .hub-card__body strong {
   margin: 0 0 4px;
   color: #0f172a;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
   min-height: 0;
   display: -webkit-box;
   overflow: hidden;
@@ -3476,10 +3417,7 @@ video {
   -webkit-line-clamp: 2;
 }
 
-.hub-card__body .card-facts {
-  margin-bottom: 0;
-}
-
+.hub-card__body .card-facts,
 .hub-card__body small {
   display: none;
 }
@@ -3504,14 +3442,14 @@ video {
     grid-template-columns: 76px minmax(0, 1fr);
     gap: 8px 10px;
     height: 100%;
-    min-height: 112px;
+    min-height: 88px;
     padding: 8px;
     border-radius: 10px;
   }
 
   .hub-card__media {
     width: 76px;
-    min-height: 96px;
+    min-height: 72px;
     height: 100%;
     aspect-ratio: auto;
     border-radius: 8px;

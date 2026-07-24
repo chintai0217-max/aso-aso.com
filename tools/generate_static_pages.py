@@ -746,32 +746,25 @@ def hub_media(image_url, label):
 def hub_card_event(event):
     href = f"../events/{event['id']}.html"
     title = event.get("title") or ""
-    time = time_text(event)
     venue = event.get("venue_name") or event.get("area_label") or ""
-    meta = " / ".join(
-        part
-        for part in [
-            event.get("municipality"),
-            CATEGORY_LABELS.get(event.get("category"), event.get("category")),
-        ]
-        if part
-    )
+    place_line = " / ".join(part for part in [event.get("municipality"), venue] if part)
+    time = time_text(event)
     badge = format_month_day(event.get("start_date")) if event.get("start_date") else ""
-    badge_html = f'<div class="hub-card__badge"><strong>{html(badge)}</strong></div>' if badge else ""
+    badge_html = (
+        f'<div class="hub-card__badge"><strong>{html(badge)}</strong>'
+        f'<span>{html(time or "時間は公式")}</span></div>'
+        if badge
+        else ""
+    )
     has_image = " has-image" if event.get("primary_image_url") else ""
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
         f"{hub_media(event.get('primary_image_url'), title)}"
         f"{badge_html}"
         f'<div class="hub-card__body">'
-        f'<p class="card-kicker">{html(meta)}</p>'
         f"<strong>{html(title)}</strong>"
-        f'<ul class="card-facts">'
-        f"<li><b>日程</b>{html(fact_or_confirm(date_text_compact(event)))}</li>"
-        f"<li><b>時間</b>{html(fact_or_confirm(time))}</li>"
-        f"<li><b>会場</b>{html(fact_or_confirm(venue))}</li>"
-        f"<li><b>料金</b>{html(fact_or_confirm(event.get('price_note')))}</li>"
-        f"</ul>"
+        f'<p class="card-kicker">{html(place_line or "地域未設定")}</p>'
+        f'<div class="event-meta"><span class="pill neutral">{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span></div>'
         f"</div>"
         f"</a>"
     )
@@ -780,15 +773,8 @@ def hub_card_event(event):
 def hub_card_place(place):
     href = f"../places/{place['id']}.html"
     title = place.get("name") or ""
-    meta = " / ".join(
-        part
-        for part in [
-            place.get("municipality"),
-            PLACE_TYPE_LABELS.get(place.get("place_type"), place.get("place_type")),
-        ]
-        if part
-    )
     indoor = INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), "")
+    place_line = " / ".join(part for part in [place.get("municipality"), indoor] if part)
     badge_html = (
         f'<div class="hub-card__badge hub-card__badge--place"><strong>{html(indoor)}</strong></div>'
         if indoor
@@ -800,14 +786,9 @@ def hub_card_place(place):
         f"{hub_media(place.get('primary_image_url'), title)}"
         f"{badge_html}"
         f'<div class="hub-card__body">'
-        f'<p class="card-kicker">{html(meta)}</p>'
         f"<strong>{html(title)}</strong>"
-        f'<ul class="card-facts">'
-        f"<li><b>対象</b>{html(fact_or_confirm(compact_text(place.get('target_age_note'), 36)))}</li>"
-        f"<li><b>時間</b>{html(fact_or_confirm(compact_text(place.get('hours_note'), 36)))}</li>"
-        f"<li><b>料金</b>{html(fact_or_confirm(compact_text(place.get('price_note'), 36)))}</li>"
-        f"<li><b>駐車場</b>{html(fact_or_confirm(compact_text(place.get('parking_note'), 36)))}</li>"
-        f"</ul>"
+        f'<p class="card-kicker">{html(place_line or "地域未設定")}</p>'
+        f'<div class="event-meta"><span class="pill neutral">{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></div>'
         f"</div>"
         f"</a>"
     )
