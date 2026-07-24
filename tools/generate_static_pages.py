@@ -283,7 +283,7 @@ def ga_snippet():
     </script>"""
 
 
-def layout(title, description, canonical, image, kind_label, h1, kicker, body, structured_data):
+def layout(title, description, canonical, image, kind_label, h1, kicker, body, structured_data, body_class="static-detail-page"):
     og_image = image or f"{BASE_URL}/og-image.png"
     return f"""<!doctype html>
 <html lang="ja">
@@ -313,7 +313,7 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
     <link rel="stylesheet" href="../styles.css">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
-  <body class="static-detail-page">
+  <body class="{html(body_class)}">
     <nav class="topbar" aria-label="サイト内ナビゲーション">
       <div class="topbar-inner">
         <a class="brand" href="../">
@@ -620,6 +620,48 @@ AREA_HUBS = [
         "title": "太田市のイベント・遊び場",
         "lead": "太田市のイベントと、ぐんまこどもの国など親子向けの遊び場をまとめています。",
     },
+    {
+        "slug": "kiryu",
+        "municipality": "桐生市",
+        "title": "桐生市のイベント・遊び場",
+        "lead": "桐生市のイベントと、屋内遊び場・児童館などの親子向けスポットをまとめています。",
+    },
+    {
+        "slug": "isesaki",
+        "municipality": "伊勢崎市",
+        "title": "伊勢崎市のイベント・遊び場",
+        "lead": "伊勢崎市のイベントと、児童センターなど子どもの遊び場を一覧で探せます。",
+    },
+    {
+        "slug": "shibukawa",
+        "municipality": "渋川市",
+        "title": "渋川市のイベント・遊び場",
+        "lead": "渋川市のイベントと、伊香保周辺を含む親子向けの遊び場をまとめています。",
+    },
+    {
+        "slug": "tatebayashi",
+        "municipality": "館林市",
+        "title": "館林市のイベント・遊び場",
+        "lead": "館林市のイベントと、科学館など子どもの遊び場をまとめています。",
+    },
+    {
+        "slug": "annaka",
+        "municipality": "安中市",
+        "title": "安中市のイベント・遊び場",
+        "lead": "安中市のイベントと、あんなかスマイルパークなど親子向けスポットをまとめています。",
+    },
+    {
+        "slug": "numata",
+        "municipality": "沼田市",
+        "title": "沼田市のイベント・遊び場",
+        "lead": "沼田市のイベントと、子ども広場など市内の遊び場を一覧で探せます。",
+    },
+    {
+        "slug": "midori",
+        "municipality": "みどり市",
+        "title": "みどり市のイベント・遊び場",
+        "lead": "みどり市のイベントと、子育て支援センターなど親子向けの遊び場をまとめています。",
+    },
 ]
 
 THEME_HUBS = [
@@ -671,8 +713,19 @@ def is_infant_record(record):
     return bool(INFANT_RE.search(text))
 
 
+def hub_media(image_url, label):
+    if image_url:
+        return (
+            f'<div class="hub-card__media">'
+            f'<img src="{html(image_url)}" alt="{html(label or "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer">'
+            f"</div>"
+        )
+    return '<div class="hub-card__media hub-card__media--empty" aria-hidden="true"></div>'
+
+
 def hub_card_event(event):
     href = f"../events/{event['id']}.html"
+    title = event.get("title") or ""
     meta = " / ".join(
         part
         for part in [
@@ -682,17 +735,25 @@ def hub_card_event(event):
         ]
         if part
     )
+    badge = format_month_day(event.get("start_date")) if event.get("start_date") else ""
+    badge_html = f'<div class="hub-card__badge"><strong>{html(badge)}</strong></div>' if badge else ""
+    has_image = " has-image" if event.get("primary_image_url") else ""
     return (
-        f'<a class="hub-card" href="{html(href)}">'
-        f"<strong>{html(event.get('title'))}</strong>"
-        f"<span>{html(meta)}</span>"
+        f'<a class="hub-card{has_image}" href="{html(href)}">'
+        f"{hub_media(event.get('primary_image_url'), title)}"
+        f"{badge_html}"
+        f'<div class="hub-card__body">'
+        f'<p class="card-kicker">{html(meta)}</p>'
+        f"<strong>{html(title)}</strong>"
         f"<small>{html(compact_text(event.get('summary') or event.get('venue_name'), 70))}</small>"
-        "</a>"
+        f"</div>"
+        f"</a>"
     )
 
 
 def hub_card_place(place):
     href = f"../places/{place['id']}.html"
+    title = place.get("name") or ""
     meta = " / ".join(
         part
         for part in [
@@ -702,13 +763,36 @@ def hub_card_place(place):
         ]
         if part
     )
-    return (
-        f'<a class="hub-card" href="{html(href)}">'
-        f"<strong>{html(place.get('name'))}</strong>"
-        f"<span>{html(meta)}</span>"
-        f"<small>{html(compact_text(place.get('features') or place.get('target_age_note'), 70))}</small>"
-        "</a>"
+    indoor = INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), "")
+    badge_html = (
+        f'<div class="hub-card__badge hub-card__badge--place"><strong>{html(indoor)}</strong></div>'
+        if indoor
+        else ""
     )
+    has_image = " has-image" if place.get("primary_image_url") else ""
+    return (
+        f'<a class="hub-card{has_image}" href="{html(href)}">'
+        f"{hub_media(place.get('primary_image_url'), title)}"
+        f"{badge_html}"
+        f'<div class="hub-card__body">'
+        f'<p class="card-kicker">{html(meta)}</p>'
+        f"<strong>{html(title)}</strong>"
+        f"<small>{html(compact_text(place.get('features') or place.get('target_age_note'), 70))}</small>"
+        f"</div>"
+        f"</a>"
+    )
+
+
+def format_month_day(value):
+    if not value or len(str(value)) < 10:
+        return ""
+    raw = str(value)[:10]
+    try:
+        month = int(raw[5:7])
+        day = int(raw[8:10])
+    except ValueError:
+        return ""
+    return f"{month}/{day}"
 
 
 def hub_section(title, cards, empty_text):
@@ -719,7 +803,7 @@ def hub_section(title, cards, empty_text):
         )
     return (
         f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>'
-        f'<div class="hub-card-grid">{"".join(cards)}</div></section>'
+        f'<div class="hub-card-grid event-list">{"".join(cards)}</div></section>'
     )
 
 
@@ -770,6 +854,7 @@ def render_area_hub(hub, events, places):
             "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
             "about": {"@type": "Place", "name": muni, "address": {"@type": "PostalAddress", "addressRegion": "群馬県"}},
         },
+        body_class="static-detail-page hub-page",
     )
 
 
@@ -826,6 +911,7 @@ def render_theme_hub(hub, events, places):
             "description": description,
             "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
         },
+        body_class="static-detail-page hub-page",
     )
 
 
@@ -869,6 +955,7 @@ def render_hub_index(kind, hubs, description):
             "url": canonical,
             "description": description,
         },
+        body_class="static-detail-page hub-page",
     )
 
 
@@ -912,7 +999,7 @@ def main():
         write(ROOT / "themes" / f"{hub['slug']}.html", render_theme_hub(hub, events, places))
     write(
         ROOT / "areas" / "index.html",
-        render_hub_index("areas", AREA_HUBS, "高崎・前橋・太田など、主要都市のイベントと遊び場をまとめています。"),
+        render_hub_index("areas", AREA_HUBS, "高崎・前橋・太田・桐生・伊勢崎など、主要都市のイベントと遊び場をまとめています。"),
     )
     write(
         ROOT / "themes" / "index.html",
