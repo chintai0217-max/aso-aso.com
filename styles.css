@@ -2479,7 +2479,7 @@ button.coverage-item.is-active {
 
 .gunma-label {
   fill: #ffffff;
-  font-size: 9.5px;
+  font-size: 10.5px;
   font-weight: 800;
   pointer-events: none;
   user-select: none;
@@ -2490,7 +2490,7 @@ button.coverage-item.is-active {
 }
 
 .gunma-label.is-callout {
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .gunma-label.is-active {
@@ -2733,33 +2733,8 @@ video {
     display: none;
   }
 
-  .gunma-map {
-    max-height: min(150px, 22vh);
-  }
-
-  .gunma-map-svg {
-    width: 100%;
-    height: auto;
-    max-height: min(150px, 22vh);
-  }
-
-  .gunma-label {
-    font-size: 6.5px;
-    stroke-width: 1.4px;
-  }
-
-  .gunma-label.is-callout {
-    font-size: 6px;
-  }
-
-  .gunma-region {
-    stroke-width: 1.2;
-  }
-
-  .hero-map-clear {
-    min-height: 28px;
-    padding: 4px 10px;
-    font-size: 11px;
+  .hero-map {
+    display: none;
   }
 
   .app-shell {
