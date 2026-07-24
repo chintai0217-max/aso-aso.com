@@ -835,7 +835,7 @@ function eventCard(event) {
   const dateLabel = formatDateRangeCompact(event) || dateRange;
 
   return `
-    <article class="event-card ${event.primary_image_url ? "has-image" : ""} ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
+    <article class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
       ${image}
       <div class="date-box event-date-box">
         <strong>${escapeHtml(formatMonthDay(event.start_date))}</strong>
@@ -868,7 +868,7 @@ function placeCard(place) {
   const hours = place.hours_note || "";
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   return `
-    <article class="event-card ${place.primary_image_url ? "has-image" : ""} ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
+    <article class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
       ${image}
       <div class="date-box place-box">
         <strong>${escapeHtml(indoorOutdoor)}</strong>
@@ -1128,10 +1128,9 @@ function displayAgeLabels(record) {
 
 function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
   const googlePlaceId = googlePhotoCandidate(record) ? record.google_place_id : "";
-  if (!url && !googlePlaceId) return "";
   const extraCount = Math.max(0, (images || []).length - 1);
   return `
-    <div class="media-thumb ${url ? "" : "is-google-pending"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
+    <div class="media-thumb ${url ? "" : googlePlaceId ? "is-google-pending" : "is-empty"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
       <span>${escapeHtml(fallbackLabel || "画像")}</span>
       ${extraCount ? `<em class="photo-count">+${extraCount}</em>` : ""}
       ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
