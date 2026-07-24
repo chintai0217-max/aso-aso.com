@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadOptionalConfig();
     state.data = await loadData();
+    applyInitialSearchQuery();
     populateFilters();
     render();
   } catch (error) {
@@ -89,6 +90,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadOptionalConfig() {
   window.APP_CONFIG = window.APP_CONFIG || {};
+}
+
+function applyInitialSearchQuery() {
+  const query = new URLSearchParams(window.location.search).get("q");
+  if (!query) return;
+  state.query = query.trim().toLowerCase();
+  els.searchInput.value = query.trim();
 }
 
 async function loadData() {
@@ -546,7 +554,7 @@ function eventCard(event) {
         <p class="summary">${escapeHtml(event.summary || event.venue_name || "")}</p>
       </div>
       <div class="event-actions">
-        <button class="primary-button detail-icon-button" type="button" data-detail-id="${event.id}" aria-label="詳細を見る">›</button>
+        <a class="primary-button detail-icon-button" href="./events/${encodeURIComponent(event.id)}.html" aria-label="${escapeHtml(event.title)}の詳細ページを見る">詳細</a>
         ${event.canonical_url ? `<a class="secondary-button" href="${escapeHtml(event.canonical_url)}" target="_blank" rel="noreferrer">公式</a>` : ""}
       </div>
     </article>
@@ -574,7 +582,7 @@ function placeCard(place) {
         <p class="summary">${escapeHtml(place.features || place.target_age_note || "")}</p>
       </div>
       <div class="event-actions">
-        <button class="primary-button detail-icon-button" type="button" data-detail-id="${place.id}" aria-label="詳細を見る">›</button>
+        <a class="primary-button detail-icon-button" href="./places/${encodeURIComponent(place.id)}.html" aria-label="${escapeHtml(place.name)}の詳細ページを見る">詳細</a>
         ${place.official_url ? `<a class="secondary-button" href="${escapeHtml(place.official_url)}" target="_blank" rel="noreferrer">公式</a>` : ""}
       </div>
     </article>
