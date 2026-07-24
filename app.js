@@ -13,6 +13,9 @@ const state = {
   sort: "date",
   filtersOpen: false,
   motenashiOnly: false,
+  freeOnly: false,
+  indoorOnly: false,
+  decision: "none",
 };
 
 let googlePlacesServicePromise = null;
@@ -184,8 +187,10 @@ function bindElements() {
     "gunmaMap",
     "clearMapSelection",
     "dateChips",
+    "decisionChips",
     "ageChips",
     "categoryChips",
+    "weekendHighlight",
     "eventList",
     "eventDialog",
     "closeDialog",
@@ -211,6 +216,9 @@ function bindEvents() {
       state.category = "all";
       state.age = "all";
       state.municipality = "all";
+      state.indoorOnly = false;
+      state.freeOnly = false;
+      state.decision = "none";
       els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
       els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
       populateFilters();
@@ -240,12 +248,20 @@ function bindEvents() {
   els.dateChips.addEventListener("click", (event) => {
     const button = event.target.closest("[data-date-scope]");
     if (!button) return;
+    state.decision = "none";
     setDateScope(button.dataset.dateScope);
+  });
+
+  els.decisionChips.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-decision]");
+    if (!button) return;
+    applyDecision(button.dataset.decision);
   });
 
   els.ageChips.addEventListener("click", (event) => {
     const button = event.target.closest("[data-age]");
     if (!button) return;
+    state.decision = "none";
     state.age = button.dataset.age;
     els.ageSelect.value = state.age;
     render();
@@ -254,6 +270,7 @@ function bindEvents() {
   els.categoryChips.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) return;
+    state.decision = "none";
     state.category = button.dataset.category;
     els.categorySelect.value = state.category;
     render();
@@ -286,6 +303,9 @@ function bindEvents() {
     state.dateScope = "upcoming";
     state.sort = "date";
     state.motenashiOnly = false;
+    state.freeOnly = false;
+    state.indoorOnly = false;
+    state.decision = "none";
     els.searchInput.value = "";
     els.categorySelect.value = "all";
     els.ageSelect.value = "all";
@@ -298,6 +318,12 @@ function bindEvents() {
     if (event.target === els.eventDialog) {
       closeRecordDialog();
     }
+  });
+  els.dialogBody.addEventListener("click", (event) => {
+    const shareButton = event.target.closest("[data-share-id]");
+    if (!shareButton) return;
+    event.preventDefault();
+    shareRecordById(shareButton.dataset.shareId, shareButton.dataset.shareKind);
   });
   els.eventDialog.addEventListener("close", () => {
     unlockDialogScroll();
@@ -383,12 +409,145 @@ function render() {
 
   document.body.dataset.mode = state.mode;
   els.topMotenashiButton.classList.toggle("is-active", state.motenashiOnly);
+  els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
+  els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
+  renderDecisionChips();
   renderDateChips();
   renderAgeChips();
   renderCategoryChips();
   renderCoverage();
   renderMapSelection();
+  renderWeekendHighlight();
   renderList(sorted);
+}
+
+function applyDecision(decision, { toggle = true } = {}) {
+  const next = toggle && state.decision === decision ? "none" : decision;
+  state.decision = next;
+  state.freeOnly = false;
+  state.indoorOnly = false;
+  state.status = "all";
+
+  if (next === "weekend") {
+    state.mode = "events";
+    state.dateScope = "weekend";
+    state.age = "all";
+    state.category = "all";
+  } else if (next === "rain") {
+    state.mode = "places";
+    state.indoorOnly = true;
+    state.age = "all";
+    state.category = "all";
+  } else if (next === "free") {
+    state.freeOnly = true;
+  } else if (next === "infant") {
+    state.age = "infant";
+  } else if (next === "verified") {
+    state.status = "verified";
+  } else if (next === "none") {
+    if (state.dateScope === "weekend") state.dateScope = "upcoming";
+  }
+
+  els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
+  els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
+  els.ageSelect.value = state.age;
+  els.categorySelect.value = state.category;
+  populateFilters();
+  render();
+  document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderDecisionChips() {
+  if (!els.decisionChips) return;
+  const chips = [
+    ["weekend", "今週末"],
+    ["rain", "雨の日屋内"],
+    ["free", "無料"],
+    ["infant", "乳幼児"],
+    ["verified", "確認済み"],
+  ];
+  els.decisionChips.innerHTML = chips
+    .map(
+      ([value, label]) =>
+        `<button type="button" class="chip decision-chip ${state.decision === value ? "is-active" : ""}" data-decision="${value}">${label}</button>`
+    )
+    .join("");
+}
+
+function renderWeekendHighlight() {
+  if (!els.weekendHighlight) return;
+  if (state.mode !== "events" || state.dateScope === "past") {
+    els.weekendHighlight.hidden = true;
+    els.weekendHighlight.innerHTML = "";
+    return;
+  }
+
+  const weekendEvents = sortRecords(
+    state.data.events.filter((event) => {
+      if (!matchesWeekend(event)) return false;
+      if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
+      if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
+      return true;
+    })
+  ).slice(0, 4);
+
+  if (!weekendEvents.length) {
+    els.weekendHighlight.hidden = true;
+    els.weekendHighlight.innerHTML = "";
+    return;
+  }
+
+  const { start, end } = weekendRange();
+  const rangeLabel = start === end ? formatDateCompact(start) : `${formatDateCompact(start, { includeYear: false })}〜${formatDateCompact(end, { includeYear: false })}`;
+
+  els.weekendHighlight.hidden = false;
+  els.weekendHighlight.innerHTML = `
+    <div class="weekend-highlight__head">
+      <div>
+        <p class="weekend-highlight__eyebrow">今週末のおでかけ</p>
+        <h2>${escapeHtml(rangeLabel)}のピックアップ</h2>
+      </div>
+      <button type="button" class="ghost-button" data-decision="weekend">今週末をすべて見る</button>
+    </div>
+    <div class="weekend-highlight__grid">
+      ${weekendEvents
+        .map((event) => {
+          const official = officialUrl(event);
+          return `
+            <article class="weekend-card" role="button" tabindex="0" data-card-id="${event.id}">
+              <div class="weekend-card__media">
+                ${event.primary_image_url ? `<img src="${escapeHtml(event.primary_image_url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
+              </div>
+              <div class="weekend-card__body">
+                <p class="card-kicker">${escapeHtml(event.municipality || "群馬県")} / ${escapeHtml(formatMonthDay(event.start_date))}</p>
+                <h3>${escapeHtml(event.title)}</h3>
+                <div class="event-meta">
+                  <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
+                  ${statusPill(event)}
+                </div>
+                ${official ? `<a class="text-link" href="${escapeHtml(official)}" target="_blank" rel="noreferrer" data-stop>公式</a>` : ""}
+              </div>
+            </article>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+
+  els.weekendHighlight.querySelectorAll("[data-card-id]").forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button, [data-stop]")) return;
+      openRecordById(card.dataset.cardId);
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openRecordById(card.dataset.cardId);
+    });
+  });
+  els.weekendHighlight.querySelectorAll("[data-decision]").forEach((button) => {
+    button.addEventListener("click", () => applyDecision(button.dataset.decision, { toggle: false }));
+  });
 }
 
 function renderMapSelection() {
@@ -652,7 +811,7 @@ function eventCard(event) {
   const price = event.price_note || "料金未設定";
 
   return `
-    <article class="event-card ${event.primary_image_url ? "has-image" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
+    <article class="event-card ${event.primary_image_url ? "has-image" : ""} ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
       ${image}
       <div class="date-box event-date-box">
         <strong>${escapeHtml(formatMonthDay(event.start_date))}</strong>
@@ -664,11 +823,10 @@ function eventCard(event) {
         <div class="event-meta">
           <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
           <span class="pill neutral">${escapeHtml(price)}</span>
+          ${statusPill(event)}
         </div>
         <p class="summary">${escapeHtml(event.summary || event.venue_name || "")}</p>
-      </div>
-      <div class="event-actions">
-        <a class="primary-button detail-icon-button" href="./events/${encodeURIComponent(event.id)}.html" aria-label="${escapeHtml(event.title)}の詳細ページを見る">詳細</a>
+        <p class="card-trust">${escapeHtml(trustLine(event))}</p>
       </div>
     </article>
   `;
@@ -680,7 +838,7 @@ function placeCard(place) {
   const price = place.price_note || "料金未設定";
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   return `
-    <article class="event-card ${place.primary_image_url ? "has-image" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
+    <article class="event-card ${place.primary_image_url ? "has-image" : ""} ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
       ${image}
       <div class="date-box place-box">
         <strong>${escapeHtml(indoorOutdoor)}</strong>
@@ -691,11 +849,10 @@ function placeCard(place) {
         <div class="event-meta">
           <span class="pill category">${escapeHtml(placeTypeLabel(place.place_type))}</span>
           <span class="pill neutral">${escapeHtml(price)}</span>
+          ${statusPill(place)}
         </div>
         <p class="summary">${escapeHtml(place.features || place.target_age_note || "")}</p>
-      </div>
-      <div class="event-actions">
-        <a class="primary-button detail-icon-button" href="./places/${encodeURIComponent(place.id)}.html" aria-label="${escapeHtml(place.name)}の詳細ページを見る">詳細</a>
+        <p class="card-trust">${escapeHtml(trustLine(place))}</p>
       </div>
     </article>
   `;
@@ -712,7 +869,9 @@ function openEventDialog(event) {
     detailFact("時間", time),
     detailFact("会場", event.venue_name),
     detailFact("料金", event.price_note),
+    detailFact("最終確認", formatVerifiedDate(event.last_verified_at)),
   ].join("");
+  const official = officialUrl(event);
 
   els.dialogBody.innerHTML = `
     <div class="dialog-content dialog-detail">
@@ -722,6 +881,7 @@ function openEventDialog(event) {
         <h2>${escapeHtml(event.title)}</h2>
         ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
         ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
+        ${isCandidate(event) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
         ${detailParagraph("概要", event.summary)}
         ${detailParagraph("補足", event.notes)}
         ${photoGallery(event.images, event.title)}
@@ -735,13 +895,14 @@ function openEventDialog(event) {
           ["カテゴリ", categoryLabel(event.category)],
           ["開催期間", dateLong !== dateShort ? dateLong : ""],
           ["ソース", event.source_names],
-          ["最終確認", event.last_verified_at],
+          ["最終確認", formatVerifiedDate(event.last_verified_at) || event.last_verified_at],
         ])}
       </div>
       <div class="dialog-actions">
+        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
+        <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(event.id))}" data-share-kind="event">共有</button>
         ${mapsUrl(event) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(event))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
         <a class="secondary-button" href="./events/${encodeURIComponent(event.id)}.html">詳細ページ</a>
-        ${event.canonical_url ? `<a class="primary-button" href="${escapeHtml(event.canonical_url)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
       </div>
     </div>
   `;
@@ -759,7 +920,9 @@ function openPlaceDialog(place) {
     detailFact("料金", compactText(place.price_note, 42)),
     detailFact("時間", compactText(place.hours_note, 42)),
     detailFact("屋内/屋外", indoorOutdoorLabel(place.indoor_outdoor)),
+    detailFact("最終確認", formatVerifiedDate(place.last_verified_at)),
   ].join("");
+  const official = officialUrl(place);
 
   els.dialogBody.innerHTML = `
     <div class="dialog-content dialog-detail">
@@ -769,6 +932,7 @@ function openPlaceDialog(place) {
         <h2>${escapeHtml(place.name)}</h2>
         ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
         ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
+        ${isCandidate(place) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
         ${detailParagraph("特徴", place.features)}
         ${detailParagraph("補足", place.notes)}
         ${photoGallery(place.images, place.name)}
@@ -790,13 +954,14 @@ function openPlaceDialog(place) {
         ])}
         ${detailSection("情報元", [
           ["ソース", place.source_names],
-          ["最終確認", place.last_verified_at],
+          ["最終確認", formatVerifiedDate(place.last_verified_at) || place.last_verified_at],
         ])}
       </div>
       <div class="dialog-actions">
+        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
+        <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(place.id))}" data-share-kind="place">共有</button>
         ${mapsUrl(place) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(place))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
         <a class="secondary-button" href="./places/${encodeURIComponent(place.id)}.html">詳細ページ</a>
-        ${place.official_url ? `<a class="primary-button" href="${escapeHtml(place.official_url)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
       </div>
     </div>
   `;
@@ -1105,6 +1270,7 @@ function filteredRecords() {
     if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
     if (state.status !== "all" && event.status !== state.status) return false;
+    if (state.freeOnly && !isFreeRecord(event)) return false;
     if (!matchesAgeGroup(event)) return false;
     if (!state.query) return true;
 
@@ -1199,6 +1365,8 @@ function filteredPlaces() {
     if (state.municipality !== "all" && place.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(place.place_type)) return false;
     if (state.status !== "all" && place.status !== state.status) return false;
+    if (state.freeOnly && !isFreeRecord(place)) return false;
+    if (state.indoorOnly && !isIndoorFriendly(place)) return false;
     if (!matchesAgeGroup(place)) return false;
     if (!state.query) return true;
 
@@ -1230,6 +1398,9 @@ function currentRecords() {
 function sortRecords(records) {
   const sorted = [...records];
   sorted.sort((a, b) => {
+    const trust = Number(isCandidate(a)) - Number(isCandidate(b));
+    if (trust) return trust;
+
     if (state.sort === "area") {
       return (
         (a.prefecture || "").localeCompare(b.prefecture || "", "ja") ||
@@ -1289,6 +1460,103 @@ function indoorOutdoorLabel(value) {
     outdoor: "屋外",
     both: "屋内外",
   }[value] || "未設定";
+}
+
+function officialUrl(record) {
+  return record.canonical_url || record.official_url || "";
+}
+
+function isCandidate(record) {
+  return record.status === "candidate" || record.confidence === "low";
+}
+
+function isFreeRecord(record) {
+  return /無料/.test(String(record.price_note || ""));
+}
+
+function isIndoorFriendly(place) {
+  return place.indoor_outdoor === "indoor" || place.indoor_outdoor === "both";
+}
+
+function formatVerifiedDate(value) {
+  if (!value) return "";
+  const raw = String(value).slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return String(value);
+  const [, month, day] = raw.split("-");
+  return `${Number(month)}/${Number(day)}確認`;
+}
+
+function trustLine(record) {
+  const parts = [];
+  const verified = formatVerifiedDate(record.last_verified_at);
+  if (verified) parts.push(verified);
+  if (isCandidate(record)) parts.push("要確認");
+  else if (record.status === "verified") parts.push("確認済み");
+  return parts.join(" · ") || "確認日未設定";
+}
+
+function statusPill(record) {
+  if (!isCandidate(record)) return "";
+  return `<span class="pill warn">要確認</span>`;
+}
+
+function siteOrigin() {
+  if (typeof location !== "undefined" && location.origin && location.origin !== "null") {
+    return location.origin;
+  }
+  return "https://aso-aso.com";
+}
+
+function recordPermalink(record, kind) {
+  const type = kind || (record.place_type != null || record.target_age_note != null ? "place" : "event");
+  const folder = type === "place" ? "places" : "events";
+  return `${siteOrigin()}/${folder}/${encodeURIComponent(record.id)}.html`;
+}
+
+function shareText(record, kind) {
+  const type = kind || (record.place_type != null || record.target_age_note != null ? "place" : "event");
+  const title = type === "place" ? record.name : record.title;
+  const where = record.municipality || record.prefecture || "群馬県";
+  const when =
+    type === "event" && record.start_date
+      ? formatDateCompact(record.start_date)
+      : indoorOutdoorLabel(record.indoor_outdoor);
+  const url = recordPermalink(record, type);
+  return `${title}（${where} / ${when}）\n${url}\n#群馬イベントナビ`;
+}
+
+async function shareRecordById(id, kind) {
+  const record =
+    kind === "place"
+      ? state.data.child_play_places.find((item) => String(item.id) === String(id))
+      : state.data.events.find((item) => String(item.id) === String(id)) ||
+        state.data.child_play_places.find((item) => String(item.id) === String(id));
+  if (!record) return;
+
+  const text = shareText(record, kind);
+  const url = recordPermalink(record, kind);
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: record.title || record.name, text, url });
+      return;
+    }
+  } catch (error) {
+    if (error && error.name === "AbortError") return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(text);
+    const button = els.dialogBody.querySelector(`[data-share-id="${String(id).replace(/"/g, "")}"]`);
+    if (button) {
+      const original = button.textContent;
+      button.textContent = "コピー済み";
+      setTimeout(() => {
+        button.textContent = original;
+      }, 1600);
+    }
+  } catch (_error) {
+    window.prompt("共有用テキストをコピーしてください", text);
+  }
 }
 
 function formatDate(value) {

@@ -170,6 +170,15 @@ def compact_text(value, limit=42):
     return text[: limit - 1].rstrip() + "…"
 
 
+def format_verified_date(value):
+    raw = str(value or "")[:10]
+    if len(raw) != 10 or raw[4] != "-" or raw[7] != "-":
+        return ""
+    month = int(raw[5:7])
+    day = int(raw[8:10])
+    return f"{month}/{day}確認"
+
+
 def time_text(event):
     values = [event.get("start_time"), event.get("end_time")]
     return " - ".join([value for value in values if value]) or ""
@@ -348,13 +357,14 @@ def detail_section(title, items):
 
 def action_links(primary_url, primary_label, home_query, map_link=""):
     query = url_quote(str(home_query or ""))
-    links = [f'<a class="secondary-button" href="../?q={html(query)}">一覧で探す</a>']
-    if map_link:
-        links.append(f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">地図で見る</a>')
+    links = []
     if primary_url:
         links.append(
             f'<a class="primary-button" href="{html(primary_url)}" target="_blank" rel="noreferrer">{html(primary_label)}</a>'
         )
+    if map_link:
+        links.append(f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">地図で見る</a>')
+    links.append(f'<a class="secondary-button" href="../?q={html(query)}">一覧で探す</a>')
     return '<div class="dialog-actions static-detail-actions">' + "".join(links) + "</div>"
 
 
@@ -463,6 +473,7 @@ def render_event(event):
                 ("時間", time_text(event)),
                 ("会場", event.get("venue_name")),
                 ("料金", event.get("price_note")),
+                ("最終確認", format_verified_date(event.get("last_verified_at"))),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
@@ -531,6 +542,7 @@ def render_place(place):
                 ("料金", compact_text(place.get("price_note"))),
                 ("時間", compact_text(place.get("hours_note"))),
                 ("屋内/屋外", indoor),
+                ("最終確認", format_verified_date(place.get("last_verified_at"))),
             ]
         )
         + "</div><div class=\"static-detail-body\">"

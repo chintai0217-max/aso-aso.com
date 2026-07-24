@@ -728,7 +728,7 @@ select:focus {
 
 .event-card {
   display: grid;
-  grid-template-columns: 104px minmax(0, 1fr) auto;
+  grid-template-columns: 104px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
   padding: 13px;
@@ -736,7 +736,7 @@ select:focus {
 }
 
 .event-card.has-image {
-  grid-template-columns: 132px 104px minmax(0, 1fr) auto;
+  grid-template-columns: 132px 104px minmax(0, 1fr);
 }
 
 .event-card:hover {
@@ -1684,7 +1684,7 @@ select:focus {
 }
 
 .event-card.has-image {
-  grid-template-columns: 128px minmax(0, 1fr) 52px;
+  grid-template-columns: 128px minmax(0, 1fr);
   gap: 12px;
   padding-left: 12px;
 }
@@ -2864,7 +2864,7 @@ video {
   .event-card,
   .event-card.has-image {
     display: grid;
-    grid-template-columns: 76px minmax(0, 1fr) auto;
+    grid-template-columns: 76px minmax(0, 1fr);
     gap: 8px 10px;
     align-items: center;
     min-height: 0;
@@ -2923,19 +2923,8 @@ video {
     gap: 2px;
   }
 
-  .event-card.has-image .event-actions,
-  .event-actions {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    display: flex;
-    width: auto;
-    align-self: center;
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-
   .event-card:not(.has-image) {
-    grid-template-columns: 64px minmax(0, 1fr) auto;
+    grid-template-columns: 64px minmax(0, 1fr);
   }
 
   .event-card:not(.has-image) .date-box {
@@ -2945,11 +2934,6 @@ video {
 
   .event-card:not(.has-image) .event-main {
     grid-column: 2;
-  }
-
-  .event-card:not(.has-image) .event-actions {
-    grid-column: 3;
-    grid-row: 1 / span 2;
   }
 
   .card-kicker {
@@ -3126,5 +3110,162 @@ video {
   .static-detail-actions .secondary-button {
     width: 100%;
     min-height: 40px;
+  }
+}
+
+/* Decision presets, trust signals, weekend highlight */
+.decision-chips {
+  margin-bottom: 2px;
+}
+
+.decision-chip.is-active {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+.card-trust {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.pill.warn {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fdba74;
+}
+
+.event-card.is-candidate {
+  border-style: dashed;
+}
+
+.trust-banner {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 6px;
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.weekend-highlight {
+  margin: 0 0 16px;
+  padding: 16px;
+  border: 1px solid #d8e3ec;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(224, 242, 254, 0.7), rgba(255, 255, 255, 0.95));
+}
+
+.weekend-highlight__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.weekend-highlight__eyebrow {
+  margin: 0 0 4px;
+  color: var(--brand-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.weekend-highlight__head h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.weekend-highlight__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.weekend-card {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #d8e3ec;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+}
+
+.weekend-card:hover {
+  border-color: rgba(2, 132, 199, 0.45);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.weekend-card__media {
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  background: #e2e8f0;
+}
+
+.weekend-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weekend-card__body {
+  min-width: 0;
+}
+
+.weekend-card__body h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.35;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 680px) {
+  .weekend-highlight {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .weekend-highlight__head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .weekend-highlight__head h2 {
+    font-size: 17px;
+  }
+
+  .weekend-highlight__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weekend-card {
+    grid-template-columns: 72px minmax(0, 1fr);
   }
 }
