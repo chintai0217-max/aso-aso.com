@@ -2065,7 +2065,7 @@ button.coverage-item.is-active {
   outline-offset: -2px;
 }
 
-/* Map / calendar / official-site actions inside the detail dialog */
+/* Map / official-site actions inside the detail dialog */
 .dialog-actions {
   display: flex;
   flex-wrap: wrap;
@@ -2075,9 +2075,19 @@ button.coverage-item.is-active {
 
 .dialog-actions .primary-button,
 .dialog-actions .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   min-height: 42px;
   padding: 0 18px;
   font-size: 14px;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 640px) {
@@ -2190,5 +2200,150 @@ button.coverage-item.is-active {
 
   .static-detail-image {
     aspect-ratio: 4 / 3;
+  }
+}
+
+/* Hero Gunma map */
+.hero-inner {
+  align-items: stretch;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.app-header__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.app-header__main .header-metrics {
+  margin-top: 8px;
+  width: min(100%, 420px);
+}
+
+.hero-map {
+  width: min(100%, 460px);
+  flex: 0 1 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 16px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 44px rgba(3, 57, 92, 0.22);
+  color: #0f172a;
+}
+
+.hero-map-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-map-caption {
+  margin: 0;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hero-map-selection {
+  margin: 0;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.gunma-map {
+  width: 100%;
+  line-height: 0;
+}
+
+.gunma-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gunma-region {
+  fill: #e0f2fe;
+  stroke: #ffffff;
+  stroke-width: 1.2;
+  cursor: pointer;
+  transition: fill 0.15s ease, stroke 0.15s ease, filter 0.15s ease;
+}
+
+.gunma-region:hover {
+  fill: #7dd3fc;
+}
+
+.gunma-region.is-active {
+  fill: #0284c7;
+  stroke: #0369a1;
+  filter: drop-shadow(0 2px 4px rgba(3, 105, 161, 0.35));
+}
+
+.gunma-label {
+  fill: #334155;
+  font-size: 9px;
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
+}
+
+.gunma-label.is-active {
+  fill: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.hero-map-clear {
+  align-self: flex-start;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero-map-clear:hover {
+  background: #bae6fd;
+}
+
+@media (max-width: 980px) {
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-map {
+    width: 100%;
+    flex: none;
+    max-width: none;
+  }
+
+  .app-header__main .header-metrics {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-map {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .gunma-label {
+    font-size: 7.5px;
+  }
+
+  .gunma-label.is-active {
+    font-size: 8.5px;
   }
 }

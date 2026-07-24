@@ -139,7 +139,7 @@ def image_tag(url, alt):
 
 
 def layout(title, description, canonical, image, kind_label, h1, kicker, body, structured_data):
-    og_image = image or f"{BASE_URL}/screenshot-desktop.png"
+    og_image = image or f"{BASE_URL}/og-image.png"
     return f"""<!doctype html>
 <html lang="ja">
   <head>
@@ -149,6 +149,10 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
     <meta name="description" content="{html(description)}">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="{html(canonical)}">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="群馬イベントナビ">
     <meta property="og:title" content="{html(title)}">
@@ -156,6 +160,7 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
     <meta property="og:url" content="{html(canonical)}">
     <meta property="og:image" content="{html(og_image)}">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{html(og_image)}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
