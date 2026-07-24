@@ -262,7 +262,8 @@ function bindEvents() {
   els.coverageList.addEventListener("click", (event) => {
     const item = event.target.closest("[data-municipality]");
     if (!item) return;
-    setMunicipality(item.dataset.municipality, { scroll: true });
+    const name = item.dataset.municipality;
+    setMunicipality(state.municipality === name ? "all" : name, { scroll: true });
   });
 
   els.gunmaMap.addEventListener("click", (event) => {
@@ -412,6 +413,7 @@ function renderDateChips() {
   }
   els.dateChips.hidden = false;
   const scopes = [
+    ["all", "すべて"],
     ["upcoming", "開催予定"],
     ["weekend", "今週末"],
     ["month", "今月"],
@@ -434,7 +436,7 @@ function renderAgeChips() {
   });
 
   const chips = [
-    `<button type="button" class="chip ${state.age === "all" ? "is-active" : ""}" data-age="all">年代すべて</button>`,
+    `<button type="button" class="chip ${state.age === "all" ? "is-active" : ""}" data-age="all">すべて</button>`,
   ].concat(
     ageGroups
       .filter((group) => state.age === group.id || (counts.get(group.id) || 0) > 0)
@@ -559,22 +561,32 @@ function renderCoverage() {
   const counts = new Map();
   records.forEach((record) => counts.set(record.municipality || "未設定", (counts.get(record.municipality || "未設定") || 0) + 1));
   const max = Math.max(...counts.values(), 1);
+  const total = records.length;
 
-  els.coverageList.innerHTML = Array.from(counts.entries())
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"))
-    .slice(0, 12)
-    .map(([name, count]) => {
-      const width = Math.max(8, Math.round((count / max) * 100));
-      const active = state.municipality === name ? "is-active" : "";
-      return `
-        <button type="button" class="coverage-item ${active}" data-municipality="${escapeHtml(name)}">
-          <strong>${escapeHtml(name)}</strong>
-          <span>${count}件</span>
-          <div class="coverage-bar"><span style="width:${width}%"></span></div>
-        </button>
-      `;
-    })
-    .join("");
+  const items = [
+    `<button type="button" class="coverage-item ${state.municipality === "all" ? "is-active" : ""}" data-municipality="all">
+      <strong>すべて</strong>
+      <span>${total}件</span>
+      <div class="coverage-bar"><span style="width:100%"></span></div>
+    </button>`,
+  ].concat(
+    Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"))
+      .slice(0, 12)
+      .map(([name, count]) => {
+        const width = Math.max(8, Math.round((count / max) * 100));
+        const active = state.municipality === name ? "is-active" : "";
+        return `
+          <button type="button" class="coverage-item ${active}" data-municipality="${escapeHtml(name)}">
+            <strong>${escapeHtml(name)}</strong>
+            <span>${count}件</span>
+            <div class="coverage-bar"><span style="width:${width}%"></span></div>
+          </button>
+        `;
+      })
+  );
+
+  els.coverageList.innerHTML = items.join("");
 }
 
 function renderList(records) {
@@ -666,12 +678,12 @@ function placeCard(place) {
   const image = mediaThumb(place.primary_image_url, place.name, placeTypeLabel(place.place_type), place.images, place);
   const age = place.target_age_note || "対象年齢は公式確認";
   const price = place.price_note || "料金未設定";
+  const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   return `
     <article class="event-card ${place.primary_image_url ? "has-image" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
       ${image}
       <div class="date-box place-box">
-        <strong>${escapeHtml(indoorOutdoorLabel(place.indoor_outdoor))}</strong>
-        <span>${escapeHtml(price)}</span>
+        <strong>${escapeHtml(indoorOutdoor)}</strong>
       </div>
       <div class="event-main">
         <p class="card-kicker">${escapeHtml(place.municipality || place.prefecture || "地域未設定")} / ${escapeHtml(age)}</p>
