@@ -10,6 +10,7 @@ from urllib.parse import quote as url_quote
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aso-aso.com"
 TODAY = date.today().isoformat()
+GA_MEASUREMENT_ID = "G-ZWE0042E90"
 
 CATEGORY_LABELS = {
     "contest": "コンテスト",
@@ -261,6 +262,17 @@ def section_paragraph(title, text):
     )
 
 
+def ga_snippet():
+    return f"""    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', '{GA_MEASUREMENT_ID}');
+    </script>"""
+
+
 def layout(title, description, canonical, image, kind_label, h1, kicker, body, structured_data):
     og_image = image or f"{BASE_URL}/og-image.png"
     return f"""<!doctype html>
@@ -268,6 +280,7 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+{ga_snippet()}
     <title>{html(title)}</title>
     <meta name="description" content="{html(description)}">
     <meta name="robots" content="index,follow">
