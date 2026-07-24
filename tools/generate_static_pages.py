@@ -252,12 +252,25 @@ def filter_relevant_images(images, title):
     return matched if len(matched) > 1 else images[:1]
 
 
+def fact_or_confirm(value, fallback="公式で確認"):
+    text = str(value or "").strip()
+    return text or fallback
+
+
 def fact_strip(items):
     cells = []
-    for label, value in items:
-        if not value:
+    for item in items:
+        if len(item) == 3:
+            label, value, fallback = item
+        else:
+            label, value = item
+            fallback = ""
+        raw = str(value or "").strip()
+        text = raw or fallback
+        if not text:
             continue
-        cells.append(f"<span><b>{html(label)}</b>{html(value)}</span>")
+        missing = " is-missing" if not raw else ""
+        cells.append(f'<span class="{missing.strip()}"><b>{html(label)}</b>{html(text)}</span>')
     if not cells:
         return ""
     return f'<div class="detail-fact-strip">{"".join(cells)}</div>'
@@ -471,11 +484,13 @@ def render_event(event):
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
-                ("開催日", date_short),
-                ("時間", time_text(event)),
-                ("会場", event.get("venue_name")),
-                ("料金", event.get("price_note")),
-                ("最終確認", format_verified_date(event.get("last_verified_at"))),
+                ("開催日", date_short, "公式で確認"),
+                ("時間", time_text(event), "公式で確認"),
+                ("会場", event.get("venue_name"), "公式で確認"),
+                ("料金", event.get("price_note"), "公式で確認"),
+                ("駐車場", event.get("parking_note"), "公式で確認"),
+                ("予約", event.get("reservation_note"), "公式で確認"),
+                ("最終確認", format_verified_date(event.get("last_verified_at")), "未設定"),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
@@ -485,9 +500,11 @@ def render_event(event):
         + detail_section(
             "会場・アクセス",
             [
-                ("住所", event.get("address")),
+                ("住所", fact_or_confirm(event.get("address"))),
                 ("地域", location),
                 ("エリア", event.get("area_label")),
+                ("駐車場", fact_or_confirm(event.get("parking_note"))),
+                ("予約", fact_or_confirm(event.get("reservation_note"))),
             ],
         )
         + detail_section(
@@ -497,12 +514,12 @@ def render_event(event):
                 ("カテゴリ", category),
                 ("開催期間", date_long if date_long != date_short else ""),
                 ("ソース", event.get("source_names")),
-                ("最終確認", event.get("last_verified_at")),
+                ("最終確認", event.get("last_verified_at") or "未設定"),
             ],
         )
         + action_links(
             event.get("canonical_url"),
-            "公式ページを見る",
+            "公式ページで最新を確認",
             event.get("title"),
             maps_url(event),
         )
@@ -540,11 +557,13 @@ def render_place(place):
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
-                ("対象", compact_text(place.get("target_age_note"))),
-                ("料金", compact_text(place.get("price_note"))),
-                ("時間", compact_text(place.get("hours_note"))),
-                ("屋内/屋外", indoor),
-                ("最終確認", format_verified_date(place.get("last_verified_at"))),
+                ("対象", compact_text(place.get("target_age_note")), "公式で確認"),
+                ("料金", compact_text(place.get("price_note")), "公式で確認"),
+                ("時間", compact_text(place.get("hours_note")), "公式で確認"),
+                ("屋内/屋外", indoor, "公式で確認"),
+                ("駐車場", compact_text(place.get("parking_note")), "公式で確認"),
+                ("予約", compact_text(place.get("reservation_note")), "公式で確認"),
+                ("最終確認", format_verified_date(place.get("last_verified_at")), "未設定"),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
@@ -554,20 +573,21 @@ def render_place(place):
         + detail_section(
             "利用案内",
             [
-                ("対象", place.get("target_age_note")),
-                ("料金", place.get("price_note")),
-                ("利用時間", place.get("hours_note")),
-                ("休み", place.get("closed_note")),
+                ("対象", fact_or_confirm(place.get("target_age_note"))),
+                ("料金", fact_or_confirm(place.get("price_note"))),
+                ("利用時間", fact_or_confirm(place.get("hours_note"))),
+                ("休み", fact_or_confirm(place.get("closed_note"))),
+                ("予約", fact_or_confirm(place.get("reservation_note"))),
                 ("種類", place_type),
             ],
         )
         + detail_section(
             "アクセス・設備",
             [
-                ("住所", place.get("address")),
+                ("住所", fact_or_confirm(place.get("address"))),
                 ("地域", location),
                 ("エリア", place.get("area_label")),
-                ("駐車場", place.get("parking_note")),
+                ("駐車場", fact_or_confirm(place.get("parking_note"))),
                 ("食事", place.get("food_note")),
                 ("授乳等", place.get("nursing_note")),
                 ("ベビーカー", place.get("stroller_note")),
@@ -577,12 +597,12 @@ def render_place(place):
             "情報元",
             [
                 ("ソース", place.get("source_names")),
-                ("最終確認", place.get("last_verified_at")),
+                ("最終確認", place.get("last_verified_at") or "未設定"),
             ],
         )
         + action_links(
             place.get("official_url"),
-            "公式ページを見る",
+            "公式ページで最新を確認",
             place.get("name"),
             maps_url(place),
         )
@@ -726,12 +746,13 @@ def hub_media(image_url, label):
 def hub_card_event(event):
     href = f"../events/{event['id']}.html"
     title = event.get("title") or ""
+    time = time_text(event)
+    venue = event.get("venue_name") or event.get("area_label") or ""
     meta = " / ".join(
         part
         for part in [
             event.get("municipality"),
             CATEGORY_LABELS.get(event.get("category"), event.get("category")),
-            date_text_compact(event),
         ]
         if part
     )
@@ -745,7 +766,12 @@ def hub_card_event(event):
         f'<div class="hub-card__body">'
         f'<p class="card-kicker">{html(meta)}</p>'
         f"<strong>{html(title)}</strong>"
-        f"<small>{html(compact_text(event.get('summary') or event.get('venue_name'), 70))}</small>"
+        f'<ul class="card-facts">'
+        f"<li><b>日程</b>{html(fact_or_confirm(date_text_compact(event)))}</li>"
+        f"<li><b>時間</b>{html(fact_or_confirm(time))}</li>"
+        f"<li><b>会場</b>{html(fact_or_confirm(venue))}</li>"
+        f"<li><b>料金</b>{html(fact_or_confirm(event.get('price_note')))}</li>"
+        f"</ul>"
         f"</div>"
         f"</a>"
     )
@@ -759,7 +785,6 @@ def hub_card_place(place):
         for part in [
             place.get("municipality"),
             PLACE_TYPE_LABELS.get(place.get("place_type"), place.get("place_type")),
-            INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), place.get("indoor_outdoor")),
         ]
         if part
     )
@@ -777,7 +802,12 @@ def hub_card_place(place):
         f'<div class="hub-card__body">'
         f'<p class="card-kicker">{html(meta)}</p>'
         f"<strong>{html(title)}</strong>"
-        f"<small>{html(compact_text(place.get('features') or place.get('target_age_note'), 70))}</small>"
+        f'<ul class="card-facts">'
+        f"<li><b>対象</b>{html(fact_or_confirm(compact_text(place.get('target_age_note'), 36)))}</li>"
+        f"<li><b>時間</b>{html(fact_or_confirm(compact_text(place.get('hours_note'), 36)))}</li>"
+        f"<li><b>料金</b>{html(fact_or_confirm(compact_text(place.get('price_note'), 36)))}</li>"
+        f"<li><b>駐車場</b>{html(fact_or_confirm(compact_text(place.get('parking_note'), 36)))}</li>"
+        f"</ul>"
         f"</div>"
         f"</a>"
     )

@@ -128,7 +128,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Nzg0MDMsInB1ciI6ImJsb2JfaWQifX0=--b2e64dbf84658ce4fac25474b8391114d98f88e7/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/%E5%A6%99%E7%BE%A9%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%EF%BC%92.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 31,
@@ -175,7 +177,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/843/keep/1200?v=5ff0d38078ef3c288d88962dbea61014bd9af699",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 21,
@@ -336,7 +340,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY3MzEsInB1ciI6ImJsb2JfaWQifX0=--0977c766c67b5ed8ea5e2c856a204d5c1bac3420/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%83%A9%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%AB%E6%B9%BF%E5%9C%B0.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 73,
@@ -402,7 +408,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2023/07/2026化石さがし受付中-225x300.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 23,
@@ -544,7 +552,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODUyOTMsInB1ciI6ImJsb2JfaWQifX0=--557b355c2bfc5eaeaa8edb01581434701e830860/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/2026%E3%82%B0%E3%83%AB%E3%83%A1%E3%83%81%E3%83%A9%E3%82%B7.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 36,
@@ -705,7 +715,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 43,
@@ -828,7 +840,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 44,
@@ -951,7 +965,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "予約制"
     },
     {
       "id": 45,
@@ -1074,7 +1090,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 63,
@@ -1140,7 +1158,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.enjoy-minakami.jp/wp/wp-content/uploads/2026/05/20260501-1777597376028-47ff5fbe-1976-4410-bb98-c7a9a8c26f67_2.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 70,
@@ -1225,7 +1245,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/04/078e4b51edacb93a32a13bdc3301cf17-636x900.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 56,
@@ -1291,7 +1313,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.higashiagatsuma.gunma.jp/www/kankou/contents/1204111587824/simple/1204111783681_1204111587824_image1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 62,
@@ -1376,7 +1400,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.enjoy-minakami.jp/images/hotaruhassei.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 17,
@@ -1499,7 +1525,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk3MDQsInB1ciI6ImJsb2JfaWQifX0=--b8ad00d9712a09e42a8a87994b90c9011b448e67/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E7%AC%AC4%E5%9B%9E%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%95%E3%82%9A%E3%83%A9%E3%83%AA%E3%83%BC%20%E8%A1%A8%E9%9D%A2_page-0001.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 72,
@@ -1717,7 +1745,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/05/b9d327603e500c513a6dcb1c077dd0b3-636x900.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 46,
@@ -1840,7 +1870,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2025/02/shi__3ba-683x1024.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 25,
@@ -1906,7 +1938,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4046/keep/1200?v=9d3be8f9544841d778fafeba1afa3b8882ba28a5",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 33,
@@ -1972,7 +2006,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2021/02/名称未設定-10.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 20,
@@ -2095,7 +2131,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODkzMTgsInB1ciI6ImJsb2JfaWQifX0=--915d7595c696e51e741fdf403c3d0fcd114ec837/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJKUEciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8413f7bb763578ade2a048a28fdb706f1ad984ce/IMG_2426.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 14,
@@ -2256,7 +2294,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzMzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--013004db78ada40434a7bd7e2e81d00b15fa2aa8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/s_IMG_7657.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 61,
@@ -2303,7 +2343,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.enjoy-minakami.jp/wp/wp-content/uploads/2026/06/S__61890565.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 47,
@@ -2407,7 +2449,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/06/いせさきふぉと2026ポスター_page-0001-724x1024.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 26,
@@ -2454,7 +2498,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/3869/keep/1200?v=3d82720f900341b2939bdfc1796f848fe8b36790",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 40,
@@ -2577,7 +2623,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.utyututuji.jp/images/icatch04.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 69,
@@ -2662,7 +2710,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/06/e371b9a3c178dc7be9d785ecd701e9ed.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 50,
@@ -2709,7 +2759,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.annaka.lg.jp/uploaded/image/16446.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込不要"
     },
     {
       "id": 38,
@@ -2870,7 +2922,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 60,
@@ -2955,7 +3009,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://16106midori.jp/wp/wp-content/uploads/2024/08/コノドント館-scaled.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 66,
@@ -3135,7 +3191,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.vill.shinto.gunma.jp/images/color-normal.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 76,
@@ -3315,7 +3373,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-15/651040543_18430459873136789_2402335141032743704_n.webp?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=EkqhQVdGjNYQ7kNvwGTvcHs&_nc_oc=AdoG_F7lhU8zwFMCXdUnip_MSwZmc8TZzpJsJZ1VF0sja3jY98eBNo8r3EQJAnFdX3U&_nc_zt=23&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=7yxzyq-zKkiVkkq_aR-19w&_nc_ss=7060f&oh=00_AQCTyeqQqJjCWD3TSmHb06ybkWGkCCDKITF-qLeheOceUg&oe=6A59DEFE",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 19,
@@ -3457,7 +3517,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0ODMsInB1ciI6ImJsb2JfaWQifX0=--e0fae92d4e4a9c7023339e05415ef9f3725262dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/HHN4gAfakAAevPl-1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 15,
@@ -3523,7 +3585,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTAxMTEsInB1ciI6ImJsb2JfaWQifX0=--ee397e0b180f42a0fbdf350fa44b29e242cb58e3/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/GunmaGmesseGames2026_page-0001.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 59,
@@ -3589,7 +3653,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://16106midori.jp/wp/wp-content/uploads/2021/03/20240410-377A2843-scaled.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 16,
@@ -3731,7 +3797,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk4MjUsInB1ciI6ImJsb2JfaWQifX0=--b829602ab082c563ff2dd5907e5668b39acd8387/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/CAEF5C38-5328-46AB-8C8A-FE4DB826A2D0.jpeg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 1,
@@ -3758,7 +3826,9 @@ window.EVENT_DATA = {
       "source_names": "高崎市 イベントカレンダー",
       "images": [],
       "primary_image_url": null,
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 35,
@@ -3919,7 +3989,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 12,
@@ -4042,7 +4114,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEzNDQsInB1ciI6ImJsb2JfaWQifX0=--ed3dbd2509a808ee9654fd444b698bceea97aebc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/20260627-01-819x1024.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 51,
@@ -4089,7 +4163,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.annaka.lg.jp/uploaded/image/16709.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 27,
@@ -4136,7 +4212,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/790/keep/1200?v=d211e1e21d5cbcc49670be1190e756ba53ebdd23",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 68,
@@ -4240,7 +4318,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kanko.vill.kawaba.gunma.jp/event/item/main_image_event.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 2,
@@ -4287,7 +4367,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 74,
@@ -4334,7 +4416,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://nanmoku.ne.jp/wp-content/uploads/2026/07/なんもく学園セミナー2026-768x376.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 57,
@@ -4457,7 +4541,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.itakura.gunma.jp/cont/s003000/d003030/d000010/20240723_001.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 3,
@@ -4523,7 +4609,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://worldcitycup.soroban-japan.com/media/gunma-soroban-worldcitycup.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 28,
@@ -4589,7 +4677,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/3904/keep/1200?v=1935e6497fe9f7c8bf99bba6675bd940ed258de9",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 37,
@@ -4750,7 +4840,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 41,
@@ -4873,7 +4965,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.utyututuji.jp/images/icatch04.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 48,
@@ -4920,7 +5014,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/025/571/yagura.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 29,
@@ -4986,7 +5082,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4176/keep/1200?v=640f8ff9c0197eae6ea37cd0cebf96e606d68ca4",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 49,
@@ -5033,7 +5131,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.fujioka.gunma.jp/material/images/group/3/fujioka-hakuicup.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 53,
@@ -5099,7 +5199,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://oze-katashina.info/wp/wp-content/uploads/2026/06/f6e8e73f3ca7596f46810bf6eb589c2c.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 67,
@@ -5241,7 +5343,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://agakanren.com/websys/wp-content/uploads/ふるさと祭り2025_A4両面0722最終_1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 39,
@@ -5345,7 +5449,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.ota-kanko.jp/cms/wp-content/uploads/2018/07/ねぷ３-300x144.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 75,
@@ -5487,7 +5593,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.gunlabo.net/images_c/event/image2043.jpg?1529631285",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 22,
@@ -5629,7 +5737,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODYzMjgsInB1ciI6ImJsb2JfaWQifX0=--1658ece9f9dffa8ff0527a2d956ef49596e3288d/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/skyrun2026_poster.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 64,
@@ -5752,7 +5862,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.chiyoda.gunma.jp/files/7751ce9033e2aea22af6ece9c0376264.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 4,
@@ -5894,7 +6006,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.takasaki-matsuri.jp/wp/wp-content/uploads/2026/05/siteimage_52_2026.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 5,
@@ -5941,7 +6055,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.takasaki-kankoukyoukai.or.jp/images/common/og_img.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 86,
@@ -6064,7 +6180,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.takasaki-matsuri.jp/wp/wp-content/uploads/2026/07/kotsukisei_2026.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込不要"
     },
     {
       "id": 78,
@@ -6111,7 +6229,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 58,
@@ -6291,7 +6411,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.ora.gunma.jp/orabiyori/orafes2026.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 87,
@@ -6414,7 +6536,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.takasaki-matsuri.jp/wp/wp-content/uploads/2026/07/kotsukisei_2026.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込不要"
     },
     {
       "id": 30,
@@ -6461,7 +6585,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/888/keep/1200?v=ed7d15db9f46138539a99708de4ba40fb2fd1f1e",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 52,
@@ -6508,7 +6634,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.annaka.lg.jp/uploaded/image/16709.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 42,
@@ -6631,7 +6759,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 55,
@@ -6735,7 +6865,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://storage.googleapis.com/studio-cms-assets/projects/xPORkVBxqr/s-910x595_v-fs_webp_25674490-9f1b-46cd-a33d-f352f7dc76d7.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 65,
@@ -6934,7 +7066,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.meiwa.gunma.jp/material/images/group/8/8tirasi.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 18,
@@ -7095,7 +7229,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk2MTUsInB1ciI6ImJsb2JfaWQifX0=--504a41717056d8db6f2f14ab4a17ebf0d799db04/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E9%A3%9F%E9%9F%B3%E5%B8%82.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 88,
@@ -7275,7 +7411,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-15/656156889_17993639768938089_533336141220273707_n.webp?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=cIH1eEW6A5EQ7kNvwEea2wG&_nc_oc=AdpK3Icc1Tg0kSZXop_Ywfn7TcZN36yEBCDIP2e4BliokAy463nrwsXbpFsaY51_uME&_nc_zt=23&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=o9TpBzqCfEYgRCZ61FkvBg&_nc_ss=7060f&oh=00_AQBiAUdS0yOM5ubfdxlWF-BntLONSvuwWgGRJo91yFJxig&oe=6A59D80B",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 34,
@@ -7379,7 +7517,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2025/08/25伊香保まつり運行表_page-0001-e1756172923979.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 54,
@@ -7521,7 +7661,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.kanra.lg.jp/k-bunka/bunka/news/kannranouomote2026.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 71,
@@ -7587,7 +7729,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/05/Thank-1-900x900.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 79,
@@ -7634,7 +7778,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 89,
@@ -7795,7 +7941,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://bistyle-run.com/wp-content/themes/bistyle2022/img/common/SDGs.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 6,
@@ -7842,7 +7990,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://ryukyunokaze.jp/images/サブネーム.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 90,
@@ -7908,7 +8058,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://tsk1958.net/wp-content/uploads/a01419dbb5df88285eb6311a6dd3bda6-768x512.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 80,
@@ -7955,7 +8107,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 32,
@@ -8021,7 +8175,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/1532/keep/1200?v=064e9c691ade81f964f63f249bf12372e2b779f0",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 81,
@@ -8068,7 +8224,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 82,
@@ -8115,7 +8273,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 13,
@@ -8238,7 +8398,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA4MjYsInB1ciI6ImJsb2JfaWQifX0=--e6d81131abb589d652d63390e9a4552a02c4900a/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%81%BE%E3%81%A15%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 83,
@@ -8285,7 +8447,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 84,
@@ -8332,7 +8496,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     },
     {
       "id": 85,
@@ -8379,7 +8545,9 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://furimazukan.com/flea-market/flea-market-314/opengraph-image",
-      "google_place_id": null
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": null
     }
   ],
   "child_play_places": [
@@ -8468,7 +8636,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kashiwa.shafuku.com/assets/img/totoro/vi_m.png?=v231218",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 67,
@@ -8517,7 +8686,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://seihoukai.ed.jp/wp-content/uploads/2022/02/shien-1024x440-1-300x129.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 68,
@@ -8623,7 +8793,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kasakake-izumi.com/files/site_config/capture.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 32,
@@ -8786,7 +8957,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.midori.gunma.jp/_res/projects/default_project/_page_/001/004/313/1_mainvisual/ytop_main_01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 71,
@@ -8949,7 +9121,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.minakami.gunma.jp/life/04kosodate_kyouiku/kosodateshien/images/kosodate_sien1_1.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 72,
@@ -9112,7 +9285,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.minakami.gunma.jp/life/04kosodate_kyouiku/kosodateshien/images/kosodate_sien1_1.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 73,
@@ -9275,7 +9449,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.minakami.gunma.jp/life/04kosodate_kyouiku/kosodateshien/images/kosodate_sien1_1.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 56,
@@ -9362,7 +9537,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.shimonita.lg.jp/hoken-kankyo/IMG_5046.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 57,
@@ -9525,7 +9701,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.shimonita.lg.jp/materials/img/title.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 54,
@@ -9707,7 +9884,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.nakanojo.gunma.jp/uploaded/image/2038.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 55,
@@ -9889,7 +10067,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.nakanojo.gunma.jp/uploaded/image/2030.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 7,
@@ -10052,7 +10231,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kezoujiyuenchi.com/wp/wp-content/uploads/slide01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 35,
@@ -10196,7 +10376,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://ise-shakyo.or.jp/for_children/images/kids-jidou1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 36,
@@ -10378,7 +10559,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://ise-shakyo.or.jp/for_children/images/level_2-sakai_center.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 3,
@@ -10427,7 +10609,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://lunapark.maebashi-park.com/assets/images/og-image.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 20,
@@ -10571,7 +10754,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://static.wixstatic.com/media/cc8243_a957f2a0455344898aa9cc656a732684~mv2.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 19,
@@ -10734,7 +10918,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.taito.co.jp/Content/images/zone/0/201407/0ca963c2-d481-4154-964d-fa0772188767_m_01_ja.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 16,
@@ -10878,7 +11063,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kinderplatz.froebel-kan.co.jp/wp-content/uploads/2025/07/b6d491415affe9467368848ec77e7d47-300x212.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 34,
@@ -11003,7 +11189,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kosodate-hiroba.jp/assets/images/enter-01-pc.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 22,
@@ -11109,7 +11296,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.round1.co.jp/img/common/ft_bg.jpg?20240617",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 4,
@@ -11196,7 +11384,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.maebashi.gunma.jp/material/images/group/104/015_88762459.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 24,
@@ -11264,7 +11453,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gllcenter.gsn.ed.jp/wysiwyg/image/download/1/5719",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 60,
@@ -11446,7 +11636,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297361",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 61,
@@ -11609,7 +11800,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297362",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 26,
@@ -11658,7 +11850,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjYyOCwicHVyIjoiYmxvYl9pZCJ9fQ==--bcad2c30e6cf2baeaadcb393bfe064c3c59139c5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsODAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a9b891ca76e298ca91bc8c78152de617052eeefc/9b3574d574f4f028fdc6f4f36494d153.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 52,
@@ -11821,7 +12014,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_oizumi_higashi01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 51,
@@ -11984,7 +12178,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_oizumi_higashi01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 21,
@@ -12090,7 +12285,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://catmocha.jp/assets/img/shop/ota/slide-shop01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 17,
@@ -12272,7 +12468,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://image-cdn.aeonmall.jp/uploads/d6139b57-b885-4b8e-8cf5-40e8fd7e6473.jpg?width=1200&height=630&fit=bounds&canvas=1200,630&bg-color=ffffff",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 38,
@@ -12359,7 +12556,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.ota.gunma.jp/uploaded/image/8305.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 39,
@@ -12522,7 +12720,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_ota_jidoucenter01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 14,
@@ -12666,7 +12865,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://won-park.com/park/wp/wp-content/uploads/2023/06/featured-1024x512.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 2,
@@ -12886,7 +13086,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/renewal_top-370x181.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 1,
@@ -13011,7 +13212,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kodomonokuni.jp/info/wp-content/uploads/topimg/img_top01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 27,
@@ -13098,7 +13300,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.omochaoukoku.com/karuizawa/wp-content/themes/karuizawa/assets/img/top/mv_img01.webp",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 47,
@@ -13166,7 +13369,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.annaka.lg.jp/uploaded/image/2694.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 48,
@@ -13253,7 +13457,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.annaka.lg.jp/uploaded/image/3929.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 25,
@@ -13302,7 +13507,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://usuitouge.com/bunkamura/uploads/2019/08/ogimg.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 44,
@@ -13446,7 +13652,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.tomioka.lg.jp/www/contents/1000000000579/simple/231124155856_1.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 11,
@@ -13571,7 +13778,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 33,
@@ -13696,7 +13904,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://safari.co.jp/wordpress/wp-content/uploads/2025/08/エサバスおすすめ特集のコピー.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 63,
@@ -13802,7 +14011,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.meiwa.gunma.jp/material/images/group/6/seisaku12.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 74,
@@ -13889,7 +14099,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.higashiagatsuma.gunma.jp/www/contents/1326350968652/simple/260626084259_1.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 59,
@@ -13976,7 +14187,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_itakura_hidamari01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 8,
@@ -14139,7 +14351,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.kiryu-kanrikyoukai.jp/amusementpark/images/kanransya.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 65,
@@ -14245,7 +14458,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/012/698/2021/title_kinopiland.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 66,
@@ -14351,7 +14565,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/002/905/kabu3.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 13,
@@ -14552,7 +14767,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.pref.gunma.jp/uploaded/image/633240.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 10,
@@ -14658,7 +14874,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://caribbe.info/website/wp-content/uploads/2020/10/pool_main.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 40,
@@ -14745,7 +14962,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "http://www.numata-kosodate.net/img/kodomohiroba01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 9,
@@ -14889,7 +15107,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.skyland89.jp/uploads/2024/08/2a60a1c4d27cffe2bf8569ca03ad3cf2.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 15,
@@ -14976,7 +15195,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kidslandus.com/admin/wp-content/uploads/2026/04/61bdd7482ae1b3ed2d5db92af14af727-300x135.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 41,
@@ -15158,7 +15378,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://shibukawa-csw.or.jp/files/site_config/capture.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 53,
@@ -15340,7 +15561,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/68f6d9888aeb5.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 70,
@@ -15484,7 +15706,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.vill.katashina.gunma.jp/images/base/moji.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 50,
@@ -15571,7 +15794,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_tamamura_minami01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 49,
@@ -15620,7 +15844,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.tamamura-bg.com/wp/wp-content/themes/tamamura-bg/img/riyou/img_ph_facade.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 58,
@@ -15745,7 +15970,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.town.kanra.lg.jp/kenkou/kodomo/sozai/inmohoriIMG_6186.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 31,
@@ -15889,7 +16115,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2018/12/top01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 45,
@@ -15938,7 +16165,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.fujioka.gunma.jp/material/images/group/18/jidoukan.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 29,
@@ -16082,7 +16310,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODM1MDIsInB1ciI6ImJsb2JfaWQifX0=--6e2139853c16b932cf1ebe70dc7b008178a23cc9/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsODAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a9b891ca76e298ca91bc8c78152de617052eeefc/hito.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 46,
@@ -16169,7 +16398,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://fujimaru.g-asuka.co.jp/wp-content/uploads/2025/08/Eye_catch01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 62,
@@ -16313,7 +16543,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_oura_higashi01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 30,
@@ -16476,7 +16707,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/img/title_bar_1.gif",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 12,
@@ -16677,7 +16909,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.tatebayashi.gunma.jp/kagakukan/020/140/IMG_1633.JPG",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 43,
@@ -16859,7 +17092,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.tatebayashi.gunma.jp/tsutsuji/core/img/top_01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 42,
@@ -16927,7 +17161,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.tatebayashi.gunma.jp/core/img/bt_mail.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 64,
@@ -17090,7 +17325,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/img_takasaki_jidoucenter01.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 18,
@@ -17158,7 +17394,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.fantasy.co.jp/wp-content/themes/aeon_fantasy/_assets/images/skidsgarden/og.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 37,
@@ -17340,7 +17577,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/6098.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 28,
@@ -17484,7 +17722,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.nippon-kinunosato.or.jp/sakura/wp-content/uploads/2026/03/76a73b56fdc1a59655571d33b6d62342-300x225.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 5,
@@ -17647,7 +17886,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://kfp-tomo.org/wp-content/uploads/2023/02/eye-gekkanyoteihyo01-550x550.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 6,
@@ -17829,7 +18069,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/4369.jpg",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     },
     {
       "id": 23,
@@ -17897,7 +18138,8 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/img/main-title.png",
-      "google_place_id": null
+      "google_place_id": null,
+      "reservation_note": null
     }
   ],
   "image_assets": [

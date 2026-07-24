@@ -830,25 +830,31 @@ function eventCard(event) {
     : formatDate(event.start_date);
   const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
   const image = mediaThumb(event.primary_image_url, event.title, categoryLabel(event.category), event.images, event);
-  const venue = event.venue_name || event.area_label || event.address || "会場未設定";
-  const price = event.price_note || "料金未設定";
+  const venue = event.venue_name || event.area_label || event.address || "";
+  const price = event.price_note || "";
+  const dateLabel = formatDateRangeCompact(event) || dateRange;
 
   return `
     <article class="event-card ${event.primary_image_url ? "has-image" : ""} ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
       ${image}
       <div class="date-box event-date-box">
         <strong>${escapeHtml(formatMonthDay(event.start_date))}</strong>
-        <span>${escapeHtml(time || dateRange)}</span>
+        <span>${escapeHtml(time || "時間は公式")}</span>
       </div>
       <div class="event-main">
-        <p class="card-kicker">${escapeHtml(event.municipality || event.prefecture || "地域未設定")} / ${escapeHtml(venue)}</p>
+        <p class="card-kicker">${escapeHtml(event.municipality || event.prefecture || "地域未設定")}</p>
         <h3 class="event-title">${escapeHtml(event.title)}</h3>
+        <ul class="card-facts">
+          <li><b>日程</b>${escapeHtml(dateLabel || "公式で確認")}</li>
+          <li><b>時間</b>${escapeHtml(displayOrConfirm(time))}</li>
+          <li><b>会場</b>${escapeHtml(displayOrConfirm(venue))}</li>
+          <li><b>料金</b>${escapeHtml(displayOrConfirm(price))}</li>
+        </ul>
         <div class="event-meta">
           <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
-          <span class="pill neutral">${escapeHtml(price)}</span>
           ${statusPill(event)}
         </div>
-        <p class="summary">${escapeHtml(event.summary || event.venue_name || "")}</p>
+        <p class="summary">${escapeHtml(event.summary || "")}</p>
         <p class="card-trust">${escapeHtml(trustLine(event))}</p>
       </div>
     </article>
@@ -857,8 +863,9 @@ function eventCard(event) {
 
 function placeCard(place) {
   const image = mediaThumb(place.primary_image_url, place.name, placeTypeLabel(place.place_type), place.images, place);
-  const age = place.target_age_note || "対象年齢は公式確認";
-  const price = place.price_note || "料金未設定";
+  const age = place.target_age_note || "";
+  const price = place.price_note || "";
+  const hours = place.hours_note || "";
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   return `
     <article class="event-card ${place.primary_image_url ? "has-image" : ""} ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
@@ -867,14 +874,19 @@ function placeCard(place) {
         <strong>${escapeHtml(indoorOutdoor)}</strong>
       </div>
       <div class="event-main">
-        <p class="card-kicker">${escapeHtml(place.municipality || place.prefecture || "地域未設定")} / ${escapeHtml(age)}</p>
+        <p class="card-kicker">${escapeHtml(place.municipality || place.prefecture || "地域未設定")}</p>
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
+        <ul class="card-facts">
+          <li><b>対象</b>${escapeHtml(displayOrConfirm(compactText(age, 36)))}</li>
+          <li><b>時間</b>${escapeHtml(displayOrConfirm(compactText(hours, 36)))}</li>
+          <li><b>料金</b>${escapeHtml(displayOrConfirm(compactText(price, 36)))}</li>
+          <li><b>駐車場</b>${escapeHtml(displayOrConfirm(compactText(place.parking_note, 36)))}</li>
+        </ul>
         <div class="event-meta">
           <span class="pill category">${escapeHtml(placeTypeLabel(place.place_type))}</span>
-          <span class="pill neutral">${escapeHtml(price)}</span>
           ${statusPill(place)}
         </div>
-        <p class="summary">${escapeHtml(place.features || place.target_age_note || "")}</p>
+        <p class="summary">${escapeHtml(place.features || "")}</p>
         <p class="card-trust">${escapeHtml(trustLine(place))}</p>
       </div>
     </article>
@@ -888,11 +900,13 @@ function openEventDialog(event) {
   const location = [event.prefecture, event.municipality].filter(Boolean).join(" / ");
   const ageLabels = displayAgeLabels(event);
   const facts = [
-    detailFact("開催日", dateShort),
-    detailFact("時間", time),
-    detailFact("会場", event.venue_name),
-    detailFact("料金", event.price_note),
-    detailFact("最終確認", formatVerifiedDate(event.last_verified_at)),
+    detailFact("開催日", dateShort, { fallback: "公式で確認" }),
+    detailFact("時間", time, { fallback: "公式で確認" }),
+    detailFact("会場", event.venue_name, { fallback: "公式で確認" }),
+    detailFact("料金", event.price_note, { fallback: "公式で確認" }),
+    detailFact("駐車場", event.parking_note, { fallback: "公式で確認" }),
+    detailFact("予約", event.reservation_note, { fallback: "公式で確認" }),
+    detailFact("最終確認", formatVerifiedDate(event.last_verified_at), { fallback: "未設定" }),
   ].join("");
   const official = officialUrl(event);
 
@@ -902,27 +916,29 @@ function openEventDialog(event) {
       <div class="dialog-main">
         <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(categoryLabel(event.category))}${event.area_label ? ` · ${escapeHtml(event.area_label)}` : ""}</p>
         <h2>${escapeHtml(event.title)}</h2>
-        ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
+        <div class="detail-fact-strip">${facts}</div>
         ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
         ${isCandidate(event) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
         ${detailParagraph("概要", event.summary)}
         ${detailParagraph("補足", event.notes)}
         ${photoGallery(event.images, event.title)}
         ${detailSection("会場・アクセス", [
-          ["住所", event.address],
+          ["住所", event.address || "公式で確認"],
           ["地域", location],
           ["エリア", event.area_label],
+          ["駐車場", event.parking_note || "公式で確認"],
+          ["予約", event.reservation_note || "公式で確認"],
         ])}
         ${detailSection("主催・情報元", [
           ["主催", event.organizer],
           ["カテゴリ", categoryLabel(event.category)],
           ["開催期間", dateLong !== dateShort ? dateLong : ""],
           ["ソース", event.source_names],
-          ["最終確認", formatVerifiedDate(event.last_verified_at) || event.last_verified_at],
+          ["最終確認", formatVerifiedDate(event.last_verified_at) || event.last_verified_at || "未設定"],
         ])}
       </div>
       <div class="dialog-actions">
-        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
+        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページで最新を確認</a>` : `<span class="trust-banner">公式URL未登録のため、主催・会場へ直接ご確認ください。</span>`}
         <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(event.id))}" data-share-kind="event">共有</button>
         ${mapsUrl(event) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(event))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
         <a class="secondary-button" href="./events/${encodeURIComponent(event.id)}.html">詳細ページ</a>
@@ -939,11 +955,13 @@ function openPlaceDialog(place) {
   const location = [place.prefecture, place.municipality].filter(Boolean).join(" / ");
   const ageLabels = displayAgeLabels(place);
   const facts = [
-    detailFact("対象", compactText(place.target_age_note, 42)),
-    detailFact("料金", compactText(place.price_note, 42)),
-    detailFact("時間", compactText(place.hours_note, 42)),
-    detailFact("屋内/屋外", indoorOutdoorLabel(place.indoor_outdoor)),
-    detailFact("最終確認", formatVerifiedDate(place.last_verified_at)),
+    detailFact("対象", compactText(place.target_age_note, 42), { fallback: "公式で確認" }),
+    detailFact("料金", compactText(place.price_note, 42), { fallback: "公式で確認" }),
+    detailFact("時間", compactText(place.hours_note, 42), { fallback: "公式で確認" }),
+    detailFact("屋内/屋外", indoorOutdoorLabel(place.indoor_outdoor), { fallback: "公式で確認" }),
+    detailFact("駐車場", compactText(place.parking_note, 42), { fallback: "公式で確認" }),
+    detailFact("予約", compactText(place.reservation_note, 42), { fallback: "公式で確認" }),
+    detailFact("最終確認", formatVerifiedDate(place.last_verified_at), { fallback: "未設定" }),
   ].join("");
   const official = officialUrl(place);
 
@@ -953,35 +971,36 @@ function openPlaceDialog(place) {
       <div class="dialog-main">
         <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(placeTypeLabel(place.place_type))} · ${escapeHtml(indoorOutdoorLabel(place.indoor_outdoor))}</p>
         <h2>${escapeHtml(place.name)}</h2>
-        ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
+        <div class="detail-fact-strip">${facts}</div>
         ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
         ${isCandidate(place) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
         ${detailParagraph("特徴", place.features)}
         ${detailParagraph("補足", place.notes)}
         ${photoGallery(place.images, place.name)}
         ${detailSection("利用案内", [
-          ["対象", place.target_age_note],
-          ["料金", place.price_note],
-          ["利用時間", place.hours_note],
-          ["休み", place.closed_note],
+          ["対象", place.target_age_note || "公式で確認"],
+          ["料金", place.price_note || "公式で確認"],
+          ["利用時間", place.hours_note || "公式で確認"],
+          ["休み", place.closed_note || "公式で確認"],
+          ["予約", place.reservation_note || "公式で確認"],
           ["種類", placeTypeLabel(place.place_type)],
         ])}
         ${detailSection("アクセス・設備", [
-          ["住所", place.address],
+          ["住所", place.address || "公式で確認"],
           ["地域", location],
           ["エリア", place.area_label],
-          ["駐車場", place.parking_note],
+          ["駐車場", place.parking_note || "公式で確認"],
           ["食事", place.food_note],
           ["授乳等", place.nursing_note],
           ["ベビーカー", place.stroller_note],
         ])}
         ${detailSection("情報元", [
           ["ソース", place.source_names],
-          ["最終確認", formatVerifiedDate(place.last_verified_at) || place.last_verified_at],
+          ["最終確認", formatVerifiedDate(place.last_verified_at) || place.last_verified_at || "未設定"],
         ])}
       </div>
       <div class="dialog-actions">
-        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
+        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページで最新を確認</a>` : `<span class="trust-banner">公式URL未登録のため、施設へ直接ご確認ください。</span>`}
         <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(place.id))}" data-share-kind="place">共有</button>
         ${mapsUrl(place) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(place))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
         <a class="secondary-button" href="./places/${encodeURIComponent(place.id)}.html">詳細ページ</a>
@@ -1014,9 +1033,17 @@ function unlockDialogScroll() {
   window.scrollTo(0, dialogScrollY);
 }
 
-function detailFact(label, value) {
-  if (!value) return "";
-  return `<span><b>${escapeHtml(label)}</b>${escapeHtml(value)}</span>`;
+function detailFact(label, value, { fallback = "" } = {}) {
+  const raw = String(value || "").trim();
+  const text = raw || fallback;
+  if (!text) return "";
+  const missing = !raw;
+  return `<span class="${missing ? "is-missing" : ""}"><b>${escapeHtml(label)}</b>${escapeHtml(text)}</span>`;
+}
+
+function displayOrConfirm(value) {
+  const text = String(value || "").trim();
+  return text || "公式で確認";
 }
 
 function detailParagraph(title, text) {

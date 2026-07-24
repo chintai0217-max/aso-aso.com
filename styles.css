@@ -1123,7 +1123,7 @@ body.dialog-open {
 
 @media (min-width: 720px) {
   .detail-fact-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
 
@@ -1140,6 +1140,12 @@ body.dialog-open {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.45;
+}
+
+.detail-fact-strip span.is-missing {
+  border-style: dashed;
+  color: #64748b;
+  background: #fff;
 }
 
 .detail-fact-strip b {
@@ -1760,6 +1766,30 @@ select:focus {
   color: #64748b;
   font-size: 12px;
   letter-spacing: 0;
+}
+
+.card-facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.card-facts li {
+  display: grid;
+  grid-template-columns: 2.5em minmax(0, 1fr);
+  gap: 6px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.card-facts b {
+  color: #64748b;
+  font-weight: 800;
 }
 
 .event-title {
@@ -2942,6 +2972,20 @@ video {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .card-facts {
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .card-facts li {
+    font-size: 10px;
+    grid-template-columns: 2.2em minmax(0, 1fr);
+  }
+
+  .card-facts li:nth-child(n + 4) {
+    display: none;
   }
 
   .event-title {
