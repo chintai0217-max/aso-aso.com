@@ -36,6 +36,7 @@ const categoryLabels = {
   nature: "自然",
   performance: "公演",
   seasonal_display: "季節展示",
+  seminar: "セミナー",
   shopping: "買い物",
   sports: "スポーツ",
   stamp_rally: "スタンプラリー",
@@ -69,6 +70,23 @@ const placeTypeLabels = {
   theme_park: "テーマパーク",
   water_play_park: "水遊び公園",
 };
+
+const eventCategoryGroups = [
+  { id: "festival", label: "祭り・花火", members: ["festival", "fireworks", "illumination", "seasonal_display"] },
+  { id: "food", label: "食・マルシェ", members: ["market", "food", "food_festival"] },
+  { id: "sports", label: "スポーツ", members: ["sports", "esports"] },
+  { id: "nature", label: "自然・花", members: ["nature", "flower", "tour"] },
+  { id: "experience", label: "体験・子ども", members: ["experience", "workshop", "craft", "kids", "stamp_rally", "contest"] },
+  { id: "culture", label: "公演・展示", members: ["performance", "exhibition", "lecture", "seminar", "entertainment", "international_exchange", "traditional_performance", "transport", "shopping"] },
+];
+
+const placeTypeGroups = [
+  { id: "indoor", label: "屋内遊び", members: ["indoor_play", "park_indoor_play", "animal_indoor_play", "indoor_sports"] },
+  { id: "childcare", label: "児童館・子育て", members: ["child_center", "childcare_support"] },
+  { id: "park", label: "公園・プール", members: ["park", "playground", "water_play_park", "pool"] },
+  { id: "amusement", label: "遊園地", members: ["amusement_park", "theme_park", "safari_park"] },
+  { id: "museum", label: "博物館・体験", members: ["museum", "science_museum", "nature_museum", "dinosaur_museum", "railway_museum", "museum_workshop", "park_science", "craft_workshop", "animal_cafe"] },
+];
 
 const els = {};
 
@@ -111,9 +129,6 @@ async function loadData() {
 
 function renderLoadError(error) {
   console.error(error);
-  els.metricEvents.textContent = "0";
-  els.metricSources.textContent = "0";
-  els.metricVerified.textContent = "0";
   els.resultCount.textContent = "0件";
   els.eventList.innerHTML = `
     <div class="empty-state">
@@ -124,9 +139,6 @@ function renderLoadError(error) {
 
 function bindElements() {
   [
-    "metricEvents",
-    "metricSources",
-    "metricVerified",
     "topMotenashiButton",
     "modeEventsButton",
     "modePlacesButton",
@@ -294,15 +306,15 @@ function updateFilterVisibility() {
 }
 
 function populateFilters() {
-  const records = currentRecords();
-  const categoryKey = state.mode === "events" ? "category" : "place_type";
-  const categories = unique(records.map((record) => record[categoryKey]).filter(Boolean));
+  const groups = currentCategoryGroups();
   els.categoryFieldLabel.textContent = state.mode === "events" ? "カテゴリ" : "種別";
 
-  fillSelect(
-    els.categorySelect,
-    [["all", "すべて"]].concat(categories.map((item) => [item, state.mode === "events" ? categoryLabel(item) : placeTypeLabel(item)]))
-  );
+  const options = [["all", "すべて"]].concat(groups.map((group) => [group.id, group.label]));
+  if (state.category !== "all" && !options.some(([value]) => value === state.category)) {
+    state.category = "all";
+  }
+  fillSelect(els.categorySelect, options);
+  els.categorySelect.value = state.category;
   populateMunicipalities();
 }
 
@@ -330,7 +342,6 @@ function render() {
 
   document.body.dataset.mode = state.mode;
   els.topMotenashiButton.classList.toggle("is-active", state.motenashiOnly);
-  renderMetrics();
   renderDateChips();
   renderCategoryChips();
   renderCoverage();
@@ -352,17 +363,6 @@ function renderMapSelection() {
   if (els.clearMapSelection) {
     els.clearMapSelection.hidden = selected === "all";
   }
-}
-
-function renderMetrics() {
-  els.metricEvents.textContent = state.data.events.length;
-  els.metricSources.textContent = state.data.child_play_places.length;
-  const municipalities = new Set(
-    [...state.data.events, ...state.data.child_play_places]
-      .map((record) => record.municipality)
-      .filter(Boolean)
-  );
-  els.metricVerified.textContent = municipalities.size;
 }
 
 function renderDateChips() {
@@ -387,23 +387,40 @@ function renderDateChips() {
 }
 
 function renderCategoryChips() {
+  const groups = currentCategoryGroups();
   const key = state.mode === "events" ? "category" : "place_type";
-  const labelFn = state.mode === "events" ? categoryLabel : placeTypeLabel;
-  const counts = new Map();
+  const counts = new Map(groups.map((group) => [group.id, 0]));
+
   recordsExceptCategory().forEach((record) => {
     const value = record[key];
-    if (value) counts.set(value, (counts.get(value) || 0) + 1);
+    if (!value) return;
+    const group = groups.find((item) => item.members.includes(value));
+    if (!group) return;
+    counts.set(group.id, (counts.get(group.id) || 0) + 1);
   });
-  const entries = Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"));
+
   const chips = [
     `<button type="button" class="chip ${state.category === "all" ? "is-active" : ""}" data-category="all">すべて</button>`,
   ].concat(
-    entries.map(
-      ([value, count]) =>
-        `<button type="button" class="chip ${state.category === value ? "is-active" : ""}" data-category="${escapeHtml(value)}">${escapeHtml(labelFn(value))}<em>${count}</em></button>`
-    )
+    groups
+      .filter((group) => (counts.get(group.id) || 0) > 0)
+      .map((group) => {
+        const count = counts.get(group.id) || 0;
+        return `<button type="button" class="chip ${state.category === group.id ? "is-active" : ""}" data-category="${escapeHtml(group.id)}">${escapeHtml(group.label)}<em>${count}</em></button>`;
+      })
   );
   els.categoryChips.innerHTML = chips.join("");
+}
+
+function currentCategoryGroups() {
+  return state.mode === "events" ? eventCategoryGroups : placeTypeGroups;
+}
+
+function matchesSelectedCategory(value) {
+  if (state.category === "all") return true;
+  const group = currentCategoryGroups().find((item) => item.id === state.category);
+  if (group) return group.members.includes(value);
+  return value === state.category;
 }
 
 function recordsExceptCategory() {
@@ -859,7 +876,7 @@ function filteredRecords() {
     if (!matchesDateScope(event)) return false;
     if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
     if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
-    if (state.category !== "all" && event.category !== state.category) return false;
+    if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
     if (state.status !== "all" && event.status !== state.status) return false;
     if (!state.query) return true;
 
@@ -952,7 +969,7 @@ function isMotenashiEvent(event) {
 function filteredPlaces() {
   return state.data.child_play_places.filter((place) => {
     if (state.municipality !== "all" && place.municipality !== state.municipality) return false;
-    if (state.category !== "all" && place.place_type !== state.category) return false;
+    if (state.category !== "all" && !matchesSelectedCategory(place.place_type)) return false;
     if (state.status !== "all" && place.status !== state.status) return false;
     if (!state.query) return true;
 
