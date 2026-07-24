@@ -292,24 +292,20 @@ select:focus {
 }
 
 .event-dialog,
-.dialog-image,
 .detail-grid {
   border-radius: 16px;
 }
 
 .dialog-image {
-  display: grid;
-  place-items: center;
+  display: block;
   aspect-ratio: 16 / 9;
-  max-height: 360px;
   background: #0f172a;
 }
 
 .dialog-image img {
   width: 100%;
   height: 100%;
-  max-height: none;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .detail-grid {
@@ -988,46 +984,76 @@ select:focus {
 }
 
 .event-dialog {
-  width: min(720px, calc(100vw - 28px));
+  position: relative;
+  width: min(920px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
   border: 0;
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 0;
-  box-shadow: var(--shadow);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.28);
 }
 
 .event-dialog::backdrop {
-  background: rgba(12, 19, 16, 0.45);
+  background: rgba(12, 19, 16, 0.52);
 }
 
 .dialog-close {
   position: absolute;
   top: 12px;
   right: 12px;
-  width: 38px;
-  min-height: 38px;
-  border: 1px solid var(--line);
+  z-index: 3;
+  width: 40px;
+  min-height: 40px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 50%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   font-size: 22px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+}
+
+#dialogBody {
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
 }
 
 .dialog-content {
-  padding: 28px;
+  padding: 0;
+}
+
+.dialog-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dialog-main {
+  padding: 8px 28px 18px;
+}
+
+.dialog-kicker {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .dialog-image {
   width: 100%;
   position: relative;
-  max-height: 280px;
-  margin-bottom: 18px;
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  max-height: min(320px, 36dvh);
+  margin: 0;
   overflow: hidden;
-  border-radius: 8px;
-  background: var(--panel-soft);
+  border-radius: 0;
+  background: linear-gradient(160deg, #dbeafe, #f1f5f9 55%, #e2e8f0);
 }
 
 .dialog-image > span {
   display: grid;
-  min-height: 220px;
+  min-height: 100%;
   place-items: center;
   padding: 20px;
   color: var(--muted);
@@ -1036,14 +1062,22 @@ select:focus {
 }
 
 .dialog-image img {
-  max-height: 280px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
 }
 
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
-  margin: -8px 0 18px;
+  margin: 4px 0 8px;
+}
+
+.photo-gallery:has(> :only-child) {
+  grid-template-columns: minmax(160px, 280px);
 }
 
 .gallery-thumb {
@@ -1063,29 +1097,97 @@ select:focus {
 }
 
 .dialog-content h2 {
-  padding-right: 44px;
-  margin-bottom: 12px;
-  font-size: 24px;
-  line-height: 1.4;
+  padding-right: 48px;
+  margin: 0 0 14px;
+  font-size: clamp(22px, 2.8vw, 30px);
+  line-height: 1.35;
+}
+
+.detail-fact-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+@media (min-width: 720px) {
+  .detail-fact-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.detail-fact-strip span {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  min-height: 0;
+  padding: 10px 12px;
+  border: 1px solid #cfe0ec;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.detail-fact-strip b {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.detail-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.detail-section {
+  margin: 0 0 18px;
+}
+
+.detail-section h3 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.detail-copy {
+  margin: 0;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.85;
+  white-space: pre-wrap;
 }
 
 .detail-grid {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 10px 14px;
-  margin: 20px 0;
-  padding: 16px;
-  background: var(--panel-soft);
-  border-radius: 8px;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 12px 16px;
+  margin: 0;
+  padding: 16px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
 }
 
 .detail-grid dt {
-  color: var(--muted);
+  color: #64748b;
+  font-size: 13px;
   font-weight: 800;
 }
 
 .detail-grid dd {
   margin: 0;
+  color: #0f172a;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .source-link {
@@ -1411,7 +1513,6 @@ select:focus {
 }
 
 .event-dialog,
-.dialog-image,
 .detail-grid {
   border-radius: 16px;
 }
@@ -1938,19 +2039,22 @@ select:focus {
   }
 
   .event-dialog {
-    width: min(100vw - 18px, 720px);
+    width: min(100vw - 12px, 920px);
+    max-height: calc(100dvh - 12px);
+    border-radius: 14px;
   }
 
-  .dialog-content {
-    padding: 18px;
+  .dialog-main {
+    padding: 6px 18px 14px;
+  }
+
+  .dialog-actions {
+    padding: 12px 18px 18px;
   }
 
   .dialog-image {
-    max-height: 220px;
-  }
-
-  .dialog-image img {
-    max-height: 220px;
+    aspect-ratio: 16 / 10;
+    max-height: min(240px, 32dvh);
   }
 
   .photo-gallery {
@@ -1959,11 +2063,18 @@ select:focus {
 
   .dialog-content h2 {
     padding-right: 36px;
-    font-size: 20px;
+    font-size: 22px;
   }
 
+  .detail-fact-strip,
   .detail-quick-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 10px 12px;
+    padding: 14px;
   }
 }
 
@@ -2073,6 +2184,15 @@ button.coverage-item.is-active {
   margin-top: 18px;
 }
 
+.dialog-detail > .dialog-actions {
+  margin-top: auto;
+  padding: 14px 28px 22px;
+  border-top: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.96);
+  position: sticky;
+  bottom: 0;
+}
+
 .dialog-actions .primary-button,
 .dialog-actions .secondary-button {
   display: inline-flex;
@@ -2114,7 +2234,9 @@ button.coverage-item.is-active {
 }
 
 .static-detail-page {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.08), transparent 34%),
+    linear-gradient(180deg, #f8fafc 0%, var(--bg) 42%);
   color: var(--ink);
 }
 
@@ -2125,33 +2247,43 @@ button.coverage-item.is-active {
 }
 
 .static-detail {
-  padding: clamp(22px, 4vw, 42px);
+  overflow: hidden;
+  padding: 0;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   background: #fff;
-  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+}
+
+.static-detail-head {
+  padding: clamp(22px, 4vw, 40px) clamp(22px, 4vw, 40px) 8px;
 }
 
 .static-detail h1 {
   max-width: 860px;
-  margin: 8px 0 14px;
+  margin: 8px 0 12px;
   color: var(--ink);
-  font-size: clamp(30px, 4.5vw, 48px);
-  line-height: 1.18;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.2;
 }
 
 .static-detail .lead {
   max-width: 780px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.static-detail-body {
+  padding: 8px clamp(22px, 4vw, 40px) clamp(24px, 4vw, 40px);
 }
 
 .static-detail-image {
   overflow: hidden;
-  margin: 24px 0;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
   background: #eef6fb;
   aspect-ratio: 16 / 9;
 }
@@ -2169,23 +2301,34 @@ button.coverage-item.is-active {
 
 .static-detail-section h2 {
   margin: 0 0 10px;
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: 800;
   line-height: 1.35;
 }
 
 .static-detail-section p {
+  margin: 0;
   color: #334155;
   font-size: 16px;
   line-height: 1.9;
+  white-space: pre-wrap;
 }
 
 .static-detail-grid {
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 .static-detail-actions {
   justify-content: flex-start;
   margin-top: 28px;
+}
+
+.static-detail .detail-fact-strip {
+  margin: 18px 0 8px;
+}
+
+.static-detail .photo-gallery {
+  margin-top: 18px;
 }
 
 @media (max-width: 640px) {
@@ -2194,12 +2337,17 @@ button.coverage-item.is-active {
   }
 
   .static-detail {
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .static-detail-image {
     aspect-ratio: 4 / 3;
+  }
+
+  .static-detail-head,
+  .static-detail-body {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -2214,12 +2362,13 @@ button.coverage-item.is-active {
   flex-direction: column;
   justify-content: center;
   gap: 18px;
-  flex: 0 1 360px;
+  flex: 4 1 0;
   min-width: 0;
+  max-width: none;
 }
 
 .hero-map {
-  flex: 1 1 0;
+  flex: 6 1 0;
   width: auto;
   min-width: 0;
   max-width: none;

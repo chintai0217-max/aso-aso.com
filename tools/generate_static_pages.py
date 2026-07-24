@@ -116,16 +116,72 @@ def place_url(place):
 
 
 def date_text(event):
-    start = event.get("start_date") or "日程未設定"
+    start = event.get("start_date")
     end = event.get("end_date")
+    if not start:
+        return ""
+    start_label = format_date_long(start)
     if end and end != start:
-        return f"{start} - {end}"
-    return start
+        return f"{start_label} 〜 {format_date_long(end)}"
+    return start_label
+
+
+def date_text_compact(event):
+    start = event.get("start_date")
+    end = event.get("end_date")
+    if not start:
+        return ""
+    start_label = format_date_compact(start)
+    if end and end != start:
+        same_year = str(start)[:4] == str(end)[:4]
+        return f"{start_label} 〜 {format_date_compact(end, include_year=not same_year)}"
+    return start_label
+
+
+def format_date_long(value):
+    try:
+        year, month, day = [int(part) for part in str(value).split("-")]
+        weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+        label = weekdays[date(year, month, day).weekday()]
+        return f"{year}年{month}月{day}日（{label}）"
+    except Exception:
+        return str(value or "")
+
+
+def format_date_compact(value, include_year=True):
+    try:
+        year, month, day = [int(part) for part in str(value).split("-")]
+        weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+        label = weekdays[date(year, month, day).weekday()]
+        if not include_year:
+            return f"{month}/{day}（{label}）"
+        return f"{year}/{month}/{day}（{label}）"
+    except Exception:
+        return str(value or "")
+
+
+def compact_text(value, limit=42):
+    text = " ".join(str(value or "").split())
+    if not text:
+        return ""
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "…"
 
 
 def time_text(event):
     values = [event.get("start_time"), event.get("end_time")]
-    return " - ".join([value for value in values if value]) or "時間未設定"
+    return " - ".join([value for value in values if value]) or ""
+
+
+def maps_url(record):
+    name = record.get("venue_name") or record.get("name") or ""
+    query = record.get("address") or " ".join(
+        [part for part in [name, record.get("municipality"), record.get("prefecture")] if part]
+    )
+    if not query:
+        return ""
+    return f"https://www.google.com/maps/search/?api=1&query={url_quote(query)}"
 
 
 def image_tag(url, alt):
@@ -133,8 +189,75 @@ def image_tag(url, alt):
         return ""
     return (
         '<div class="static-detail-image">'
-        f'<img src="{html(url)}" alt="{html(alt)}" loading="eager" decoding="async" referrerpolicy="no-referrer">'
+        f'<img src="{html(url)}" alt="{html(alt)}" loading="eager" decoding="async" referrerpolicy="no-referrer" '
+        'onerror="this.closest(\'.static-detail-image\').hidden=true">'
         "</div>"
+    )
+
+
+def gallery_html(images, alt):
+    items = []
+    seen = set()
+    for image in images or []:
+        url = image.get("image_url") if isinstance(image, dict) else None
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        items.append(image if isinstance(image, dict) else {"image_url": url})
+    items = filter_relevant_images(items, alt)
+    if len(items) <= 1:
+        return ""
+    thumbs = []
+    for image in items[1:5]:
+        href = image.get("source_page_url") or image.get("image_url")
+        thumbs.append(
+            f'<a href="{html(href)}" target="_blank" rel="noreferrer" class="gallery-thumb">'
+            f'<img src="{html(image.get("image_url"))}" alt="{html(image.get("alt_text") or alt)}" '
+            'loading="lazy" decoding="async" referrerpolicy="no-referrer">'
+            "</a>"
+        )
+    return f'<div class="photo-gallery" aria-label="写真ギャラリー">{"".join(thumbs)}</div>'
+
+
+def filter_relevant_images(images, title):
+    if len(images) <= 1:
+        return images
+    key = "".join(str(title or "").split())
+    for ch in "！？!?0123456789０１２３４５６７８９":
+        key = key.replace(ch, "")
+    if len(key) < 4:
+        return images[:2]
+    needle = key[: min(10, len(key))]
+    matched = []
+    for index, image in enumerate(images):
+        if index == 0:
+            matched.append(image)
+            continue
+        alt = "".join(str(image.get("alt_text") or "").split())
+        if not alt:
+            continue
+        if needle in alt or alt[: min(6, len(alt))] in needle:
+            matched.append(image)
+    return matched if len(matched) > 1 else images[:1]
+
+
+def fact_strip(items):
+    cells = []
+    for label, value in items:
+        if not value:
+            continue
+        cells.append(f"<span><b>{html(label)}</b>{html(value)}</span>")
+    if not cells:
+        return ""
+    return f'<div class="detail-fact-strip">{"".join(cells)}</div>'
+
+
+def section_paragraph(title, text):
+    if not text:
+        return ""
+    return (
+        f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>'
+        f'<p class="detail-copy">{html(text)}</p></section>'
     )
 
 
@@ -185,9 +308,6 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
     </nav>
     <main class="static-detail-shell">
       <article class="static-detail">
-        <p class="eyebrow">{html(kind_label)}</p>
-        <h1>{html(h1)}</h1>
-        <p class="lead">{html(kicker)}</p>
         {body}
       </article>
     </main>
@@ -206,9 +326,18 @@ def details(items):
     return '<dl class="detail-grid static-detail-grid">' + "".join(rows) + "</dl>"
 
 
-def action_links(primary_url, primary_label, home_query):
+def detail_section(title, items):
+    grid = details(items)
+    if not grid:
+        return ""
+    return f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>{grid}</section>'
+
+
+def action_links(primary_url, primary_label, home_query, map_link=""):
     query = url_quote(str(home_query or ""))
     links = [f'<a class="secondary-button" href="../?q={html(query)}">一覧で探す</a>']
+    if map_link:
+        links.append(f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">地図で見る</a>')
     if primary_url:
         links.append(
             f'<a class="primary-button" href="{html(primary_url)}" target="_blank" rel="noreferrer">{html(primary_label)}</a>'
@@ -305,23 +434,53 @@ def render_event(event):
         f"{event.get('summary') or ''}",
         155,
     )
-    quick = [
-        ("日付", date_text(event)),
-        ("時間", time_text(event)),
-        ("会場", event.get("venue_name")),
-        ("住所", event.get("address")),
-        ("地域", " / ".join([x for x in [event.get("prefecture"), event.get("municipality")] if x])),
-        ("カテゴリ", category),
-        ("料金", event.get("price_note")),
-        ("主催", event.get("organizer")),
-        ("情報元", event.get("source_names")),
-        ("最終確認", event.get("last_verified_at")),
-    ]
+    location = " / ".join([x for x in [event.get("prefecture"), event.get("municipality")] if x])
+    kicker_parts = [event.get("municipality") or "群馬県", category, event.get("area_label")]
+    kicker = " · ".join([part for part in kicker_parts if part])
+    date_long = date_text(event)
+    date_short = date_text_compact(event)
     body = (
         image_tag(event.get("primary_image_url"), event.get("title"))
-        + f'<section class="static-detail-section"><h2>概要</h2><p>{html(event.get("summary") or "詳細は公式ページで確認してください。")}</p></section>'
-        + details(quick)
-        + action_links(event.get("canonical_url"), "公式ページを見る", event.get("title"))
+        + '<div class="static-detail-head">'
+        + f'<p class="eyebrow">群馬のイベント</p><h1>{html(event.get("title"))}</h1>'
+        + f'<p class="lead">{html(kicker)}</p>'
+        + fact_strip(
+            [
+                ("開催日", date_short),
+                ("時間", time_text(event)),
+                ("会場", event.get("venue_name")),
+                ("料金", event.get("price_note")),
+            ]
+        )
+        + "</div><div class=\"static-detail-body\">"
+        + section_paragraph("概要", event.get("summary"))
+        + section_paragraph("補足", event.get("notes"))
+        + gallery_html(event.get("images"), event.get("title"))
+        + detail_section(
+            "会場・アクセス",
+            [
+                ("住所", event.get("address")),
+                ("地域", location),
+                ("エリア", event.get("area_label")),
+            ],
+        )
+        + detail_section(
+            "主催・情報元",
+            [
+                ("主催", event.get("organizer")),
+                ("カテゴリ", category),
+                ("開催期間", date_long if date_long != date_short else ""),
+                ("ソース", event.get("source_names")),
+                ("最終確認", event.get("last_verified_at")),
+            ],
+        )
+        + action_links(
+            event.get("canonical_url"),
+            "公式ページを見る",
+            event.get("title"),
+            maps_url(event),
+        )
+        + "</div>"
     )
     return layout(
         title,
@@ -330,7 +489,7 @@ def render_event(event):
         event.get("primary_image_url"),
         "群馬のイベント",
         event.get("title"),
-        f"{event.get('municipality') or '群馬県'} / {category} / {date_text(event)}",
+        kicker,
         body,
         event_structured_data(event, canonical),
     )
@@ -346,26 +505,61 @@ def render_place(place):
         f"{place_type}、{indoor}。{place.get('features') or place.get('target_age_note') or ''}",
         155,
     )
-    quick = [
-        ("地域", " / ".join([x for x in [place.get("prefecture"), place.get("municipality")] if x])),
-        ("住所", place.get("address")),
-        ("種類", place_type),
-        ("屋内/屋外", indoor),
-        ("対象", place.get("target_age_note")),
-        ("特徴", place.get("features")),
-        ("料金", place.get("price_note")),
-        ("利用時間", place.get("hours_note")),
-        ("休み", place.get("closed_note")),
-        ("駐車場", place.get("parking_note")),
-        ("授乳等", place.get("nursing_note")),
-        ("情報元", place.get("source_names")),
-        ("最終確認", place.get("last_verified_at")),
-    ]
+    location = " / ".join([x for x in [place.get("prefecture"), place.get("municipality")] if x])
+    kicker = " · ".join([part for part in [place.get("municipality") or "群馬県", place_type, indoor] if part])
     body = (
         image_tag(place.get("primary_image_url"), place.get("name"))
-        + f'<section class="static-detail-section"><h2>概要</h2><p>{html(place.get("features") or place.get("target_age_note") or "詳細は公式ページで確認してください。")}</p></section>'
-        + details(quick)
-        + action_links(place.get("official_url"), "公式ページを見る", place.get("name"))
+        + '<div class="static-detail-head">'
+        + f'<p class="eyebrow">群馬の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
+        + f'<p class="lead">{html(kicker)}</p>'
+        + fact_strip(
+            [
+                ("対象", compact_text(place.get("target_age_note"))),
+                ("料金", compact_text(place.get("price_note"))),
+                ("時間", compact_text(place.get("hours_note"))),
+                ("屋内/屋外", indoor),
+            ]
+        )
+        + "</div><div class=\"static-detail-body\">"
+        + section_paragraph("特徴", place.get("features"))
+        + section_paragraph("補足", place.get("notes"))
+        + gallery_html(place.get("images"), place.get("name"))
+        + detail_section(
+            "利用案内",
+            [
+                ("対象", place.get("target_age_note")),
+                ("料金", place.get("price_note")),
+                ("利用時間", place.get("hours_note")),
+                ("休み", place.get("closed_note")),
+                ("種類", place_type),
+            ],
+        )
+        + detail_section(
+            "アクセス・設備",
+            [
+                ("住所", place.get("address")),
+                ("地域", location),
+                ("エリア", place.get("area_label")),
+                ("駐車場", place.get("parking_note")),
+                ("食事", place.get("food_note")),
+                ("授乳等", place.get("nursing_note")),
+                ("ベビーカー", place.get("stroller_note")),
+            ],
+        )
+        + detail_section(
+            "情報元",
+            [
+                ("ソース", place.get("source_names")),
+                ("最終確認", place.get("last_verified_at")),
+            ],
+        )
+        + action_links(
+            place.get("official_url"),
+            "公式ページを見る",
+            place.get("name"),
+            maps_url(place),
+        )
+        + "</div>"
     )
     return layout(
         title,
@@ -374,7 +568,7 @@ def render_place(place):
         place.get("primary_image_url"),
         "群馬の子どもの遊び場",
         place.get("name"),
-        f"{place.get('municipality') or '群馬県'} / {place_type} / {indoor}",
+        kicker,
         body,
         place_structured_data(place, canonical),
     )

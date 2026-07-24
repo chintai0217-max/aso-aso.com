@@ -185,6 +185,11 @@
             </label>
 
             <label class="field">
+              <span>年代</span>
+              <select id="ageSelect"></select>
+            </label>
+
+            <label class="field">
               <span id="categoryFieldLabel">カテゴリ</span>
               <select id="categorySelect"></select>
             </label>
@@ -199,19 +204,9 @@
       </aside>
 
       <section class="content">
-        <div class="toolbar">
-          <div>
-            <p class="results-label">検索結果</p>
-            <h2 id="resultCount">-件</h2>
-          </div>
-          <div class="toolbar-actions">
-            <button id="sortDateButton" class="icon-button is-active" type="button" title="日付順">日付順</button>
-            <button id="sortAreaButton" class="icon-button" type="button" title="地域順">地域順</button>
-          </div>
-        </div>
-
         <div class="quick-filters">
           <div id="dateChips" class="chip-row" role="group" aria-label="日程でしぼり込み"></div>
+          <div id="ageChips" class="chip-row" role="group" aria-label="年代でしぼり込み"></div>
           <div id="categoryChips" class="chip-row" role="group" aria-label="カテゴリでしぼり込み"></div>
         </div>
 

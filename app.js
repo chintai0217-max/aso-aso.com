@@ -7,6 +7,7 @@ const state = {
   query: "",
   municipality: "all",
   category: "all",
+  age: "all",
   status: "all",
   dateScope: "upcoming",
   sort: "date",
@@ -88,6 +89,23 @@ const placeTypeGroups = [
   { id: "museum", label: "博物館・体験", members: ["museum", "science_museum", "nature_museum", "dinosaur_museum", "railway_museum", "museum_workshop", "park_science", "craft_workshop", "animal_cafe"] },
 ];
 
+const ageGroups = [
+  { id: "infant", label: "乳幼児" },
+  { id: "preschool", label: "未就学" },
+  { id: "elementary", label: "小学生" },
+  { id: "general", label: "中高生・一般" },
+];
+
+const agePatterns = {
+  infant: /乳児|乳幼児|0歳|1歳|2歳|6か月|生後|未就園|よちよち|ベビー|赤ちゃん/,
+  preschool: /未就学|就園前|就学前|幼児|保育園|幼稚園|園児|小学校入学前|入学前/,
+  elementary: /小学生|小学\d|小学校|児童(?!館)|低学年|高学年|キッズ/,
+  general: /中学生|高校生?|中高生|18歳|大学生|大人|一般|小中学生/,
+};
+
+const openAgePattern = /年齢制限なし|だれでも|どなたでも|自由利用/;
+const familyAgePattern = /子ども|子供|親子/;
+
 const els = {};
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -129,7 +147,6 @@ async function loadData() {
 
 function renderLoadError(error) {
   console.error(error);
-  els.resultCount.textContent = "0件";
   els.eventList.innerHTML = `
     <div class="empty-state">
       データを読み込めませんでした。ローカルで開く場合は同梱の data/events.js を確認してください。
@@ -146,17 +163,16 @@ function bindElements() {
     "filterBody",
     "searchInput",
     "municipalitySelect",
+    "ageSelect",
     "categoryFieldLabel",
     "categorySelect",
     "resetButton",
     "coverageList",
     "gunmaMap",
     "clearMapSelection",
-    "resultCount",
     "dateChips",
+    "ageChips",
     "categoryChips",
-    "sortDateButton",
-    "sortAreaButton",
     "eventList",
     "eventDialog",
     "closeDialog",
@@ -180,6 +196,7 @@ function bindEvents() {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
       state.category = "all";
+      state.age = "all";
       state.municipality = "all";
       els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
       els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
@@ -197,6 +214,11 @@ function bindEvents() {
     setMunicipality(event.target.value, { scroll: false });
   });
 
+  els.ageSelect.addEventListener("change", (event) => {
+    state.age = event.target.value;
+    render();
+  });
+
   els.categorySelect.addEventListener("change", (event) => {
     state.category = event.target.value;
     render();
@@ -206,6 +228,14 @@ function bindEvents() {
     const button = event.target.closest("[data-date-scope]");
     if (!button) return;
     setDateScope(button.dataset.dateScope);
+  });
+
+  els.ageChips.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-age]");
+    if (!button) return;
+    state.age = button.dataset.age;
+    els.ageSelect.value = state.age;
+    render();
   });
 
   els.categoryChips.addEventListener("click", (event) => {
@@ -233,32 +263,18 @@ function bindEvents() {
     setMunicipality("all", { scroll: false });
   });
 
-  els.sortDateButton.addEventListener("click", () => {
-    state.sort = "date";
-    els.sortDateButton.classList.add("is-active");
-    els.sortAreaButton.classList.remove("is-active");
-    render();
-  });
-
-  els.sortAreaButton.addEventListener("click", () => {
-    state.sort = "area";
-    els.sortAreaButton.classList.add("is-active");
-    els.sortDateButton.classList.remove("is-active");
-    render();
-  });
-
   els.resetButton.addEventListener("click", () => {
     state.query = "";
     state.municipality = "all";
     state.category = "all";
+    state.age = "all";
     state.status = "all";
     state.dateScope = "upcoming";
     state.sort = "date";
     state.motenashiOnly = false;
     els.searchInput.value = "";
     els.categorySelect.value = "all";
-    els.sortDateButton.classList.add("is-active");
-    els.sortAreaButton.classList.remove("is-active");
+    els.ageSelect.value = "all";
     populateMunicipalities();
     render();
   });
@@ -313,6 +329,12 @@ function populateFilters() {
   }
   fillSelect(els.categorySelect, options);
   els.categorySelect.value = state.category;
+
+  fillSelect(
+    els.ageSelect,
+    [["all", "すべて"]].concat(ageGroups.map((group) => [group.id, group.label]))
+  );
+  els.ageSelect.value = state.age;
   populateMunicipalities();
 }
 
@@ -341,6 +363,7 @@ function render() {
   document.body.dataset.mode = state.mode;
   els.topMotenashiButton.classList.toggle("is-active", state.motenashiOnly);
   renderDateChips();
+  renderAgeChips();
   renderCategoryChips();
   renderCoverage();
   renderMapSelection();
@@ -380,6 +403,27 @@ function renderDateChips() {
         `<button type="button" class="chip ${state.dateScope === value ? "is-active" : ""}" data-date-scope="${value}">${label}</button>`
     )
     .join("");
+}
+
+function renderAgeChips() {
+  const counts = new Map(ageGroups.map((group) => [group.id, 0]));
+  recordsExceptAge().forEach((record) => {
+    detectAgeTags(record).forEach((tag) => {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    });
+  });
+
+  const chips = [
+    `<button type="button" class="chip ${state.age === "all" ? "is-active" : ""}" data-age="all">年代すべて</button>`,
+  ].concat(
+    ageGroups
+      .filter((group) => state.age === group.id || (counts.get(group.id) || 0) > 0)
+      .map((group) => {
+        const count = counts.get(group.id) || 0;
+        return `<button type="button" class="chip ${state.age === group.id ? "is-active" : ""}" data-age="${escapeHtml(group.id)}">${escapeHtml(group.label)}<em>${count}</em></button>`;
+      })
+  );
+  els.ageChips.innerHTML = chips.join("");
 }
 
 function renderCategoryChips() {
@@ -427,6 +471,69 @@ function recordsExceptCategory() {
   return records;
 }
 
+function recordsExceptAge() {
+  const saved = state.age;
+  state.age = "all";
+  const records = filteredRecords();
+  state.age = saved;
+  return records;
+}
+
+function ageSearchText(record) {
+  if (record.place_type != null || record.target_age_note != null) {
+    return [
+      record.target_age_note,
+      record.features,
+      record.name,
+      record.place_type,
+    ]
+      .filter(Boolean)
+      .join(" ");
+  }
+  return [
+    record.title,
+    record.summary,
+    record.notes,
+    record.category,
+    categoryLabels[record.category] || "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function detectAgeTags(record) {
+  const text = ageSearchText(record);
+  const tags = new Set(
+    ageGroups.map((group) => group.id).filter((id) => agePatterns[id].test(text))
+  );
+
+  if (openAgePattern.test(text)) {
+    return ageGroups.map((group) => group.id);
+  }
+
+  if (record.category === "kids") {
+    tags.add("preschool");
+    tags.add("elementary");
+  }
+
+  if (!tags.size && familyAgePattern.test(text)) {
+    return ["infant", "preschool", "elementary"];
+  }
+
+  if (!tags.size) {
+    // イベントは年齢記載が少ないため、明示がないものは中高生・一般扱い
+    if (record.start_date || record.title) return ["general"];
+    return ageGroups.map((group) => group.id);
+  }
+
+  return Array.from(tags);
+}
+
+function matchesAgeGroup(record) {
+  if (state.age === "all") return true;
+  return detectAgeTags(record).includes(state.age);
+}
+
 function renderCoverage() {
   const records = currentRecords();
   const counts = new Map();
@@ -451,8 +558,6 @@ function renderCoverage() {
 }
 
 function renderList(records) {
-  els.resultCount.textContent = `${records.length}件`;
-
   if (records.length === 0) {
     els.eventList.innerHTML = `<div class="empty-state">条件に一致するデータがありません。</div>`;
     return;
@@ -565,36 +670,45 @@ function placeCard(place) {
 }
 
 function openEventDialog(event) {
-  const date = event.end_date && event.end_date !== event.start_date
-    ? `${formatDate(event.start_date)} - ${formatDate(event.end_date)}`
-    : formatDate(event.start_date);
-  const time = [event.start_time, event.end_time].filter(Boolean).join(" - ") || "未設定";
+  const dateLong = formatDateRange(event);
+  const dateShort = formatDateRangeCompact(event);
+  const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
+  const location = [event.prefecture, event.municipality].filter(Boolean).join(" / ");
+  const ageLabels = displayAgeLabels(event);
+  const facts = [
+    detailFact("開催日", dateShort),
+    detailFact("時間", time),
+    detailFact("会場", event.venue_name),
+    detailFact("料金", event.price_note),
+  ].join("");
 
   els.dialogBody.innerHTML = `
-    <div class="dialog-content">
+    <div class="dialog-content dialog-detail">
       ${dialogImage(event.primary_image_url, event.title, event)}
-      ${photoGallery(event.images, event.title)}
-      <h2>${escapeHtml(event.title)}</h2>
-      <div class="event-meta">
-        <span class="pill">${escapeHtml(event.prefecture)} / ${escapeHtml(event.municipality || "未設定")}</span>
-        <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
+      <div class="dialog-main">
+        <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(categoryLabel(event.category))}${event.area_label ? ` · ${escapeHtml(event.area_label)}` : ""}</p>
+        <h2>${escapeHtml(event.title)}</h2>
+        ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
+        ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
+        ${detailParagraph("概要", event.summary)}
+        ${detailParagraph("補足", event.notes)}
+        ${photoGallery(event.images, event.title)}
+        ${detailSection("会場・アクセス", [
+          ["住所", event.address],
+          ["地域", location],
+          ["エリア", event.area_label],
+        ])}
+        ${detailSection("主催・情報元", [
+          ["主催", event.organizer],
+          ["カテゴリ", categoryLabel(event.category)],
+          ["開催期間", dateLong !== dateShort ? dateLong : ""],
+          ["ソース", event.source_names],
+          ["最終確認", event.last_verified_at],
+        ])}
       </div>
-      <div class="detail-quick-facts">
-        <span><b>日付</b>${escapeHtml(date)}</span>
-        <span><b>時間</b>${escapeHtml(time)}</span>
-        <span><b>会場</b>${escapeHtml(event.venue_name || "未設定")}</span>
-        <span><b>料金</b>${escapeHtml(event.price_note || "未設定")}</span>
-      </div>
-      <p class="summary">${escapeHtml(event.summary || "")}</p>
-      <dl class="detail-grid">
-        <dt>会場</dt><dd>${escapeHtml(event.venue_name || "未設定")}</dd>
-        <dt>住所</dt><dd>${escapeHtml(event.address || "未設定")}</dd>
-        <dt>料金</dt><dd>${escapeHtml(event.price_note || "未設定")}</dd>
-        <dt>主催</dt><dd>${escapeHtml(event.organizer || "未設定")}</dd>
-        <dt>ソース</dt><dd>${escapeHtml(event.source_names || "未設定")}</dd>
-      </dl>
       <div class="dialog-actions">
-        ${mapsUrl(event) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(event))}" target="_blank" rel="noreferrer">${iconMapPin()}地図で見る</a>` : ""}
+        ${mapsUrl(event) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(event))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
+        <a class="secondary-button" href="./events/${encodeURIComponent(event.id)}.html">詳細ページ</a>
         ${event.canonical_url ? `<a class="primary-button" href="${escapeHtml(event.canonical_url)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
       </div>
     </div>
@@ -605,31 +719,50 @@ function openEventDialog(event) {
 }
 
 function openPlaceDialog(place) {
+  const location = [place.prefecture, place.municipality].filter(Boolean).join(" / ");
+  const ageLabels = displayAgeLabels(place);
+  const facts = [
+    detailFact("対象", compactText(place.target_age_note, 42)),
+    detailFact("料金", compactText(place.price_note, 42)),
+    detailFact("時間", compactText(place.hours_note, 42)),
+    detailFact("屋内/屋外", indoorOutdoorLabel(place.indoor_outdoor)),
+  ].join("");
+
   els.dialogBody.innerHTML = `
-    <div class="dialog-content">
+    <div class="dialog-content dialog-detail">
       ${dialogImage(place.primary_image_url, place.name, place)}
-      ${photoGallery(place.images, place.name)}
-      <h2>${escapeHtml(place.name)}</h2>
-      <div class="event-meta">
-        <span class="pill">${escapeHtml(place.prefecture)} / ${escapeHtml(place.municipality || "未設定")}</span>
-        <span class="pill category">${escapeHtml(placeTypeLabel(place.place_type))}</span>
+      <div class="dialog-main">
+        <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(placeTypeLabel(place.place_type))} · ${escapeHtml(indoorOutdoorLabel(place.indoor_outdoor))}</p>
+        <h2>${escapeHtml(place.name)}</h2>
+        ${facts ? `<div class="detail-fact-strip">${facts}</div>` : ""}
+        ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
+        ${detailParagraph("特徴", place.features)}
+        ${detailParagraph("補足", place.notes)}
+        ${photoGallery(place.images, place.name)}
+        ${detailSection("利用案内", [
+          ["対象", place.target_age_note],
+          ["料金", place.price_note],
+          ["利用時間", place.hours_note],
+          ["休み", place.closed_note],
+          ["種類", placeTypeLabel(place.place_type)],
+        ])}
+        ${detailSection("アクセス・設備", [
+          ["住所", place.address],
+          ["地域", location],
+          ["エリア", place.area_label],
+          ["駐車場", place.parking_note],
+          ["食事", place.food_note],
+          ["授乳等", place.nursing_note],
+          ["ベビーカー", place.stroller_note],
+        ])}
+        ${detailSection("情報元", [
+          ["ソース", place.source_names],
+          ["最終確認", place.last_verified_at],
+        ])}
       </div>
-      <div class="detail-quick-facts">
-        <span><b>対象</b>${escapeHtml(place.target_age_note || "未設定")}</span>
-        <span><b>屋内/屋外</b>${escapeHtml(indoorOutdoorLabel(place.indoor_outdoor))}</span>
-        <span><b>料金</b>${escapeHtml(place.price_note || "未設定")}</span>
-        <span><b>時間</b>${escapeHtml(place.hours_note || "未設定")}</span>
-      </div>
-      <p class="summary">${escapeHtml(place.features || "")}</p>
-      <dl class="detail-grid">
-        <dt>住所</dt><dd>${escapeHtml(place.address || "未設定")}</dd>
-        <dt>休み</dt><dd>${escapeHtml(place.closed_note || "未設定")}</dd>
-        <dt>授乳等</dt><dd>${escapeHtml(place.nursing_note || "未設定")}</dd>
-        <dt>駐車場</dt><dd>${escapeHtml(place.parking_note || "未設定")}</dd>
-        <dt>ソース</dt><dd>${escapeHtml(place.source_names || "未設定")}</dd>
-      </dl>
       <div class="dialog-actions">
-        ${mapsUrl(place) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(place))}" target="_blank" rel="noreferrer">${iconMapPin()}地図で見る</a>` : ""}
+        ${mapsUrl(place) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(place))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
+        <a class="secondary-button" href="./places/${encodeURIComponent(place.id)}.html">詳細ページ</a>
         ${place.official_url ? `<a class="primary-button" href="${escapeHtml(place.official_url)}" target="_blank" rel="noreferrer">公式ページ</a>` : ""}
       </div>
     </div>
@@ -637,6 +770,91 @@ function openPlaceDialog(place) {
 
   els.eventDialog.showModal();
   hydrateGooglePhotoTargets(els.dialogBody);
+}
+
+function detailFact(label, value) {
+  if (!value) return "";
+  return `<span><b>${escapeHtml(label)}</b>${escapeHtml(value)}</span>`;
+}
+
+function detailParagraph(title, text) {
+  if (!text) return "";
+  return `
+    <section class="detail-section">
+      <h3>${escapeHtml(title)}</h3>
+      <p class="detail-copy">${escapeHtml(text)}</p>
+    </section>
+  `;
+}
+
+function detailSection(title, rows) {
+  const filled = rows.filter(([, value]) => value);
+  if (!filled.length) return "";
+  return `
+    <section class="detail-section">
+      <h3>${escapeHtml(title)}</h3>
+      <dl class="detail-grid">
+        ${filled.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join("")}
+      </dl>
+    </section>
+  `;
+}
+
+function compactText(value, limit = 40) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (!text) return "";
+  if (text.length <= limit) return text;
+  return `${text.slice(0, limit - 1).trim()}…`;
+}
+
+function formatDateRange(event) {
+  const start = formatDateLong(event.start_date);
+  if (!start) return "";
+  if (event.end_date && event.end_date !== event.start_date) {
+    return `${start} 〜 ${formatDateLong(event.end_date)}`;
+  }
+  return start;
+}
+
+function formatDateRangeCompact(event) {
+  const start = formatDateCompact(event.start_date);
+  if (!start) return "";
+  if (event.end_date && event.end_date !== event.start_date) {
+    const sameYear = String(event.start_date).slice(0, 4) === String(event.end_date).slice(0, 4);
+    return `${start} 〜 ${formatDateCompact(event.end_date, { includeYear: !sameYear })}`;
+  }
+  return start;
+}
+
+function formatDateLong(value) {
+  if (!value) return "";
+  const [year, month, day] = value.split("-").map(Number);
+  if (!year || !month || !day) return formatDate(value);
+  const week = ["日", "月", "火", "水", "木", "金", "土"][new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
+  return `${year}年${month}月${day}日（${week}）`;
+}
+
+function formatDateCompact(value, { includeYear = true } = {}) {
+  if (!value) return "";
+  const [year, month, day] = value.split("-").map(Number);
+  if (!year || !month || !day) return formatDate(value);
+  const week = ["日", "月", "火", "水", "木", "金", "土"][new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
+  if (!includeYear) return `${month}/${day}（${week}）`;
+  return `${year}/${month}/${day}（${week}）`;
+}
+
+function displayAgeLabels(record) {
+  const text = ageSearchText(record);
+  const explicit = ageGroups.some((group) => agePatterns[group.id].test(text));
+  const hasCue =
+    explicit ||
+    openAgePattern.test(text) ||
+    familyAgePattern.test(text) ||
+    record.category === "kids";
+  if (!hasCue) return [];
+  return detectAgeTags(record)
+    .map((id) => ageGroups.find((group) => group.id === id)?.label)
+    .filter(Boolean);
 }
 
 function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
@@ -657,7 +875,7 @@ function dialogImage(url, alt, record = {}) {
   if (!url && !googlePlaceId) return "";
   return `
     <div class="dialog-image ${url ? "" : "is-google-pending"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
-      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" referrerpolicy="no-referrer">` : `<span>${escapeHtml(alt)}</span>`}
+      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" referrerpolicy="no-referrer" onerror="this.closest('.dialog-image').hidden=true">` : `<span>${escapeHtml(alt)}</span>`}
     </div>
   `;
 }
@@ -758,12 +976,12 @@ function applyGooglePhoto(target, photo, alt) {
 }
 
 function photoGallery(images = [], alt) {
-  const uniqueImages = uniqueImagesByVisual(images).slice(0, 8);
+  const uniqueImages = filterRelevantImages(uniqueImagesByVisual(images), alt);
   if (uniqueImages.length <= 1) return "";
   return `
     <div class="photo-gallery" aria-label="写真ギャラリー">
       ${uniqueImages
-        .slice(1)
+        .slice(1, 5)
         .map((image) => `
           <a href="${escapeHtml(image.source_page_url || image.image_url)}" target="_blank" rel="noreferrer" class="gallery-thumb">
             <img src="${escapeHtml(image.image_url)}" alt="${escapeHtml(image.alt_text || alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -772,6 +990,25 @@ function photoGallery(images = [], alt) {
         .join("")}
     </div>
   `;
+}
+
+function filterRelevantImages(images = [], title = "") {
+  if (images.length <= 1) return images;
+  const key = String(title || "")
+    .replace(/[\s\u3000]/g, "")
+    .replace(/[！？!?\d０-９]+/g, "");
+  if (key.length < 4) return images.slice(0, 2);
+
+  const needle = key.slice(0, Math.min(10, key.length));
+  const matched = images.filter((image, index) => {
+    if (index === 0) return true;
+    const alt = String(image.alt_text || "").replace(/[\s\u3000]/g, "");
+    if (!alt) return false;
+    return alt.includes(needle) || needle.includes(alt.slice(0, Math.min(6, alt.length)));
+  });
+
+  // 関連画像がヒーロー以外にない場合は誤関連サムネを出さない
+  return matched.length > 1 ? matched : images.slice(0, 1);
 }
 
 function uniqueImagesByVisual(images = []) {
@@ -814,6 +1051,7 @@ function filteredRecords() {
     if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
     if (state.status !== "all" && event.status !== state.status) return false;
+    if (!matchesAgeGroup(event)) return false;
     if (!state.query) return true;
 
     const haystack = [
@@ -907,6 +1145,7 @@ function filteredPlaces() {
     if (state.municipality !== "all" && place.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(place.place_type)) return false;
     if (state.status !== "all" && place.status !== state.status) return false;
+    if (!matchesAgeGroup(place)) return false;
     if (!state.query) return true;
 
     const haystack = [
