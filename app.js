@@ -108,6 +108,8 @@ const familyAgePattern = /子ども|子供|親子/;
 
 const els = {};
 
+let dialogScrollY = 0;
+
 document.addEventListener("DOMContentLoaded", async () => {
   bindElements();
   bindEvents();
@@ -118,10 +120,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     applyInitialSearchQuery();
     populateFilters();
     render();
+    scrollToInitialAnchor();
   } catch (error) {
     renderLoadError(error);
   }
 });
+
+function scrollToInitialAnchor() {
+  const hash = window.location.hash;
+  if (!hash) return;
+  const target = document.querySelector(hash);
+  if (!target) return;
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
 
 async function loadOptionalConfig() {
   window.APP_CONFIG = window.APP_CONFIG || {};
@@ -279,11 +292,18 @@ function bindEvents() {
     render();
   });
 
-  els.closeDialog.addEventListener("click", () => els.eventDialog.close());
+  els.closeDialog.addEventListener("click", () => closeRecordDialog());
   els.eventDialog.addEventListener("click", (event) => {
     if (event.target === els.eventDialog) {
-      els.eventDialog.close();
+      closeRecordDialog();
     }
+  });
+  els.eventDialog.addEventListener("close", () => {
+    unlockDialogScroll();
+  });
+  els.eventDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeRecordDialog();
   });
 }
 
@@ -714,6 +734,7 @@ function openEventDialog(event) {
     </div>
   `;
 
+  lockDialogScroll();
   els.eventDialog.showModal();
   hydrateGooglePhotoTargets(els.dialogBody);
 }
@@ -768,8 +789,29 @@ function openPlaceDialog(place) {
     </div>
   `;
 
+  lockDialogScroll();
   els.eventDialog.showModal();
   hydrateGooglePhotoTargets(els.dialogBody);
+}
+
+function closeRecordDialog() {
+  if (!els.eventDialog.open) return;
+  els.eventDialog.close();
+}
+
+function lockDialogScroll() {
+  if (!document.body.classList.contains("dialog-open")) {
+    dialogScrollY = window.scrollY || window.pageYOffset || 0;
+  }
+  document.documentElement.style.setProperty("--dialog-scroll-y", `-${dialogScrollY}px`);
+  document.body.classList.add("dialog-open");
+}
+
+function unlockDialogScroll() {
+  if (!document.body.classList.contains("dialog-open")) return;
+  document.body.classList.remove("dialog-open");
+  document.documentElement.style.removeProperty("--dialog-scroll-y");
+  window.scrollTo(0, dialogScrollY);
 }
 
 function detailFact(label, value) {

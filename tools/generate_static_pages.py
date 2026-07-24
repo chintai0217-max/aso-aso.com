@@ -301,7 +301,7 @@ def layout(title, description, canonical, image, kind_label, h1, kicker, body, s
           </span>
         </a>
         <div class="topbar-links">
-          <a href="../">一覧へ戻る</a>
+          <a href="../#eventList">一覧へ戻る</a>
           <a href="../sitemap.xml">サイトマップ</a>
         </div>
       </div>
