@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aso-aso.com"
 TODAY = date.today().isoformat()
 GA_MEASUREMENT_ID = "G-ZWE0042E90"
+ADSENSE_CLIENT_ID = "ca-pub-7927260139193410"
 
 CATEGORY_LABELS = {
     "contest": "コンテスト",
@@ -293,7 +294,10 @@ def ga_snippet():
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
       gtag('config', '{GA_MEASUREMENT_ID}');
-    </script>"""
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT_ID}"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="{ADSENSE_CLIENT_ID}">"""
 
 
 def layout(title, description, canonical, image, kind_label, h1, kicker, body, structured_data, body_class="static-detail-page"):
