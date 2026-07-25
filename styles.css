@@ -3478,6 +3478,159 @@ video {
   }
 }
 
+.site-intro {
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.96));
+}
+
+.site-intro-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.9fr);
+  gap: 28px 40px;
+  width: min(1280px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 32px;
+}
+
+.site-intro-copy h2,
+.site-intro-guides h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.site-intro-copy p,
+.site-intro-guides p {
+  margin: 0 0 14px;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.site-intro-steps {
+  margin: 0;
+  padding-left: 1.3em;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.site-intro-steps li + li {
+  margin-top: 4px;
+}
+
+.site-intro-guides {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.site-intro-guides ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.site-intro-guides li + li {
+  margin-top: 8px;
+}
+
+.site-intro-guides a {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-intro-guides a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .site-intro-inner {
+    grid-template-columns: 1fr;
+    width: calc(100% - 16px);
+    padding: 22px 0 26px;
+    gap: 18px;
+  }
+}
+
+.info-page .policy-updated {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.guide-section + .guide-section {
+  margin-top: 28px;
+}
+
+.guide-section .detail-copy + .detail-copy {
+  margin-top: 12px;
+}
+
+.guide-inline-links,
+.guide-related {
+  margin: 12px 0 0;
+  padding-left: 1.3em;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.guide-inline-links li + li,
+.guide-related li + li {
+  margin-top: 6px;
+}
+
+.guide-inline-links a,
+.guide-related a,
+.hub-intro a {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.hub-intro .detail-copy + .detail-copy {
+  margin-top: 12px;
+}
+
+.hub-intro .guide-related {
+  margin-top: 14px;
+}
+
+.info-page .info-page-body .static-detail-section + .static-detail-section {
+  margin-top: 28px;
+}
+
+.info-page .static-detail-section ul,
+.info-page .static-detail-section ol {
+  margin: 0;
+  padding-left: 1.35em;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.info-page .static-detail-section li + li {
+  margin-top: 6px;
+}
+
+.info-page .static-detail-section a {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.info-page .static-detail-section .detail-copy + .detail-copy,
+.info-page .static-detail-section ul + .detail-copy,
+.info-page .static-detail-section .detail-copy + ul {
+  margin-top: 12px;
+}
+
 .site-footer {
   margin-top: 40px;
   border-top: 1px solid var(--line);
