@@ -65,10 +65,10 @@
           </span>
         </a>
         <div class="topbar-links">
-          <a href="#eventList">一覧</a>
-          <a href="./areas/">地域</a>
-          <a href="./themes/">テーマ</a>
-          <a href="./guides/">ガイド</a>
+          <a href="#eventList"><i class="ui-icon ui-icon--list" aria-hidden="true"></i>一覧</a>
+          <a href="./areas/"><i class="ui-icon ui-icon--map" aria-hidden="true"></i>地域</a>
+          <a href="./themes/"><i class="ui-icon ui-icon--layers" aria-hidden="true"></i>テーマ</a>
+          <a href="./guides/"><i class="ui-icon ui-icon--book" aria-hidden="true"></i>ガイド</a>
         </div>
       </div>
     </nav>
@@ -173,36 +173,36 @@
       <aside class="sidebar" aria-label="絞り込み">
         <section class="filter-panel">
           <div class="filter-title">
-            <h2>絞り込み</h2>
+            <h2><i class="ui-icon ui-icon--sliders" aria-hidden="true"></i>絞り込み</h2>
             <div class="filter-actions">
-              <button id="filterToggleButton" class="ghost-button filter-toggle" type="button" aria-expanded="false">条件</button>
-              <button id="resetButton" class="ghost-button" type="button">リセット</button>
+              <button id="filterToggleButton" class="ghost-button filter-toggle" type="button" aria-expanded="false"><i class="ui-icon ui-icon--sliders" aria-hidden="true"></i>条件</button>
+              <button id="resetButton" class="ghost-button" type="button"><i class="ui-icon ui-icon--rotate" aria-hidden="true"></i>リセット</button>
             </div>
           </div>
 
           <div class="mode-switch" role="group" aria-label="表示データ">
-            <button id="modeEventsButton" class="mode-button is-active" type="button" data-mode="events">イベント</button>
-            <button id="modePlacesButton" class="mode-button" type="button" data-mode="places">遊び場</button>
+            <button id="modeEventsButton" class="mode-button is-active" type="button" data-mode="events"><i class="ui-icon ui-icon--ticket" aria-hidden="true"></i>イベント</button>
+            <button id="modePlacesButton" class="mode-button" type="button" data-mode="places"><i class="ui-icon ui-icon--play" aria-hidden="true"></i>遊び場</button>
           </div>
 
           <div id="filterBody" class="filter-body">
             <label class="field">
-              <span>キーワード</span>
+              <span><i class="ui-icon ui-icon--search" aria-hidden="true"></i>キーワード</span>
               <input id="searchInput" type="search" placeholder="イベント名・会場・概要">
             </label>
 
             <label class="field">
-              <span>市町村</span>
+              <span><i class="ui-icon ui-icon--pin" aria-hidden="true"></i>市町村</span>
               <select id="municipalitySelect"></select>
             </label>
 
             <label class="field">
-              <span>年代</span>
+              <span><i class="ui-icon ui-icon--users" aria-hidden="true"></i>年代</span>
               <select id="ageSelect"></select>
             </label>
 
             <label class="field">
-              <span id="categoryFieldLabel">カテゴリ</span>
+              <span id="categoryFieldLabel"><i class="ui-icon ui-icon--tag" aria-hidden="true"></i>カテゴリ</span>
               <select id="categorySelect"></select>
             </label>
 
@@ -210,7 +210,7 @@
         </section>
 
         <section class="coverage-panel">
-          <h2>地域からさがす</h2>
+          <h2><i class="ui-icon ui-icon--map" aria-hidden="true"></i>地域からさがす</h2>
           <div id="coverageList" class="coverage-list"></div>
         </section>
       </aside>

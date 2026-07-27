@@ -292,33 +292,84 @@ def image_tag(url, alt):
     )
 
 
-def gallery_html(images, alt):
+def collect_gallery_images(record, alt, limit=8):
     items = []
     seen = set()
-    for image in images or []:
-        url = image.get("image_url") if isinstance(image, dict) else None
+    primary = record.get("primary_image_url")
+    raw_list = []
+    if primary:
+        raw_list.append({"image_url": primary, "alt_text": alt})
+    for image in record.get("images") or []:
+        if isinstance(image, dict) and image.get("image_url"):
+            raw_list.append(image)
+        elif isinstance(image, str):
+            raw_list.append({"image_url": image, "alt_text": alt})
+    for image in raw_list:
+        url = image.get("image_url")
         if not url:
             continue
         display_url = upgrade_image_url(url) or url
         if display_url in seen:
             continue
         seen.add(display_url)
-        entry = dict(image) if isinstance(image, dict) else {"image_url": display_url}
+        entry = dict(image)
         entry["image_url"] = display_url
         items.append(entry)
     items = filter_relevant_images(items, alt)
-    if len(items) <= 1:
+    best = best_display_image(record)
+    if best and items:
+        rest = [item for item in items if item.get("image_url") != best]
+        best_item = next((item for item in items if item.get("image_url") == best), {"image_url": best, "alt_text": alt})
+        items = [best_item] + rest
+    return items[:limit]
+
+
+def detail_hero_html(record, alt):
+    images = collect_gallery_images(record, alt)
+    if not images:
         return ""
-    thumbs = []
-    for image in items[1:5]:
-        href = image.get("source_page_url") or image.get("image_url")
-        thumbs.append(
-            f'<a href="{html(href)}" target="_blank" rel="noreferrer" class="gallery-thumb">'
-            f'<img src="{html(image.get("image_url"))}" alt="{html(image.get("alt_text") or alt)}" '
-            'loading="lazy" decoding="async" referrerpolicy="no-referrer">'
-            "</a>"
+    if len(images) == 1:
+        return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt)
+    slides = []
+    dots = []
+    total = len(images)
+    for index, image in enumerate(images):
+        url = image.get("image_url")
+        slide_alt = image.get("alt_text") or alt
+        loading = "eager" if index == 0 else "lazy"
+        slides.append(
+            '<div class="detail-carousel__slide" role="group" '
+            f'aria-label="{index + 1} / {total}">'
+            f'<img src="{html(url)}" alt="{html(slide_alt)}" loading="{loading}" decoding="async" '
+            'referrerpolicy="no-referrer" '
+            'onload="if(this.naturalWidth&lt;640)this.classList.add(\'is-lowres\')" '
+            'onerror="this.closest(\'.detail-carousel__slide\').classList.add(\'is-broken\')">'
+            "</div>"
         )
-    return f'<div class="photo-gallery" aria-label="写真ギャラリー">{"".join(thumbs)}</div>'
+        dots.append(
+            f'<button type="button" class="detail-carousel__dot{" is-active" if index == 0 else ""}" '
+            f'data-carousel-dot="{index}" aria-label="写真 {index + 1}"></button>'
+        )
+    return (
+        '<div class="detail-carousel" data-carousel>'
+        '<div class="detail-carousel__viewport" tabindex="0" aria-label="写真ギャラリー">'
+        f'<div class="detail-carousel__track">{"".join(slides)}</div>'
+        "</div>"
+        f'<button type="button" class="detail-carousel__nav is-prev" data-carousel-prev aria-label="前の写真">'
+        f'{ui_icon("arrow-left")}</button>'
+        f'<button type="button" class="detail-carousel__nav is-next" data-carousel-next aria-label="次の写真">'
+        f'<i class="ui-icon ui-icon--arrow-left is-flip" aria-hidden="true"></i></button>'
+        '<div class="detail-carousel__meta">'
+        f'<div class="detail-carousel__dots" role="tablist" aria-label="写真選択">{"".join(dots)}</div>'
+        f'<span class="detail-carousel__count" data-carousel-count>1 / {total}</span>'
+        "</div>"
+        "</div>"
+    )
+
+
+def gallery_html(images, alt):
+    # kept for compatibility; hero carousel now shows all photos
+    return ""
 
 
 def filter_relevant_images(images, title):
@@ -340,7 +391,7 @@ def filter_relevant_images(images, title):
             continue
         if needle in alt or alt[: min(6, len(alt))] in needle:
             matched.append(image)
-    return matched if len(matched) > 1 else images[:1]
+    return matched if len(matched) > 1 else images
 
 
 def fact_or_confirm(value, fallback="公式で確認"):
@@ -348,23 +399,54 @@ def fact_or_confirm(value, fallback="公式で確認"):
     return text or fallback
 
 
+def ui_icon(name: str) -> str:
+    return f'<i class="ui-icon ui-icon--{html(name)}" aria-hidden="true"></i>'
+
+
+FACT_ICONS = {
+    "開催日": "calendar",
+    "時間": "clock",
+    "会場": "building",
+    "料金": "yen",
+    "対象": "users",
+    "屋内/屋外": "home",
+    "イベント": "ticket",
+    "遊び場": "play",
+}
+
+
 def fact_strip(items):
     cells = []
     for item in items:
         if len(item) == 3:
-            label, value, fallback = item
+            label, value, _fallback = item
         else:
             label, value = item
-            fallback = ""
         raw = str(value or "").strip()
-        text = raw or fallback
-        if not text:
+        # 「公式で確認」だけの空カードは出さない
+        if not raw:
             continue
-        missing = " is-missing" if not raw else ""
-        cells.append(f'<span class="{missing.strip()}"><b>{html(label)}</b>{html(text)}</span>')
+        icon_name = FACT_ICONS.get(label, "tag")
+        if label == "屋内/屋外":
+            icon_name = "sun" if "屋外" in raw and "屋内" not in raw else "home"
+        cells.append(
+            f"<span><b>{ui_icon(icon_name)}{html(label)}</b>{html(raw)}</span>"
+        )
     if not cells:
         return ""
     return f'<div class="detail-fact-strip">{"".join(cells)}</div>'
+
+
+def details(items):
+    rows = []
+    for label, value in items:
+        text = str(value or "").strip()
+        if not text or text == "公式で確認":
+            continue
+        rows.append(f"<dt>{html(label)}</dt><dd>{html(text)}</dd>")
+    if not rows:
+        return ""
+    return '<dl class="detail-grid static-detail-grid">' + "".join(rows) + "</dl>"
 
 
 def section_paragraph(title, text):
@@ -415,6 +497,71 @@ def list_return_script():
             link.setAttribute("href", url);
           });
         } catch (e) {}
+      })();
+    </script>
+    <script>
+      (function () {
+        function initCarousel(root) {
+          var viewport = root.querySelector(".detail-carousel__viewport");
+          var track = root.querySelector(".detail-carousel__track");
+          var slides = Array.prototype.slice.call(root.querySelectorAll(".detail-carousel__slide"));
+          var dots = Array.prototype.slice.call(root.querySelectorAll("[data-carousel-dot]"));
+          var countEl = root.querySelector("[data-carousel-count]");
+          var prev = root.querySelector("[data-carousel-prev]");
+          var next = root.querySelector("[data-carousel-next]");
+          if (!viewport || !track || slides.length < 2) return;
+
+          var index = 0;
+          var total = slides.length;
+
+          function slideWidth() {
+            return viewport.clientWidth || 1;
+          }
+
+          function goTo(nextIndex, smooth) {
+            index = (nextIndex + total) % total;
+            viewport.scrollTo({ left: slideWidth() * index, behavior: smooth === false ? "auto" : "smooth" });
+            updateUI();
+          }
+
+          function updateUI() {
+            if (countEl) countEl.textContent = (index + 1) + " / " + total;
+            dots.forEach(function (dot, i) {
+              dot.classList.toggle("is-active", i === index);
+            });
+            slides.forEach(function (slide, i) {
+              slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+            });
+          }
+
+          function syncFromScroll() {
+            var nextIndex = Math.round(viewport.scrollLeft / slideWidth());
+            if (nextIndex !== index && nextIndex >= 0 && nextIndex < total) {
+              index = nextIndex;
+              updateUI();
+            }
+          }
+
+          if (prev) prev.addEventListener("click", function () { goTo(index - 1); });
+          if (next) next.addEventListener("click", function () { goTo(index + 1); });
+          dots.forEach(function (dot) {
+            dot.addEventListener("click", function () {
+              goTo(Number(dot.getAttribute("data-carousel-dot")) || 0);
+            });
+          });
+          viewport.addEventListener("scroll", function () {
+            window.clearTimeout(viewport._carouselTimer);
+            viewport._carouselTimer = window.setTimeout(syncFromScroll, 60);
+          }, { passive: true });
+          viewport.addEventListener("keydown", function (event) {
+            if (event.key === "ArrowLeft") { event.preventDefault(); goTo(index - 1); }
+            if (event.key === "ArrowRight") { event.preventDefault(); goTo(index + 1); }
+          });
+          window.addEventListener("resize", function () { goTo(index, false); });
+          updateUI();
+        }
+
+        document.querySelectorAll("[data-carousel]").forEach(initCarousel);
       })();
     </script>"""
 
@@ -490,10 +637,10 @@ def layout(
           </span>
         </a>
         <div class="topbar-links">
-          <a data-list-return href="{home}#eventList">一覧へ戻る</a>
-          <a href="{home}areas/">地域</a>
-          <a href="{home}themes/">テーマ</a>
-          <a href="{home}guides/">ガイド</a>
+          <a data-list-return href="{home}#eventList">{ui_icon("arrow-left")}一覧へ戻る</a>
+          <a href="{home}areas/">{ui_icon("map")}地域</a>
+          <a href="{home}themes/">{ui_icon("layers")}テーマ</a>
+          <a href="{home}guides/">{ui_icon("book")}ガイド</a>
         </div>
       </div>
     </nav>
@@ -509,16 +656,6 @@ def layout(
 """
 
 
-def details(items):
-    rows = []
-    for label, value in items:
-        if value:
-            rows.append(f"<dt>{html(label)}</dt><dd>{html(value)}</dd>")
-    if not rows:
-        return ""
-    return '<dl class="detail-grid static-detail-grid">' + "".join(rows) + "</dl>"
-
-
 def detail_section(title, items):
     grid = details(items)
     if not grid:
@@ -530,13 +667,15 @@ def action_links(primary_url, primary_label, mode, municipality="", map_link="")
     links = []
     if primary_url:
         links.append(
-            f'<a class="primary-button" href="{html(primary_url)}" target="_blank" rel="noreferrer">{html(primary_label)}</a>'
+            f'<a class="primary-button" href="{html(primary_url)}" target="_blank" rel="noreferrer">{ui_icon("external")}{html(primary_label)}</a>'
         )
     if map_link:
-        links.append(f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">地図で見る</a>')
+        links.append(
+            f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">{ui_icon("map")}地図で見る</a>'
+        )
     list_href = list_search_href(mode=mode, municipality=municipality or "")
     links.append(
-        f'<a class="secondary-button" data-list-return href="{html(list_href)}">一覧で探す</a>'
+        f'<a class="secondary-button" data-list-return href="{html(list_href)}">{ui_icon("list")}一覧で探す</a>'
     )
     return '<div class="dialog-actions static-detail-actions">' + "".join(links) + "</div>"
 
@@ -641,33 +780,29 @@ def render_event(event):
     date_short = date_text_compact(event)
     display_image = best_display_image(event)
     body = (
-        image_tag(display_image, event.get("title"))
+        detail_hero_html(event, event.get("title"))
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">群馬のイベント</p><h1>{html(event.get("title"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
-                ("開催日", date_short, "公式で確認"),
-                ("時間", time_text(event), "公式で確認"),
-                ("会場", event.get("venue_name"), "公式で確認"),
-                ("料金", event.get("price_note"), "公式で確認"),
-                ("駐車場", event.get("parking_note"), "公式で確認"),
-                ("予約", event.get("reservation_note"), "公式で確認"),
-                ("最終確認", format_verified_date(event.get("last_verified_at")), "未設定"),
+                ("開催日", date_short),
+                ("時間", time_text(event)),
+                ("会場", event.get("venue_name")),
+                ("料金", event.get("price_note")),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
         + section_paragraph("概要", event.get("summary"))
         + section_paragraph("補足", event.get("notes"))
-        + gallery_html(event.get("images"), event.get("title"))
         + detail_section(
             "会場・アクセス",
             [
-                ("住所", fact_or_confirm(event.get("address"))),
+                ("住所", event.get("address")),
                 ("地域", location),
                 ("エリア", event.get("area_label")),
-                ("駐車場", fact_or_confirm(event.get("parking_note"))),
-                ("予約", fact_or_confirm(event.get("reservation_note"))),
+                ("駐車場", event.get("parking_note")),
+                ("予約", event.get("reservation_note")),
             ],
         )
         + detail_section(
@@ -677,7 +812,7 @@ def render_event(event):
                 ("カテゴリ", category),
                 ("開催期間", date_long if date_long != date_short else ""),
                 ("ソース", event.get("source_names")),
-                ("最終確認", event.get("last_verified_at") or "未設定"),
+                ("最終確認", format_verified_date(event.get("last_verified_at")) or event.get("last_verified_at")),
             ],
         )
         + action_links(
@@ -716,43 +851,39 @@ def render_place(place):
     kicker = " · ".join([part for part in [place.get("municipality") or "群馬県", place_type, indoor] if part])
     display_image = best_display_image(place)
     body = (
-        image_tag(display_image, place.get("name"))
+        detail_hero_html(place, place.get("name"))
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">群馬の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
-                ("対象", compact_text(place.get("target_age_note")), "公式で確認"),
-                ("料金", compact_text(place.get("price_note")), "公式で確認"),
-                ("時間", compact_text(place.get("hours_note")), "公式で確認"),
-                ("屋内/屋外", indoor, "公式で確認"),
-                ("駐車場", compact_text(place.get("parking_note")), "公式で確認"),
-                ("予約", compact_text(place.get("reservation_note")), "公式で確認"),
-                ("最終確認", format_verified_date(place.get("last_verified_at")), "未設定"),
+                ("対象", compact_text(place.get("target_age_note"))),
+                ("料金", compact_text(place.get("price_note"))),
+                ("時間", compact_text(place.get("hours_note"))),
+                ("屋内/屋外", indoor if indoor and indoor != "屋内外未設定" else ""),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
         + section_paragraph("特徴", place.get("features"))
         + section_paragraph("補足", place.get("notes"))
-        + gallery_html(place.get("images"), place.get("name"))
         + detail_section(
             "利用案内",
             [
-                ("対象", fact_or_confirm(place.get("target_age_note"))),
-                ("料金", fact_or_confirm(place.get("price_note"))),
-                ("利用時間", fact_or_confirm(place.get("hours_note"))),
-                ("休み", fact_or_confirm(place.get("closed_note"))),
-                ("予約", fact_or_confirm(place.get("reservation_note"))),
+                ("対象", place.get("target_age_note")),
+                ("料金", place.get("price_note")),
+                ("利用時間", place.get("hours_note")),
+                ("休み", place.get("closed_note")),
+                ("予約", place.get("reservation_note")),
                 ("種類", place_type),
             ],
         )
         + detail_section(
             "アクセス・設備",
             [
-                ("住所", fact_or_confirm(place.get("address"))),
+                ("住所", place.get("address")),
                 ("地域", location),
                 ("エリア", place.get("area_label")),
-                ("駐車場", fact_or_confirm(place.get("parking_note"))),
+                ("駐車場", place.get("parking_note")),
                 ("食事", place.get("food_note")),
                 ("授乳等", place.get("nursing_note")),
                 ("ベビーカー", place.get("stroller_note")),
@@ -762,7 +893,7 @@ def render_place(place):
             "情報元",
             [
                 ("ソース", place.get("source_names")),
-                ("最終確認", place.get("last_verified_at") or "未設定"),
+                ("最終確認", format_verified_date(place.get("last_verified_at")) or place.get("last_verified_at")),
             ],
         )
         + action_links(
@@ -954,22 +1085,25 @@ def hub_card_event(event):
     venue = event.get("venue_name") or event.get("area_label") or ""
     place_line = " / ".join(part for part in [event.get("municipality"), venue] if part)
     date_label = format_month_day(event.get("start_date")) if event.get("start_date") else ""
-    kicker = " · ".join(part for part in [date_label, place_line or "地域未設定"] if part)
     time = time_text(event)
     display_image = best_display_image(event)
     has_image = " has-image" if display_image else ""
+    kicker_bits = []
+    if date_label:
+        kicker_bits.append(f'<span class="meta-item">{ui_icon("calendar")}{html(date_label)}</span>')
+    kicker_bits.append(f'<span class="meta-item">{ui_icon("pin")}{html(place_line or "地域未設定")}</span>')
     meta_bits = []
     if time:
-        meta_bits.append(f'<span class="pill neutral">{html(time)}</span>')
+        meta_bits.append(f'<span class="pill neutral">{ui_icon("clock")}{html(time)}</span>')
     meta_bits.append(
-        f'<span class="pill neutral">{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span>'
+        f'<span class="pill neutral">{ui_icon("yen")}{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span>'
     )
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
         f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
-        f'<p class="card-kicker">{html(kicker)}</p>'
+        f'<p class="card-kicker">{"".join(kicker_bits)}</p>'
         f'<div class="event-meta">{"".join(meta_bits)}</div>'
         f"</div>"
         f"</a>"
@@ -980,16 +1114,21 @@ def hub_card_place(place):
     href = f"../places/{place['id']}.html"
     title = place.get("name") or ""
     indoor = INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), "")
-    place_line = " / ".join(part for part in [place.get("municipality"), indoor] if part)
     display_image = best_display_image(place)
     has_image = " has-image" if display_image else ""
+    indoor_icon = "sun" if place.get("indoor_outdoor") == "outdoor" else "home"
+    kicker_bits = [
+        f'<span class="meta-item">{ui_icon("pin")}{html(place.get("municipality") or place.get("prefecture") or "地域未設定")}</span>'
+    ]
+    if indoor:
+        kicker_bits.append(f'<span class="meta-item">{ui_icon(indoor_icon)}{html(indoor)}</span>')
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
         f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
-        f'<p class="card-kicker">{html(place_line or "地域未設定")}</p>'
-        f'<div class="event-meta"><span class="pill neutral">{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></div>'
+        f'<p class="card-kicker">{"".join(kicker_bits)}</p>'
+        f'<div class="event-meta"><span class="pill neutral">{ui_icon("yen")}{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></div>'
         f"</div>"
         f"</a>"
     )
@@ -1055,17 +1194,17 @@ def render_area_hub(hub, events, places):
         f'<p class="eyebrow">地域からさがす</p><h1>{html(hub["title"])}</h1>'
         f'<p class="lead">{html(hub["lead"])}</p>'
         f'<div class="detail-fact-strip">'
-        f'<span><b>イベント</b>{len(event_items)}件</span>'
-        f'<span><b>遊び場</b>{len(place_items)}件</span>'
-        f"<span><b>対象</b>{html(muni)}</span>"
+        f'<span><b>{ui_icon("ticket")}イベント</b>{len(event_items)}件</span>'
+        f'<span><b>{ui_icon("play")}遊び場</b>{len(place_items)}件</span>'
+        f"<span><b>{ui_icon('pin')}対象</b>{html(muni)}</span>"
         f"</div></div><div class=\"static-detail-body\">"
         + hub_intro_html(hub)
         + hub_section("開催予定のイベント", [hub_card_event(e) for e in event_items], "現在、掲載中の開催予定イベントはありません。")
         + hub_section("子どもの遊び場", [hub_card_place(p) for p in place_items], "現在、掲載中の遊び場はありません。")
-        + f'<div class="dialog-actions static-detail-actions">'
-        f'<a class="primary-button" href="{html(list_href)}">一覧で絞り込む</a>'
-        f'<a class="secondary-button" href="../themes/">テーマから探す</a>'
-        f'<a class="secondary-button" href="../guides/">おでかけガイド</a>'
+        +         f'<div class="dialog-actions static-detail-actions">'
+        f'<a class="primary-button" href="{html(list_href)}">{ui_icon("list")}一覧で絞り込む</a>'
+        f'<a class="secondary-button" href="../themes/">{ui_icon("layers")}テーマから探す</a>'
+        f'<a class="secondary-button" href="../guides/">{ui_icon("book")}おでかけガイド</a>'
         f"</div></div>"
     )
     return layout(
@@ -1116,16 +1255,16 @@ def render_theme_hub(hub, events, places):
         f'<p class="eyebrow">テーマからさがす</p><h1>{html(hub["title"])}</h1>'
         f'<p class="lead">{html(hub["lead"])}</p>'
         f'<div class="detail-fact-strip">'
-        f'<span><b>イベント</b>{len(event_items)}件</span>'
-        f'<span><b>遊び場</b>{len(place_items)}件</span>'
+        f'<span><b>{ui_icon("ticket")}イベント</b>{len(event_items)}件</span>'
+        f'<span><b>{ui_icon("play")}遊び場</b>{len(place_items)}件</span>'
         f"</div></div><div class=\"static-detail-body\">"
         + hub_intro_html(hub)
         + hub_section("イベント", [hub_card_event(e) for e in event_items], "条件に合う開催予定イベントは現在ありません。")
         + hub_section("遊び場", [hub_card_place(p) for p in place_items], "条件に合う遊び場は現在ありません。")
-        + f'<div class="dialog-actions static-detail-actions">'
-        f'<a class="primary-button" href="{html(list_href)}">一覧で同じ条件を開く</a>'
-        f'<a class="secondary-button" href="../areas/">地域から探す</a>'
-        f'<a class="secondary-button" href="../guides/">おでかけガイド</a>'
+        +         f'<div class="dialog-actions static-detail-actions">'
+        f'<a class="primary-button" href="{html(list_href)}">{ui_icon("list")}一覧で同じ条件を開く</a>'
+        f'<a class="secondary-button" href="../areas/">{ui_icon("map")}地域から探す</a>'
+        f'<a class="secondary-button" href="../guides/">{ui_icon("book")}おでかけガイド</a>'
         f"</div></div>"
     )
     return layout(
@@ -1509,7 +1648,7 @@ def render_guides_index(guides):
             f'<a class="hub-card" href="./{html(guide["slug"])}.html">'
             f'<div class="hub-card__body">'
             f"<strong>{html(guide['title'])}</strong>"
-            f'<p class="card-kicker">{html(guide.get("eyebrow") or "おでかけガイド")}</p>'
+            f'<p class="card-kicker"><span class="meta-item">{ui_icon("book")}{html(guide.get("eyebrow") or "おでかけガイド")}</span></p>'
             f"<small>{html(guide.get('description') or guide.get('lead') or '')}</small>"
             f"</div></a>"
         )
@@ -1520,13 +1659,13 @@ def render_guides_index(guides):
         f'<p class="lead">{html(description)}</p>'
         "</div><div class=\"static-detail-body\">"
         '<section class="static-detail-section detail-section">'
-        "<h2>記事一覧</h2>"
+        f"<h2>{ui_icon('book')}記事一覧</h2>"
         f'<div class="hub-card-grid">{"".join(cards)}</div>'
         "</section>"
         '<div class="dialog-actions static-detail-actions">'
-        '<a class="primary-button" href="../#eventList">トップの一覧へ</a>'
-        '<a class="secondary-button" href="../areas/">地域から探す</a>'
-        '<a class="secondary-button" href="../themes/">テーマから探す</a>'
+        f'<a class="primary-button" href="../#eventList">{ui_icon("list")}トップの一覧へ</a>'
+        f'<a class="secondary-button" href="../areas/">{ui_icon("map")}地域から探す</a>'
+        f'<a class="secondary-button" href="../themes/">{ui_icon("layers")}テーマから探す</a>'
         "</div></div>"
     )
     return layout(

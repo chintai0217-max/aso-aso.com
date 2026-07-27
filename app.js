@@ -421,12 +421,17 @@ function setDateScope(scope) {
 function updateFilterVisibility() {
   els.filterBody.classList.toggle("is-open", state.filtersOpen);
   els.filterToggleButton.setAttribute("aria-expanded", String(state.filtersOpen));
-  els.filterToggleButton.textContent = state.filtersOpen ? "閉じる" : "条件";
+  els.filterToggleButton.innerHTML = state.filtersOpen
+    ? `${uiIcon("sliders")}閉じる`
+    : `${uiIcon("sliders")}条件`;
 }
 
 function populateFilters() {
   const groups = currentCategoryGroups();
-  els.categoryFieldLabel.textContent = state.mode === "events" ? "カテゴリ" : "種別";
+  els.categoryFieldLabel.innerHTML =
+    state.mode === "events"
+      ? `${uiIcon("tag")}カテゴリ`
+      : `${uiIcon("tag")}種別`;
 
   const options = [["all", "すべて"]].concat(groups.map((group) => [group.id, group.label]));
   if (state.category !== "all" && !options.some(([value]) => value === state.category)) {
@@ -532,17 +537,17 @@ function applyDecision(decision, { toggle = true, scroll = true, skipRender = fa
 function renderDecisionChips() {
   if (!els.decisionChips) return;
   const chips = [
-    ["weekend", "今週末"],
-    ["rain", "雨の日屋内（遊び場）"],
-    ["free", "無料"],
-    ["infant", "乳幼児"],
-    ["motenashi", "もてなし広場"],
-    ["verified", "確認済み"],
+    ["weekend", "今週末", "calendar"],
+    ["rain", "雨の日屋内（遊び場）", "rain"],
+    ["free", "無料", "yen"],
+    ["infant", "乳幼児", "baby"],
+    ["motenashi", "もてなし広場", "building"],
+    ["verified", "確認済み", "check"],
   ];
   els.decisionChips.innerHTML = chips
     .map(
-      ([value, label]) =>
-        `<button type="button" class="chip decision-chip ${state.decision === value ? "is-active" : ""}" data-decision="${value}">${label}</button>`
+      ([value, label, icon]) =>
+        `<button type="button" class="chip decision-chip ${state.decision === value ? "is-active" : ""}" data-decision="${value}">${uiIcon(icon)}${label}</button>`
     )
     .join("");
 }
@@ -657,10 +662,10 @@ function renderWeekendHighlight() {
   els.weekendHighlight.innerHTML = `
     <div class="weekend-highlight__head">
       <div>
-        <p class="weekend-highlight__eyebrow">今週末のおでかけ</p>
+        <p class="weekend-highlight__eyebrow">${uiIcon("calendar")}今週末のおでかけ</p>
         <h2>${escapeHtml(rangeLabel)}のピックアップ</h2>
       </div>
-      <button type="button" class="ghost-button" data-decision="weekend">今週末をすべて見る</button>
+      <button type="button" class="ghost-button" data-decision="weekend">${uiIcon("calendar")}今週末をすべて見る</button>
     </div>
     <div class="weekend-highlight__grid">
       ${weekendEvents
@@ -672,10 +677,13 @@ function renderWeekendHighlight() {
                 ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
               </div>
               <div class="weekend-card__body">
-                <p class="card-kicker">${escapeHtml(event.municipality || "群馬県")} / ${escapeHtml(formatMonthDay(event.start_date))}</p>
+                <p class="card-kicker">
+                  <span class="meta-item">${uiIcon("pin")}${escapeHtml(event.municipality || "群馬県")}</span>
+                  <span class="meta-item">${uiIcon("calendar")}${escapeHtml(formatMonthDay(event.start_date))}</span>
+                </p>
                 <h3>${escapeHtml(event.title)}</h3>
                 <div class="event-meta">
-                  <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
+                  <span class="pill category">${uiIcon("tag")}${escapeHtml(categoryLabel(event.category))}</span>
                   ${statusPill(event)}
                 </div>
               </div>
@@ -713,16 +721,16 @@ function renderDateChips() {
   }
   els.dateChips.hidden = false;
   const scopes = [
-    ["all", "すべて"],
-    ["upcoming", "開催予定"],
-    ["weekend", "今週末"],
-    ["month", "今月"],
-    ["past", "過去"],
+    ["all", "すべて", "list"],
+    ["upcoming", "開催予定", "ticket"],
+    ["weekend", "今週末", "calendar"],
+    ["month", "今月", "calendar"],
+    ["past", "過去", "clock"],
   ];
   els.dateChips.innerHTML = scopes
     .map(
-      ([value, label]) =>
-        `<button type="button" class="chip ${state.dateScope === value ? "is-active" : ""}" data-date-scope="${value}">${label}</button>`
+      ([value, label, icon]) =>
+        `<button type="button" class="chip ${state.dateScope === value ? "is-active" : ""}" data-date-scope="${value}">${uiIcon(icon)}${label}</button>`
     )
     .join("");
 }
@@ -736,13 +744,14 @@ function renderAgeChips() {
   });
 
   const chips = [
-    `<button type="button" class="chip ${state.age === "all" ? "is-active" : ""}" data-age="all">すべて</button>`,
+    `<button type="button" class="chip ${state.age === "all" ? "is-active" : ""}" data-age="all">${uiIcon("users")}すべて</button>`,
   ].concat(
     ageGroups
       .filter((group) => state.age === group.id || (counts.get(group.id) || 0) > 0)
       .map((group) => {
         const count = counts.get(group.id) || 0;
-        return `<button type="button" class="chip ${state.age === group.id ? "is-active" : ""}" data-age="${escapeHtml(group.id)}">${escapeHtml(group.label)}<em>${count}</em></button>`;
+        const icon = group.id === "infant" || group.id === "baby" ? "baby" : "users";
+        return `<button type="button" class="chip ${state.age === group.id ? "is-active" : ""}" data-age="${escapeHtml(group.id)}">${uiIcon(icon)}${escapeHtml(group.label)}<em>${count}</em></button>`;
       })
   );
   els.ageChips.innerHTML = chips.join("");
@@ -762,13 +771,13 @@ function renderCategoryChips() {
   });
 
   const chips = [
-    `<button type="button" class="chip ${state.category === "all" ? "is-active" : ""}" data-category="all">すべて</button>`,
+    `<button type="button" class="chip ${state.category === "all" ? "is-active" : ""}" data-category="all">${uiIcon("tag")}すべて</button>`,
   ].concat(
     groups
       .filter((group) => (counts.get(group.id) || 0) > 0)
       .map((group) => {
         const count = counts.get(group.id) || 0;
-        return `<button type="button" class="chip ${state.category === group.id ? "is-active" : ""}" data-category="${escapeHtml(group.id)}">${escapeHtml(group.label)}<em>${count}</em></button>`;
+        return `<button type="button" class="chip ${state.category === group.id ? "is-active" : ""}" data-category="${escapeHtml(group.id)}">${uiIcon("tag")}${escapeHtml(group.label)}<em>${count}</em></button>`;
       })
   );
   els.categoryChips.innerHTML = chips.join("");
@@ -865,7 +874,7 @@ function renderCoverage() {
 
   const items = [
     `<button type="button" class="coverage-item ${state.municipality === "all" ? "is-active" : ""}" data-municipality="all">
-      <strong>すべて</strong>
+      <strong>${uiIcon("map")}すべて</strong>
       <span>${total}件</span>
       <div class="coverage-bar"><span style="width:100%"></span></div>
     </button>`,
@@ -878,7 +887,7 @@ function renderCoverage() {
         const active = state.municipality === name ? "is-active" : "";
         return `
           <button type="button" class="coverage-item ${active}" data-municipality="${escapeHtml(name)}">
-            <strong>${escapeHtml(name)}</strong>
+            <strong>${uiIcon("pin")}${escapeHtml(name)}</strong>
             <span>${count}件</span>
             <div class="coverage-bar"><span style="width:${width}%"></span></div>
           </button>
@@ -904,16 +913,55 @@ function renderList(records) {
       groups.get(key).push(record);
     });
     els.eventList.innerHTML = Array.from(groups.entries())
-      .map(
-        ([key, items]) =>
-          `<h3 class="date-group-heading">${escapeHtml(monthHeading(key))}</h3>` + items.map(cardFn).join("")
-      )
+      .map(([key, items]) => renderDateGroup(key, items, cardFn))
       .join("");
   } else {
     els.eventList.innerHTML = records.map(cardFn).join("");
   }
 
   hydrateGooglePhotoTargets(els.eventList);
+}
+
+function renderDateGroup(key, items, cardFn) {
+  const cards = items.map(cardFn).join("");
+  const count = items.length;
+  const collapseByDefault = key === "開催中";
+
+  if (!collapseByDefault) {
+    return `${dateGroupHeadingHtml(key, count)}${cards}`;
+  }
+
+  return `
+    <details class="date-group">
+      <summary class="date-group-heading date-group-toggle">
+        <span class="date-group-toggle__label">${uiIcon("calendar")}${escapeHtml(monthHeading(key))}</span>
+        <span class="date-group-toggle__meta"><em>${count}件</em><i class="ui-icon ui-icon--chevron" aria-hidden="true"></i></span>
+      </summary>
+      <div class="date-group-body">${cards}</div>
+    </details>
+  `;
+}
+
+function dateGroupHeadingHtml(key, count) {
+  if (/^\d{4}-\d{2}$/.test(key)) {
+    const [year, month] = key.split("-");
+    return `
+      <h3 class="date-group-heading date-group-heading--month">
+        <span class="date-group-heading__main">
+          <span class="date-group-heading__year">${escapeHtml(year)}</span>
+          <span class="date-group-heading__month">${Number(month)}<small>月</small></span>
+        </span>
+        <span class="date-group-heading__count">${count}件</span>
+      </h3>
+    `;
+  }
+
+  return `
+    <h3 class="date-group-heading date-group-heading--label">
+      <span class="date-group-heading__main">${uiIcon("calendar")}${escapeHtml(monthHeading(key))}</span>
+      <span class="date-group-heading__count">${count}件</span>
+    </h3>
+  `;
 }
 
 function eventCard(event) {
@@ -923,18 +971,20 @@ function eventCard(event) {
   const venue = event.venue_name || event.area_label || "";
   const placeLine = [event.municipality || event.prefecture, venue].filter(Boolean).join(" / ");
   const dateLabel = formatMonthDay(event.start_date);
-  const kicker = [dateLabel !== "-" ? dateLabel : "", placeLine || "地域未設定"].filter(Boolean).join(" · ");
   const price = event.price_note || "";
+  const kickerParts = [];
+  if (dateLabel !== "-") kickerParts.push(`<span class="meta-item">${uiIcon("calendar")}${escapeHtml(dateLabel)}</span>`);
+  kickerParts.push(`<span class="meta-item">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>`);
 
   return `
     <a class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
       ${image}
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(event.title)}</h3>
-        <p class="card-kicker">${escapeHtml(kicker)}</p>
+        <p class="card-kicker">${kickerParts.join("")}</p>
         <div class="event-meta">
-          ${time ? `<span class="pill neutral">${escapeHtml(time)}</span>` : ""}
-          <span class="pill neutral">${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+          ${time ? `<span class="pill neutral">${uiIcon("clock")}${escapeHtml(time)}</span>` : ""}
+          <span class="pill neutral">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(event)}
         </div>
       </div>
@@ -948,14 +998,18 @@ function placeCard(place) {
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   const placeLine = [place.municipality || place.prefecture, indoorOutdoor].filter(Boolean).join(" / ");
   const price = place.price_note || "";
+  const indoorIcon = place.indoor_outdoor === "outdoor" ? "sun" : "home";
   return `
     <a class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
       ${image}
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
-        <p class="card-kicker">${escapeHtml(placeLine || "地域未設定")}</p>
+        <p class="card-kicker">
+          <span class="meta-item">${uiIcon("pin")}${escapeHtml(place.municipality || place.prefecture || "地域未設定")}</span>
+          ${indoorOutdoor ? `<span class="meta-item">${uiIcon(indoorIcon)}${escapeHtml(indoorOutdoor)}</span>` : ""}
+        </p>
         <div class="event-meta">
-          <span class="pill neutral">${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+          <span class="pill neutral">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(place)}
         </div>
       </div>
@@ -1409,7 +1463,11 @@ function isIndoorFriendly(place) {
 
 function statusPill(record) {
   if (!isCandidate(record)) return "";
-  return `<span class="pill warn">要確認</span>`;
+  return `<span class="pill warn">${uiIcon("alert")}要確認</span>`;
+}
+
+function uiIcon(name) {
+  return `<i class="ui-icon ui-icon--${name}" aria-hidden="true"></i>`;
 }
 
 function formatDate(value) {
