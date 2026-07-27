@@ -2769,7 +2769,7 @@ button.coverage-item.is-active .ui-icon {
 
 .static-detail-section h2 {
   margin: 0 0 10px;
-  font-size: var(--text);
+  font-size: 1.125rem;
   font-weight: 800;
   line-height: 1.35;
 }
@@ -2800,7 +2800,7 @@ button.coverage-item.is-active .ui-icon {
 .recommend-block h3 {
   margin: 0 0 6px;
   color: var(--brand-dark);
-  font-size: var(--text-sm);
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -3522,12 +3522,11 @@ video {
 
   .static-detail h1 {
     margin: 4px 0 8px;
-    font-size: var(--text-xl);
+    font-size: clamp(1.5rem, 6.2vw, 1.75rem);
   }
 
   .static-detail .lead {
     margin-bottom: 8px;
-    font-size: var(--text);
     display: block;
     overflow: visible;
     -webkit-line-clamp: unset;
@@ -4480,7 +4479,7 @@ p,
 }
 
 .static-detail .lead {
-  font-size: var(--text-lg);
+  font-size: 1.1875rem;
   font-weight: 600;
   line-height: 1.8;
 }
@@ -4488,13 +4487,63 @@ p,
 .static-detail .detail-copy,
 .guide-section .detail-copy,
 .info-page .detail-copy {
-  font-size: var(--text);
-  line-height: 1.9;
+  font-size: 1.125rem;
+  line-height: 1.95;
 }
 
 .static-detail-section h2,
 .guide-section h2 {
   color: var(--ink);
+  font-size: 1.1875rem;
+}
+
+.static-detail-page .detail-fact-strip span {
+  font-size: 1.125rem;
+}
+
+.static-detail-page .detail-fact-strip b,
+.static-detail-page .detail-grid dt {
+  font-size: 1rem;
+}
+
+.static-detail-page .detail-grid dd {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.static-detail-page .recommend-block h3 {
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 680px) {
+  .static-detail-page .static-detail h1 {
+    font-size: clamp(1.5rem, 6.2vw, 1.75rem);
+  }
+
+  .static-detail-page .static-detail .lead {
+    font-size: 1.125rem;
+  }
+
+  .static-detail-page .static-detail-section h2,
+  .static-detail-page .guide-section h2 {
+    font-size: 1.125rem;
+  }
+
+  .static-detail-page .detail-copy,
+  .static-detail-page .static-detail-section p,
+  .static-detail-page .detail-grid dd,
+  .static-detail-page .detail-fact-strip span {
+    font-size: 1.125rem;
+  }
+
+  .static-detail-page .recommend-block h3 {
+    font-size: 1rem;
+  }
+
+  .static-detail-page .detail-fact-strip b,
+  .static-detail-page .detail-grid dt {
+    font-size: 0.9375rem;
+  }
 }
 
 .info-page .policy-updated {
