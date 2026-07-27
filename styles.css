@@ -481,6 +481,7 @@ h1 {
 
 .filter-actions {
   display: flex;
+  flex: 0 0 auto;
   gap: 8px;
 }
 
@@ -490,8 +491,36 @@ h1 {
 
 .filter-title h2,
 .coverage-panel h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
   margin: 0;
+  min-width: 0;
+  color: var(--ink);
   font-size: var(--text);
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.filter-title h2 {
+  flex: 1 1 auto;
+}
+
+.filter-title h2 .ui-icon,
+.coverage-panel h2 .ui-icon,
+.field > span .ui-icon,
+.ghost-button .ui-icon,
+.mode-button .ui-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  opacity: 0.85;
+}
+
+.field > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
 }
 
 .mode-switch {
@@ -1719,9 +1748,27 @@ select:focus {
 
 .date-group-heading__main {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.45em;
+  align-items: center;
+  gap: 0.5em;
   min-width: 0;
+}
+
+.date-group-heading__main > .ui-icon {
+  width: 1.05em;
+  height: 1.05em;
+  color: var(--brand);
+  opacity: 0.9;
+  align-self: center;
+}
+
+.date-group-heading--month .date-group-heading__main {
+  align-items: baseline;
+}
+
+.date-group-heading--month .date-group-heading__main > .ui-icon {
+  align-self: center;
+  position: relative;
+  top: 0.08em;
 }
 
 .date-group-heading__year {
@@ -4049,13 +4096,10 @@ video {
 .ghost-button,
 .primary-button,
 .secondary-button,
-.filter-title h2,
-.coverage-panel h2,
 .weekend-highlight__eyebrow,
 .card-kicker,
 .pill,
 .detail-fact-strip b,
-.field > span,
 .meta-item {
   display: inline-flex;
   align-items: center;
@@ -4067,9 +4111,7 @@ video {
 .chip,
 .ghost-button,
 .primary-button,
-.secondary-button,
-.filter-title h2,
-.coverage-panel h2 {
+.secondary-button {
   display: inline-flex;
 }
 

@@ -948,6 +948,7 @@ function dateGroupHeadingHtml(key, count) {
     return `
       <h3 class="date-group-heading date-group-heading--month">
         <span class="date-group-heading__main">
+          ${uiIcon("calendar")}
           <span class="date-group-heading__year">${escapeHtml(year)}</span>
           <span class="date-group-heading__month">${Number(month)}<small>月</small></span>
         </span>
