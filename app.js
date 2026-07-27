@@ -869,27 +869,23 @@ function renderCoverage() {
   const records = currentRecords();
   const counts = new Map();
   records.forEach((record) => counts.set(record.municipality || "未設定", (counts.get(record.municipality || "未設定") || 0) + 1));
-  const max = Math.max(...counts.values(), 1);
   const total = records.length;
 
   const items = [
     `<button type="button" class="coverage-item ${state.municipality === "all" ? "is-active" : ""}" data-municipality="all">
       <strong>${uiIcon("map")}すべて</strong>
       <span>${total}件</span>
-      <div class="coverage-bar"><span style="width:100%"></span></div>
     </button>`,
   ].concat(
     Array.from(counts.entries())
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"))
       .slice(0, 12)
       .map(([name, count]) => {
-        const width = Math.max(8, Math.round((count / max) * 100));
         const active = state.municipality === name ? "is-active" : "";
         return `
           <button type="button" class="coverage-item ${active}" data-municipality="${escapeHtml(name)}">
             <strong>${uiIcon("pin")}${escapeHtml(name)}</strong>
             <span>${count}件</span>
-            <div class="coverage-bar"><span style="width:${width}%"></span></div>
           </button>
         `;
       })
