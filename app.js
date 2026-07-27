@@ -1333,8 +1333,23 @@ function matchesWeekend(event) {
   const startDate = event.start_date;
   const endDate = event.end_date || event.start_date;
   if (!startDate || endDate < TODAY) return false;
+  if (isLongRunningEvent(event)) return false;
   const { start, end } = weekendRange();
   return startDate <= end && endDate >= start;
+}
+
+function isLongRunningEvent(event) {
+  return eventSpanDays(event) >= 14;
+}
+
+function eventSpanDays(event) {
+  const startDate = event.start_date;
+  const endDate = event.end_date || event.start_date;
+  if (!startDate || !endDate) return 0;
+  const start = Date.parse(`${startDate}T00:00:00Z`);
+  const end = Date.parse(`${endDate}T00:00:00Z`);
+  if (Number.isNaN(start) || Number.isNaN(end) || end < start) return 0;
+  return Math.round((end - start) / 86400000) + 1;
 }
 
 function matchesThisMonth(event) {
