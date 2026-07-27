@@ -221,9 +221,92 @@ def upgrade_image_url(url):
     )
 
 
+def image_basename(url):
+    if not url:
+        return ""
+    path = re.sub(r"[?#].*$", "", str(url))
+    return path.rstrip("/").rsplit("/", 1)[-1].lower()
+
+
+def is_junk_image_url(url):
+    """Exclude site chrome, ranking badges, SNS icons, nav art, maps UI, etc."""
+    if not url:
+        return True
+    base = image_basename(url)
+    stem = base.rsplit(".", 1)[0] if "." in base else base
+    if not stem:
+        return True
+    # Single-letter / ultra-short assets (x.png, 1.gif)
+    if len(stem) <= 2:
+        return True
+    # Ranking / medal badges like no1.png
+    if re.fullmatch(r"no\d{1,2}", stem):
+        return True
+    junk_stems = {
+        "access",
+        "koutuu",
+        "koutsuu",
+        "kotu",
+        "traffic",
+        "favicon",
+        "spacer",
+        "blank",
+        "dummy",
+        "pixel",
+        "1x1",
+        "arrow",
+        "pagetop",
+        "totop",
+        "share",
+        "sns",
+        "facebook",
+        "instagram",
+        "twitter",
+        "line",
+        "line_btn",
+        "qr",
+        "qrcode",
+        "logo",
+        "icon",
+        "badge",
+        "medal",
+        "ranking",
+        "banner",
+        "btn",
+        "button",
+        "nav",
+        "menu",
+        "header",
+        "footer",
+        "gnav",
+        "gnav_img1",
+        "gnav_img2",
+        "gnav_img3",
+        "netsunoyu01",
+        "netsunoyu02",
+        "netsunoyu",
+    }
+    if stem in junk_stems:
+        return True
+    if re.search(
+        r"(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking)(?:[-_]|$)",
+        stem,
+    ):
+        return True
+    if re.search(
+        r"(?:ogp|noimage|s100x100|capture\.jpg|/common/(?:img|images?)/|/themes?/.*/(?:common|assets)/.*gnav)",
+        url,
+        re.I,
+    ):
+        return True
+    return False
+
+
 def image_pixel_hint(url):
     if not url:
         return 0
+    if is_junk_image_url(url):
+        return -10_000
     score = 0
     wp = re.search(r"-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))", url, re.I)
     if wp:
@@ -251,12 +334,18 @@ def image_pixel_hint(url):
         score = 700
     if re.search(r"(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr)", url, re.I):
         score -= 250
-    if re.search(r"\.(?:webp|png)(?:\?|$)", url, re.I):
-        score += 30
+    # Live cams are usable fallbacks but should never beat event photos
+    if re.search(r"(?:livecamera|webcam)", url, re.I):
+        score -= 320
+    # Prefer real photos over UI chrome PNGs
+    if re.search(r"\.(?:jpe?g)(?:\?|$)", url, re.I):
+        score += 40
+    elif re.search(r"\.(?:webp)(?:\?|$)", url, re.I):
+        score += 20
     return score
 
 
-def best_display_image(record):
+def candidate_image_urls(record):
     urls = []
     primary = record.get("primary_image_url")
     if primary:
@@ -266,13 +355,25 @@ def best_display_image(record):
             urls.append(image["image_url"])
         elif isinstance(image, str):
             urls.append(image)
+    return urls
+
+
+def best_display_image(record):
+    urls = candidate_image_urls(record)
     if not urls:
         return ""
+    primary = record.get("primary_image_url") or ""
+    primary_upgraded = upgrade_image_url(primary) or primary
+    if primary_upgraded and not is_junk_image_url(primary_upgraded):
+        return primary_upgraded
+
     best = ""
     best_score = -10_000
     for url in urls:
-        upgraded = upgrade_image_url(url)
+        upgraded = upgrade_image_url(url) or url
         for candidate in ((upgraded, url) if upgraded != url else (url,)):
+            if is_junk_image_url(candidate):
+                continue
             score = image_pixel_hint(candidate)
             if score > best_score:
                 best_score = score
@@ -309,17 +410,22 @@ def collect_gallery_images(record, alt, limit=8):
         if not url:
             continue
         display_url = upgrade_image_url(url) or url
-        if display_url in seen:
+        if is_junk_image_url(display_url) or display_url in seen:
             continue
         seen.add(display_url)
-        entry = dict(image)
+        entry = dict(image) if isinstance(image, dict) else {"image_url": display_url, "alt_text": alt}
         entry["image_url"] = display_url
         items.append(entry)
     items = filter_relevant_images(items, alt)
     best = best_display_image(record)
     if best and items:
         rest = [item for item in items if item.get("image_url") != best]
-        best_item = next((item for item in items if item.get("image_url") == best), {"image_url": best, "alt_text": alt})
+        best_item = next(
+            (item for item in items if item.get("image_url") == best),
+            {"image_url": best, "alt_text": alt},
+        )
+        # Prefer higher-scoring real photos after the lead image
+        rest.sort(key=lambda item: image_pixel_hint(item.get("image_url") or ""), reverse=True)
         items = [best_item] + rest
     return items[:limit]
 
@@ -623,7 +729,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727f">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727g">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">

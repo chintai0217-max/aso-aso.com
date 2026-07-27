@@ -1063,9 +1063,43 @@ function upgradeImageUrl(url = "") {
   return url.replace(/-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))/i, "");
 }
 
+function imageBasename(url = "") {
+  const path = String(url).replace(/[?#].*$/, "");
+  return path.split("/").pop()?.toLowerCase() || "";
+}
+
+function isJunkImageUrl(url = "") {
+  if (!url) return true;
+  const base = imageBasename(url);
+  const stem = base.includes(".") ? base.slice(0, base.lastIndexOf(".")) : base;
+  if (!stem || stem.length <= 2) return true;
+  if (/^no\d{1,2}$/i.test(stem)) return true;
+  const junkStems = new Set([
+    "access", "koutuu", "koutsuu", "kotu", "traffic",
+    "favicon", "spacer", "blank", "dummy", "pixel", "1x1", "arrow",
+    "pagetop", "totop", "share", "sns", "facebook", "instagram", "twitter",
+    "line", "line_btn", "qr", "qrcode", "logo", "icon", "badge", "medal",
+    "ranking", "banner", "btn", "button", "nav", "menu", "header", "footer",
+    "gnav", "gnav_img1", "gnav_img2", "gnav_img3",
+    "netsunoyu01", "netsunoyu02", "netsunoyu",
+  ]);
+  if (junkStems.has(stem)) return true;
+  if (/(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking)(?:[-_]|$)/i.test(stem)) {
+    return true;
+  }
+  if (/(?:ogp|noimage|s100x100|capture\.jpg|\/common\/(?:img|images?)\/|\/themes?\/.*\/(?:common|assets)\/.*gnav)/i.test(url)) {
+    return true;
+  }
+  return false;
+}
+
 function imagePixelHint(url = "") {
   if (!url) return 0;
   if (imageHintCache.has(url)) return imageHintCache.get(url);
+  if (isJunkImageUrl(url)) {
+    imageHintCache.set(url, -10000);
+    return -10000;
+  }
 
   let score = 0;
   const wp = url.match(/-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))/i);
@@ -1092,7 +1126,9 @@ function imagePixelHint(url = "") {
   if (/(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr)/i.test(url)) {
     score -= 250;
   }
-  if (/\.(?:webp|png)(?:\?|$)/i.test(url)) score += 30;
+  if (/(?:livecamera|webcam)/i.test(url)) score -= 320;
+  if (/\.(?:jpe?g)(?:\?|$)/i.test(url)) score += 40;
+  else if (/\.(?:webp)(?:\?|$)/i.test(url)) score += 20;
   imageHintCache.set(url, score);
   return score;
 }
@@ -1109,7 +1145,7 @@ function collectImageCandidates(record = {}) {
   for (const url of urls) {
     const upgraded = upgradeImageUrl(url);
     for (const candidate of upgraded && upgraded !== url ? [upgraded, url] : [url]) {
-      if (!candidate || seen.has(candidate)) continue;
+      if (!candidate || seen.has(candidate) || isJunkImageUrl(candidate)) continue;
       seen.add(candidate);
       scored.push({ url: candidate, score: imagePixelHint(candidate) });
     }
@@ -1121,7 +1157,13 @@ function collectImageCandidates(record = {}) {
 function prepareRecordImage(record = {}) {
   if (!record || record._displayImage != null) return record;
   const scored = collectImageCandidates(record);
-  const display = scored[0]?.url || "";
+  const primary = upgradeImageUrl(record.primary_image_url || "") || record.primary_image_url || "";
+  let display = "";
+  if (primary && !isJunkImageUrl(primary)) {
+    display = primary;
+  } else {
+    display = scored[0]?.url || "";
+  }
   let thumb = display;
   if (scored.length) {
     const ideal = 480;
@@ -1161,7 +1203,7 @@ function googlePhotoCandidate(record = {}) {
 }
 
 function isLikelyLowQualityImage(url = "") {
-  return /(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr)/i.test(url);
+  return isJunkImageUrl(url) || /(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr|livecamera|webcam)/i.test(url);
 }
 
 function googleMapsApiKey() {
