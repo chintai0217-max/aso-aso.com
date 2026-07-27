@@ -2782,6 +2782,34 @@ button.coverage-item.is-active .ui-icon {
   white-space: pre-wrap;
 }
 
+.recommend-section {
+  display: grid;
+  gap: 14px;
+}
+
+.recommend-section > h2 {
+  margin-bottom: 0;
+}
+
+.recommend-block {
+  padding: 14px 16px;
+  border-left: 3px solid var(--brand);
+  background: linear-gradient(90deg, rgba(2, 132, 199, 0.08), transparent 72%);
+}
+
+.recommend-block h3 {
+  margin: 0 0 6px;
+  color: var(--brand-dark);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.recommend-block .detail-copy {
+  margin: 0;
+  line-height: 1.8;
+}
+
 .static-detail-grid {
   margin-top: 0;
   padding: 0;

@@ -569,6 +569,34 @@ def section_paragraph(title, text):
     )
 
 
+def recommend_section(event):
+    recommended = str(event.get("recommended_for") or "").strip()
+    scenes = str(event.get("best_scenes") or "").strip()
+    if not recommended and not scenes:
+        return ""
+    blocks = []
+    if recommended:
+        blocks.append(
+            '<div class="recommend-block">'
+            "<h3>こんな方におすすめ</h3>"
+            f'<p class="detail-copy">{html(recommended)}</p>'
+            "</div>"
+        )
+    if scenes:
+        blocks.append(
+            '<div class="recommend-block">'
+            "<h3>こんなシーンで楽しめる</h3>"
+            f'<p class="detail-copy">{html(scenes)}</p>'
+            "</div>"
+        )
+    return (
+        '<section class="static-detail-section detail-section recommend-section">'
+        "<h2>おすすめの楽しみ方</h2>"
+        + "".join(blocks)
+        + "</section>"
+    )
+
+
 def ga_snippet():
     return f"""    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>
@@ -734,7 +762,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260728c">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260728d">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -905,6 +933,7 @@ def render_event(event):
         )
         + "</div><div class=\"static-detail-body\">"
         + section_paragraph("概要", event.get("summary"))
+        + recommend_section(event)
         + section_paragraph("補足", event.get("notes"))
         + detail_section(
             "会場・アクセス",
