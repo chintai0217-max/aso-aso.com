@@ -1748,13 +1748,23 @@ select:focus {
 }
 
 .date-group-heading--month .date-group-heading__main {
-  align-items: baseline;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.45em 0.9em 0.5em;
+  border-radius: 999px;
+  background: var(--brand);
+  color: var(--on-brand);
+  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.22);
 }
 
 .date-group-heading--month .date-group-heading__main > .ui-icon {
   align-self: center;
-  position: relative;
-  top: 0.08em;
+  position: static;
+  top: auto;
+  width: 1em;
+  height: 1em;
+  color: var(--on-brand);
+  opacity: 1;
 }
 
 .date-group-heading__year {
@@ -1762,6 +1772,10 @@ select:focus {
   font-size: var(--text-sm);
   font-weight: 800;
   letter-spacing: 0.04em;
+}
+
+.date-group-heading--month .date-group-heading__year {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .date-group-heading__year::after {
@@ -1776,12 +1790,20 @@ select:focus {
   letter-spacing: -0.02em;
 }
 
+.date-group-heading--month .date-group-heading__month {
+  color: var(--on-brand);
+}
+
 .date-group-heading__month small {
   margin-left: 0.08em;
   color: var(--brand-dark);
   font-size: 0.55em;
   font-weight: 800;
   vertical-align: baseline;
+}
+
+.date-group-heading--month .date-group-heading__month small {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .date-group-heading__count {
