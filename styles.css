@@ -107,7 +107,7 @@
   border-bottom: 0;
 }
 
-.eyebrow {
+.app-header .eyebrow {
   color: var(--on-brand);
   font-weight: 900;
 }
@@ -117,7 +117,7 @@ h1 {
   line-height: 1.08;
 }
 
-.lead {
+.app-header .lead {
   max-width: 760px;
   color: var(--on-brand);
   font-size: var(--text-lg);
@@ -1384,7 +1384,7 @@ body.dialog-open {
   border-bottom: 0;
 }
 
-.eyebrow {
+.app-header .eyebrow {
   color: var(--on-brand);
   font-weight: 900;
 }
@@ -1394,7 +1394,7 @@ h1 {
   line-height: 1.08;
 }
 
-.lead {
+.app-header .lead {
   max-width: 760px;
   color: var(--on-brand);
   font-size: var(--text-lg);
@@ -2079,17 +2079,17 @@ select:focus {
     padding-bottom: 48px;
   }
 
-  .eyebrow {
+  .app-header .eyebrow {
     margin-bottom: 8px;
   }
 
-  h1 {
+  .app-header h1 {
     max-width: 340px;
     font-size: var(--text-xl);
     line-height: 1.12;
   }
 
-  .lead {
+  .app-header .lead {
     display: -webkit-box;
     overflow: hidden;
     margin-top: 10px;
@@ -2449,9 +2449,18 @@ button.coverage-item.is-active {
 .static-detail .lead {
   max-width: 780px;
   margin-bottom: 8px;
-  color: var(--muted);
+  color: var(--ink);
   font-size: var(--text);
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.static-detail .eyebrow {
+  margin: 0;
+  color: var(--ink);
+  font-size: var(--text);
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 .static-detail-body {
@@ -3365,7 +3374,10 @@ video {
 
   .static-detail .lead {
     margin-bottom: 8px;
-    font-size: var(--text-sm);
+    font-size: var(--text);
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
   }
 
   .static-detail-image {
@@ -4201,7 +4213,6 @@ p,
 
 .lead,
 .card-kicker,
-.eyebrow,
 .brand small,
 .detail-fact-strip b,
 .detail-grid dt,
@@ -4211,6 +4222,47 @@ p,
 .site-footer-brand {
   color: var(--muted);
   font-size: var(--text-sm);
+}
+
+.eyebrow {
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 900;
+}
+
+.static-detail .eyebrow {
+  color: var(--ink);
+  font-size: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.static-detail .lead,
+.static-detail .detail-copy,
+.guide-section .detail-copy,
+.info-page .detail-copy {
+  color: var(--ink);
+}
+
+.static-detail .lead {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.static-detail .detail-copy,
+.guide-section .detail-copy,
+.info-page .detail-copy {
+  font-size: var(--text);
+  line-height: 1.9;
+}
+
+.static-detail-section h2,
+.guide-section h2 {
+  color: var(--ink);
+}
+
+.info-page .policy-updated {
+  color: var(--muted);
 }
 
 .chip,
