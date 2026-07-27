@@ -47,7 +47,7 @@
           </span>
         </a>
         <div class="topbar-links">
-          <a href="../#eventList">一覧へ戻る</a>
+          <a data-list-return href="../#eventList">一覧へ戻る</a>
           <a href="../areas/">地域</a>
           <a href="../themes/">テーマ</a>
           <a href="../guides/">ガイド</a>
@@ -56,7 +56,7 @@
     </nav>
     <main class="static-detail-shell">
       <article class="static-detail">
-        <div class="static-detail-head"><p class="eyebrow">群馬のイベント</p><h1>タイフェスティバル高崎2026</h1><p class="lead">高崎市 · 食フェス · 高崎駅周辺</p><div class="detail-fact-strip"><span class=""><b>開催日</b>2026/7/19（日）</span><span class=""><b>時間</b>16:00 - 20:45</span><span class=""><b>会場</b>高崎市もてなし広場</span><span class=""><b>料金</b>入場無料</span><span class="is-missing"><b>駐車場</b>公式で確認</span><span class="is-missing"><b>予約</b>公式で確認</span><span class="is-missing"><b>最終確認</b>未設定</span></div></div><div class="static-detail-body"><section class="static-detail-section detail-section"><h2>概要</h2><p class="detail-copy">タイ文化・フードイベント。SNS由来のため公式確認対象。</p></section><section class="static-detail-section detail-section"><h2>会場・アクセス</h2><dl class="detail-grid static-detail-grid"><dt>住所</dt><dd>群馬県高崎市高松町1</dd><dt>地域</dt><dd>群馬県 / 高崎市</dd><dt>エリア</dt><dd>高崎駅周辺</dd><dt>駐車場</dt><dd>公式で確認</dd><dt>予約</dt><dd>公式で確認</dd></dl></section><section class="static-detail-section detail-section"><h2>主催・情報元</h2><dl class="detail-grid static-detail-grid"><dt>カテゴリ</dt><dd>食フェス</dd><dt>開催期間</dt><dd>2026年7月19日（日）</dd><dt>ソース</dt><dd>高崎市 イベントカレンダー</dd><dt>最終確認</dt><dd>未設定</dd></dl></section><div class="dialog-actions static-detail-actions"><a class="primary-button" href="https://www.instagram.com/thai.fes.takasaki/" target="_blank" rel="noreferrer">公式ページで最新を確認</a><a class="secondary-button" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E9%AB%98%E6%9D%BE%E7%94%BA1" target="_blank" rel="noreferrer">地図で見る</a><a class="secondary-button" href="../?q=%E3%82%BF%E3%82%A4%E3%83%95%E3%82%A7%E3%82%B9%E3%83%86%E3%82%A3%E3%83%90%E3%83%AB%E9%AB%98%E5%B4%8E2026">一覧で探す</a></div></div>
+        <div class="static-detail-head"><p class="eyebrow">群馬のイベント</p><h1>タイフェスティバル高崎2026</h1><p class="lead">高崎市 · 食フェス · 高崎駅周辺</p><div class="detail-fact-strip"><span class=""><b>開催日</b>2026/7/19（日）</span><span class=""><b>時間</b>16:00 - 20:45</span><span class=""><b>会場</b>高崎市もてなし広場</span><span class=""><b>料金</b>入場無料</span><span class="is-missing"><b>駐車場</b>公式で確認</span><span class="is-missing"><b>予約</b>公式で確認</span><span class="is-missing"><b>最終確認</b>未設定</span></div></div><div class="static-detail-body"><section class="static-detail-section detail-section"><h2>概要</h2><p class="detail-copy">タイ文化・フードイベント。SNS由来のため公式確認対象。</p></section><section class="static-detail-section detail-section"><h2>会場・アクセス</h2><dl class="detail-grid static-detail-grid"><dt>住所</dt><dd>群馬県高崎市高松町1</dd><dt>地域</dt><dd>群馬県 / 高崎市</dd><dt>エリア</dt><dd>高崎駅周辺</dd><dt>駐車場</dt><dd>公式で確認</dd><dt>予約</dt><dd>公式で確認</dd></dl></section><section class="static-detail-section detail-section"><h2>主催・情報元</h2><dl class="detail-grid static-detail-grid"><dt>カテゴリ</dt><dd>食フェス</dd><dt>開催期間</dt><dd>2026年7月19日（日）</dd><dt>ソース</dt><dd>高崎市 イベントカレンダー</dd><dt>最終確認</dt><dd>未設定</dd></dl></section><div class="dialog-actions static-detail-actions"><a class="primary-button" href="https://www.instagram.com/thai.fes.takasaki/" target="_blank" rel="noreferrer">公式ページで最新を確認</a><a class="secondary-button" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E9%AB%98%E6%9D%BE%E7%94%BA1" target="_blank" rel="noreferrer">地図で見る</a><a class="secondary-button" data-list-return href="../?municipality=%E9%AB%98%E5%B4%8E%E5%B8%82#eventList">一覧で探す</a></div></div>
       </article>
     </main>
     <footer class="site-footer">
@@ -71,5 +71,16 @@
         </nav>
       </div>
     </footer>
+    <script>
+      (function () {
+        try {
+          var url = sessionStorage.getItem("aso:listUrl");
+          if (!url) return;
+          document.querySelectorAll("[data-list-return]").forEach(function (link) {
+            link.setAttribute("href", url);
+          });
+        } catch (e) {}
+      })();
+    </script>
   </body>
 </html>

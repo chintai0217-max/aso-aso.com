@@ -318,6 +318,35 @@ def footer_html(asset_prefix="../"):
     </footer>"""
 
 
+def list_return_script():
+    return """    <script>
+      (function () {
+        try {
+          var url = sessionStorage.getItem("aso:listUrl");
+          if (!url) return;
+          document.querySelectorAll("[data-list-return]").forEach(function (link) {
+            link.setAttribute("href", url);
+          });
+        } catch (e) {}
+      })();
+    </script>"""
+
+
+def list_search_href(mode="", municipality="", asset_prefix="../"):
+    params = []
+    if mode == "places":
+        params.append("mode=places")
+    elif mode and mode not in ("events", "event"):
+        params.append(f"mode={url_quote(mode)}")
+    if municipality:
+        params.append(f"municipality={url_quote(municipality)}")
+    query = ("?" + "&".join(params)) if params else ""
+    home = asset_prefix if asset_prefix.endswith("/") else f"{asset_prefix}/"
+    if asset_prefix in ("./", "."):
+        home = "./"
+    return f"{home}{query}#eventList"
+
+
 def layout(
     title,
     description,
@@ -374,7 +403,7 @@ def layout(
           </span>
         </a>
         <div class="topbar-links">
-          <a href="{home}#eventList">一覧へ戻る</a>
+          <a data-list-return href="{home}#eventList">一覧へ戻る</a>
           <a href="{home}areas/">地域</a>
           <a href="{home}themes/">テーマ</a>
           <a href="{home}guides/">ガイド</a>
@@ -387,6 +416,7 @@ def layout(
       </article>
     </main>
 {footer_html(asset_prefix)}
+{list_return_script()}
   </body>
 </html>
 """
@@ -409,8 +439,7 @@ def detail_section(title, items):
     return f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>{grid}</section>'
 
 
-def action_links(primary_url, primary_label, home_query, map_link=""):
-    query = url_quote(str(home_query or ""))
+def action_links(primary_url, primary_label, mode, municipality="", map_link=""):
     links = []
     if primary_url:
         links.append(
@@ -418,7 +447,10 @@ def action_links(primary_url, primary_label, home_query, map_link=""):
         )
     if map_link:
         links.append(f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">地図で見る</a>')
-    links.append(f'<a class="secondary-button" href="../?q={html(query)}">一覧で探す</a>')
+    list_href = list_search_href(mode=mode, municipality=municipality or "")
+    links.append(
+        f'<a class="secondary-button" data-list-return href="{html(list_href)}">一覧で探す</a>'
+    )
     return '<div class="dialog-actions static-detail-actions">' + "".join(links) + "</div>"
 
 
@@ -559,7 +591,8 @@ def render_event(event):
         + action_links(
             event.get("canonical_url"),
             "公式ページで最新を確認",
-            event.get("title"),
+            "events",
+            event.get("municipality") or "",
             maps_url(event),
         )
         + "</div>"
@@ -642,7 +675,8 @@ def render_place(place):
         + action_links(
             place.get("official_url"),
             "公式ページで最新を確認",
-            place.get("name"),
+            "places",
+            place.get("municipality") or "",
             maps_url(place),
         )
         + "</div>"

@@ -236,11 +236,13 @@ select:focus {
   box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
 }
 
-.event-card[role="button"] {
+a.event-card {
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.event-card[role="button"]:focus-visible {
+a.event-card:focus-visible {
   outline: 3px solid rgba(14, 165, 233, 0.28);
   outline-offset: 3px;
 }
@@ -2147,6 +2149,21 @@ select:focus {
   margin-bottom: 16px;
 }
 
+.list-context {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.list-context[hidden] {
+  display: none;
+}
+
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -3222,12 +3239,19 @@ video {
   border: 1px solid #d8e3ec;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.92);
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .weekend-card:hover {
   border-color: rgba(2, 132, 199, 0.45);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.weekend-card:focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.28);
+  outline-offset: 2px;
 }
 
 .weekend-card__media {

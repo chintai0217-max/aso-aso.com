@@ -47,7 +47,7 @@
           </span>
         </a>
         <div class="topbar-links">
-          <a href="../#eventList">一覧へ戻る</a>
+          <a data-list-return href="../#eventList">一覧へ戻る</a>
           <a href="../areas/">地域</a>
           <a href="../themes/">テーマ</a>
           <a href="../guides/">ガイド</a>
@@ -71,5 +71,16 @@
         </nav>
       </div>
     </footer>
+    <script>
+      (function () {
+        try {
+          var url = sessionStorage.getItem("aso:listUrl");
+          if (!url) return;
+          document.querySelectorAll("[data-list-return]").forEach(function (link) {
+            link.setAttribute("href", url);
+          });
+        } catch (e) {}
+      })();
+    </script>
   </body>
 </html>

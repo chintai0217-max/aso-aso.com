@@ -1,4 +1,5 @@
 const TODAY = todayInTimeZone("Asia/Tokyo");
+const LIST_RETURN_KEY = "aso:listUrl";
 const googlePhotoCache = new Map();
 
 const state = {
@@ -111,8 +112,6 @@ const familyAgePattern = /子ども|子供|親子/;
 
 const els = {};
 
-let dialogScrollY = 0;
-
 document.addEventListener("DOMContentLoaded", async () => {
   bindElements();
   bindEvents();
@@ -145,6 +144,17 @@ async function loadOptionalConfig() {
 
 function applyInitialSearchQuery() {
   const params = new URLSearchParams(window.location.search);
+
+  const decision = params.get("decision");
+  if (decision && decision !== "none") {
+    applyDecision(decision, { toggle: false, scroll: false, skipRender: true });
+  }
+
+  const mode = params.get("mode");
+  if (mode === "events" || mode === "places") {
+    state.mode = mode;
+  }
+
   const query = params.get("q");
   if (query) {
     state.query = query.trim().toLowerCase();
@@ -156,15 +166,76 @@ function applyInitialSearchQuery() {
     state.municipality = municipality;
   }
 
-  const mode = params.get("mode");
-  if (mode === "events" || mode === "places") {
-    state.mode = mode;
+  const category = params.get("category");
+  if (category) {
+    state.category = category;
   }
 
-  const decision = params.get("decision");
-  if (decision) {
-    applyDecision(decision, { toggle: false, scroll: false });
+  const age = params.get("age");
+  if (age) {
+    state.age = age;
   }
+
+  const status = params.get("status");
+  if (status) {
+    state.status = status;
+  }
+
+  const date = params.get("date");
+  if (date) {
+    state.dateScope = date;
+  }
+
+  if (params.has("motenashi")) {
+    state.motenashiOnly = params.get("motenashi") === "1";
+  }
+  if (params.has("free")) {
+    state.freeOnly = params.get("free") === "1";
+  }
+  if (params.has("indoor")) {
+    state.indoorOnly = params.get("indoor") === "1";
+  }
+}
+
+function buildListSearchParams() {
+  const params = new URLSearchParams();
+  if (state.mode !== "events") params.set("mode", state.mode);
+  const queryText = els.searchInput?.value?.trim() || "";
+  if (queryText) params.set("q", queryText);
+  if (state.municipality !== "all") params.set("municipality", state.municipality);
+  if (state.category !== "all") params.set("category", state.category);
+  if (state.age !== "all") params.set("age", state.age);
+  if (state.status !== "all") params.set("status", state.status);
+  if (state.mode === "events" && state.dateScope !== "upcoming") params.set("date", state.dateScope);
+  if (state.motenashiOnly) params.set("motenashi", "1");
+  if (state.freeOnly) params.set("free", "1");
+  if (state.indoorOnly) params.set("indoor", "1");
+  if (state.decision !== "none") params.set("decision", state.decision);
+  return params;
+}
+
+function listReturnPath() {
+  const search = buildListSearchParams().toString();
+  return `/${search ? `?${search}` : ""}#eventList`;
+}
+
+function rememberListReturnUrl() {
+  try {
+    sessionStorage.setItem(LIST_RETURN_KEY, listReturnPath());
+  } catch (_error) {
+    // ignore quota / private mode
+  }
+}
+
+function syncStateToUrl() {
+  const params = buildListSearchParams();
+  const search = params.toString();
+  const next = `${window.location.pathname}${search ? `?${search}` : ""}${window.location.hash}`;
+  const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  if (next !== current) {
+    history.replaceState(null, "", next);
+  }
+  rememberListReturnUrl();
 }
 
 async function loadData() {
@@ -189,7 +260,6 @@ function renderLoadError(error) {
 
 function bindElements() {
   [
-    "topMotenashiButton",
     "modeEventsButton",
     "modePlacesButton",
     "filterToggleButton",
@@ -207,21 +277,15 @@ function bindElements() {
     "decisionChips",
     "ageChips",
     "categoryChips",
+    "listContext",
     "weekendHighlight",
     "eventList",
-    "eventDialog",
-    "closeDialog",
-    "dialogBody",
   ].forEach((id) => {
     els[id] = document.getElementById(id);
   });
 }
 
 function bindEvents() {
-  els.topMotenashiButton.addEventListener("click", () => {
-    setMotenashiOnly(!state.motenashiOnly);
-  });
-
   els.filterToggleButton.addEventListener("click", () => {
     state.filtersOpen = !state.filtersOpen;
     updateFilterVisibility();
@@ -235,6 +299,7 @@ function bindEvents() {
       state.municipality = "all";
       state.indoorOnly = false;
       state.freeOnly = false;
+      state.motenashiOnly = false;
       state.decision = "none";
       els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
       els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
@@ -329,26 +394,6 @@ function bindEvents() {
     populateMunicipalities();
     render();
   });
-
-  els.closeDialog.addEventListener("click", () => closeRecordDialog());
-  els.eventDialog.addEventListener("click", (event) => {
-    if (event.target === els.eventDialog) {
-      closeRecordDialog();
-    }
-  });
-  els.dialogBody.addEventListener("click", (event) => {
-    const shareButton = event.target.closest("[data-share-id]");
-    if (!shareButton) return;
-    event.preventDefault();
-    shareRecordById(shareButton.dataset.shareId, shareButton.dataset.shareKind);
-  });
-  els.eventDialog.addEventListener("close", () => {
-    unlockDialogScroll();
-  });
-  els.eventDialog.addEventListener("cancel", (event) => {
-    event.preventDefault();
-    closeRecordDialog();
-  });
 }
 
 function setMunicipality(name, { scroll = false } = {}) {
@@ -360,16 +405,6 @@ function setMunicipality(name, { scroll = false } = {}) {
   if (scroll && state.municipality !== "all") {
     document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-}
-
-function setMotenashiOnly(value) {
-  state.mode = "events";
-  state.motenashiOnly = value;
-  state.municipality = "all";
-  els.modeEventsButton.classList.add("is-active");
-  els.modePlacesButton.classList.remove("is-active");
-  populateFilters();
-  render();
 }
 
 function setDateScope(scope) {
@@ -425,7 +460,6 @@ function render() {
   const sorted = sortRecords(records);
 
   document.body.dataset.mode = state.mode;
-  els.topMotenashiButton.classList.toggle("is-active", state.motenashiOnly);
   els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
   els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
   renderDecisionChips();
@@ -434,15 +468,18 @@ function render() {
   renderCategoryChips();
   renderCoverage();
   renderMapSelection();
+  renderListContext();
   renderWeekendHighlight();
   renderList(sorted);
+  syncStateToUrl();
 }
 
-function applyDecision(decision, { toggle = true, scroll = true } = {}) {
+function applyDecision(decision, { toggle = true, scroll = true, skipRender = false } = {}) {
   const next = toggle && state.decision === decision ? "none" : decision;
   state.decision = next;
   state.freeOnly = false;
   state.indoorOnly = false;
+  state.motenashiOnly = false;
   state.status = "all";
 
   if (next === "weekend") {
@@ -461,6 +498,12 @@ function applyDecision(decision, { toggle = true, scroll = true } = {}) {
     state.age = "infant";
   } else if (next === "verified") {
     state.status = "verified";
+  } else if (next === "motenashi") {
+    state.mode = "events";
+    state.motenashiOnly = true;
+    state.municipality = "all";
+    state.age = "all";
+    state.category = "all";
   } else if (next === "none") {
     if (state.dateScope === "weekend") state.dateScope = "upcoming";
   }
@@ -471,11 +514,11 @@ function applyDecision(decision, { toggle = true, scroll = true } = {}) {
   }
   if (els.ageSelect) els.ageSelect.value = state.age;
   if (els.categorySelect) els.categorySelect.value = state.category;
-  if (state.data) {
+  if (!skipRender && state.data) {
     populateFilters();
     render();
   }
-  if (scroll) {
+  if (!skipRender && scroll) {
     document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
@@ -484,9 +527,10 @@ function renderDecisionChips() {
   if (!els.decisionChips) return;
   const chips = [
     ["weekend", "今週末"],
-    ["rain", "雨の日屋内"],
+    ["rain", "雨の日屋内（遊び場）"],
     ["free", "無料"],
     ["infant", "乳幼児"],
+    ["motenashi", "もてなし広場"],
     ["verified", "確認済み"],
   ];
   els.decisionChips.innerHTML = chips
@@ -495,6 +539,64 @@ function renderDecisionChips() {
         `<button type="button" class="chip decision-chip ${state.decision === value ? "is-active" : ""}" data-decision="${value}">${label}</button>`
     )
     .join("");
+}
+
+function renderListContext() {
+  if (!els.listContext) return;
+  const parts = [];
+  parts.push(state.mode === "events" ? "イベント" : "遊び場");
+
+  if (state.decision === "rain") {
+    parts.push("雨の日屋内に切り替えました");
+  } else if (state.decision === "weekend") {
+    parts.push("今週末");
+  } else if (state.decision === "free") {
+    parts.push("無料");
+  } else if (state.decision === "infant") {
+    parts.push("乳幼児向け");
+  } else if (state.decision === "motenashi") {
+    parts.push("もてなし広場");
+  } else if (state.decision === "verified") {
+    parts.push("確認済み");
+  }
+
+  if (state.municipality !== "all") parts.push(state.municipality);
+  if (state.decision !== "motenashi" && state.motenashiOnly) parts.push("もてなし広場");
+  if (state.decision !== "free" && state.freeOnly) parts.push("無料");
+  if (state.decision !== "rain" && state.indoorOnly) parts.push("屋内");
+  if (state.mode === "events" && state.dateScope !== "upcoming" && state.decision !== "weekend") {
+    const dateLabels = { all: "すべて", weekend: "今週末", month: "今月", past: "過去" };
+    parts.push(dateLabels[state.dateScope] || state.dateScope);
+  }
+  if (state.age !== "all" && state.decision !== "infant") {
+    const age = ageGroups.find((group) => group.id === state.age);
+    if (age) parts.push(age.label);
+  }
+  if (state.category !== "all") {
+    const group = currentCategoryGroups().find((item) => item.id === state.category);
+    if (group) parts.push(group.label);
+  }
+  if (state.query) parts.push(`「${els.searchInput?.value?.trim() || state.query}」`);
+
+  const hasFilter =
+    state.decision !== "none" ||
+    state.municipality !== "all" ||
+    state.motenashiOnly ||
+    state.freeOnly ||
+    state.indoorOnly ||
+    state.age !== "all" ||
+    state.category !== "all" ||
+    Boolean(state.query) ||
+    (state.mode === "events" && state.dateScope !== "upcoming");
+
+  if (!hasFilter) {
+    els.listContext.hidden = true;
+    els.listContext.textContent = "";
+    return;
+  }
+
+  els.listContext.hidden = false;
+  els.listContext.textContent = parts.join(" · ");
 }
 
 function renderWeekendHighlight() {
@@ -508,9 +610,31 @@ function renderWeekendHighlight() {
   const weekendEvents = sortRecords(
     state.data.events.filter((event) => {
       if (!matchesWeekend(event)) return false;
-      if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
       if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
-      return true;
+      if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
+      if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
+      if (state.status !== "all" && event.status !== state.status) return false;
+      if (state.freeOnly && !isFreeRecord(event)) return false;
+      if (!matchesAgeGroup(event)) return false;
+      if (!state.query) return true;
+
+      const haystack = [
+        event.title,
+        event.prefecture,
+        event.municipality,
+        event.area_label,
+        event.venue_name,
+        event.address,
+        event.category,
+        event.organizer,
+        event.summary,
+        event.source_names,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+      return haystack.includes(state.query);
     })
   ).slice(0, 4);
 
@@ -535,9 +659,8 @@ function renderWeekendHighlight() {
     <div class="weekend-highlight__grid">
       ${weekendEvents
         .map((event) => {
-          const official = officialUrl(event);
           return `
-            <article class="weekend-card" role="button" tabindex="0" data-card-id="${event.id}">
+            <a class="weekend-card" href="${escapeHtml(recordPageHref(event, "event"))}">
               <div class="weekend-card__media">
                 ${event.primary_image_url ? `<img src="${escapeHtml(event.primary_image_url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
               </div>
@@ -548,26 +671,14 @@ function renderWeekendHighlight() {
                   <span class="pill category">${escapeHtml(categoryLabel(event.category))}</span>
                   ${statusPill(event)}
                 </div>
-                ${official ? `<a class="text-link" href="${escapeHtml(official)}" target="_blank" rel="noreferrer" data-stop>公式</a>` : ""}
               </div>
-            </article>
+            </a>
           `;
         })
         .join("")}
     </div>
   `;
 
-  els.weekendHighlight.querySelectorAll("[data-card-id]").forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (event.target.closest("a, button, [data-stop]")) return;
-      openRecordById(card.dataset.cardId);
-    });
-    card.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      openRecordById(card.dataset.cardId);
-    });
-  });
   els.weekendHighlight.querySelectorAll("[data-decision]").forEach((button) => {
     button.addEventListener("click", () => applyDecision(button.dataset.decision, { toggle: false }));
   });
@@ -795,33 +906,7 @@ function renderList(records) {
     els.eventList.innerHTML = records.map(cardFn).join("");
   }
 
-  els.eventList.querySelectorAll("[data-card-id]").forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (event.target.closest("a, button")) return;
-      openRecordById(card.dataset.cardId);
-    });
-    card.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      openRecordById(card.dataset.cardId);
-    });
-  });
-  els.eventList.querySelectorAll("[data-detail-id]").forEach((button) => {
-    button.addEventListener("click", () => {
-      openRecordById(button.dataset.detailId);
-    });
-  });
   hydrateGooglePhotoTargets(els.eventList);
-}
-
-function openRecordById(id) {
-  const record = currentRecords().find((item) => String(item.id) === String(id));
-  if (!record) return;
-  if (state.mode === "events") {
-    openEventDialog(record);
-  } else {
-    openPlaceDialog(record);
-  }
 }
 
 function eventCard(event) {
@@ -832,7 +917,7 @@ function eventCard(event) {
   const price = event.price_note || "";
 
   return `
-    <article class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${event.id}">
+    <a class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
       ${image}
       <div class="date-box event-date-box">
         <strong>${escapeHtml(formatMonthDay(event.start_date))}</strong>
@@ -846,7 +931,7 @@ function eventCard(event) {
           ${statusPill(event)}
         </div>
       </div>
-    </article>
+    </a>
   `;
 }
 
@@ -856,7 +941,7 @@ function placeCard(place) {
   const placeLine = [place.municipality || place.prefecture, indoorOutdoor].filter(Boolean).join(" / ");
   const price = place.price_note || "";
   return `
-    <article class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" role="button" tabindex="0" data-card-id="${place.id}">
+    <a class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
       ${image}
       <div class="date-box place-box">
         <strong>${escapeHtml(indoorOutdoor)}</strong>
@@ -869,156 +954,13 @@ function placeCard(place) {
           ${statusPill(place)}
         </div>
       </div>
-    </article>
+    </a>
   `;
 }
 
-function openEventDialog(event) {
-  const dateLong = formatDateRange(event);
-  const dateShort = formatDateRangeCompact(event);
-  const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
-  const location = [event.prefecture, event.municipality].filter(Boolean).join(" / ");
-  const ageLabels = displayAgeLabels(event);
-  const facts = [
-    detailFact("開催日", dateShort, { fallback: "公式で確認" }),
-    detailFact("時間", time, { fallback: "公式で確認" }),
-    detailFact("会場", event.venue_name, { fallback: "公式で確認" }),
-    detailFact("料金", event.price_note, { fallback: "公式で確認" }),
-    detailFact("駐車場", event.parking_note, { fallback: "公式で確認" }),
-    detailFact("予約", event.reservation_note, { fallback: "公式で確認" }),
-    detailFact("最終確認", formatVerifiedDate(event.last_verified_at), { fallback: "未設定" }),
-  ].join("");
-  const official = officialUrl(event);
-
-  els.dialogBody.innerHTML = `
-    <div class="dialog-content dialog-detail">
-      ${dialogImage(event.primary_image_url, event.title, event)}
-      <div class="dialog-main">
-        <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(categoryLabel(event.category))}${event.area_label ? ` · ${escapeHtml(event.area_label)}` : ""}</p>
-        <h2>${escapeHtml(event.title)}</h2>
-        <div class="detail-fact-strip">${facts}</div>
-        ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
-        ${isCandidate(event) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
-        ${detailParagraph("概要", event.summary)}
-        ${detailParagraph("補足", event.notes)}
-        ${photoGallery(event.images, event.title)}
-        ${detailSection("会場・アクセス", [
-          ["住所", event.address || "公式で確認"],
-          ["地域", location],
-          ["エリア", event.area_label],
-          ["駐車場", event.parking_note || "公式で確認"],
-          ["予約", event.reservation_note || "公式で確認"],
-        ])}
-        ${detailSection("主催・情報元", [
-          ["主催", event.organizer],
-          ["カテゴリ", categoryLabel(event.category)],
-          ["開催期間", dateLong !== dateShort ? dateLong : ""],
-          ["ソース", event.source_names],
-          ["最終確認", formatVerifiedDate(event.last_verified_at) || event.last_verified_at || "未設定"],
-        ])}
-      </div>
-      <div class="dialog-actions">
-        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページで最新を確認</a>` : `<span class="trust-banner">公式URL未登録のため、主催・会場へ直接ご確認ください。</span>`}
-        <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(event.id))}" data-share-kind="event">共有</button>
-        ${mapsUrl(event) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(event))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
-        <a class="secondary-button" href="./events/${encodeURIComponent(event.id)}.html">詳細ページ</a>
-      </div>
-    </div>
-  `;
-
-  lockDialogScroll();
-  els.eventDialog.showModal();
-  hydrateGooglePhotoTargets(els.dialogBody);
-}
-
-function openPlaceDialog(place) {
-  const location = [place.prefecture, place.municipality].filter(Boolean).join(" / ");
-  const ageLabels = displayAgeLabels(place);
-  const facts = [
-    detailFact("対象", compactText(place.target_age_note, 42), { fallback: "公式で確認" }),
-    detailFact("料金", compactText(place.price_note, 42), { fallback: "公式で確認" }),
-    detailFact("時間", compactText(place.hours_note, 42), { fallback: "公式で確認" }),
-    detailFact("屋内/屋外", indoorOutdoorLabel(place.indoor_outdoor), { fallback: "公式で確認" }),
-    detailFact("駐車場", compactText(place.parking_note, 42), { fallback: "公式で確認" }),
-    detailFact("予約", compactText(place.reservation_note, 42), { fallback: "公式で確認" }),
-    detailFact("最終確認", formatVerifiedDate(place.last_verified_at), { fallback: "未設定" }),
-  ].join("");
-  const official = officialUrl(place);
-
-  els.dialogBody.innerHTML = `
-    <div class="dialog-content dialog-detail">
-      ${dialogImage(place.primary_image_url, place.name, place)}
-      <div class="dialog-main">
-        <p class="dialog-kicker">${escapeHtml(location || "群馬県")} · ${escapeHtml(placeTypeLabel(place.place_type))} · ${escapeHtml(indoorOutdoorLabel(place.indoor_outdoor))}</p>
-        <h2>${escapeHtml(place.name)}</h2>
-        <div class="detail-fact-strip">${facts}</div>
-        ${ageLabels.length ? `<div class="detail-tag-row">${ageLabels.map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join("")}</div>` : ""}
-        ${isCandidate(place) ? `<p class="trust-banner">情報は未確認の候補です。公式ページで最新をご確認ください。</p>` : ""}
-        ${detailParagraph("特徴", place.features)}
-        ${detailParagraph("補足", place.notes)}
-        ${photoGallery(place.images, place.name)}
-        ${detailSection("利用案内", [
-          ["対象", place.target_age_note || "公式で確認"],
-          ["料金", place.price_note || "公式で確認"],
-          ["利用時間", place.hours_note || "公式で確認"],
-          ["休み", place.closed_note || "公式で確認"],
-          ["予約", place.reservation_note || "公式で確認"],
-          ["種類", placeTypeLabel(place.place_type)],
-        ])}
-        ${detailSection("アクセス・設備", [
-          ["住所", place.address || "公式で確認"],
-          ["地域", location],
-          ["エリア", place.area_label],
-          ["駐車場", place.parking_note || "公式で確認"],
-          ["食事", place.food_note],
-          ["授乳等", place.nursing_note],
-          ["ベビーカー", place.stroller_note],
-        ])}
-        ${detailSection("情報元", [
-          ["ソース", place.source_names],
-          ["最終確認", formatVerifiedDate(place.last_verified_at) || place.last_verified_at || "未設定"],
-        ])}
-      </div>
-      <div class="dialog-actions">
-        ${official ? `<a class="primary-button" href="${escapeHtml(official)}" target="_blank" rel="noreferrer">公式ページで最新を確認</a>` : `<span class="trust-banner">公式URL未登録のため、施設へ直接ご確認ください。</span>`}
-        <button class="secondary-button" type="button" data-share-id="${escapeHtml(String(place.id))}" data-share-kind="place">共有</button>
-        ${mapsUrl(place) ? `<a class="secondary-button" href="${escapeHtml(mapsUrl(place))}" target="_blank" rel="noreferrer">${iconMapPin()}地図</a>` : ""}
-        <a class="secondary-button" href="./places/${encodeURIComponent(place.id)}.html">詳細ページ</a>
-      </div>
-    </div>
-  `;
-
-  lockDialogScroll();
-  els.eventDialog.showModal();
-  hydrateGooglePhotoTargets(els.dialogBody);
-}
-
-function closeRecordDialog() {
-  if (!els.eventDialog.open) return;
-  els.eventDialog.close();
-}
-
-function lockDialogScroll() {
-  if (!document.body.classList.contains("dialog-open")) {
-    dialogScrollY = window.scrollY || window.pageYOffset || 0;
-  }
-  document.documentElement.style.setProperty("--dialog-scroll-y", `-${dialogScrollY}px`);
-  document.body.classList.add("dialog-open");
-}
-
-function unlockDialogScroll() {
-  if (!document.body.classList.contains("dialog-open")) return;
-  document.body.classList.remove("dialog-open");
-  document.documentElement.style.removeProperty("--dialog-scroll-y");
-  window.scrollTo(0, dialogScrollY);
-}
-
-function detailFact(label, value, { fallback = "" } = {}) {
-  const raw = String(value || "").trim();
-  const text = raw || fallback;
-  if (!text) return "";
-  const missing = !raw;
-  return `<span class="${missing ? "is-missing" : ""}"><b>${escapeHtml(label)}</b>${escapeHtml(text)}</span>`;
+function recordPageHref(record, kind) {
+  const folder = kind === "place" ? "places" : "events";
+  return `./${folder}/${encodeURIComponent(record.id)}.html`;
 }
 
 function displayOrConfirm(value) {
@@ -1026,61 +968,11 @@ function displayOrConfirm(value) {
   return text || "公式で確認";
 }
 
-function detailParagraph(title, text) {
-  if (!text) return "";
-  return `
-    <section class="detail-section">
-      <h3>${escapeHtml(title)}</h3>
-      <p class="detail-copy">${escapeHtml(text)}</p>
-    </section>
-  `;
-}
-
-function detailSection(title, rows) {
-  const filled = rows.filter(([, value]) => value);
-  if (!filled.length) return "";
-  return `
-    <section class="detail-section">
-      <h3>${escapeHtml(title)}</h3>
-      <dl class="detail-grid">
-        ${filled.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join("")}
-      </dl>
-    </section>
-  `;
-}
-
 function compactText(value, limit = 40) {
   const text = String(value || "").replace(/\s+/g, " ").trim();
   if (!text) return "";
   if (text.length <= limit) return text;
   return `${text.slice(0, limit - 1).trim()}…`;
-}
-
-function formatDateRange(event) {
-  const start = formatDateLong(event.start_date);
-  if (!start) return "";
-  if (event.end_date && event.end_date !== event.start_date) {
-    return `${start} 〜 ${formatDateLong(event.end_date)}`;
-  }
-  return start;
-}
-
-function formatDateRangeCompact(event) {
-  const start = formatDateCompact(event.start_date);
-  if (!start) return "";
-  if (event.end_date && event.end_date !== event.start_date) {
-    const sameYear = String(event.start_date).slice(0, 4) === String(event.end_date).slice(0, 4);
-    return `${start} 〜 ${formatDateCompact(event.end_date, { includeYear: !sameYear })}`;
-  }
-  return start;
-}
-
-function formatDateLong(value) {
-  if (!value) return "";
-  const [year, month, day] = value.split("-").map(Number);
-  if (!year || !month || !day) return formatDate(value);
-  const week = ["日", "月", "火", "水", "木", "金", "土"][new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
-  return `${year}年${month}月${day}日（${week}）`;
 }
 
 function formatDateCompact(value, { includeYear = true } = {}) {
@@ -1092,20 +984,6 @@ function formatDateCompact(value, { includeYear = true } = {}) {
   return `${year}/${month}/${day}（${week}）`;
 }
 
-function displayAgeLabels(record) {
-  const text = ageSearchText(record);
-  const explicit = ageGroups.some((group) => agePatterns[group.id].test(text));
-  const hasCue =
-    explicit ||
-    openAgePattern.test(text) ||
-    familyAgePattern.test(text) ||
-    record.category === "kids";
-  if (!hasCue) return [];
-  return detectAgeTags(record)
-    .map((id) => ageGroups.find((group) => group.id === id)?.label)
-    .filter(Boolean);
-}
-
 function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
   const googlePlaceId = googlePhotoCandidate(record) ? record.google_place_id : "";
   const extraCount = Math.max(0, (images || []).length - 1);
@@ -1114,16 +992,6 @@ function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
       <span>${escapeHtml(fallbackLabel || "画像")}</span>
       ${extraCount ? `<em class="photo-count">+${extraCount}</em>` : ""}
       ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
-    </div>
-  `;
-}
-
-function dialogImage(url, alt, record = {}) {
-  const googlePlaceId = googlePhotoCandidate(record) ? record.google_place_id : "";
-  if (!url && !googlePlaceId) return "";
-  return `
-    <div class="dialog-image ${url ? "" : "is-google-pending"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
-      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" referrerpolicy="no-referrer" onerror="this.closest('.dialog-image').hidden=true">` : `<span>${escapeHtml(alt)}</span>`}
     </div>
   `;
 }
@@ -1221,74 +1089,6 @@ function applyGooglePhoto(target, photo, alt) {
     attribution.innerHTML = photo.attributions.join(" ");
     target.appendChild(attribution);
   }
-}
-
-function photoGallery(images = [], alt) {
-  const uniqueImages = filterRelevantImages(uniqueImagesByVisual(images), alt);
-  if (uniqueImages.length <= 1) return "";
-  return `
-    <div class="photo-gallery" aria-label="写真ギャラリー">
-      ${uniqueImages
-        .slice(1, 5)
-        .map((image) => `
-          <a href="${escapeHtml(image.source_page_url || image.image_url)}" target="_blank" rel="noreferrer" class="gallery-thumb">
-            <img src="${escapeHtml(image.image_url)}" alt="${escapeHtml(image.alt_text || alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          </a>
-        `)
-        .join("")}
-    </div>
-  `;
-}
-
-function filterRelevantImages(images = [], title = "") {
-  if (images.length <= 1) return images;
-  const key = String(title || "")
-    .replace(/[\s\u3000]/g, "")
-    .replace(/[！？!?\d０-９]+/g, "");
-  if (key.length < 4) return images.slice(0, 2);
-
-  const needle = key.slice(0, Math.min(10, key.length));
-  const matched = images.filter((image, index) => {
-    if (index === 0) return true;
-    const alt = String(image.alt_text || "").replace(/[\s\u3000]/g, "");
-    if (!alt) return false;
-    return alt.includes(needle) || needle.includes(alt.slice(0, Math.min(6, alt.length)));
-  });
-
-  // 関連画像がヒーロー以外にない場合は誤関連サムネを出さない
-  return matched.length > 1 ? matched : images.slice(0, 1);
-}
-
-function uniqueImagesByVisual(images = []) {
-  const seen = new Set();
-  return images.filter((image) => {
-    if (!image || !image.image_url) return false;
-    const key = imageVisualKey(image);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-}
-
-function imageVisualKey(image) {
-  const url = image.image_url || "";
-  const path = decodeURIComponent(url.split("?")[0]).split("/").pop() || url;
-  const filenameKey = path
-    .toLowerCase()
-    .replace(/\.(jpe?g|png|webp|gif|svg)$/i, "")
-    .replace(/(-|_)(scaled|thumb|thumbnail|small|medium|large)/gi, "")
-    .replace(/[-_]\d{2,5}x(\d{2,5}|auto)([-_]\d+)?/gi, "")
-    .replace(/@\dx|_pc|_sp|_webp|s-\d+x\d+_v-fs_webp/gi, "")
-    .replace(/[^a-z0-9]+/gi, "-")
-    .replace(/^-|-$/g, "");
-  if (filenameKey) return `file:${filenameKey}`;
-
-  const altKey = (image.alt_text || image.title || "")
-    .toLowerCase()
-    .replace(/\.(jpe?g|png|webp|gif|svg)$/i, "")
-    .replace(/[\s\u3000]+/g, "")
-    .replace(/[^\w\u3040-\u30ff\u3400-\u9fff]+/g, "");
-  return altKey.length >= 10 ? `alt:${altKey}` : `url:${url}`;
 }
 
 function filteredRecords() {
@@ -1491,10 +1291,6 @@ function indoorOutdoorLabel(value) {
   }[value] || "未設定";
 }
 
-function officialUrl(record) {
-  return record.canonical_url || record.official_url || "";
-}
-
 function isCandidate(record) {
   return record.status === "candidate" || record.confidence === "low";
 }
@@ -1507,85 +1303,9 @@ function isIndoorFriendly(place) {
   return place.indoor_outdoor === "indoor" || place.indoor_outdoor === "both";
 }
 
-function formatVerifiedDate(value) {
-  if (!value) return "";
-  const raw = String(value).slice(0, 10);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return String(value);
-  const [, month, day] = raw.split("-");
-  return `${Number(month)}/${Number(day)}確認`;
-}
-
-function trustLine(record) {
-  const parts = [];
-  const verified = formatVerifiedDate(record.last_verified_at);
-  if (verified) parts.push(verified);
-  if (isCandidate(record)) parts.push("要確認");
-  else if (record.status === "verified") parts.push("確認済み");
-  return parts.join(" · ") || "確認日未設定";
-}
-
 function statusPill(record) {
   if (!isCandidate(record)) return "";
   return `<span class="pill warn">要確認</span>`;
-}
-
-function siteOrigin() {
-  if (typeof location !== "undefined" && location.origin && location.origin !== "null") {
-    return location.origin;
-  }
-  return "https://aso-aso.com";
-}
-
-function recordPermalink(record, kind) {
-  const type = kind || (record.place_type != null || record.target_age_note != null ? "place" : "event");
-  const folder = type === "place" ? "places" : "events";
-  return `${siteOrigin()}/${folder}/${encodeURIComponent(record.id)}.html`;
-}
-
-function shareText(record, kind) {
-  const type = kind || (record.place_type != null || record.target_age_note != null ? "place" : "event");
-  const title = type === "place" ? record.name : record.title;
-  const where = record.municipality || record.prefecture || "群馬県";
-  const when =
-    type === "event" && record.start_date
-      ? formatDateCompact(record.start_date)
-      : indoorOutdoorLabel(record.indoor_outdoor);
-  const url = recordPermalink(record, type);
-  return `${title}（${where} / ${when}）\n${url}\n#群馬イベントナビ`;
-}
-
-async function shareRecordById(id, kind) {
-  const record =
-    kind === "place"
-      ? state.data.child_play_places.find((item) => String(item.id) === String(id))
-      : state.data.events.find((item) => String(item.id) === String(id)) ||
-        state.data.child_play_places.find((item) => String(item.id) === String(id));
-  if (!record) return;
-
-  const text = shareText(record, kind);
-  const url = recordPermalink(record, kind);
-  try {
-    if (navigator.share) {
-      await navigator.share({ title: record.title || record.name, text, url });
-      return;
-    }
-  } catch (error) {
-    if (error && error.name === "AbortError") return;
-  }
-
-  try {
-    await navigator.clipboard.writeText(text);
-    const button = els.dialogBody.querySelector(`[data-share-id="${String(id).replace(/"/g, "")}"]`);
-    if (button) {
-      const original = button.textContent;
-      button.textContent = "コピー済み";
-      setTimeout(() => {
-        button.textContent = original;
-      }, 1600);
-    }
-  } catch (_error) {
-    window.prompt("共有用テキストをコピーしてください", text);
-  }
 }
 
 function formatDate(value) {
@@ -1612,17 +1332,6 @@ function monthHeading(key) {
   if (key === "開催中") return "開催中・通年";
   const [year, month] = key.split("-");
   return `${year}年${Number(month)}月`;
-}
-
-function mapsUrl(record) {
-  const name = record.venue_name || record.name || "";
-  const query = record.address || [name, record.municipality, record.prefecture].filter(Boolean).join(" ");
-  if (!query) return "";
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-}
-
-function iconMapPin() {
-  return `<svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2c-3.9 0-7 3.1-7 7 0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>`;
 }
 
 function escapeHtml(value) {
