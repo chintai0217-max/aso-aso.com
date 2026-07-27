@@ -206,25 +206,6 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
-          "id": 59,
-          "entity_type": "event",
-          "entity_id": 21,
-          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY3MzEsInB1ciI6ImJsb2JfaWQifX0=--0977c766c67b5ed8ea5e2c856a204d5c1bac3420/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%83%A9%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%AB%E6%B9%BF%E5%9C%B0.jpg",
-          "source_page_url": "https://gunma-kanko.jp/events/269",
-          "title": "ラムサール条約登録地を歩く！ 芳ヶ平湿原とチャツボミゴケ公園散策ツアー受付中！（中之条町）【3月30日（月）～10月31日（土）】 | イベント一覧 | 心にググっと観光ぐんま",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=150"
-        },
-        {
           "id": 61,
           "entity_type": "event",
           "entity_id": 21,
@@ -242,6 +223,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=20"
+        },
+        {
+          "id": 59,
+          "entity_type": "event",
+          "entity_id": 21,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY3MzEsInB1ciI6ImJsb2JfaWQifX0=--0977c766c67b5ed8ea5e2c856a204d5c1bac3420/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%83%A9%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%AB%E6%B9%BF%E5%9C%B0.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/269",
+          "title": "ラムサール条約登録地を歩く！ 芳ヶ平湿原とチャツボミゴケ公園散策ツアー受付中！（中之条町）【3月30日（月）～10月31日（土）】 | イベント一覧 | 心にググっと観光ぐんま",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=150"
         },
         {
           "id": 60,
@@ -339,7 +339,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY3MzEsInB1ciI6ImJsb2JfaWQifX0=--0977c766c67b5ed8ea5e2c856a204d5c1bac3420/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%83%A9%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%AB%E6%B9%BF%E5%9C%B0.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY3MzEsInB1ciI6ImJsb2JfaWQifX0=--0977c766c67b5ed8ea5e2c856a204d5c1bac3420/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/%E3%83%A9%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%AB%E6%B9%BF%E5%9C%B0.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -368,6 +368,25 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "神流町恐竜センター ニュース",
       "images": [
+        {
+          "id": 2712,
+          "entity_type": "event",
+          "entity_id": 73,
+          "image_url": "https://dino-nakasato.org/wp-content/uploads/2022/04/画像３-1536x1152.jpeg",
+          "source_page_url": "https://dino-nakasato.org/news/kaseki-sagasi-2022/",
+          "title": "発掘体験2026 化石さがし体験",
+          "alt_text": "発掘体験2026 化石さがし体験",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 231,
           "entity_type": "event",
@@ -407,7 +426,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=32"
         }
       ],
-      "primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2023/07/2026化石さがし受付中-225x300.jpg",
+      "primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2022/04/画像３-1536x1152.jpeg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -581,6 +600,44 @@ window.EVENT_DATA = {
       "source_names": "湯Love草津 イベント",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 36,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/240706_01.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1878.php",
+          "title": "湯畑キャンドル 夢の灯り",
+          "alt_text": "湯畑キャンドル 夢の灯り",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
+          "id": 2713,
+          "entity_type": "event",
+          "entity_id": 36,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/ce980feae5a1406bf14bedf7d166fee9250d4e3b-thumb-5841x2976-107.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1878.php",
+          "title": "湯畑キャンドル 夢の灯り",
+          "alt_text": "湯畑キャンドル 夢の灯り",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 121,
           "entity_type": "event",
           "entity_id": 36,
@@ -714,7 +771,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
+      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/240706_01.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -744,29 +801,29 @@ window.EVENT_DATA = {
       "source_names": "沼田市観光協会",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 43,
+          "image_url": "https://www.numata-kankou.jp/news/img/t644-0.jpg",
+          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+          "title": "第5回 ニャンとワンダフルフォトコンテスト",
+          "alt_text": "第5回 ニャンとワンダフルフォトコンテスト",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 150,
           "entity_type": "event",
           "entity_id": 43,
           "image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
-          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
-          "title": "お知らせ一覧 | 沼田市観光協会",
-          "alt_text": "",
-          "image_kind": "inline",
-          "width": 247,
-          "height": 350,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
-          "id": 818,
-          "entity_type": "event",
-          "entity_id": 43,
-          "image_url": "https://www.numata-kankou.jp/news/img/t644-0.jpg",
           "source_page_url": "https://www.numata-kankou.jp/news/index.html",
           "title": "お知らせ一覧 | 沼田市観光協会",
           "alt_text": "",
@@ -839,7 +896,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
+      "primary_image_url": "https://www.numata-kankou.jp/news/img/t644-0.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -869,6 +926,25 @@ window.EVENT_DATA = {
       "source_names": "沼田市観光協会",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 44,
+          "image_url": "https://www.numata-kankou.jp/news/img/t644-1.jpg",
+          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+          "title": "大正和服体験",
+          "alt_text": "大正和服体験",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 154,
           "entity_type": "event",
           "entity_id": 44,
@@ -892,25 +968,6 @@ window.EVENT_DATA = {
           "entity_type": "event",
           "entity_id": 44,
           "image_url": "https://www.numata-kankou.jp/news/img/t644-0.jpg",
-          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
-          "title": "お知らせ一覧 | 沼田市観光協会",
-          "alt_text": "",
-          "image_kind": "inline",
-          "width": 247,
-          "height": 350,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
-          "id": 827,
-          "entity_type": "event",
-          "entity_id": 44,
-          "image_url": "https://www.numata-kankou.jp/news/img/t644-1.jpg",
           "source_page_url": "https://www.numata-kankou.jp/news/index.html",
           "title": "お知らせ一覧 | 沼田市観光協会",
           "alt_text": "",
@@ -964,7 +1021,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
+      "primary_image_url": "https://www.numata-kankou.jp/news/img/t644-1.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "予約制"
@@ -993,6 +1050,25 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "沼田市観光協会",
       "images": [
+        {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 45,
+          "image_url": "https://www.numata-kankou.jp/news/img/t643-0.jpg",
+          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+          "title": "上州真田三名城 無料シャトルバス",
+          "alt_text": "上州真田三名城 無料シャトルバス",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
         {
           "id": 158,
           "entity_type": "event",
@@ -1051,25 +1127,6 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         },
         {
-          "id": 836,
-          "entity_type": "event",
-          "entity_id": 45,
-          "image_url": "https://www.numata-kankou.jp/news/img/t643-0.jpg",
-          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
-          "title": "お知らせ一覧 | 沼田市観光協会",
-          "alt_text": "",
-          "image_kind": "inline",
-          "width": 247,
-          "height": 350,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
           "id": 837,
           "entity_type": "event",
           "entity_id": 45,
@@ -1089,7 +1146,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
+      "primary_image_url": "https://www.numata-kankou.jp/news/img/t643-0.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -1429,6 +1486,25 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
+          "id": 45,
+          "entity_type": "event",
+          "entity_id": 17,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzM5OTAsInB1ciI6ImJsb2JfaWQifX0=--d70080e6d3b28b04fccd80b8f4912f0823e989d2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_1214.JPG",
+          "source_page_url": "https://gunma-kanko.jp/events/294",
+          "title": "第４回スタンプラリー”たまぐる” 開催！ | イベント一覧 | 心にググっと観光ぐんま",
+          "alt_text": "道の駅 玉村宿",
+          "image_kind": "inline",
+          "width": 382,
+          "height": 280,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=28"
+        },
+        {
           "id": 43,
           "entity_type": "event",
           "entity_id": 17,
@@ -1455,25 +1531,6 @@ window.EVENT_DATA = {
           "source_page_url": "https://gunma-kanko.jp/events/294",
           "title": "第４回スタンプラリー”たまぐる” 開催！ | イベント一覧 | 心にググっと観光ぐんま",
           "alt_text": "玉村八幡宮",
-          "image_kind": "inline",
-          "width": 382,
-          "height": 280,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
-          "id": 45,
-          "entity_type": "event",
-          "entity_id": 17,
-          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzM5OTAsInB1ciI6ImJsb2JfaWQifX0=--d70080e6d3b28b04fccd80b8f4912f0823e989d2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_1214.JPG",
-          "source_page_url": "https://gunma-kanko.jp/events/294",
-          "title": "第４回スタンプラリー”たまぐる” 開催！ | イベント一覧 | 心にググっと観光ぐんま",
-          "alt_text": "道の駅 玉村宿",
           "image_kind": "inline",
           "width": 382,
           "height": 280,
@@ -1524,7 +1581,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk3MDQsInB1ciI6ImJsb2JfaWQifX0=--b8ad00d9712a09e42a8a87994b90c9011b448e67/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E7%AC%AC4%E5%9B%9E%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%95%E3%82%9A%E3%83%A9%E3%83%AA%E3%83%BC%20%E8%A1%A8%E9%9D%A2_page-0001.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzM5OTAsInB1ciI6ImJsb2JfaWQifX0=--d70080e6d3b28b04fccd80b8f4912f0823e989d2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_1214.JPG",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2035,6 +2092,25 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
+          "id": 2721,
+          "entity_type": "event",
+          "entity_id": 20,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODkzMTgsInB1ciI6ImJsb2JfaWQifX0=--915d7595c696e51e741fdf403c3d0fcd114ec837/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/IMG_2426.JPG",
+          "source_page_url": "https://gunma-kanko.jp/events/290",
+          "title": "赤城で台湾さんぽ 昭和をみつける 九份の夜",
+          "alt_text": "赤城で台湾さんぽ 昭和をみつける 九份の夜",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 55,
           "entity_type": "event",
           "entity_id": 20,
@@ -2130,7 +2206,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODkzMTgsInB1ciI6ImJsb2JfaWQifX0=--915d7595c696e51e741fdf403c3d0fcd114ec837/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJKUEciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8413f7bb763578ade2a048a28fdb706f1ad984ce/IMG_2426.JPG",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODkzMTgsInB1ciI6ImJsb2JfaWQifX0=--915d7595c696e51e741fdf403c3d0fcd114ec837/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/IMG_2426.JPG",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2160,25 +2236,6 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
-          "id": 31,
-          "entity_type": "event",
-          "entity_id": 14,
-          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzMzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--013004db78ada40434a7bd7e2e81d00b15fa2aa8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/s_IMG_7657.jpg",
-          "source_page_url": "https://gunma-kanko.jp/events/299",
-          "title": "あつまれ！ミュージアムキッズデー「みんなで七夕かざりをつくろう」（長野原町）【7月4日(土)・7月5日(日)】 | イベント一覧 | 心にググっと観光ぐんま",
-          "alt_text": "名勝「吾妻峡」のミツバツツジ",
-          "image_kind": "inline",
-          "width": 382,
-          "height": 280,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
           "id": 32,
           "entity_type": "event",
           "entity_id": 14,
@@ -2196,6 +2253,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=20"
+        },
+        {
+          "id": 31,
+          "entity_type": "event",
+          "entity_id": 14,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzMzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--013004db78ada40434a7bd7e2e81d00b15fa2aa8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/s_IMG_7657.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/299",
+          "title": "あつまれ！ミュージアムキッズデー「みんなで七夕かざりをつくろう」（長野原町）【7月4日(土)・7月5日(日)】 | イベント一覧 | 心にググっと観光ぐんま",
+          "alt_text": "名勝「吾妻峡」のミツバツツジ",
+          "image_kind": "inline",
+          "width": 382,
+          "height": 280,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=28"
         },
         {
           "id": 33,
@@ -2293,7 +2369,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzMzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--013004db78ada40434a7bd7e2e81d00b15fa2aa8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/s_IMG_7657.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTg2MTgsInB1ciI6ImJsb2JfaWQifX0=--1c170780a2223dbd37efd5eaed4e51f56c0544c4/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/%E5%B7%9D%E5%8E%9F%E6%B9%AF%E6%B8%A9%E6%B3%89%E3%81%82%E3%81%9D%E3%81%B3%E3%81%AE%E5%9F%BA%E5%9C%B0NOA-scaled.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2372,48 +2448,29 @@ window.EVENT_DATA = {
       "source_names": "伊勢崎市観光物産協会",
       "images": [
         {
-          "id": 847,
+          "id": null,
           "entity_type": "event",
           "entity_id": 47,
-          "image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/06/いせさきふぉと2026ポスター_page-0001-724x1024.jpg",
+          "image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/07/%E5%8D%94%E4%BC%9AHP%E7%94%A8%E3%82%B5%E3%83%A0%E3%83%8D_1-e1782978956226.jpg",
           "source_page_url": "https://isesaki-kankou.com/info/isesakiphoto2026/",
-          "title": "いせさきふぉと。２０２６ 開催のお知らせ | 伊勢崎市観光物産協会",
-          "alt_text": "",
-          "image_kind": "inline",
-          "width": 1754,
-          "height": 2481,
+          "title": "いせさきふぉと。2026",
+          "alt_text": "いせさきふぉと。2026",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
           "credit": null,
           "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
           "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=32"
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
         },
         {
           "id": 165,
           "entity_type": "event",
           "entity_id": 47,
           "image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/07/協会HP用サムネ_1-e1782978956226-300x202.jpg",
-          "source_page_url": "https://isesaki-kankou.com/info/isesakiphoto2026/",
-          "title": "いせさきふぉと。２０２６ 開催のお知らせ | 伊勢崎市観光物産協会",
-          "alt_text": null,
-          "image_kind": "inline",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
-        },
-        {
-          "id": 164,
-          "entity_type": "event",
-          "entity_id": 47,
-          "image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/06/赤堀花しょうぶ園ポスチラデータ_1-212x300.jpg",
           "source_page_url": "https://isesaki-kankou.com/info/isesakiphoto2026/",
           "title": "いせさきふぉと。２０２６ 開催のお知らせ | 伊勢崎市観光物産協会",
           "alt_text": null,
@@ -2448,7 +2505,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/06/いせさきふぉと2026ポスター_page-0001-724x1024.jpg",
+      "primary_image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/07/%E5%8D%94%E4%BC%9AHP%E7%94%A8%E3%82%B5%E3%83%A0%E3%83%8D_1-e1782978956226.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2652,6 +2709,25 @@ window.EVENT_DATA = {
       "source_names": "上野村観光Navi イベント",
       "images": [
         {
+          "id": 2724,
+          "entity_type": "event",
+          "entity_id": 69,
+          "image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/06/ed12d8af532ea2e34a137432c55652fb-849x1200.jpg",
+          "source_page_url": "https://uenomura-kankonavi.jp/event/event-3643/",
+          "title": "第21回村のいいとこ・クラフト再発見 みんなの夏音じかん",
+          "alt_text": "第21回村のいいとこ・クラフト再発見 みんなの夏音じかん",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 960,
           "entity_type": "event",
           "entity_id": 69,
@@ -2709,7 +2785,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/06/e371b9a3c178dc7be9d785ecd701e9ed.jpg",
+      "primary_image_url": "https://uenomura-kankonavi.jp/wp/wp-content/uploads/2026/06/ed12d8af532ea2e34a137432c55652fb-849x1200.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2787,6 +2863,44 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "湯Love草津 イベント",
       "images": [
+        {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 38,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/a467af9264cf9f657fef1178d30d46ab52a9b47e.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1996.php",
+          "title": "草津温泉 江戸風鈴",
+          "alt_text": "草津温泉 江戸風鈴",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
+          "id": 2725,
+          "entity_type": "event",
+          "entity_id": 38,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/ce980feae5a1406bf14bedf7d166fee9250d4e3b-thumb-5841x2976-107.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1996.php",
+          "title": "草津温泉 江戸風鈴",
+          "alt_text": "草津温泉 江戸風鈴",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 129,
           "entity_type": "event",
@@ -2921,7 +3035,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
+      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/a467af9264cf9f657fef1178d30d46ab52a9b47e.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -2951,25 +3065,6 @@ window.EVENT_DATA = {
       "source_names": "みどり市観光ガイド イベント情報",
       "images": [
         {
-          "id": 196,
-          "entity_type": "event",
-          "entity_id": 60,
-          "image_url": "https://16106midori.jp/wp/wp-content/uploads/2024/08/コノドント館-scaled.jpg",
-          "source_page_url": "https://16106midori.jp/event/9302/",
-          "title": "第113回企画展「となりの恐竜展−じっくりみる恐竜のかたち−」 | イベント情報 | わたらせ渓谷鐵道が走る群馬県みどり市の観光公式サイト",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=158"
-        },
-        {
           "id": 197,
           "entity_type": "event",
           "entity_id": 60,
@@ -2987,6 +3082,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
+        },
+        {
+          "id": 196,
+          "entity_type": "event",
+          "entity_id": 60,
+          "image_url": "https://16106midori.jp/wp/wp-content/uploads/2024/08/コノドント館-scaled.jpg",
+          "source_page_url": "https://16106midori.jp/event/9302/",
+          "title": "第113回企画展「となりの恐竜展−じっくりみる恐竜のかたち−」 | イベント情報 | わたらせ渓谷鐵道が走る群馬県みどり市の観光公式サイト",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=158"
         },
         {
           "id": 911,
@@ -3008,7 +3122,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://16106midori.jp/wp/wp-content/uploads/2024/08/コノドント館-scaled.jpg",
+      "primary_image_url": "https://16106midori.jp/wp/wp-content/uploads/2026/07/113kikakuten_1-721x1020.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -3402,6 +3516,25 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
+          "id": 2727,
+          "entity_type": "event",
+          "entity_id": 19,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0ODMsInB1ciI6ImJsb2JfaWQifX0=--e0fae92d4e4a9c7023339e05415ef9f3725262dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/HHN4gAfakAAevPl-1.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/292",
+          "title": "温泉郷クラフトシアター2026",
+          "alt_text": "温泉郷クラフトシアター2026",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 51,
           "entity_type": "event",
           "entity_id": 19,
@@ -3516,7 +3649,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0ODMsInB1ciI6ImJsb2JfaWQifX0=--e0fae92d4e4a9c7023339e05415ef9f3725262dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/HHN4gAfakAAevPl-1.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0ODMsInB1ciI6ImJsb2JfaWQifX0=--e0fae92d4e4a9c7023339e05415ef9f3725262dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/HHN4gAfakAAevPl-1.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -3545,6 +3678,25 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
+        {
+          "id": 2728,
+          "entity_type": "event",
+          "entity_id": 15,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDE5NTUsInB1ciI6ImJsb2JfaWQifX0=--9951aadf92b715e00a5700080081d812a6ca0092/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/4.%E6%B4%9E%E7%AA%9F%E8%A6%B3%E9%9F%B3.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/297",
+          "title": "Gunma Gmesse Games 2026",
+          "alt_text": "Gunma Gmesse Games 2026",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 35,
           "entity_type": "event",
@@ -3584,7 +3736,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=68"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTAxMTEsInB1ciI6ImJsb2JfaWQifX0=--ee397e0b180f42a0fbdf350fa44b29e242cb58e3/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/GunmaGmesseGames2026_page-0001.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDE5NTUsInB1ciI6ImJsb2JfaWQifX0=--9951aadf92b715e00a5700080081d812a6ca0092/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/4.%E6%B4%9E%E7%AA%9F%E8%A6%B3%E9%9F%B3.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -3614,25 +3766,6 @@ window.EVENT_DATA = {
       "source_names": "みどり市観光ガイド イベント情報",
       "images": [
         {
-          "id": 192,
-          "entity_type": "event",
-          "entity_id": 59,
-          "image_url": "https://16106midori.jp/wp/wp-content/uploads/2021/03/20240410-377A2843-scaled.jpg",
-          "source_page_url": "https://16106midori.jp/event/9293/",
-          "title": "ながめ余興場 催物情報｜7月～9月 | イベント情報 | わたらせ渓谷鐵道が走る群馬県みどり市の観光公式サイト",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=158"
-        },
-        {
           "id": 193,
           "entity_type": "event",
           "entity_id": 59,
@@ -3650,6 +3783,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
+        },
+        {
+          "id": 192,
+          "entity_type": "event",
+          "entity_id": 59,
+          "image_url": "https://16106midori.jp/wp/wp-content/uploads/2021/03/20240410-377A2843-scaled.jpg",
+          "source_page_url": "https://16106midori.jp/event/9293/",
+          "title": "ながめ余興場 催物情報｜7月～9月 | イベント情報 | わたらせ渓谷鐵道が走る群馬県みどり市の観光公式サイト",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=158"
         }
       ],
       "primary_image_url": "https://16106midori.jp/wp/wp-content/uploads/2021/03/20240410-377A2843-scaled.jpg",
@@ -3855,6 +4007,25 @@ window.EVENT_DATA = {
       "source_names": "湯Love草津 イベント",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 35,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/event/img/top_mv.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1787.php",
+          "title": "夏休み お楽しみ昆虫採集",
+          "alt_text": "夏休み お楽しみ昆虫採集",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 117,
           "entity_type": "event",
           "entity_id": 35,
@@ -3988,7 +4159,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
+      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/event/img/top_mv.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -4017,6 +4188,25 @@ window.EVENT_DATA = {
       "notes": "公式・準公式URLに基づき確認ステータスを更新。",
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
+        {
+          "id": 2733,
+          "entity_type": "event",
+          "entity_id": 12,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEzNDQsInB1ciI6ImJsb2JfaWQifX0=--ed3dbd2509a808ee9654fd444b698bceea97aebc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/20260627-01-819x1024.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/302",
+          "title": "道の駅しもにた 有機農産物・こんにゃく消費拡大イベント",
+          "alt_text": "道の駅しもにた 有機農産物・こんにゃく消費拡大イベント",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 23,
           "entity_type": "event",
@@ -4113,7 +4303,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEzNDQsInB1ciI6ImJsb2JfaWQifX0=--ed3dbd2509a808ee9654fd444b698bceea97aebc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/20260627-01-819x1024.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEzNDQsInB1ciI6ImJsb2JfaWQifX0=--ed3dbd2509a808ee9654fd444b698bceea97aebc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/20260627-01-819x1024.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -4706,6 +4896,44 @@ window.EVENT_DATA = {
       "source_names": "湯Love草津 イベント",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 37,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/e63fd647aea80c8359c5421d43689659aa8276ae-thumb-6642x3489-722.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1992.php",
+          "title": "第80回 草津温泉感謝祭",
+          "alt_text": "第80回 草津温泉感謝祭",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
+          "id": 2734,
+          "entity_type": "event",
+          "entity_id": 37,
+          "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/e63fd647aea80c8359c5421d43689659aa8276ae-thumb-6642x3489-722.jpg",
+          "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1992.php",
+          "title": "第80回 草津温泉感謝祭",
+          "alt_text": "第80回 草津温泉感謝祭",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 125,
           "entity_type": "event",
           "entity_id": 37,
@@ -4839,7 +5067,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/img/livecamera.jpg",
+      "primary_image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/e63fd647aea80c8359c5421d43689659aa8276ae-thumb-6642x3489-722.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -5043,6 +5271,25 @@ window.EVENT_DATA = {
       "source_names": "前橋まるごとガイド イベント",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 29,
+          "image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4073/keep/1200?v=f37d1b0b620e560895d70a22de689193e45eaa97",
+          "source_page_url": "https://www.maebashi-cvb.com/event/2011",
+          "title": "前橋花火大会",
+          "alt_text": "前橋花火大会",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 91,
           "entity_type": "event",
           "entity_id": 29,
@@ -5081,7 +5328,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4176/keep/1200?v=640f8ff9c0197eae6ea37cd0cebf96e606d68ca4",
+      "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4073/keep/1200?v=f37d1b0b620e560895d70a22de689193e45eaa97",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -5228,6 +5475,25 @@ window.EVENT_DATA = {
       "source_names": "高山村公式サイト 観光イベント",
       "images": [
         {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 67,
+          "image_url": "https://www.takayama-kanko.jp/info/photo/top.jpg",
+          "source_page_url": "https://vill.takayama.gunma.jp/kankou/event/",
+          "title": "高山ふるさと祭り",
+          "alt_text": "高山ふるさと祭り",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 1535,
           "entity_type": "event",
           "entity_id": 67,
@@ -5245,25 +5511,6 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=158"
-        },
-        {
-          "id": 1538,
-          "entity_type": "event",
-          "entity_id": 67,
-          "image_url": "https://www.takayama-kanko.jp/info/photo/top.jpg",
-          "source_page_url": "https://www.takayama-kanko.jp/info/event.html",
-          "title": "イベント・歳時記｜群馬県高山村の観光案内",
-          "alt_text": null,
-          "image_kind": "supplemental",
-          "width": 900,
-          "height": 220,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
         },
         {
           "id": 1536,
@@ -5342,7 +5589,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://agakanren.com/websys/wp-content/uploads/ふるさと祭り2025_A4両面0722最終_1.jpg",
+      "primary_image_url": "https://www.takayama-kanko.jp/info/photo/top.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -5371,6 +5618,25 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "太田市観光物産協会",
       "images": [
+        {
+          "id": 2737,
+          "entity_type": "event",
+          "entity_id": 39,
+          "image_url": "https://www.ota-kanko.jp/cms/wp-content/uploads/2018/07/ねぷ３-1024x493.jpg",
+          "source_page_url": "https://www.ota-kanko.jp/info/%E5%B0%BE%E5%B3%B6%E3%81%AD%E3%81%B7%E3%81%9F%E3%81%BE%E3%81%A4%E3%82%8A/",
+          "title": "尾島ねぷたまつり",
+          "alt_text": "尾島ねぷたまつり",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 782,
           "entity_type": "event",
@@ -5448,7 +5714,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://www.ota-kanko.jp/cms/wp-content/uploads/2018/07/ねぷ３-300x144.jpg",
+      "primary_image_url": "https://www.ota-kanko.jp/cms/wp-content/uploads/2018/07/ねぷ３-1024x493.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -6035,10 +6301,29 @@ window.EVENT_DATA = {
       "source_names": "高崎観光協会",
       "images": [
         {
+          "id": 2738,
+          "entity_type": "event",
+          "entity_id": 5,
+          "image_url": "https://www.takasaki-kankoukyoukai.or.jp/wp-content/themes/takakan2020/images/home/banner/558x305/bikei.jpg",
+          "source_page_url": "https://www.takasaki-kankoukyoukai.or.jp/",
+          "title": "開運たかさき食堂2026夏",
+          "alt_text": "開運たかさき食堂2026夏",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 7,
           "entity_type": "event",
           "entity_id": 5,
-          "image_url": "https://www.takasaki-kankoukyoukai.or.jp/images/common/og_img.jpg",
+          "image_url": "https://www.takasaki-kankoukyoukai.or.jp/wp-content/themes/takakan2020/images/home/banner/558x305/bikei.jpg",
           "source_page_url": "https://www.takasaki-kankoukyoukai.or.jp/",
           "title": "高崎観光協会",
           "alt_text": null,
@@ -6054,7 +6339,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://www.takasaki-kankoukyoukai.or.jp/images/common/og_img.jpg",
+      "primary_image_url": "https://www.takasaki-kankoukyoukai.or.jp/wp-content/themes/takakan2020/images/home/banner/558x305/bikei.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -6565,6 +6850,25 @@ window.EVENT_DATA = {
       "source_names": "前橋まるごとガイド イベント",
       "images": [
         {
+          "id": 2740,
+          "entity_type": "event",
+          "entity_id": 30,
+          "image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/889/keep/1200?v=62e64e81d42ac2d489dbb64b0d535adbc83a6ba0",
+          "source_page_url": "https://www.maebashi-cvb.com/event/2026",
+          "title": "あかぎ大沼・白樺マラソン",
+          "alt_text": "あかぎ大沼・白樺マラソン",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 95,
           "entity_type": "event",
           "entity_id": 30,
@@ -6584,7 +6888,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/888/keep/1200?v=ed7d15db9f46138539a99708de4ba40fb2fd1f1e",
+      "primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/889/keep/1200?v=62e64e81d42ac2d489dbb64b0d535adbc83a6ba0",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -6658,10 +6962,29 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-07-05",
       "last_verified_at": "2026-07-05",
-      "canonical_url": "https://www.numata-kankou.jp/news/index.html",
+      "canonical_url": "https://www.numata-kankou.jp/activity/experience/hoshizora/",
       "notes": null,
       "source_names": "沼田市観光協会",
       "images": [
+        {
+          "id": null,
+          "entity_type": "event",
+          "entity_id": 42,
+          "image_url": "https://www.numata-kankou.jp/activity/experience/hoshizora/img/img03.png",
+          "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+          "title": "2026年たんばら高原星空観察",
+          "alt_text": "2026年たんばら高原星空観察",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
         {
           "id": 146,
           "entity_type": "event",
@@ -6758,7 +7081,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.numata-kankou.jp/news/img/t635-0.jpg",
+      "primary_image_url": "https://www.numata-kankou.jp/activity/experience/hoshizora/img/img03.png",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -7095,6 +7418,25 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
+          "id": 48,
+          "entity_type": "event",
+          "entity_id": 18,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzY2OTgsInB1ciI6ImJsb2JfaWQifX0=--6c8a3b14d4a7858e3a504ee16e8068163a803e0e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_6686.JPG",
+          "source_page_url": "https://gunma-kanko.jp/events/293",
+          "title": "食・音・市 しもにたFes | イベント一覧 | 心にググっと観光ぐんま",
+          "alt_text": "下仁田あじさい園",
+          "image_kind": "inline",
+          "width": 382,
+          "height": 280,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=28"
+        },
+        {
           "id": 47,
           "entity_type": "event",
           "entity_id": 18,
@@ -7131,25 +7473,6 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=20"
-        },
-        {
-          "id": 48,
-          "entity_type": "event",
-          "entity_id": 18,
-          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzY2OTgsInB1ciI6ImJsb2JfaWQifX0=--6c8a3b14d4a7858e3a504ee16e8068163a803e0e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_6686.JPG",
-          "source_page_url": "https://gunma-kanko.jp/events/293",
-          "title": "食・音・市 しもにたFes | イベント一覧 | 心にググっと観光ぐんま",
-          "alt_text": "下仁田あじさい園",
-          "image_kind": "inline",
-          "width": 382,
-          "height": 280,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=28"
         },
         {
           "id": 49,
@@ -7228,7 +7551,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk2MTUsInB1ciI6ImJsb2JfaWQifX0=--504a41717056d8db6f2f14ab4a17ebf0d799db04/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E9%A3%9F%E9%9F%B3%E5%B8%82.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzY2OTgsInB1ciI6ImJsb2JfaWQifX0=--6c8a3b14d4a7858e3a504ee16e8068163a803e0e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/IMG_6686.JPG",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -7440,6 +7763,25 @@ window.EVENT_DATA = {
       "source_names": "渋川伊香保温泉観光協会 最新イベント",
       "images": [
         {
+          "id": 2743,
+          "entity_type": "event",
+          "entity_id": 34,
+          "image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2025/10/TAT_3851.jpg",
+          "source_page_url": "https://www.ikaho-kankou.com/calendar/ikaho-matsuri/",
+          "title": "伊香保まつり",
+          "alt_text": "伊香保まつり",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 113,
           "entity_type": "event",
           "entity_id": 34,
@@ -7516,7 +7858,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=40"
         }
       ],
-      "primary_image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2025/08/25伊香保まつり運行表_page-0001-e1756172923979.jpg",
+      "primary_image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2025/10/TAT_3851.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -8302,6 +8644,25 @@ window.EVENT_DATA = {
       "source_names": "心にググっと観光ぐんま イベント一覧",
       "images": [
         {
+          "id": 580,
+          "entity_type": "event",
+          "entity_id": 13,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExMywicHVyIjoiYmxvYl9pZCJ9fQ==--af6d8315e11dcea68fd647a3773ed8e8fc806014/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/c318c452f0d5f681a9e36112df14501b.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/298",
+          "title": "中之条まちなか５時間リレーマラソン 先行エントリー受付中！【6月19日（金）～7月31日（金）】 | イベント一覧 | 心にググっと観光ぐんま",
+          "alt_text": "貴娘（貴娘酒造(株)）",
+          "image_kind": "inline",
+          "width": 382,
+          "height": 280,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=20"
+        },
+        {
           "id": 27,
           "entity_type": "event",
           "entity_id": 13,
@@ -8359,25 +8720,6 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         },
         {
-          "id": 580,
-          "entity_type": "event",
-          "entity_id": 13,
-          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExMywicHVyIjoiYmxvYl9pZCJ9fQ==--af6d8315e11dcea68fd647a3773ed8e8fc806014/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/c318c452f0d5f681a9e36112df14501b.jpg",
-          "source_page_url": "https://gunma-kanko.jp/events/298",
-          "title": "中之条まちなか５時間リレーマラソン 先行エントリー受付中！【6月19日（金）～7月31日（金）】 | イベント一覧 | 心にググっと観光ぐんま",
-          "alt_text": "貴娘（貴娘酒造(株)）",
-          "image_kind": "inline",
-          "width": 382,
-          "height": 280,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=20"
-        },
-        {
           "id": 581,
           "entity_type": "event",
           "entity_id": 13,
@@ -8397,7 +8739,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA4MjYsInB1ciI6ImJsb2JfaWQifX0=--e6d81131abb589d652d63390e9a4552a02c4900a/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbMTAyNCxudWxsXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--a2133805151f507ee9ea9b87d22bf2bd59910ffa/%E3%81%BE%E3%81%A15%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88.jpg",
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExMywicHVyIjoiYmxvYl9pZCJ9fQ==--af6d8315e11dcea68fd647a3773ed8e8fc806014/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/c318c452f0d5f681a9e36112df14501b.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": null
@@ -8666,6 +9008,25 @@ window.EVENT_DATA = {
       "source_names": "みどり市 地域子育て支援センター",
       "images": [
         {
+          "id": 2745,
+          "entity_type": "child_play_place",
+          "entity_id": 67,
+          "image_url": "https://seihoukai.ed.jp/wp-content/uploads/2022/02/shien-1024x440-1-768x330.png",
+          "source_page_url": "https://www.city.midori.gunma.jp/kosodate/1001641/1002538.html",
+          "title": "みどり市地域子育て支援センター にこにこ館",
+          "alt_text": "みどり市地域子育て支援センター にこにこ館",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 2706,
           "entity_type": "child_play_place",
           "entity_id": 67,
@@ -8685,7 +9046,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=42"
         }
       ],
-      "primary_image_url": "https://seihoukai.ed.jp/wp-content/uploads/2022/02/shien-1024x440-1-300x129.png",
+      "primary_image_url": "https://seihoukai.ed.jp/wp-content/uploads/2022/02/shien-1024x440-1-768x330.png",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -8716,25 +9077,6 @@ window.EVENT_DATA = {
       "source_names": "みどり市 地域子育て支援センター",
       "images": [
         {
-          "id": 2708,
-          "entity_type": "child_play_place",
-          "entity_id": 68,
-          "image_url": "https://kasakake-izumi.com/files/site_config/capture.jpg",
-          "source_page_url": "https://kasakake-izumi.com/pages/31/",
-          "title": "子育て支援センターのびのびくらぶ｜群馬県みどり市の社会福祉法人ことぶき会笠懸いずみ保育園です。乳児保育・早朝保育・延長保育・土曜保育・休日保育・特定保育をおこなっています。",
-          "alt_text": null,
-          "image_kind": "supplemental",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-14",
-          "last_verified_at": "2026-07-14",
-          "notes": "auto_collected_score=168"
-        },
-        {
           "id": 2709,
           "entity_type": "child_play_place",
           "entity_id": 68,
@@ -8752,6 +9094,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-14",
           "last_verified_at": "2026-07-14",
           "notes": "auto_collected_score=42"
+        },
+        {
+          "id": 2708,
+          "entity_type": "child_play_place",
+          "entity_id": 68,
+          "image_url": "https://kasakake-izumi.com/files/site_config/capture.jpg",
+          "source_page_url": "https://kasakake-izumi.com/pages/31/",
+          "title": "子育て支援センターのびのびくらぶ｜群馬県みどり市の社会福祉法人ことぶき会笠懸いずみ保育園です。乳児保育・早朝保育・延長保育・土曜保育・休日保育・特定保育をおこなっています。",
+          "alt_text": null,
+          "image_kind": "supplemental",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-14",
+          "last_verified_at": "2026-07-14",
+          "notes": "auto_collected_score=168"
         },
         {
           "id": 2710,
@@ -8792,7 +9153,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=42"
         }
       ],
-      "primary_image_url": "https://kasakake-izumi.com/files/site_config/capture.jpg",
+      "primary_image_url": "https://kasakake-izumi.com/files/libs/742/202504081350161101.webp?1744087816",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -9567,6 +9928,25 @@ window.EVENT_DATA = {
       "source_names": "下仁田町 ほたる山公園",
       "images": [
         {
+          "id": 454,
+          "entity_type": "child_play_place",
+          "entity_id": 57,
+          "image_url": "https://www.town.shimonita.lg.jp/kanko/m03/m03/m01/29hotaruyama.JPG",
+          "source_page_url": "https://www.town.shimonita.lg.jp/kanko/m03/m03/02.html",
+          "title": "下仁田町ホームページ ： 下仁田町ほたる山公園",
+          "alt_text": "29hotaruyama.JPG",
+          "image_kind": "inline",
+          "width": 230,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=20"
+        },
+        {
           "id": 451,
           "entity_type": "child_play_place",
           "entity_id": 57,
@@ -9603,25 +9983,6 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
-        },
-        {
-          "id": 454,
-          "entity_type": "child_play_place",
-          "entity_id": 57,
-          "image_url": "https://www.town.shimonita.lg.jp/kanko/m03/m03/m01/29hotaruyama.JPG",
-          "source_page_url": "https://www.town.shimonita.lg.jp/kanko/m03/m03/02.html",
-          "title": "下仁田町ホームページ ： 下仁田町ほたる山公園",
-          "alt_text": "29hotaruyama.JPG",
-          "image_kind": "inline",
-          "width": 230,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=20"
         },
         {
           "id": 1402,
@@ -9700,7 +10061,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=20"
         }
       ],
-      "primary_image_url": "https://www.town.shimonita.lg.jp/materials/img/title.png",
+      "primary_image_url": "https://www.town.shimonita.lg.jp/kanko/m03/m03/m01/29hotaruyama.JPG",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -10589,6 +10950,25 @@ window.EVENT_DATA = {
       "source_names": "るなぱあく 公式サイト",
       "images": [
         {
+          "id": 2746,
+          "entity_type": "child_play_place",
+          "entity_id": 3,
+          "image_url": "https://lunapark.maebashi-park.com/assets/images/home/slide-01_pc.jpg",
+          "source_page_url": "https://lunapark.maebashi-park.com/",
+          "title": "るなぱあく 前橋市中央児童遊園",
+          "alt_text": "るなぱあく 前橋市中央児童遊園",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 251,
           "entity_type": "child_play_place",
           "entity_id": 3,
@@ -10608,7 +10988,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://lunapark.maebashi-park.com/assets/images/og-image.jpg",
+      "primary_image_url": "https://lunapark.maebashi-park.com/assets/images/home/slide-01_pc.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -10638,6 +11018,25 @@ window.EVENT_DATA = {
       "notes": null,
       "source_names": "ふぁんぱーく 公式サイト",
       "images": [
+        {
+          "id": 2747,
+          "entity_type": "child_play_place",
+          "entity_id": 20,
+          "image_url": "https://static.wixstatic.com/media/cc8243_fc6ced5384ce47849d6517391f196f67~mv2.jpg/v1/fill/w_936,h_427,q_90,enc_avif,quality_auto/cc8243_fc6ced5384ce47849d6517391f196f67~mv2.jpg",
+          "source_page_url": "https://seckey1899.wixsite.com/my-site-1",
+          "title": "ふぁんぱーく",
+          "alt_text": "ふぁんぱーく",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
         {
           "id": 1157,
           "entity_type": "child_play_place",
@@ -10753,7 +11152,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=24"
         }
       ],
-      "primary_image_url": "https://static.wixstatic.com/media/cc8243_a957f2a0455344898aa9cc656a732684~mv2.png",
+      "primary_image_url": "https://static.wixstatic.com/media/cc8243_fc6ced5384ce47849d6517391f196f67~mv2.jpg/v1/fill/w_936,h_427,q_90,enc_avif,quality_auto/cc8243_fc6ced5384ce47849d6517391f196f67~mv2.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -10948,6 +11347,25 @@ window.EVENT_DATA = {
       "source_names": "フレーベル館 Kinder Platz ガーデン前橋店 公式サイト",
       "images": [
         {
+          "id": 2748,
+          "entity_type": "child_play_place",
+          "entity_id": 16,
+          "image_url": "https://kinderplatz.froebel-kan.co.jp/wp-content/uploads/2025/07/b6d491415affe9467368848ec77e7d47-1600x1131.jpg",
+          "source_page_url": "https://kinderplatz.froebel-kan.co.jp/allstorelist/garden-maebashi/",
+          "title": "フレーベル館 Kinder Platz ガーデン前橋店",
+          "alt_text": "フレーベル館 Kinder Platz ガーデン前橋店",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 2250,
           "entity_type": "child_play_place",
           "entity_id": 16,
@@ -11062,7 +11480,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=52"
         }
       ],
-      "primary_image_url": "https://kinderplatz.froebel-kan.co.jp/wp-content/uploads/2025/07/b6d491415affe9467368848ec77e7d47-300x212.jpg",
+      "primary_image_url": "https://kinderplatz.froebel-kan.co.jp/wp-content/uploads/2025/07/b6d491415affe9467368848ec77e7d47-1600x1131.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -11483,25 +11901,6 @@ window.EVENT_DATA = {
       "source_names": "千代田町社会福祉協議会 児童センター",
       "images": [
         {
-          "id": 459,
-          "entity_type": "child_play_place",
-          "entity_id": 60,
-          "image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297361",
-          "source_page_url": "https://www.chiyoda-shakyo.or.jp/pages/80/",
-          "title": "児童センター｜社会福祉法人 千代田町社会福祉協議会の公式ホームページへようこそ",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=158"
-        },
-        {
           "id": 460,
           "entity_type": "child_play_place",
           "entity_id": 60,
@@ -11519,6 +11918,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
+        },
+        {
+          "id": 459,
+          "entity_type": "child_play_place",
+          "entity_id": 60,
+          "image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297361",
+          "source_page_url": "https://www.chiyoda-shakyo.or.jp/pages/80/",
+          "title": "児童センター｜社会福祉法人 千代田町社会福祉協議会の公式ホームページへようこそ",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=158"
         },
         {
           "id": 461,
@@ -11635,7 +12053,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297361",
+      "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/libs/2437/p/20220119152330604.JPG?1661842880",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -11666,25 +12084,6 @@ window.EVENT_DATA = {
       "source_names": "千代田町社会福祉協議会 陽だまり交流館",
       "images": [
         {
-          "id": 463,
-          "entity_type": "child_play_place",
-          "entity_id": 61,
-          "image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297362",
-          "source_page_url": "https://www.chiyoda-shakyo.or.jp/pages/33/",
-          "title": "陽だまり交流館（児童館）｜社会福祉法人 千代田町社会福祉協議会の公式ホームページへようこそ",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=158"
-        },
-        {
           "id": 464,
           "entity_type": "child_play_place",
           "entity_id": 61,
@@ -11702,6 +12101,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
+        },
+        {
+          "id": 463,
+          "entity_type": "child_play_place",
+          "entity_id": 61,
+          "image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297362",
+          "source_page_url": "https://www.chiyoda-shakyo.or.jp/pages/33/",
+          "title": "陽だまり交流館（児童館）｜社会福祉法人 千代田町社会福祉協議会の公式ホームページへようこそ",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=158"
         },
         {
           "id": 465,
@@ -11799,7 +12217,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=-2"
         }
       ],
-      "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/site_config/capture.jpg?1783297362",
+      "primary_image_url": "https://www.chiyoda-shakyo.or.jp/files/libs/726/201708021444571985.jpg?1661842880",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -12895,6 +13313,25 @@ window.EVENT_DATA = {
       "source_names": "ぐんまこどもの国児童会館 公式サイト",
       "images": [
         {
+          "id": 2749,
+          "entity_type": "child_play_place",
+          "entity_id": 2,
+          "image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/R8夏_HPスライダ.jpg",
+          "source_page_url": "https://kodomonokuni.or.jp/",
+          "title": "ぐんまこどもの国児童会館",
+          "alt_text": "ぐんまこどもの国児童会館",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 1022,
           "entity_type": "child_play_place",
           "entity_id": 2,
@@ -13085,7 +13522,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/renewal_top-370x181.jpg",
+      "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/R8夏_HPスライダ.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -13487,6 +13924,25 @@ window.EVENT_DATA = {
       "source_names": "碓氷峠鉄道文化むら 公式サイト",
       "images": [
         {
+          "id": 2751,
+          "entity_type": "child_play_place",
+          "entity_id": 25,
+          "image_url": "https://www.usuitouge.com/bunkamura/img/img-home-main01.jpg",
+          "source_page_url": "https://www.usuitouge.com/bunkamura/",
+          "title": "碓氷峠鉄道文化むら",
+          "alt_text": "碓氷峠鉄道文化むら",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 337,
           "entity_type": "child_play_place",
           "entity_id": 25,
@@ -13506,7 +13962,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=158"
         }
       ],
-      "primary_image_url": "https://usuitouge.com/bunkamura/uploads/2019/08/ogimg.png",
+      "primary_image_url": "https://www.usuitouge.com/bunkamura/img/img-home-main01.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -15137,6 +15593,44 @@ window.EVENT_DATA = {
       "source_names": "キッズランドUS 群馬渋川店 公式サイト",
       "images": [
         {
+          "id": null,
+          "entity_type": "child_play_place",
+          "entity_id": 15,
+          "image_url": "https://kidslandus.com/admin/wp-content/uploads/2025/05/IMG_0947.jpeg",
+          "source_page_url": "https://kidslandus.com/shop/shibukawa/",
+          "title": "キッズランドUS 群馬渋川店",
+          "alt_text": "キッズランドUS 群馬渋川店",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
+          "id": 2752,
+          "entity_type": "child_play_place",
+          "entity_id": 15,
+          "image_url": "https://kidslandus.com/admin/wp-content/uploads/2023/07/2aaa0138e213e33c4f626b2ffb33fb2d-1536x187.jpg",
+          "source_page_url": "https://kidslandus.com/shop/shibukawa/",
+          "title": "キッズランドUS 群馬渋川店",
+          "alt_text": "キッズランドUS 群馬渋川店",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 1131,
           "entity_type": "child_play_place",
           "entity_id": 15,
@@ -15194,7 +15688,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=32"
         }
       ],
-      "primary_image_url": "https://kidslandus.com/admin/wp-content/uploads/2026/04/61bdd7482ae1b3ed2d5db92af14af727-300x135.jpg",
+      "primary_image_url": "https://kidslandus.com/admin/wp-content/uploads/2025/05/IMG_0947.jpeg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -15225,25 +15719,6 @@ window.EVENT_DATA = {
       "source_names": "渋川市社会福祉協議会 だれでも広場",
       "images": [
         {
-          "id": 397,
-          "entity_type": "child_play_place",
-          "entity_id": 41,
-          "image_url": "https://shibukawa-csw.or.jp/files/site_config/capture.jpg",
-          "source_page_url": "https://shibukawa-csw.or.jp/pages/29/",
-          "title": "だれでも広場公式サイト | 渋川市社協 | 子育て | 無料施設 | 渋川 | ボールプール",
-          "alt_text": null,
-          "image_kind": "representative",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "high",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=158"
-        },
-        {
           "id": 398,
           "entity_type": "child_play_place",
           "entity_id": 41,
@@ -15261,6 +15736,25 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=28"
+        },
+        {
+          "id": 397,
+          "entity_type": "child_play_place",
+          "entity_id": 41,
+          "image_url": "https://shibukawa-csw.or.jp/files/site_config/capture.jpg",
+          "source_page_url": "https://shibukawa-csw.or.jp/pages/29/",
+          "title": "だれでも広場公式サイト | 渋川市社協 | 子育て | 無料施設 | 渋川 | ボールプール",
+          "alt_text": null,
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=158"
         },
         {
           "id": 399,
@@ -15377,7 +15871,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=32"
         }
       ],
-      "primary_image_url": "https://shibukawa-csw.or.jp/files/site_config/capture.jpg",
+      "primary_image_url": "https://shibukawa-csw.or.jp/files/libs/9375/202309031521247226.jpg?1741235331",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -16573,6 +17067,25 @@ window.EVENT_DATA = {
       "source_names": "浅間園 浅間火山博物館 公式情報",
       "images": [
         {
+          "id": 353,
+          "entity_type": "child_play_place",
+          "entity_id": 30,
+          "image_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/img/p_sc_gaikan.jpg",
+          "source_page_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/school.html",
+          "title": "鬼押出し浅間園 浅間火山博物館 【学校向け】",
+          "alt_text": "浅間火山博物館 外観",
+          "image_kind": "inline",
+          "width": 180,
+          "height": 120,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=40"
+        },
+        {
           "id": 1227,
           "entity_type": "child_play_place",
           "entity_id": 30,
@@ -16685,28 +17198,9 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=20"
-        },
-        {
-          "id": 353,
-          "entity_type": "child_play_place",
-          "entity_id": 30,
-          "image_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/img/p_sc_gaikan.jpg",
-          "source_page_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/school.html",
-          "title": "鬼押出し浅間園 浅間火山博物館 【学校向け】",
-          "alt_text": "浅間火山博物館 外観",
-          "image_kind": "inline",
-          "width": 180,
-          "height": 120,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=40"
         }
       ],
-      "primary_image_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/img/title_bar_1.gif",
+      "primary_image_url": "https://www.asamaen.tsumagoi.gunma.jp/brochure/img/p_sc_gaikan.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -17355,6 +17849,25 @@ window.EVENT_DATA = {
       "source_names": "スキッズガーデン 高崎店 公式サイト",
       "images": [
         {
+          "id": null,
+          "entity_type": "child_play_place",
+          "entity_id": 18,
+          "image_url": "https://www.fantasy.co.jp/wp-content/themes/aeon_fantasy/_assets/images/skidsgarden/index/about_photo.jpg",
+          "source_page_url": "https://www.fantasy.co.jp/skidsgarden/shoplist/shop5436/",
+          "title": "スキッズガーデン 高崎店",
+          "alt_text": "スキッズガーデン 高崎店",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "curated_representative"
+        },
+        {
           "id": 311,
           "entity_type": "child_play_place",
           "entity_id": 18,
@@ -17372,28 +17885,9 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=158"
-        },
-        {
-          "id": 312,
-          "entity_type": "child_play_place",
-          "entity_id": 18,
-          "image_url": "https://www.fantasy.co.jp/wp-content/uploads/2019/03/skids-price.png",
-          "source_page_url": "https://www.fantasy.co.jp/skidsgarden/shoplist/shop5436/",
-          "title": "スキッズガーデン 高崎店※一部日程でお子さまのみの入場を休止しております。詳細は店舗情 報備考欄をご覧ください｜店舗検索｜スキッズガーデン｜株式会社イオンファンタジー公式サイト",
-          "alt_text": null,
-          "image_kind": "inline",
-          "width": null,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=32"
         }
       ],
-      "primary_image_url": "https://www.fantasy.co.jp/wp-content/themes/aeon_fantasy/_assets/images/skidsgarden/og.jpg",
+      "primary_image_url": "https://www.fantasy.co.jp/wp-content/themes/aeon_fantasy/_assets/images/skidsgarden/index/about_photo.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -17607,6 +18101,25 @@ window.EVENT_DATA = {
       "source_names": "群馬県立日本絹の里 公式サイト",
       "images": [
         {
+          "id": 2753,
+          "entity_type": "child_play_place",
+          "entity_id": 28,
+          "image_url": "https://www.nippon-kinunosato.or.jp/sakura/wp-content/uploads/2026/03/76a73b56fdc1a59655571d33b6d62342-768x576.jpg",
+          "source_page_url": "https://www.nippon-kinunosato.or.jp/",
+          "title": "群馬県立日本絹の里",
+          "alt_text": "群馬県立日本絹の里",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-27",
+          "last_verified_at": "2026-07-27",
+          "notes": "refresh_representative_images"
+        },
+        {
           "id": 1211,
           "entity_type": "child_play_place",
           "entity_id": 28,
@@ -17721,7 +18234,7 @@ window.EVENT_DATA = {
           "notes": "auto_collected_score=28"
         }
       ],
-      "primary_image_url": "https://www.nippon-kinunosato.or.jp/sakura/wp-content/uploads/2026/03/76a73b56fdc1a59655571d33b6d62342-300x225.jpg",
+      "primary_image_url": "https://www.nippon-kinunosato.or.jp/sakura/wp-content/uploads/2026/03/76a73b56fdc1a59655571d33b6d62342-768x576.jpg",
       "google_place_id": null,
       "reservation_note": null
     },
@@ -18099,25 +18612,6 @@ window.EVENT_DATA = {
       "source_names": "高崎市少年科学館 公式サイト",
       "images": [
         {
-          "id": 329,
-          "entity_type": "child_play_place",
-          "entity_id": 23,
-          "image_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/img/main-title.png",
-          "source_page_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/",
-          "title": "高崎市少年科学館",
-          "alt_text": "高崎市少年科学館",
-          "image_kind": "inline",
-          "width": 170,
-          "height": null,
-          "credit": null,
-          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
-          "status": "verified",
-          "confidence": "medium",
-          "discovered_at": "2026-07-06",
-          "last_verified_at": "2026-07-06",
-          "notes": "auto_collected_score=40"
-        },
-        {
           "id": 1183,
           "entity_type": "child_play_place",
           "entity_id": 23,
@@ -18135,9 +18629,28 @@ window.EVENT_DATA = {
           "discovered_at": "2026-07-06",
           "last_verified_at": "2026-07-06",
           "notes": "auto_collected_score=26"
+        },
+        {
+          "id": 329,
+          "entity_type": "child_play_place",
+          "entity_id": 23,
+          "image_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/img/main-title.png",
+          "source_page_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/",
+          "title": "高崎市少年科学館",
+          "alt_text": "高崎市少年科学館",
+          "image_kind": "inline",
+          "width": 170,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-07-06",
+          "last_verified_at": "2026-07-06",
+          "notes": "auto_collected_score=40"
         }
       ],
-      "primary_image_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/img/main-title.png",
+      "primary_image_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/upload/key_visual/8/17452798521bd6fe244748a7ce4f825.jpg",
       "google_place_id": null,
       "reservation_note": null
     }
@@ -41208,6 +41721,253 @@ window.EVENT_DATA = {
       "discovered_at": "2026-07-06",
       "last_verified_at": "2026-07-06",
       "notes": "auto_collected_score=32"
+    },
+    {
+      "id": 2714,
+      "entity_type": "event",
+      "entity_id": 36,
+      "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/ce980feae5a1406bf14bedf7d166fee9250d4e3b-thumb-5841x2976-107.jpg",
+      "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1878.php",
+      "title": "湯畑キャンドル 夢の灯り",
+      "alt_text": "湯畑キャンドル 夢の灯り",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2716,
+      "entity_type": "event",
+      "entity_id": 43,
+      "image_url": "https://www.numata-kankou.jp/tourism/sight/img/main_visual_ttl.png",
+      "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+      "title": "第5回 ニャンとワンダフルフォトコンテスト",
+      "alt_text": "第5回 ニャンとワンダフルフォトコンテスト",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2718,
+      "entity_type": "event",
+      "entity_id": 44,
+      "image_url": "https://www.numata-kankou.jp/tourism/sight/img/main_visual_ttl.png",
+      "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+      "title": "大正和服体験",
+      "alt_text": "大正和服体験",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2720,
+      "entity_type": "event",
+      "entity_id": 45,
+      "image_url": "https://www.numata-kankou.jp/tourism/sight/img/main_visual_ttl.png",
+      "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+      "title": "上州真田三名城 無料シャトルバス",
+      "alt_text": "上州真田三名城 無料シャトルバス",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2723,
+      "entity_type": "event",
+      "entity_id": 47,
+      "image_url": "https://isesaki-kankou.com/wp/wp-content/uploads/2026/06/赤堀花しょうぶ園ポスチラデータ_1.jpg",
+      "source_page_url": "https://isesaki-kankou.com/info/isesakiphoto2026/",
+      "title": "いせさきふぉと。2026",
+      "alt_text": "いせさきふぉと。2026",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2726,
+      "entity_type": "event",
+      "entity_id": 38,
+      "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/ce980feae5a1406bf14bedf7d166fee9250d4e3b-thumb-5841x2976-107.jpg",
+      "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1996.php",
+      "title": "草津温泉 江戸風鈴",
+      "alt_text": "草津温泉 江戸風鈴",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2729,
+      "entity_type": "event",
+      "entity_id": 15,
+      "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDE5NTUsInB1ciI6ImJsb2JfaWQifX0=--9951aadf92b715e00a5700080081d812a6ca0092/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzM4MiwyODBdfSwicHVyIjoidmFyaWF0aW9uIn19--ee35c1b47ce4f45d49b02db0ff3dd960347db4f8/4.%E6%B4%9E%E7%AA%9F%E8%A6%B3%E9%9F%B3.jpg",
+      "source_page_url": "https://gunma-kanko.jp/events/297",
+      "title": "Gunma Gmesse Games 2026",
+      "alt_text": "Gunma Gmesse Games 2026",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2732,
+      "entity_type": "event",
+      "entity_id": 35,
+      "image_url": "https://www.kusatsu-onsen.ne.jp/event/img/top_mv.jpg",
+      "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1787.php",
+      "title": "夏休み お楽しみ昆虫採集",
+      "alt_text": "夏休み お楽しみ昆虫採集",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2735,
+      "entity_type": "event",
+      "entity_id": 37,
+      "image_url": "https://www.kusatsu-onsen.ne.jp/assets_c/2024/03/ce980feae5a1406bf14bedf7d166fee9250d4e3b-thumb-5841x2976-107.jpg",
+      "source_page_url": "https://www.kusatsu-onsen.ne.jp/event/1992.php",
+      "title": "第80回 草津温泉感謝祭",
+      "alt_text": "第80回 草津温泉感謝祭",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2739,
+      "entity_type": "event",
+      "entity_id": 5,
+      "image_url": "https://www.takasaki-kankoukyoukai.or.jp/wp-content/themes/takakan2020/images/home/banner/558x305/bikei.jpg",
+      "source_page_url": "https://www.takasaki-kankoukyoukai.or.jp/",
+      "title": "開運たかさき食堂2026夏",
+      "alt_text": "開運たかさき食堂2026夏",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2742,
+      "entity_type": "event",
+      "entity_id": 42,
+      "image_url": "https://www.numata-kankou.jp/tourism/sight/img/main_visual_ttl.png",
+      "source_page_url": "https://www.numata-kankou.jp/news/index.html",
+      "title": "2026年たんばら高原星空観察",
+      "alt_text": "2026年たんばら高原星空観察",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2744,
+      "entity_type": "event",
+      "entity_id": 34,
+      "image_url": "https://www.ikaho-kankou.com/wp/wp-content/uploads/2025/10/TAT_3851.jpg",
+      "source_page_url": "https://www.ikaho-kankou.com/calendar/ikaho-matsuri/",
+      "title": "伊香保まつり",
+      "alt_text": "伊香保まつり",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
+    },
+    {
+      "id": 2750,
+      "entity_type": "child_play_place",
+      "entity_id": 2,
+      "image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/R8夏_HPスライダ.jpg",
+      "source_page_url": "https://kodomonokuni.or.jp/",
+      "title": "ぐんまこどもの国児童会館",
+      "alt_text": "ぐんまこどもの国児童会館",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・準公式ページ上の画像URL。再配布可否は未確認のため、公開利用時は出典リンク併記または利用条件確認が必要。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-07-27",
+      "last_verified_at": "2026-07-27",
+      "notes": "refresh_representative_images"
     }
   ],
   "sources": [

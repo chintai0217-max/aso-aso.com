@@ -1082,12 +1082,13 @@ function isJunkImageUrl(url = "") {
     "ranking", "banner", "btn", "button", "nav", "menu", "header", "footer",
     "gnav", "gnav_img1", "gnav_img2", "gnav_img3",
     "netsunoyu01", "netsunoyu02", "netsunoyu",
+    "main_visual_ttl", "skids-price",
   ]);
   if (junkStems.has(stem)) return true;
-  if (/(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking)(?:[-_]|$)/i.test(stem)) {
+  if (/(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking|price|ttl)(?:[-_]|$)/i.test(stem)) {
     return true;
   }
-  if (/(?:ogp|noimage|s100x100|capture\.jpg|\/common\/(?:img|images?)\/|\/themes?\/.*\/(?:common|assets)\/.*gnav)/i.test(url)) {
+  if (/(?:ogp|noimage|s100x100|capture\.jpg|rsrc\.php|main_visual_ttl|skids-price|page-\d+|\/common\/(?:img|images?)\/|\/themes?\/.*\/(?:common|assets)\/.*gnav|nav-(?:sight|ski|foods|spa)|skids-price)/i.test(url)) {
     return true;
   }
   return false;

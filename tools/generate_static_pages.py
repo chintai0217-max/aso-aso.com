@@ -285,16 +285,21 @@ def is_junk_image_url(url):
         "netsunoyu01",
         "netsunoyu02",
         "netsunoyu",
+        "main_visual_ttl",
+        "skids-price",
+        "no_thumb_330_220-7e11cfa6fb99748a3c98138fa90f5bfac1b4c79ae7c",
     }
     if stem in junk_stems:
         return True
     if re.search(
-        r"(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking)(?:[-_]|$)",
+        r"(?:^|[-_])(?:logo|icon|btn|button|banner|arrow|qr|sns|share|favicon|gnav|nav|header|footer|badge|medal|ranking|price|ttl)(?:[-_]|$)",
         stem,
     ):
         return True
     if re.search(
-        r"(?:ogp|noimage|s100x100|capture\.jpg|/common/(?:img|images?)/|/themes?/.*/(?:common|assets)/.*gnav)",
+        r"(?:ogp|noimage|s100x100|capture\.jpg|rsrc\.php|main_visual_ttl|skids-price|"
+        r"ポスチラ|page-\d+|掲示用|/common/(?:img|images?)/|/themes?/.*/(?:common|assets)/.*gnav|"
+        r"nav-(?:sight|ski|foods|spa)|skids-price)",
         url,
         re.I,
     ):
@@ -729,7 +734,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727h">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727i">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
