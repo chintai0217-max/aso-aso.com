@@ -2552,9 +2552,8 @@ button.coverage-item.is-active {
 }
 
 .static-detail-image {
+  position: relative;
   overflow: hidden;
-  display: grid;
-  place-items: center;
   margin: 0;
   border: 0;
   border-radius: 0;
@@ -2563,6 +2562,8 @@ button.coverage-item.is-active {
 }
 
 .static-detail-image img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -2573,10 +2574,6 @@ button.coverage-item.is-active {
 }
 
 .static-detail-image img.is-lowres {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
 }
 
@@ -2602,6 +2599,7 @@ button.coverage-item.is-active {
 
 .detail-carousel__track {
   display: flex;
+  align-items: stretch;
   width: 100%;
 }
 
@@ -2610,9 +2608,11 @@ button.coverage-item.is-active {
   flex: 0 0 100%;
   width: 100%;
   aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  overflow: hidden;
   scroll-snap-align: start;
-  display: grid;
-  place-items: center;
   background: #0f172a;
 }
 
@@ -2621,6 +2621,8 @@ button.coverage-item.is-active {
 }
 
 .detail-carousel__slide img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -2628,10 +2630,6 @@ button.coverage-item.is-active {
 }
 
 .detail-carousel__slide img.is-lowres {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
 }
 
