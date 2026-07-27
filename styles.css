@@ -4164,6 +4164,63 @@ video {
   display: inline-flex;
 }
 
+.mode-button {
+  justify-content: center;
+  width: 100%;
+  gap: 0.35em;
+  line-height: 1;
+}
+
+.mode-button .ui-icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  vertical-align: 0;
+  transform: none;
+}
+
+.field > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  line-height: 1.2;
+}
+
+.field > span .ui-icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  vertical-align: 0;
+  transform: none;
+}
+
+.field input,
+.field select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 16px;
+  line-height: 1.25;
+  border-radius: 999px;
+  background-color: #f8fafc;
+}
+
+.field select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 42px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+}
+
+.field select:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
 .card-kicker {
   display: flex;
   flex-wrap: nowrap;
@@ -4195,16 +4252,18 @@ video {
 }
 
 .chip:hover .ui-icon,
-.topbar-links a:hover .ui-icon,
-.mode-button:hover .ui-icon {
+.topbar-links a:hover .ui-icon {
   opacity: 1;
   transform: translateY(-1px);
+}
+
+.mode-button:hover .ui-icon {
+  opacity: 1;
 }
 
 .chip.is-active .ui-icon,
 .mode-button.is-active .ui-icon {
   opacity: 1;
-  transform: scale(1.08);
 }
 
 .brand-mark {
