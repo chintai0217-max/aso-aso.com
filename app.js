@@ -973,21 +973,21 @@ function eventCard(event) {
   const placeLine = [event.municipality || event.prefecture, venue].filter(Boolean).join(" / ");
   const dateLabel = formatMonthDay(event.start_date);
   const price = event.price_note || "";
-  const kickerParts = [];
-  if (dateLabel !== "-") kickerParts.push(`<span class="meta-item">${uiIcon("calendar")}${escapeHtml(dateLabel)}</span>`);
-  kickerParts.push(`<span class="meta-item">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>`);
+  const whenParts = [];
+  if (dateLabel !== "-") whenParts.push(`<span class="meta-item">${uiIcon("calendar")}${escapeHtml(dateLabel)}</span>`);
+  if (time) whenParts.push(`<span class="meta-item">${uiIcon("clock")}${escapeHtml(time)}</span>`);
 
   return `
     <a class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
       ${image}
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(event.title)}</h3>
-        <p class="card-kicker">${kickerParts.join("")}</p>
-        <div class="event-meta">
-          ${time ? `<span class="pill neutral">${uiIcon("clock")}${escapeHtml(time)}</span>` : ""}
-          <span class="pill neutral">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+        ${whenParts.length ? `<p class="card-kicker card-kicker--when">${whenParts.join("")}</p>` : ""}
+        <p class="card-kicker card-kicker--where">
+          <span class="meta-item">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>
+          <span class="meta-item">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(event)}
-        </div>
+        </p>
       </div>
     </a>
   `;
@@ -997,7 +997,6 @@ function placeCard(place) {
   const displayImage = bestThumbImage(place);
   const image = mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place);
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
-  const placeLine = [place.municipality || place.prefecture, indoorOutdoor].filter(Boolean).join(" / ");
   const price = place.price_note || "";
   const indoorIcon = place.indoor_outdoor === "outdoor" ? "sun" : "home";
   return `
@@ -1005,14 +1004,14 @@ function placeCard(place) {
       ${image}
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
-        <p class="card-kicker">
+        <p class="card-kicker card-kicker--when">
           <span class="meta-item">${uiIcon("pin")}${escapeHtml(place.municipality || place.prefecture || "地域未設定")}</span>
           ${indoorOutdoor ? `<span class="meta-item">${uiIcon(indoorIcon)}${escapeHtml(indoorOutdoor)}</span>` : ""}
         </p>
-        <div class="event-meta">
-          <span class="pill neutral">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+        <p class="card-kicker card-kicker--where">
+          <span class="meta-item">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(place)}
-        </div>
+        </p>
       </div>
     </a>
   `;

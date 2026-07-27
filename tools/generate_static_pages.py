@@ -623,7 +623,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727c">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260727d">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -1088,23 +1088,23 @@ def hub_card_event(event):
     time = time_text(event)
     display_image = best_display_image(event)
     has_image = " has-image" if display_image else ""
-    kicker_bits = []
+    when_bits = []
     if date_label:
-        kicker_bits.append(f'<span class="meta-item">{ui_icon("calendar")}{html(date_label)}</span>')
-    kicker_bits.append(f'<span class="meta-item">{ui_icon("pin")}{html(place_line or "地域未設定")}</span>')
-    meta_bits = []
+        when_bits.append(f'<span class="meta-item">{ui_icon("calendar")}{html(date_label)}</span>')
     if time:
-        meta_bits.append(f'<span class="pill neutral">{ui_icon("clock")}{html(time)}</span>')
-    meta_bits.append(
-        f'<span class="pill neutral">{ui_icon("yen")}{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span>'
-    )
+        when_bits.append(f'<span class="meta-item">{ui_icon("clock")}{html(time)}</span>')
+    where_bits = [
+        f'<span class="meta-item">{ui_icon("pin")}{html(place_line or "地域未設定")}</span>',
+        f'<span class="meta-item">{ui_icon("yen")}{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span>',
+    ]
+    when_html = f'<p class="card-kicker card-kicker--when">{"".join(when_bits)}</p>' if when_bits else ""
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
         f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
-        f'<p class="card-kicker">{"".join(kicker_bits)}</p>'
-        f'<div class="event-meta">{"".join(meta_bits)}</div>'
+        f"{when_html}"
+        f'<p class="card-kicker card-kicker--where">{"".join(where_bits)}</p>'
         f"</div>"
         f"</a>"
     )
@@ -1117,18 +1117,18 @@ def hub_card_place(place):
     display_image = best_display_image(place)
     has_image = " has-image" if display_image else ""
     indoor_icon = "sun" if place.get("indoor_outdoor") == "outdoor" else "home"
-    kicker_bits = [
+    when_bits = [
         f'<span class="meta-item">{ui_icon("pin")}{html(place.get("municipality") or place.get("prefecture") or "地域未設定")}</span>'
     ]
     if indoor:
-        kicker_bits.append(f'<span class="meta-item">{ui_icon(indoor_icon)}{html(indoor)}</span>')
+        when_bits.append(f'<span class="meta-item">{ui_icon(indoor_icon)}{html(indoor)}</span>')
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
         f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
-        f'<p class="card-kicker">{"".join(kicker_bits)}</p>'
-        f'<div class="event-meta"><span class="pill neutral">{ui_icon("yen")}{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></div>'
+        f'<p class="card-kicker card-kicker--when">{"".join(when_bits)}</p>'
+        f'<p class="card-kicker card-kicker--where"><span class="meta-item">{ui_icon("yen")}{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></p>'
         f"</div>"
         f"</a>"
     )
