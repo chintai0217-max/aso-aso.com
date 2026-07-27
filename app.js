@@ -20,6 +20,8 @@ const state = {
 };
 
 let googlePlacesServicePromise = null;
+let searchRenderTimer = 0;
+const imageHintCache = new Map();
 
 const categoryLabels = {
   contest: "コンテスト",
@@ -119,6 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadOptionalConfig();
     state.data = await loadData();
+    prepareAllRecordImages(state.data);
     applyInitialSearchQuery();
     populateFilters();
     render();
@@ -310,7 +313,10 @@ function bindEvents() {
 
   els.searchInput.addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
-    render();
+    window.clearTimeout(searchRenderTimer);
+    searchRenderTimer = window.setTimeout(() => {
+      render();
+    }, 120);
   });
 
   els.municipalitySelect.addEventListener("change", (event) => {
@@ -659,10 +665,11 @@ function renderWeekendHighlight() {
     <div class="weekend-highlight__grid">
       ${weekendEvents
         .map((event) => {
+          const imageUrl = bestThumbImage(event);
           return `
             <a class="weekend-card" href="${escapeHtml(recordPageHref(event, "event"))}">
               <div class="weekend-card__media">
-                ${event.primary_image_url ? `<img src="${escapeHtml(event.primary_image_url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
+                ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
               </div>
               <div class="weekend-card__body">
                 <p class="card-kicker">${escapeHtml(event.municipality || "群馬県")} / ${escapeHtml(formatMonthDay(event.start_date))}</p>
@@ -911,22 +918,22 @@ function renderList(records) {
 
 function eventCard(event) {
   const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
-  const image = mediaThumb(event.primary_image_url, event.title, categoryLabel(event.category), event.images, event);
+  const displayImage = bestThumbImage(event);
+  const image = mediaThumb(displayImage, event.title, categoryLabel(event.category), event.images, event);
   const venue = event.venue_name || event.area_label || "";
   const placeLine = [event.municipality || event.prefecture, venue].filter(Boolean).join(" / ");
+  const dateLabel = formatMonthDay(event.start_date);
+  const kicker = [dateLabel !== "-" ? dateLabel : "", placeLine || "地域未設定"].filter(Boolean).join(" · ");
   const price = event.price_note || "";
 
   return `
     <a class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
       ${image}
-      <div class="date-box event-date-box">
-        <strong>${escapeHtml(formatMonthDay(event.start_date))}</strong>
-        <span>${escapeHtml(time || "時間は公式")}</span>
-      </div>
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(event.title)}</h3>
-        <p class="card-kicker">${escapeHtml(placeLine || "地域未設定")}</p>
+        <p class="card-kicker">${escapeHtml(kicker)}</p>
         <div class="event-meta">
+          ${time ? `<span class="pill neutral">${escapeHtml(time)}</span>` : ""}
           <span class="pill neutral">${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
           ${statusPill(event)}
         </div>
@@ -936,16 +943,14 @@ function eventCard(event) {
 }
 
 function placeCard(place) {
-  const image = mediaThumb(place.primary_image_url, place.name, placeTypeLabel(place.place_type), place.images, place);
+  const displayImage = bestThumbImage(place);
+  const image = mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place);
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   const placeLine = [place.municipality || place.prefecture, indoorOutdoor].filter(Boolean).join(" / ");
   const price = place.price_note || "";
   return `
     <a class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
       ${image}
-      <div class="date-box place-box">
-        <strong>${escapeHtml(indoorOutdoor)}</strong>
-      </div>
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
         <p class="card-kicker">${escapeHtml(placeLine || "地域未設定")}</p>
@@ -991,15 +996,114 @@ function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
     <div class="media-thumb ${url ? "" : googlePlaceId ? "is-google-pending" : "is-empty"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
       <span>${escapeHtml(fallbackLabel || "画像")}</span>
       ${extraCount ? `<em class="photo-count">+${extraCount}</em>` : ""}
-      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
+      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded');if(this.naturalWidth<180)this.closest('.media-thumb').classList.add('is-lowres')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
     </div>
   `;
 }
 
+function upgradeImageUrl(url = "") {
+  if (!url) return "";
+  const match = url.match(/-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))/i);
+  if (!match) return url;
+  if (Math.max(Number(match[1]), Number(match[2])) >= 800) return url;
+  return url.replace(/-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))/i, "");
+}
+
+function imagePixelHint(url = "") {
+  if (!url) return 0;
+  if (imageHintCache.has(url)) return imageHintCache.get(url);
+
+  let score = 0;
+  const wp = url.match(/-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))/i);
+  if (wp) score = Math.max(Number(wp[1]), Number(wp[2]));
+  const keep = url.match(/\/keep\/(\d+)/);
+  if (keep) score = Math.max(score, Number(keep[1]));
+
+  for (const seg of url.split("/")) {
+    if (!seg.includes("eyJ")) continue;
+    try {
+      const raw = seg.split("--")[0];
+      const padded = raw + "=".repeat((4 - (raw.length % 4)) % 4);
+      const json = atob(padded.replace(/-/g, "+").replace(/_/g, "/"));
+      const resize = json.match(/resize_to_fit[^0-9]*(\d+)/);
+      if (resize) score = Math.max(score, Number(resize[1]));
+      if (json.includes('"format":"webp"') || json.includes('"format":"png"')) score += 40;
+      if (json.includes('"format":"jpeg"') || json.includes('"format":"jpg"')) score -= 20;
+    } catch (_error) {
+      // ignore malformed signed blobs
+    }
+  }
+
+  if (!score) score = 700;
+  if (/(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr)/i.test(url)) {
+    score -= 250;
+  }
+  if (/\.(?:webp|png)(?:\?|$)/i.test(url)) score += 30;
+  imageHintCache.set(url, score);
+  return score;
+}
+
+function collectImageCandidates(record = {}) {
+  const urls = [];
+  if (record.primary_image_url) urls.push(record.primary_image_url);
+  for (const image of record.images || []) {
+    if (image && image.image_url) urls.push(image.image_url);
+  }
+
+  const scored = [];
+  const seen = new Set();
+  for (const url of urls) {
+    const upgraded = upgradeImageUrl(url);
+    for (const candidate of upgraded && upgraded !== url ? [upgraded, url] : [url]) {
+      if (!candidate || seen.has(candidate)) continue;
+      seen.add(candidate);
+      scored.push({ url: candidate, score: imagePixelHint(candidate) });
+    }
+  }
+  scored.sort((a, b) => b.score - a.score);
+  return scored;
+}
+
+function prepareRecordImage(record = {}) {
+  if (!record || record._displayImage != null) return record;
+  const scored = collectImageCandidates(record);
+  const display = scored[0]?.url || "";
+  let thumb = display;
+  if (scored.length) {
+    const ideal = 480;
+    const usable = scored.filter((item) => item.score >= 280);
+    const pool = usable.length ? usable : scored;
+    thumb = pool.reduce((best, cur) =>
+      Math.abs(cur.score - ideal) < Math.abs(best.score - ideal) ? cur : best
+    ).url;
+  }
+  record._displayImage = display;
+  record._thumbImage = thumb;
+  return record;
+}
+
+function prepareAllRecordImages(data) {
+  if (!data) return;
+  for (const record of data.events || []) prepareRecordImage(record);
+  for (const record of data.child_play_places || []) prepareRecordImage(record);
+}
+
+function bestDisplayImage(record = {}) {
+  prepareRecordImage(record);
+  return record._displayImage || "";
+}
+
+function bestThumbImage(record = {}) {
+  prepareRecordImage(record);
+  return record._thumbImage || record._displayImage || "";
+}
+
 function googlePhotoCandidate(record = {}) {
   if (!record.google_place_id || !googleMapsApiKey()) return false;
+  prepareRecordImage(record);
+  const display = record._displayImage || "";
   const images = record.images || [];
-  return !record.primary_image_url || images.length < 2 || isLikelyLowQualityImage(record.primary_image_url);
+  return !display || images.length < 2 || isLikelyLowQualityImage(display) || imagePixelHint(display) < 500;
 }
 
 function isLikelyLowQualityImage(url = "") {

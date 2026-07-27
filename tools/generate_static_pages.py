@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import base64
 import json
 import re
 import shutil
@@ -199,12 +200,93 @@ def maps_url(record):
     return f"https://www.google.com/maps/search/?api=1&query={url_quote(query)}"
 
 
+def upgrade_image_url(url):
+    if not url:
+        return ""
+    match = re.search(
+        r"-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))",
+        url,
+        flags=re.I,
+    )
+    if not match:
+        return url
+    # すでに十分大きい派生画像はそのまま使う
+    if max(int(match.group(1)), int(match.group(2))) >= 800:
+        return url
+    return re.sub(
+        r"-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))",
+        "",
+        url,
+        flags=re.I,
+    )
+
+
+def image_pixel_hint(url):
+    if not url:
+        return 0
+    score = 0
+    wp = re.search(r"-(\d{2,4})x(\d{2,4})(?=\.(?:jpe?g|png|webp|gif)(?:\?|$))", url, re.I)
+    if wp:
+        score = max(int(wp.group(1)), int(wp.group(2)))
+    keep = re.search(r"/keep/(\d+)", url)
+    if keep:
+        score = max(score, int(keep.group(1)))
+    for seg in url.split("/"):
+        if "eyJ" not in seg:
+            continue
+        raw = seg.split("--", 1)[0]
+        pad = "=" * ((4 - len(raw) % 4) % 4)
+        try:
+            decoded = base64.urlsafe_b64decode(raw + pad).decode("utf-8", "ignore")
+        except Exception:
+            continue
+        m = re.search(r"resize_to_fit[^0-9]*(\d+)", decoded)
+        if m:
+            score = max(score, int(m.group(1)))
+        if '"format":"webp"' in decoded or '"format":"png"' in decoded:
+            score += 40
+        if '"format":"jpeg"' in decoded or '"format":"jpg"' in decoded:
+            score -= 20
+    if score == 0:
+        score = 700
+    if re.search(r"(?:[-_](?:150|176|225|250|300)x|s100x100|capture\.jpg|ogp|noimage|header|logo|qr)", url, re.I):
+        score -= 250
+    if re.search(r"\.(?:webp|png)(?:\?|$)", url, re.I):
+        score += 30
+    return score
+
+
+def best_display_image(record):
+    urls = []
+    primary = record.get("primary_image_url")
+    if primary:
+        urls.append(primary)
+    for image in record.get("images") or []:
+        if isinstance(image, dict) and image.get("image_url"):
+            urls.append(image["image_url"])
+        elif isinstance(image, str):
+            urls.append(image)
+    if not urls:
+        return ""
+    best = ""
+    best_score = -10_000
+    for url in urls:
+        upgraded = upgrade_image_url(url)
+        for candidate in ((upgraded, url) if upgraded != url else (url,)):
+            score = image_pixel_hint(candidate)
+            if score > best_score:
+                best_score = score
+                best = candidate
+    return best
+
+
 def image_tag(url, alt):
     if not url:
         return ""
     return (
         '<div class="static-detail-image">'
         f'<img src="{html(url)}" alt="{html(alt)}" loading="eager" decoding="async" referrerpolicy="no-referrer" '
+        'onload="if(this.naturalWidth&lt;640)this.classList.add(\'is-lowres\')" '
         'onerror="this.closest(\'.static-detail-image\').hidden=true">'
         "</div>"
     )
@@ -215,10 +297,15 @@ def gallery_html(images, alt):
     seen = set()
     for image in images or []:
         url = image.get("image_url") if isinstance(image, dict) else None
-        if not url or url in seen:
+        if not url:
             continue
-        seen.add(url)
-        items.append(image if isinstance(image, dict) else {"image_url": url})
+        display_url = upgrade_image_url(url) or url
+        if display_url in seen:
+            continue
+        seen.add(display_url)
+        entry = dict(image) if isinstance(image, dict) else {"image_url": display_url}
+        entry["image_url"] = display_url
+        items.append(entry)
     items = filter_relevant_images(items, alt)
     if len(items) <= 1:
         return ""
@@ -479,8 +566,10 @@ def event_structured_data(event, canonical):
         event_schema["startDate"] = event["start_date"]
     if event.get("end_date"):
         event_schema["endDate"] = event["end_date"]
-    if event.get("primary_image_url"):
-        event_schema["image"] = [event["primary_image_url"]]
+    if event.get("primary_image_url") or (event.get("images") or []):
+        image = best_display_image(event)
+        if image:
+            event_schema["image"] = [image]
     if event.get("organizer"):
         event_schema["organizer"] = {"@type": "Organization", "name": event["organizer"]}
     return graph(canonical, event.get("title"), event.get("summary"), event_schema)
@@ -500,8 +589,10 @@ def place_structured_data(place, canonical):
             "streetAddress": place.get("address"),
         },
     }
-    if place.get("primary_image_url"):
-        place_schema["image"] = [place["primary_image_url"]]
+    if place.get("primary_image_url") or (place.get("images") or []):
+        image = best_display_image(place)
+        if image:
+            place_schema["image"] = [image]
     if place.get("official_url"):
         place_schema["sameAs"] = [place["official_url"]]
     return graph(canonical, place.get("name"), place.get("features"), place_schema)
@@ -548,8 +639,9 @@ def render_event(event):
     kicker = " · ".join([part for part in kicker_parts if part])
     date_long = date_text(event)
     date_short = date_text_compact(event)
+    display_image = best_display_image(event)
     body = (
-        image_tag(event.get("primary_image_url"), event.get("title"))
+        image_tag(display_image, event.get("title"))
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">群馬のイベント</p><h1>{html(event.get("title"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
@@ -601,7 +693,7 @@ def render_event(event):
         title,
         description,
         canonical,
-        event.get("primary_image_url"),
+        display_image,
         "群馬のイベント",
         event.get("title"),
         kicker,
@@ -622,8 +714,9 @@ def render_place(place):
     )
     location = " / ".join([x for x in [place.get("prefecture"), place.get("municipality")] if x])
     kicker = " · ".join([part for part in [place.get("municipality") or "群馬県", place_type, indoor] if part])
+    display_image = best_display_image(place)
     body = (
-        image_tag(place.get("primary_image_url"), place.get("name"))
+        image_tag(display_image, place.get("name"))
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">群馬の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
@@ -685,7 +778,7 @@ def render_place(place):
         title,
         description,
         canonical,
-        place.get("primary_image_url"),
+        display_image,
         "群馬の子どもの遊び場",
         place.get("name"),
         kicker,
@@ -860,23 +953,24 @@ def hub_card_event(event):
     title = event.get("title") or ""
     venue = event.get("venue_name") or event.get("area_label") or ""
     place_line = " / ".join(part for part in [event.get("municipality"), venue] if part)
+    date_label = format_month_day(event.get("start_date")) if event.get("start_date") else ""
+    kicker = " · ".join(part for part in [date_label, place_line or "地域未設定"] if part)
     time = time_text(event)
-    badge = format_month_day(event.get("start_date")) if event.get("start_date") else ""
-    badge_html = (
-        f'<div class="hub-card__badge"><strong>{html(badge)}</strong>'
-        f'<span>{html(time or "時間は公式")}</span></div>'
-        if badge
-        else ""
+    display_image = best_display_image(event)
+    has_image = " has-image" if display_image else ""
+    meta_bits = []
+    if time:
+        meta_bits.append(f'<span class="pill neutral">{html(time)}</span>')
+    meta_bits.append(
+        f'<span class="pill neutral">{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span>'
     )
-    has_image = " has-image" if event.get("primary_image_url") else ""
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
-        f"{hub_media(event.get('primary_image_url'), title)}"
-        f"{badge_html}"
+        f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
-        f'<p class="card-kicker">{html(place_line or "地域未設定")}</p>'
-        f'<div class="event-meta"><span class="pill neutral">{html(fact_or_confirm(compact_text(event.get("price_note"), 28)))}</span></div>'
+        f'<p class="card-kicker">{html(kicker)}</p>'
+        f'<div class="event-meta">{"".join(meta_bits)}</div>'
         f"</div>"
         f"</a>"
     )
@@ -887,16 +981,11 @@ def hub_card_place(place):
     title = place.get("name") or ""
     indoor = INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), "")
     place_line = " / ".join(part for part in [place.get("municipality"), indoor] if part)
-    badge_html = (
-        f'<div class="hub-card__badge hub-card__badge--place"><strong>{html(indoor)}</strong></div>'
-        if indoor
-        else ""
-    )
-    has_image = " has-image" if place.get("primary_image_url") else ""
+    display_image = best_display_image(place)
+    has_image = " has-image" if display_image else ""
     return (
         f'<a class="hub-card{has_image}" href="{html(href)}">'
-        f"{hub_media(place.get('primary_image_url'), title)}"
-        f"{badge_html}"
+        f"{hub_media(display_image, title)}"
         f'<div class="hub-card__body">'
         f"<strong>{html(title)}</strong>"
         f'<p class="card-kicker">{html(place_line or "地域未設定")}</p>'
