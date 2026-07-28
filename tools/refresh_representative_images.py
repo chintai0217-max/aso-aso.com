@@ -39,7 +39,7 @@ WEAK_PRIMARY_RE = re.compile(
     r"(?:livecamera|webcam|page-\d+|flyer|チラシ|A4|両面|運営日|calendar|"
     r"opengraph-image|og[_-]?img|og-image|no_thumb|t\d+-\d+\.jpg|"
     r"ふるさと祭り2025_A4|schedule|timetable|運行|タイムテーブル|掲示用|"
-    r"ポスチラ|main_visual_ttl|rsrc\.php|skids-price|/banner/)",
+    r"ポスチラ|main_visual_ttl|rsrc\.php|skids-price|/banner/|modal_menu|adobe_reader|get_adobe_reader|btn_|icon_|logo_header)",
     re.I,
 )
 
