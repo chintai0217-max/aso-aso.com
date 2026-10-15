@@ -1154,6 +1154,20 @@ AREA_HUBS = [
         "title": "栃木県のイベント・遊び場",
         "lead": "栃木県内の開催予定イベントを掲載しています。市町村ごとの遊び場情報は順次追加します。",
     },
+    {
+        "slug": "ibaraki",
+        "prefecture": "茨城県",
+        "title": "茨城県のイベント・遊び場",
+        "lead": "茨城県内の親子向けイベントと、科学館・自然博物館・公園などの遊び場をまとめています。",
+        "intro": [
+            "茨城県では、水戸・つくば・大洗などの文化催事や科学体験、自然を楽しめる施設を掲載しています。イベントは開催日や申込条件を確認し、遊び場は屋内外の過ごし方や料金を比べて選べます。",
+            "イベントの申込状況や季節営業は変わるため、出発前に各主催者の公式案内をご確認ください。",
+        ],
+        "guide_links": [
+            {"href": "../guides/how-to-find-events.html", "label": "イベントの探し方"},
+            {"href": "../guides/weekend-checklist.html", "label": "週末のおでかけ前チェック"},
+        ],
+    },
 ]
 
 THEME_HUBS = [
@@ -1915,7 +1929,7 @@ def main():
     write(ROOT / "guides" / "index.html", render_guides_index(guides))
     write(
         ROOT / "areas" / "index.html",
-        render_hub_index("areas", AREA_HUBS, "群馬県を中心に、栃木県など関東各地の開催予定イベントを地域ごとにまとめています。"),
+        render_hub_index("areas", AREA_HUBS, "関東各地の開催予定イベントと子どもの遊び場を、地域ごとにまとめています。"),
     )
     write(
         ROOT / "themes" / "index.html",
