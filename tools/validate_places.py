@@ -17,6 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_JSON = ROOT / "data" / "events.json"
 
+KANTO_PREFECTURES = {"茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"}
+
 PLACE_TYPES = {
     "amusement_park",
     "animal_cafe",
@@ -88,8 +90,8 @@ def validate_place(place: dict, source_names: set[str], *, for_publish: bool = F
         if val is None or (isinstance(val, str) and not val.strip()):
             issues.append(issue("error", pid, f"required field missing: {key}"))
 
-    if place.get("prefecture") != "群馬県":
-        issues.append(issue("error", pid, "prefecture must be 群馬県"))
+    if place.get("prefecture") not in KANTO_PREFECTURES:
+        issues.append(issue("error", pid, "prefecture must be within the Kanto region"))
 
     if place.get("place_type") not in PLACE_TYPES:
         issues.append(issue("error", pid, f"unknown place_type: {place.get('place_type')}"))
@@ -108,8 +110,11 @@ def validate_place(place: dict, source_names: set[str], *, for_publish: bool = F
         issues.append(issue("error", pid, "official_url must be http(s)"))
 
     src = place.get("source_names")
-    if src and src not in source_names:
-        issues.append(issue("error", pid, f"source_names not in sources[]: {src}"))
+    if src:
+        cited_sources = {name.strip() for name in src.split(" / ")}
+        missing_sources = sorted(cited_sources - source_names)
+        if missing_sources:
+            issues.append(issue("error", pid, f"source_names not in sources[]: {missing_sources}"))
 
     # Accuracy heuristics
     for field in ("price_note", "hours_note", "closed_note", "features", "target_age_note"):
