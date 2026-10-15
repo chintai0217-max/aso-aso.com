@@ -14,37 +14,38 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927260139193410"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-7927260139193410">
-    <title>群馬イベントナビ｜イベント・遊び場をさがす</title>
-    <meta name="description" content="群馬県内のイベント、週末のおでかけ、子どもの遊び場を市町村・カテゴリ・日程から探せる地域情報ナビです。公式サイトや観光協会の情報をもとに一覧できます。">
+    <title>関東イベントナビ｜関東のイベント・遊び場をさがす</title>
+    <meta name="description" content="群馬県を中心に、栃木県など関東各地のイベントや子どもの遊び場情報を順次追加。都県・市町村・カテゴリ・日程から探せます。">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://aso-aso.com/">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="./favicon-16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="群馬イベントナビ">
-    <meta property="og:title" content="群馬イベントナビ｜イベント・遊び場をさがす">
-    <meta property="og:description" content="群馬県内のイベント、週末のおでかけ、子どもの遊び場を市町村・カテゴリ・日程から探せます。">
+    <meta property="og:site_name" content="関東イベントナビ">
+    <meta property="og:title" content="関東イベントナビ｜関東のイベント・遊び場をさがす">
+    <meta property="og:description" content="群馬県を中心に、栃木県から関東各地へ掲載エリアを順次拡大。イベントや遊び場を都県・市町村・カテゴリ・日程から探せます。">
     <meta property="og:url" content="https://aso-aso.com/">
     <meta property="og:image" content="https://aso-aso.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="群馬イベントナビ｜イベント・遊び場をさがす">
+    <meta property="og:image:alt" content="関東イベントナビ｜関東のイベント・遊び場をさがす">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://aso-aso.com/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=20260728i">
+    <link rel="stylesheet" href="./styles.css?v=20261015a">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "群馬イベントナビ",
+        "name": "関東イベントナビ",
         "url": "https://aso-aso.com/",
-        "description": "群馬県内のイベント、週末のおでかけ、子どもの遊び場を探せる地域情報ナビです。",
+        "description": "群馬県を中心に、栃木県から関東各地へ情報を広げるイベント・遊び場ナビです。",
         "inLanguage": "ja",
         "potentialAction": {
           "@type": "SearchAction",
@@ -58,9 +59,9 @@
     <nav class="topbar" aria-label="サイト内ナビゲーション">
       <div class="topbar-inner">
         <a class="brand" href="./">
-          <span class="brand-mark">群</span>
+          <span class="brand-mark">関</span>
           <span>
-            <strong>群馬イベントナビ</strong>
+            <strong>関東イベントナビ</strong>
             <small>イベント・遊び場データベース</small>
           </span>
         </a>
@@ -76,8 +77,8 @@
     <header class="app-header">
       <div class="hero-inner">
         <div class="app-header__main">
-          <h1>群馬のイベントと<br>子どもの遊び場が、すぐわかる。</h1>
-          <p class="lead">公式サイト・観光協会・会場情報を横断して、週末の予定と親子で行ける場所を検索できます。</p>
+          <h1>関東のイベントと<br>子どもの遊び場が、すぐわかる。</h1>
+          <p class="lead">群馬県を中心に、栃木県から関東各地へ掲載エリアを順次拡大中。公式サイトや観光協会の情報をもとに、都県・市町村から探せます。</p>
         </div>
         <aside class="hero-map" aria-label="群馬県の市町村地図">
           <div id="gunmaMap" class="gunma-map">
@@ -192,6 +193,11 @@
             </label>
 
             <label class="field">
+              <span><i class="ui-icon ui-icon--pin" aria-hidden="true"></i>都県</span>
+              <select id="prefectureSelect"></select>
+            </label>
+
+            <label class="field">
               <span><i class="ui-icon ui-icon--pin" aria-hidden="true"></i>市町村</span>
               <select id="municipalitySelect"></select>
             </label>
@@ -231,7 +237,7 @@
 
     <footer class="site-footer">
       <div class="site-footer-inner">
-        <p class="site-footer-brand">群馬イベントナビ</p>
+        <p class="site-footer-brand">関東イベントナビ</p>
         <nav class="site-footer-nav" aria-label="フッター">
           <a href="./guides/">おでかけガイド</a>
           <a href="./about.html">運営について</a>
@@ -244,6 +250,6 @@
 
     <script src="./config.js"></script>
     <script src="./data/events.js"></script>
-    <script src="./app.js?v=20260728i"></script>
+    <script src="./app.js?v=20261015a"></script>
   </body>
 </html>

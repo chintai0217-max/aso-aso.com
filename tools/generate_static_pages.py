@@ -614,7 +614,7 @@ def ga_snippet():
 def footer_html(asset_prefix="../"):
     return f"""    <footer class="site-footer">
       <div class="site-footer-inner">
-        <p class="site-footer-brand">群馬イベントナビ</p>
+        <p class="site-footer-brand">関東イベントナビ</p>
         <nav class="site-footer-nav" aria-label="フッター">
           <a href="{asset_prefix}guides/">おでかけガイド</a>
           <a href="{asset_prefix}about.html">運営について</a>
@@ -705,7 +705,7 @@ def list_return_script():
     </script>"""
 
 
-def list_search_href(mode="", municipality="", asset_prefix="../"):
+def list_search_href(mode="", municipality="", prefecture="", asset_prefix="../"):
     params = []
     if mode == "places":
         params.append("mode=places")
@@ -713,6 +713,8 @@ def list_search_href(mode="", municipality="", asset_prefix="../"):
         params.append(f"mode={url_quote(mode)}")
     if municipality:
         params.append(f"municipality={url_quote(municipality)}")
+    if prefecture:
+        params.append(f"prefecture={url_quote(prefecture)}")
     query = ("?" + "&".join(params)) if params else ""
     home = asset_prefix if asset_prefix.endswith("/") else f"{asset_prefix}/"
     if asset_prefix in ("./", "."):
@@ -747,12 +749,13 @@ def layout(
     <meta name="description" content="{html(description)}">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="{html(canonical)}">
+    <link rel="manifest" href="{asset_prefix}site.webmanifest">
     <link rel="icon" href="{asset_prefix}favicon.ico" sizes="any">
     <link rel="icon" href="{asset_prefix}favicon.svg" type="image/svg+xml">
     <link rel="icon" href="{asset_prefix}favicon-32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="{asset_prefix}apple-touch-icon.png" sizes="180x180">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="群馬イベントナビ">
+    <meta property="og:site_name" content="関東イベントナビ">
     <meta property="og:title" content="{html(title)}">
     <meta property="og:description" content="{html(description)}">
     <meta property="og:url" content="{html(canonical)}">
@@ -762,16 +765,16 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20260728i">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261015a">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
     <nav class="topbar" aria-label="サイト内ナビゲーション">
       <div class="topbar-inner">
         <a class="brand" href="{home}">
-          <span class="brand-mark">群</span>
+          <span class="brand-mark">関</span>
           <span>
-            <strong>群馬イベントナビ</strong>
+            <strong>関東イベントナビ</strong>
             <small>イベント・遊び場データベース</small>
           </span>
         </a>
@@ -802,7 +805,7 @@ def detail_section(title, items):
     return f'<section class="static-detail-section detail-section"><h2>{html(title)}</h2>{grid}</section>'
 
 
-def action_links(primary_url, primary_label, mode, municipality="", map_link=""):
+def action_links(primary_url, primary_label, mode, municipality="", map_link="", prefecture=""):
     links = []
     if primary_url:
         links.append(
@@ -812,7 +815,11 @@ def action_links(primary_url, primary_label, mode, municipality="", map_link="")
         links.append(
             f'<a class="secondary-button" href="{html(map_link)}" target="_blank" rel="noreferrer">{ui_icon("map")}地図で見る</a>'
         )
-    list_href = list_search_href(mode=mode, municipality=municipality or "")
+    list_href = list_search_href(
+        mode=mode,
+        municipality=municipality or "",
+        prefecture=prefecture or "",
+    )
     links.append(
         f'<a class="secondary-button" data-list-return href="{html(list_href)}">{ui_icon("list")}一覧で探す</a>'
     )
@@ -883,7 +890,7 @@ def graph(canonical, name, description, main_entity):
             {
                 "@type": "WebSite",
                 "@id": f"{BASE_URL}/#website",
-                "name": "群馬イベントナビ",
+                "name": "関東イベントナビ",
                 "url": f"{BASE_URL}/",
                 "inLanguage": "ja",
             },
@@ -904,16 +911,18 @@ def graph(canonical, name, description, main_entity):
 
 def render_event(event):
     canonical = event_url(event)
+    prefecture = event.get("prefecture") or "関東"
+    location_name = event.get("municipality") or prefecture
     category = CATEGORY_LABELS.get(event.get("category"), event.get("category") or "イベント")
-    title = f"{event.get('title')}｜{event.get('municipality') or '群馬県'}のイベント｜群馬イベントナビ"
+    title = f"{event.get('title')}｜{location_name}のイベント｜関東イベントナビ"
     description = compact(
-        f"{event.get('municipality') or '群馬県'}の{category}「{event.get('title')}」。"
+        f"{location_name}の{category}「{event.get('title')}」。"
         f"{date_text(event)}、{event.get('venue_name') or event.get('area_label') or ''}。"
         f"{event.get('summary') or ''}",
         155,
     )
     location = " / ".join([x for x in [event.get("prefecture"), event.get("municipality")] if x])
-    kicker_parts = [event.get("municipality") or "群馬県", category, event.get("area_label")]
+    kicker_parts = [location_name, category, event.get("area_label")]
     kicker = " · ".join([part for part in kicker_parts if part])
     date_long = date_text(event)
     date_short = date_text_compact(event)
@@ -921,7 +930,7 @@ def render_event(event):
     body = (
         detail_hero_html(event, event.get("title"))
         + '<div class="static-detail-head">'
-        + f'<p class="eyebrow">群馬のイベント</p><h1>{html(event.get("title"))}</h1>'
+        + f'<p class="eyebrow">{html(prefecture)}のイベント</p><h1>{html(event.get("title"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
@@ -961,6 +970,7 @@ def render_event(event):
             "events",
             event.get("municipality") or "",
             maps_url(event),
+            prefecture,
         )
         + "</div>"
     )
@@ -969,7 +979,7 @@ def render_event(event):
         description,
         canonical,
         display_image,
-        "群馬のイベント",
+        f"{prefecture}のイベント",
         event.get("title"),
         kicker,
         body,
@@ -979,21 +989,23 @@ def render_event(event):
 
 def render_place(place):
     canonical = place_url(place)
+    prefecture = place.get("prefecture") or "関東"
+    location_name = place.get("municipality") or prefecture
     place_type = PLACE_TYPE_LABELS.get(place.get("place_type"), place.get("place_type") or "遊び場")
     indoor = INDOOR_OUTDOOR_LABELS.get(place.get("indoor_outdoor"), place.get("indoor_outdoor") or "屋内外未設定")
-    title = f"{place.get('name')}｜{place.get('municipality') or '群馬県'}の子どもの遊び場｜群馬イベントナビ"
+    title = f"{place.get('name')}｜{location_name}の子どもの遊び場｜関東イベントナビ"
     description = compact(
-        f"{place.get('municipality') or '群馬県'}の子どもの遊び場「{place.get('name')}」。"
+        f"{location_name}の子どもの遊び場「{place.get('name')}」。"
         f"{place_type}、{indoor}。{place.get('features') or place.get('target_age_note') or ''}",
         155,
     )
     location = " / ".join([x for x in [place.get("prefecture"), place.get("municipality")] if x])
-    kicker = " · ".join([part for part in [place.get("municipality") or "群馬県", place_type, indoor] if part])
+    kicker = " · ".join([part for part in [location_name, place_type, indoor] if part])
     display_image = best_display_image(place)
     body = (
         detail_hero_html(place, place.get("name"))
         + '<div class="static-detail-head">'
-        + f'<p class="eyebrow">群馬の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
+        + f'<p class="eyebrow">{html(prefecture)}の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
         + fact_strip(
             [
@@ -1042,6 +1054,7 @@ def render_place(place):
             "places",
             place.get("municipality") or "",
             maps_url(place),
+            prefecture,
         )
         + "</div>"
     )
@@ -1134,6 +1147,12 @@ AREA_HUBS = [
         "municipality": "みどり市",
         "title": "みどり市のイベント・遊び場",
         "lead": "みどり市のイベントと、子育て支援センターなど親子向けの遊び場をまとめています。",
+    },
+    {
+        "slug": "tochigi",
+        "prefecture": "栃木県",
+        "title": "栃木県のイベント・遊び場",
+        "lead": "栃木県内の開催予定イベントを掲載しています。市町村ごとの遊び場情報は順次追加します。",
     },
 ]
 
@@ -1317,15 +1336,33 @@ def hub_intro_html(hub):
 
 
 def render_area_hub(hub, events, places):
-    muni = hub["municipality"]
-    event_items = [e for e in events if e.get("municipality") == muni and is_upcoming_event(e)]
+    muni = hub.get("municipality")
+    prefecture = hub.get("prefecture") or "群馬県"
+    target = muni or prefecture
+    if muni:
+        event_items = [
+            e for e in events
+            if e.get("municipality") == muni
+            and (not hub.get("prefecture") or e.get("prefecture") == prefecture)
+            and is_upcoming_event(e)
+        ]
+        place_items = [
+            p for p in places
+            if p.get("municipality") == muni
+            and (not hub.get("prefecture") or p.get("prefecture") == prefecture)
+        ]
+    else:
+        event_items = [e for e in events if e.get("prefecture") == prefecture and is_upcoming_event(e)]
+        place_items = [p for p in places if p.get("prefecture") == prefecture]
     event_items.sort(key=lambda e: (e.get("start_date") or "", e.get("title") or ""))
-    place_items = [p for p in places if p.get("municipality") == muni]
     place_items.sort(key=lambda p: (p.get("place_type") or "", p.get("name") or ""))
     canonical = f"{BASE_URL}/areas/{hub['slug']}.html"
-    list_href = f"../?municipality={url_quote(muni)}#eventList"
+    query_params = [f"prefecture={url_quote(prefecture)}"]
+    if muni:
+        query_params.append(f"municipality={url_quote(muni)}")
+    list_href = f"../?{'&'.join(query_params)}#eventList"
     description = compact(
-        f"群馬県{muni}のイベント{len(event_items)}件、子どもの遊び場{len(place_items)}件。"
+        f"{prefecture}{muni or ''}のイベント{len(event_items)}件、子どもの遊び場{len(place_items)}件。"
         f"{hub['lead']}",
         155,
     )
@@ -1336,7 +1373,7 @@ def render_area_hub(hub, events, places):
         f'<div class="detail-fact-strip">'
         f'<span><b>{ui_icon("ticket")}イベント</b>{len(event_items)}件</span>'
         f'<span><b>{ui_icon("play")}遊び場</b>{len(place_items)}件</span>'
-        f"<span><b>{ui_icon('pin')}対象</b>{html(muni)}</span>"
+        f"<span><b>{ui_icon('pin')}対象</b>{html(target)}</span>"
         f"</div></div><div class=\"static-detail-body\">"
         + hub_intro_html(hub)
         + hub_section("開催予定のイベント", [hub_card_event(e) for e in event_items], "現在、掲載中の開催予定イベントはありません。")
@@ -1348,7 +1385,7 @@ def render_area_hub(hub, events, places):
         f"</div></div>"
     )
     return layout(
-        f"{hub['title']}｜群馬イベントナビ",
+        f"{hub['title']}｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1362,8 +1399,8 @@ def render_area_hub(hub, events, places):
             "name": hub["title"],
             "url": canonical,
             "description": description,
-            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
-            "about": {"@type": "Place", "name": muni, "address": {"@type": "PostalAddress", "addressRegion": "群馬県"}},
+            "isPartOf": {"@type": "WebSite", "name": "関東イベントナビ", "url": f"{BASE_URL}/"},
+            "about": {"@type": "Place", "name": target, "address": {"@type": "PostalAddress", "addressRegion": prefecture}},
         },
         body_class="static-detail-page hub-page",
     )
@@ -1408,7 +1445,7 @@ def render_theme_hub(hub, events, places):
         f"</div></div>"
     )
     return layout(
-        f"{hub['title']}｜群馬イベントナビ",
+        f"{hub['title']}｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1422,7 +1459,7 @@ def render_theme_hub(hub, events, places):
             "name": hub["title"],
             "url": canonical,
             "description": description,
-            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+            "isPartOf": {"@type": "WebSite", "name": "関東イベントナビ", "url": f"{BASE_URL}/"},
         },
         body_class="static-detail-page hub-page",
     )
@@ -1436,14 +1473,14 @@ def render_hub_index(kind, hubs, description):
         cards.append(
             f'<a class="hub-card" href="{html(href)}">'
             f"<strong>{html(hub['title'])}</strong>"
-            f"<span>{html(hub.get('municipality') or 'テーマ')}</span>"
+            f"<span>{html(hub.get('municipality') or hub.get('prefecture') or 'テーマ')}</span>"
             f"<small>{html(hub['lead'])}</small>"
             "</a>"
         )
     label = "地域" if kind == "areas" else "テーマ"
     body = (
         '<div class="static-detail-head">'
-        f'<p class="eyebrow">群馬イベントナビ</p><h1>{html(label)}からさがす</h1>'
+        f'<p class="eyebrow">関東イベントナビ</p><h1>{html(label)}からさがす</h1>'
         f'<p class="lead">{html(description)}</p>'
         "</div><div class=\"static-detail-body\">"
         f'<div class="hub-card-grid">{"".join(cards)}</div>'
@@ -1453,7 +1490,7 @@ def render_hub_index(kind, hubs, description):
     )
     # hub index uses ./ links; layout assumes ../ for assets — keep ../ for css from areas/index
     return layout(
-        f"{label}からさがす｜群馬イベントナビ",
+        f"{label}からさがす｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1482,18 +1519,18 @@ def section(title, content_html):
 def render_about():
     canonical = f"{BASE_URL}/about.html"
     description = (
-        "群馬イベントナビの運営方針、情報の集め方、更新の考え方、お問い合わせ方法について説明します。"
+        "関東イベントナビの運営方針、情報の集め方、更新の考え方、お問い合わせ方法について説明します。"
     )
     body = (
         '<div class="static-detail-head">'
-        '<p class="eyebrow">群馬イベントナビ</p>'
+        '<p class="eyebrow">関東イベントナビ</p>'
         "<h1>運営について</h1>"
         f'<p class="lead">{html(description)}</p>'
         f'<p class="policy-updated">最終更新日：{html(TODAY_JA)}</p>'
         "</div><div class=\"static-detail-body info-page-body\">"
         + section(
             "このサイトについて",
-            "<p class=\"detail-copy\">群馬イベントナビ（aso-aso.com）は、群馬県内のイベントや子どもの遊び場を、"
+            "<p class=\"detail-copy\">関東イベントナビ（aso-aso.com）は、群馬県を中心に栃木県など関東各地のイベントや子どもの遊び場を、"
             "市町村・日程・テーマから探しやすくするための地域情報ナビです。"
             "公式サイトや観光協会などの公開情報をもとに、週末のおでかけ検討を助けることを目的としています。</p>",
         )
@@ -1532,7 +1569,7 @@ def render_about():
         "</div></div>"
     )
     return layout(
-        "運営について｜群馬イベントナビ",
+        "運営について｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1546,7 +1583,7 @@ def render_about():
             "name": "運営について",
             "url": canonical,
             "description": description,
-            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+            "isPartOf": {"@type": "WebSite", "name": "関東イベントナビ", "url": f"{BASE_URL}/"},
         },
         body_class="static-detail-page info-page",
         asset_prefix="./",
@@ -1556,18 +1593,18 @@ def render_about():
 def render_privacy():
     canonical = f"{BASE_URL}/privacy.html"
     description = (
-        "群馬イベントナビのプライバシーポリシーです。アクセス解析、広告配信、Cookieの取り扱いについて説明します。"
+        "関東イベントナビのプライバシーポリシーです。アクセス解析、広告配信、Cookieの取り扱いについて説明します。"
     )
     body = (
         '<div class="static-detail-head">'
-        '<p class="eyebrow">群馬イベントナビ</p>'
+        '<p class="eyebrow">関東イベントナビ</p>'
         "<h1>プライバシーポリシー</h1>"
         f'<p class="lead">{html(description)}</p>'
         f'<p class="policy-updated">最終更新日：{html(TODAY_JA)}</p>'
         "</div><div class=\"static-detail-body info-page-body\">"
         + section(
             "基本方針",
-            "<p class=\"detail-copy\">群馬イベントナビ（以下「当サイト」）は、利用者のプライバシーを尊重し、"
+            "<p class=\"detail-copy\">関東イベントナビ（以下「当サイト」）は、利用者のプライバシーを尊重し、"
             "取得した情報を適切に取り扱います。本ポリシーでは、当サイトにおける情報の取り扱いについて説明します。</p>",
         )
         + section(
@@ -1654,7 +1691,7 @@ def render_privacy():
         "</div></div>"
     )
     return layout(
-        "プライバシーポリシー｜群馬イベントナビ",
+        "プライバシーポリシー｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1668,7 +1705,7 @@ def render_privacy():
             "name": "プライバシーポリシー",
             "url": canonical,
             "description": description,
-            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+            "isPartOf": {"@type": "WebSite", "name": "関東イベントナビ", "url": f"{BASE_URL}/"},
         },
         body_class="static-detail-page info-page",
         asset_prefix="./",
@@ -1755,7 +1792,7 @@ def render_guide(guide, guides):
         "</div></div>"
     )
     return layout(
-        f"{guide.get('title')}｜群馬イベントナビ",
+        f"{guide.get('title')}｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1770,9 +1807,9 @@ def render_guide(guide, guides):
             "description": description,
             "dateModified": guide.get("updated") or TODAY,
             "inLanguage": "ja",
-            "author": {"@type": "Organization", "name": "群馬イベントナビ"},
+            "author": {"@type": "Organization", "name": "関東イベントナビ"},
             "mainEntityOfPage": canonical,
-            "isPartOf": {"@type": "WebSite", "name": "群馬イベントナビ", "url": f"{BASE_URL}/"},
+            "isPartOf": {"@type": "WebSite", "name": "関東イベントナビ", "url": f"{BASE_URL}/"},
         },
         body_class="static-detail-page info-page guide-page",
         asset_prefix="../",
@@ -1794,7 +1831,7 @@ def render_guides_index(guides):
         )
     body = (
         '<div class="static-detail-head">'
-        '<p class="eyebrow">群馬イベントナビ</p>'
+        '<p class="eyebrow">関東イベントナビ</p>'
         "<h1>おでかけガイド</h1>"
         f'<p class="lead">{html(description)}</p>'
         "</div><div class=\"static-detail-body\">"
@@ -1809,7 +1846,7 @@ def render_guides_index(guides):
         "</div></div>"
     )
     return layout(
-        "おでかけガイド｜群馬イベントナビ",
+        "おでかけガイド｜関東イベントナビ",
         description,
         canonical,
         None,
@@ -1878,7 +1915,7 @@ def main():
     write(ROOT / "guides" / "index.html", render_guides_index(guides))
     write(
         ROOT / "areas" / "index.html",
-        render_hub_index("areas", AREA_HUBS, "高崎・前橋・太田・桐生・伊勢崎など、主要都市のイベントと遊び場をまとめています。"),
+        render_hub_index("areas", AREA_HUBS, "群馬県を中心に、栃木県など関東各地の開催予定イベントを地域ごとにまとめています。"),
     )
     write(
         ROOT / "themes" / "index.html",

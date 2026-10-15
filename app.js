@@ -6,6 +6,7 @@ const state = {
   data: null,
   mode: "events",
   query: "",
+  prefecture: "all",
   municipality: "all",
   category: "all",
   age: "all",
@@ -18,6 +19,8 @@ const state = {
   indoorOnly: false,
   decision: "none",
 };
+
+const KANTO_PREFECTURES = ["東京都", "神奈川県", "埼玉県", "千葉県", "茨城県", "栃木県", "群馬県"];
 
 let googlePlacesServicePromise = null;
 let searchRenderTimer = 0;
@@ -169,6 +172,11 @@ function applyInitialSearchQuery() {
     state.municipality = municipality;
   }
 
+  const prefecture = params.get("prefecture");
+  if (prefecture) {
+    state.prefecture = prefecture;
+  }
+
   const category = params.get("category");
   if (category) {
     state.category = category;
@@ -205,6 +213,7 @@ function buildListSearchParams() {
   if (state.mode !== "events") params.set("mode", state.mode);
   const queryText = els.searchInput?.value?.trim() || "";
   if (queryText) params.set("q", queryText);
+  if (state.prefecture !== "all") params.set("prefecture", state.prefecture);
   if (state.municipality !== "all") params.set("municipality", state.municipality);
   if (state.category !== "all") params.set("category", state.category);
   if (state.age !== "all") params.set("age", state.age);
@@ -268,6 +277,7 @@ function bindElements() {
     "filterToggleButton",
     "filterBody",
     "searchInput",
+    "prefectureSelect",
     "municipalitySelect",
     "ageSelect",
     "categoryFieldLabel",
@@ -299,6 +309,7 @@ function bindEvents() {
       state.mode = button.dataset.mode;
       state.category = "all";
       state.age = "all";
+      state.prefecture = "all";
       state.municipality = "all";
       state.indoorOnly = false;
       state.freeOnly = false;
@@ -319,8 +330,18 @@ function bindEvents() {
     }, 120);
   });
 
+  els.prefectureSelect.addEventListener("change", (event) => {
+    setPrefecture(event.target.value, { scroll: false });
+  });
+
   els.municipalitySelect.addEventListener("change", (event) => {
-    setMunicipality(event.target.value, { scroll: false });
+    const value = event.target.value;
+    if (value === "all") {
+      setMunicipality("all", { scroll: false });
+      return;
+    }
+    const [prefecture, municipality] = value.split("::");
+    setLocationFilter(prefecture, municipality, { scroll: false });
   });
 
   els.ageSelect.addEventListener("change", (event) => {
@@ -365,25 +386,33 @@ function bindEvents() {
   });
 
   els.coverageList.addEventListener("click", (event) => {
-    const item = event.target.closest("[data-municipality]");
+    const item = event.target.closest("[data-location-filter]");
     if (!item) return;
-    const name = item.dataset.municipality;
-    setMunicipality(state.municipality === name ? "all" : name, { scroll: true });
+    if (item.dataset.locationFilter === "all") {
+      setLocationFilter("all", "all", { scroll: false });
+      return;
+    }
+    const prefecture = item.dataset.prefecture;
+    const municipality = item.dataset.municipality;
+    const isSelected = state.prefecture === prefecture && state.municipality === municipality;
+    setLocationFilter(prefecture, isSelected ? "all" : municipality, { scroll: true });
   });
 
   els.gunmaMap.addEventListener("click", (event) => {
     const region = event.target.closest("[data-municipality]");
     if (!region) return;
     const name = region.dataset.municipality;
+    state.prefecture = "群馬県";
     setMunicipality(state.municipality === name ? "all" : name, { scroll: true });
   });
 
   els.clearMapSelection.addEventListener("click", () => {
-    setMunicipality("all", { scroll: false });
+    setLocationFilter("all", "all", { scroll: false });
   });
 
   els.resetButton.addEventListener("click", () => {
     state.query = "";
+    state.prefecture = "all";
     state.municipality = "all";
     state.category = "all";
     state.age = "all";
@@ -404,12 +433,40 @@ function bindEvents() {
 
 function setMunicipality(name, { scroll = false } = {}) {
   state.municipality = name || "all";
-  if (els.municipalitySelect) {
-    els.municipalitySelect.value = state.municipality;
-  }
+  populateMunicipalities();
   render();
   if (scroll && state.municipality !== "all") {
     document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function setPrefecture(name, { scroll = false } = {}) {
+  state.prefecture = name || "all";
+  state.municipality = "all";
+  populateMunicipalities();
+  render();
+  if (scroll && state.prefecture !== "all") {
+    document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function setLocationFilter(prefecture, municipality, { scroll = false } = {}) {
+  state.prefecture = prefecture || "all";
+  state.municipality = municipality || "all";
+  if (els.prefectureSelect) els.prefectureSelect.value = state.prefecture;
+  populateMunicipalities();
+  render();
+  if (scroll && (state.prefecture !== "all" || state.municipality !== "all")) {
+    document.getElementById("eventList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function syncLocationSelects() {
+  if (els.prefectureSelect) els.prefectureSelect.value = state.prefecture;
+  if (els.municipalitySelect) {
+    els.municipalitySelect.value = state.municipality === "all"
+      ? "all"
+      : `${state.prefecture}::${state.municipality}`;
   }
 }
 
@@ -445,19 +502,57 @@ function populateFilters() {
     [["all", "すべて"]].concat(ageGroups.map((group) => [group.id, group.label]))
   );
   els.ageSelect.value = state.age;
+  populatePrefectures();
   populateMunicipalities();
 }
 
+function populatePrefectures() {
+  const available = new Set(allRecords().map((record) => record.prefecture).filter(Boolean));
+  const prefectures = KANTO_PREFECTURES.filter((name) => available.has(name));
+  available.forEach((name) => {
+    if (!prefectures.includes(name)) prefectures.push(name);
+  });
+  if (state.prefecture !== "all" && !prefectures.includes(state.prefecture)) {
+    prefectures.push(state.prefecture);
+  }
+  fillSelect(
+    els.prefectureSelect,
+    [["all", "掲載中の都県すべて"]].concat(prefectures.map((name) => [name, name]))
+  );
+  els.prefectureSelect.value = state.prefecture;
+}
+
 function populateMunicipalities() {
-  const municipalities = unique(currentRecords().map((record) => record.municipality).filter(Boolean));
-  if (state.municipality !== "all" && !municipalities.includes(state.municipality)) {
-    municipalities.push(state.municipality);
+  const pairs = currentRecords()
+    .filter((record) => state.prefecture === "all" || record.prefecture === state.prefecture)
+    .filter((record) => record.prefecture && record.municipality)
+    .map((record) => ({ prefecture: record.prefecture, municipality: record.municipality }));
+  const uniquePairs = Array.from(
+    new Map(pairs.map((item) => [`${item.prefecture}::${item.municipality}`, item])).values()
+  ).sort((a, b) =>
+    (KANTO_PREFECTURES.indexOf(a.prefecture) - KANTO_PREFECTURES.indexOf(b.prefecture)) ||
+    a.prefecture.localeCompare(b.prefecture, "ja") ||
+    a.municipality.localeCompare(b.municipality, "ja")
+  );
+  if (state.municipality !== "all") {
+    const matching = uniquePairs.filter((item) => item.municipality === state.municipality);
+    if (state.prefecture === "all" && matching.length) {
+      const legacyMatch = matching.find((item) => item.prefecture === "群馬県") || matching[0];
+      state.prefecture = legacyMatch.prefecture;
+    }
+    const selectedKey = `${state.prefecture}::${state.municipality}`;
+    if (!uniquePairs.some((item) => `${item.prefecture}::${item.municipality}` === selectedKey)) {
+      uniquePairs.push({ prefecture: state.prefecture, municipality: state.municipality });
+    }
   }
   fillSelect(
     els.municipalitySelect,
-    [["all", "すべて"]].concat(municipalities.map((item) => [item, item]))
+    [["all", "すべて"]].concat(uniquePairs.map((item) => [
+      `${item.prefecture}::${item.municipality}`,
+      state.prefecture === "all" ? `${item.prefecture} ${item.municipality}` : item.municipality,
+    ]))
   );
-  els.municipalitySelect.value = state.municipality;
+  syncLocationSelects();
 }
 
 function fillSelect(select, options) {
@@ -471,6 +566,7 @@ function render() {
   const sorted = sortRecords(records);
 
   document.body.dataset.mode = state.mode;
+  document.body.dataset.prefecture = state.prefecture;
   els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
   els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
   renderDecisionChips();
@@ -511,6 +607,7 @@ function applyDecision(decision, { toggle = true, scroll = true, skipRender = fa
     state.status = "verified";
   } else if (next === "motenashi") {
     state.mode = "events";
+    state.prefecture = "群馬県";
     state.motenashiOnly = true;
     state.municipality = "all";
     state.age = "all";
@@ -571,6 +668,7 @@ function renderListContext() {
     parts.push("確認済み");
   }
 
+  if (state.prefecture !== "all") parts.push(state.prefecture);
   if (state.municipality !== "all") parts.push(state.municipality);
   if (state.decision !== "motenashi" && state.motenashiOnly) parts.push("もてなし広場");
   if (state.decision !== "free" && state.freeOnly) parts.push("無料");
@@ -591,6 +689,7 @@ function renderListContext() {
 
   const hasFilter =
     state.decision !== "none" ||
+    state.prefecture !== "all" ||
     state.municipality !== "all" ||
     state.motenashiOnly ||
     state.freeOnly ||
@@ -622,6 +721,7 @@ function renderWeekendHighlight() {
     state.data.events.filter((event) => {
       if (!matchesWeekend(event)) return false;
       if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
+      if (state.prefecture !== "all" && event.prefecture !== state.prefecture) return false;
       if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
       if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
       if (state.status !== "all" && event.status !== state.status) return false;
@@ -678,7 +778,7 @@ function renderWeekendHighlight() {
               </div>
               <div class="weekend-card__body">
                 <p class="card-kicker">
-                  <span class="meta-item">${uiIcon("pin")}${escapeHtml(event.municipality || "群馬県")}</span>
+                  <span class="meta-item">${uiIcon("pin")}${escapeHtml(formatRecordLocation(event))}</span>
                   <span class="meta-item">${uiIcon("calendar")}${escapeHtml(formatMonthDay(event.start_date))}</span>
                 </p>
                 <h3>${escapeHtml(event.title)}</h3>
@@ -701,6 +801,9 @@ function renderWeekendHighlight() {
 
 function renderMapSelection() {
   if (!els.gunmaMap) return;
+  const mapVisible = state.prefecture === "all" || state.prefecture === "群馬県";
+  const mapPanel = els.gunmaMap.closest(".hero-map");
+  if (mapPanel) mapPanel.hidden = !mapVisible;
   const selected = state.municipality;
   els.gunmaMap.querySelectorAll(".gunma-region").forEach((region) => {
     region.classList.toggle("is-active", region.dataset.municipality === selected);
@@ -866,25 +969,34 @@ function matchesAgeGroup(record) {
 }
 
 function renderCoverage() {
-  const records = currentRecords();
+  const allRecords = currentRecords();
+  const records = allRecords.filter((record) =>
+    state.prefecture === "all" || record.prefecture === state.prefecture
+  );
   const counts = new Map();
-  records.forEach((record) => counts.set(record.municipality || "未設定", (counts.get(record.municipality || "未設定") || 0) + 1));
-  const total = records.length;
+  records.forEach((record) => {
+    if (!record.prefecture || !record.municipality) return;
+    const key = `${record.prefecture}::${record.municipality}`;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  });
+  const total = allRecords.length;
 
   const items = [
-    `<button type="button" class="coverage-item ${state.municipality === "all" ? "is-active" : ""}" data-municipality="all">
-      <strong>${uiIcon("map")}すべて</strong>
+    `<button type="button" class="coverage-item ${state.prefecture === "all" && state.municipality === "all" ? "is-active" : ""}" data-location-filter="all">
+      <strong>${uiIcon("map")}掲載中のすべて</strong>
       <span>${total}件</span>
     </button>`,
   ].concat(
     Array.from(counts.entries())
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"))
       .slice(0, 12)
-      .map(([name, count]) => {
-        const active = state.municipality === name ? "is-active" : "";
+      .map(([key, count]) => {
+        const [prefecture, municipality] = key.split("::");
+        const active = state.prefecture === prefecture && state.municipality === municipality ? "is-active" : "";
+        const label = state.prefecture === "all" ? `${prefecture} ${municipality}` : municipality;
         return `
-          <button type="button" class="coverage-item ${active}" data-municipality="${escapeHtml(name)}">
-            <strong>${uiIcon("pin")}${escapeHtml(name)}</strong>
+          <button type="button" class="coverage-item ${active}" data-location-filter="municipality" data-prefecture="${escapeHtml(prefecture)}" data-municipality="${escapeHtml(municipality)}">
+            <strong>${uiIcon("pin")}${escapeHtml(label)}</strong>
             <span>${count}件</span>
           </button>
         `;
@@ -966,7 +1078,7 @@ function eventCard(event) {
   const displayImage = bestThumbImage(event);
   const image = mediaThumb(displayImage, event.title, categoryLabel(event.category), event.images, event);
   const venue = event.venue_name || event.area_label || "";
-  const placeLine = [event.municipality || event.prefecture, venue].filter(Boolean).join(" / ");
+  const placeLine = [formatRecordLocation(event), venue].filter(Boolean).join(" / ");
   const dateLabel = formatMonthDay(event.start_date);
   const price = event.price_note || "";
   const whenParts = [];
@@ -1001,7 +1113,7 @@ function placeCard(place) {
       <div class="event-main">
         <h3 class="event-title">${escapeHtml(place.name)}</h3>
         <p class="card-kicker card-kicker--when">
-          <span class="meta-item">${uiIcon("pin")}${escapeHtml(place.municipality || place.prefecture || "地域未設定")}</span>
+          <span class="meta-item">${uiIcon("pin")}${escapeHtml(formatRecordLocation(place) || "地域未設定")}</span>
           ${indoorOutdoor ? `<span class="meta-item">${uiIcon(indoorIcon)}${escapeHtml(indoorOutdoor)}</span>` : ""}
         </p>
         <p class="card-kicker card-kicker--where">
@@ -1293,6 +1405,7 @@ function filteredRecords() {
   return state.data.events.filter((event) => {
     if (!matchesDateScope(event)) return false;
     if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
+    if (state.prefecture !== "all" && event.prefecture !== state.prefecture) return false;
     if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
     if (state.status !== "all" && event.status !== state.status) return false;
@@ -1403,6 +1516,7 @@ function isMotenashiEvent(event) {
 
 function filteredPlaces() {
   return state.data.child_play_places.filter((place) => {
+    if (state.prefecture !== "all" && place.prefecture !== state.prefecture) return false;
     if (state.municipality !== "all" && place.municipality !== state.municipality) return false;
     if (state.category !== "all" && !matchesSelectedCategory(place.place_type)) return false;
     if (state.status !== "all" && place.status !== state.status) return false;
@@ -1434,6 +1548,14 @@ function filteredPlaces() {
 
 function currentRecords() {
   return state.mode === "events" ? state.data.events : state.data.child_play_places;
+}
+
+function allRecords() {
+  return [...state.data.events, ...state.data.child_play_places];
+}
+
+function formatRecordLocation(record) {
+  return [record.prefecture, record.municipality].filter(Boolean).join(" ");
 }
 
 function sortRecords(records) {

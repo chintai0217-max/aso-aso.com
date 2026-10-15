@@ -2918,6 +2918,10 @@ button.coverage-item.is-active .ui-icon {
   color: var(--on-brand);
 }
 
+.hero-map[hidden] {
+  display: none;
+}
+
 .gunma-map {
   display: flex;
   justify-content: center;
@@ -4615,6 +4619,16 @@ a {
 }
 
 /* Mobile type/layout must come after the unified scale above. */
+@media (min-width: 681px) {
+  body[data-prefecture]:not([data-prefecture="all"]):not([data-prefecture="群馬県"]) .app-header {
+    min-height: 300px;
+  }
+
+  body[data-prefecture]:not([data-prefecture="all"]):not([data-prefecture="群馬県"]) .hero-inner {
+    min-height: 224px;
+  }
+}
+
 @media (max-width: 680px) {
   .brand strong {
     font-size: var(--text-sm);
