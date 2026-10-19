@@ -1486,3 +1486,34 @@
     scroll-snap-align: start;
   }
 }
+
+/* Give the page title more space and a clearer visual lead-in. */
+.finder-page .app-header {
+  padding: 32px 0 34px;
+}
+
+.finder-page .app-header h1 {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.34;
+}
+
+.finder-page .app-header .lead {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .finder-page .app-header {
+    padding: 20px 0 22px;
+  }
+
+  .finder-page .app-header h1 {
+    font-size: clamp(24px, 6vw, 31px);
+    line-height: 1.38;
+  }
+
+  .finder-page .app-header .lead {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+}
