@@ -282,6 +282,9 @@ function bindElements() {
     "ageSelect",
     "categoryFieldLabel",
     "categorySelect",
+    "decisionLabel",
+    "resultsTitle",
+    "resultCount",
     "resetButton",
     "coverageList",
     "gunmaMap",
@@ -479,8 +482,8 @@ function updateFilterVisibility() {
   els.filterBody.classList.toggle("is-open", state.filtersOpen);
   els.filterToggleButton.setAttribute("aria-expanded", String(state.filtersOpen));
   els.filterToggleButton.innerHTML = state.filtersOpen
-    ? `${uiIcon("sliders")}閉じる`
-    : `${uiIcon("sliders")}条件`;
+    ? `${uiIcon("sliders")}条件を閉じる`
+    : `${uiIcon("sliders")}詳しい条件`;
 }
 
 function populateFilters() {
@@ -517,7 +520,7 @@ function populatePrefectures() {
   }
   fillSelect(
     els.prefectureSelect,
-    [["all", "掲載中の都県すべて"]].concat(prefectures.map((name) => [name, name]))
+    [["all", "掲載エリアすべて"]].concat(prefectures.map((name) => [name, name]))
   );
   els.prefectureSelect.value = state.prefecture;
 }
@@ -567,6 +570,14 @@ function render() {
 
   document.body.dataset.mode = state.mode;
   document.body.dataset.prefecture = state.prefecture;
+  if (els.searchInput) {
+    els.searchInput.placeholder = state.mode === "events"
+      ? "イベント名・会場・地域"
+      : "施設名・地域・特徴";
+  }
+  if (els.resultsTitle) els.resultsTitle.textContent = state.mode === "events" ? "イベントを探す" : "遊び場を探す";
+  if (els.resultCount) els.resultCount.textContent = `${sorted.length.toLocaleString("ja-JP")}件`;
+  if (els.decisionLabel) els.decisionLabel.textContent = state.mode === "events" ? "こだわり" : "遊び場の特徴";
   els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
   els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
   renderDecisionChips();
@@ -633,14 +644,18 @@ function applyDecision(decision, { toggle = true, scroll = true, skipRender = fa
 
 function renderDecisionChips() {
   if (!els.decisionChips) return;
-  const chips = [
-    ["weekend", "今週末", "calendar"],
-    ["rain", "雨の日屋内（遊び場）", "rain"],
-    ["free", "無料", "yen"],
-    ["infant", "乳幼児", "baby"],
-    ["motenashi", "もてなし広場", "building"],
-    ["verified", "確認済み", "check"],
-  ];
+  const chips = state.mode === "events"
+    ? [
+        ["free", "無料", "yen"],
+        ["infant", "乳幼児向け", "baby"],
+        ["verified", "公式確認済み", "check"],
+      ]
+    : [
+        ["rain", "屋内で遊ぶ", "home"],
+        ["free", "無料", "yen"],
+        ["infant", "乳幼児向け", "baby"],
+        ["verified", "公式確認済み", "check"],
+      ];
   els.decisionChips.innerHTML = chips
     .map(
       ([value, label, icon]) =>
@@ -747,7 +762,7 @@ function renderWeekendHighlight() {
 
       return haystack.includes(state.query);
     })
-  ).slice(0, 4);
+  );
 
   if (!weekendEvents.length) {
     els.weekendHighlight.hidden = true;
@@ -760,37 +775,10 @@ function renderWeekendHighlight() {
 
   els.weekendHighlight.hidden = false;
   els.weekendHighlight.innerHTML = `
-    <div class="weekend-highlight__head">
-      <div>
-        <p class="weekend-highlight__eyebrow">${uiIcon("calendar")}今週末のおでかけ</p>
-        <h2>${escapeHtml(rangeLabel)}のピックアップ</h2>
-      </div>
-      <button type="button" class="ghost-button" data-decision="weekend">${uiIcon("calendar")}今週末をすべて見る</button>
-    </div>
-    <div class="weekend-highlight__grid">
-      ${weekendEvents
-        .map((event) => {
-          const imageUrl = bestThumbImage(event);
-          return `
-            <a class="weekend-card" href="${escapeHtml(recordPageHref(event, "event"))}">
-              <div class="weekend-card__media">
-                ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}
-              </div>
-              <div class="weekend-card__body">
-                <p class="card-kicker">
-                  <span class="meta-item">${uiIcon("pin")}${escapeHtml(formatRecordLocation(event))}</span>
-                  <span class="meta-item">${uiIcon("calendar")}${escapeHtml(formatMonthDay(event.start_date))}</span>
-                </p>
-                <h3>${escapeHtml(event.title)}</h3>
-                <div class="event-meta">
-                  <span class="pill category">${uiIcon("tag")}${escapeHtml(categoryLabel(event.category))}</span>
-                  ${statusPill(event)}
-                </div>
-              </div>
-            </a>
-          `;
-        })
-        .join("")}
+    <div class="weekend-strip">
+      <span class="weekend-strip__icon">${uiIcon("calendar")}</span>
+      <p><strong>今週末 ${escapeHtml(rangeLabel)}</strong><span>${weekendEvents.length.toLocaleString("ja-JP")}件のイベント</span></p>
+      <button type="button" class="ghost-button" data-decision="weekend">週末のイベントを見る</button>
     </div>
   `;
 
@@ -801,7 +789,7 @@ function renderWeekendHighlight() {
 
 function renderMapSelection() {
   if (!els.gunmaMap) return;
-  const mapVisible = state.prefecture === "all" || state.prefecture === "群馬県";
+  const mapVisible = state.prefecture === "群馬県";
   const mapPanel = els.gunmaMap.closest(".hero-map");
   if (mapPanel) mapPanel.hidden = !mapVisible;
   const selected = state.municipality;
@@ -1033,7 +1021,8 @@ function renderList(records) {
 function renderDateGroup(key, items, cardFn) {
   const cards = items.map(cardFn).join("");
   const count = items.length;
-  const collapseByDefault = key === "開催中";
+  const isMonth = /^\d{4}-\d{2}$/.test(key);
+  const collapseByDefault = key === "開催中" || (isMonth && key !== TODAY.slice(0, 7));
 
   if (!collapseByDefault) {
     return `${dateGroupHeadingHtml(key, count)}${cards}`;
@@ -1076,26 +1065,27 @@ function dateGroupHeadingHtml(key, count) {
 function eventCard(event) {
   const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
   const displayImage = bestThumbImage(event);
-  const image = mediaThumb(displayImage, event.title, categoryLabel(event.category), event.images, event);
+  const image = displayImage ? mediaThumb(displayImage, event.title, categoryLabel(event.category), event.images, event) : "";
   const venue = event.venue_name || event.area_label || "";
   const placeLine = [formatRecordLocation(event), venue].filter(Boolean).join(" / ");
-  const dateLabel = formatMonthDay(event.start_date);
-  const price = event.price_note || "";
-  const whenParts = [];
-  if (dateLabel !== "-") whenParts.push(`<span class="meta-item">${uiIcon("calendar")}${escapeHtml(dateLabel)}</span>`);
-  if (time) whenParts.push(`<span class="meta-item">${uiIcon("clock")}${escapeHtml(time)}</span>`);
+  const dateLabel = eventDateRangeLabel(event);
 
   return `
-    <a class="event-card has-image ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
+    <a class="event-card event-card--event ${displayImage ? "has-image" : "no-image"} ${isCandidate(event) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(event, "event"))}">
       ${image}
       <div class="event-main">
-        <h3 class="event-title">${escapeHtml(event.title)}</h3>
-        ${whenParts.length ? `<p class="card-kicker card-kicker--when">${whenParts.join("")}</p>` : ""}
-        <p class="card-kicker card-kicker--where">
-          <span class="meta-item">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>
-          <span class="meta-item">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+        <div class="event-card__topline">
+          <span class="pill category">${uiIcon("tag")}${escapeHtml(categoryLabel(event.category))}</span>
           ${statusPill(event)}
+        </div>
+        <h3 class="event-title">${escapeHtml(event.title)}</h3>
+        <p class="event-card__facts">
+          <span class="meta-item">${uiIcon("calendar")}${escapeHtml(dateLabel)}</span>
+          ${time ? `<span class="meta-item">${uiIcon("clock")}${escapeHtml(time)}</span>` : ""}
+          <span class="meta-item event-card__location">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>
         </p>
+        ${event.summary ? `<p class="event-card__summary">${escapeHtml(compactText(event.summary, 100))}</p>` : ""}
+        <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(event.price_note, 52)))}</span></div>
       </div>
     </a>
   `;
@@ -1103,26 +1093,37 @@ function eventCard(event) {
 
 function placeCard(place) {
   const displayImage = bestThumbImage(place);
-  const image = mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place);
+  const image = displayImage ? mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place) : "";
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
-  const price = place.price_note || "";
-  const indoorIcon = place.indoor_outdoor === "outdoor" ? "sun" : "home";
   return `
-    <a class="event-card has-image ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
+    <a class="event-card event-card--place ${displayImage ? "has-image" : "no-image"} ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
       ${image}
       <div class="event-main">
-        <h3 class="event-title">${escapeHtml(place.name)}</h3>
-        <p class="card-kicker card-kicker--when">
-          <span class="meta-item">${uiIcon("pin")}${escapeHtml(formatRecordLocation(place) || "地域未設定")}</span>
-          ${indoorOutdoor ? `<span class="meta-item">${uiIcon(indoorIcon)}${escapeHtml(indoorOutdoor)}</span>` : ""}
-        </p>
-        <p class="card-kicker card-kicker--where">
-          <span class="meta-item">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(price, 28)))}</span>
+        <div class="event-card__topline">
+          <span class="pill category">${uiIcon("tag")}${escapeHtml(placeTypeLabel(place.place_type))}</span>
+          ${indoorOutdoor ? `<span class="pill neutral">${escapeHtml(indoorOutdoor)}</span>` : ""}
           ${statusPill(place)}
+        </div>
+        <h3 class="event-title">${escapeHtml(place.name)}</h3>
+        <p class="event-card__facts">
+          <span class="meta-item">${uiIcon("pin")}${escapeHtml(formatRecordLocation(place) || "地域未設定")}</span>
+          ${place.target_age_note ? `<span class="meta-item event-card__place-target">対象：${escapeHtml(compactText(place.target_age_note, 72))}</span>` : ""}
         </p>
+        <p class="event-card__place-hours">${uiIcon("clock")}<span>${escapeHtml(compactText(place.hours_note || "利用時間は公式案内をご確認ください", 90))}</span></p>
+        ${place.closed_note ? `<p class="event-card__place-closed"><strong>休館：</strong>${escapeHtml(compactText(place.closed_note, 76))}</p>` : ""}
+        <p class="event-card__summary">${escapeHtml(compactText(place.features || "施設の設備や利用条件は詳細をご確認ください", 100))}</p>
+        <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(place.price_note, 52)))}</span></div>
       </div>
     </a>
   `;
+}
+
+function eventDateRangeLabel(event) {
+  const start = event.start_date;
+  const end = event.end_date || start;
+  if (!start) return "日程未定";
+  if (!end || end === start) return formatMonthDay(start);
+  return `${formatMonthDay(start)}〜${formatMonthDay(end)}`;
 }
 
 function recordPageHref(record, kind) {
