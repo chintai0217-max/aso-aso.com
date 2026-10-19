@@ -961,7 +961,7 @@ def render_event(event):
                 ("カテゴリ", category),
                 ("開催期間", date_long if date_long != date_short else ""),
                 ("ソース", event.get("source_names")),
-                ("最終確認", format_verified_date(event.get("last_verified_at")) or event.get("last_verified_at")),
+                ("情報確認日", format_verified_date(event.get("last_verified_at")) or event.get("last_verified_at")),
             ],
         )
         + action_links(
@@ -1045,7 +1045,7 @@ def render_place(place):
             "情報元",
             [
                 ("ソース", place.get("source_names")),
-                ("最終確認", format_verified_date(place.get("last_verified_at")) or place.get("last_verified_at")),
+                ("情報確認日", format_verified_date(place.get("last_verified_at")) or place.get("last_verified_at")),
             ],
         )
         + action_links(

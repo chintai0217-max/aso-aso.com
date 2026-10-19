@@ -17,7 +17,10 @@ const state = {
   motenashiOnly: false,
   freeOnly: false,
   indoorOnly: false,
+  outdoorOnly: false,
   decision: "none",
+  visiblePlaceCount: 12,
+  resultSetKey: "",
 };
 
 const KANTO_PREFECTURES = ["東京都", "神奈川県", "埼玉県", "千葉県", "茨城県", "栃木県", "群馬県"];
@@ -206,6 +209,12 @@ function applyInitialSearchQuery() {
   if (params.has("indoor")) {
     state.indoorOnly = params.get("indoor") === "1";
   }
+  if (params.has("outdoor")) {
+    state.outdoorOnly = params.get("outdoor") === "1";
+  }
+  const sort = params.get("sort");
+  if (sort === "area" || sort === "type" || sort === "date") state.sort = sort;
+  if (state.mode === "places" && !sort) state.sort = "type";
 }
 
 function buildListSearchParams() {
@@ -222,6 +231,8 @@ function buildListSearchParams() {
   if (state.motenashiOnly) params.set("motenashi", "1");
   if (state.freeOnly) params.set("free", "1");
   if (state.indoorOnly) params.set("indoor", "1");
+  if (state.outdoorOnly) params.set("outdoor", "1");
+  if (state.sort !== (state.mode === "places" ? "type" : "date")) params.set("sort", state.sort);
   if (state.decision !== "none") params.set("decision", state.decision);
   return params;
 }
@@ -285,16 +296,14 @@ function bindElements() {
     "decisionLabel",
     "resultsTitle",
     "resultCount",
+    "dataUpdated",
+    "sortSelect",
     "resetButton",
-    "coverageList",
-    "gunmaMap",
-    "clearMapSelection",
     "dateChips",
     "decisionChips",
     "ageChips",
     "categoryChips",
     "listContext",
-    "weekendHighlight",
     "eventList",
   ].forEach((id) => {
     els[id] = document.getElementById(id);
@@ -315,9 +324,12 @@ function bindEvents() {
       state.prefecture = "all";
       state.municipality = "all";
       state.indoorOnly = false;
+      state.outdoorOnly = false;
       state.freeOnly = false;
       state.motenashiOnly = false;
       state.decision = "none";
+      state.dateScope = "upcoming";
+      state.sort = state.mode === "places" ? "type" : "date";
       els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
       els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
       populateFilters();
@@ -357,6 +369,11 @@ function bindEvents() {
     render();
   });
 
+  els.sortSelect.addEventListener("change", (event) => {
+    state.sort = event.target.value;
+    render();
+  });
+
   els.dateChips.addEventListener("click", (event) => {
     const button = event.target.closest("[data-date-scope]");
     if (!button) return;
@@ -388,50 +405,77 @@ function bindEvents() {
     render();
   });
 
-  els.coverageList.addEventListener("click", (event) => {
-    const item = event.target.closest("[data-location-filter]");
-    if (!item) return;
-    if (item.dataset.locationFilter === "all") {
-      setLocationFilter("all", "all", { scroll: false });
+  els.resetButton.addEventListener("click", resetFilters);
+
+  els.listContext.addEventListener("click", (event) => {
+    if (event.target.closest("[data-clear-all]")) {
+      resetFilters();
       return;
     }
-    const prefecture = item.dataset.prefecture;
-    const municipality = item.dataset.municipality;
-    const isSelected = state.prefecture === prefecture && state.municipality === municipality;
-    setLocationFilter(prefecture, isSelected ? "all" : municipality, { scroll: true });
+    const chip = event.target.closest("[data-clear-filter]");
+    if (chip) clearFilter(chip.dataset.clearFilter);
   });
 
-  els.gunmaMap.addEventListener("click", (event) => {
-    const region = event.target.closest("[data-municipality]");
-    if (!region) return;
-    const name = region.dataset.municipality;
-    state.prefecture = "群馬県";
-    setMunicipality(state.municipality === name ? "all" : name, { scroll: true });
+  els.eventList.addEventListener("click", (event) => {
+    if (event.target.closest("[data-show-more-places]")) {
+      state.visiblePlaceCount += 12;
+      render();
+      return;
+    }
+    const action = event.target.closest("[data-empty-action]")?.dataset.emptyAction;
+    if (action === "reset") resetFilters();
+    if (action === "all-dates") {
+      state.dateScope = "all";
+      state.decision = "none";
+      render();
+    }
+    if (action === "expand-area") {
+      state.prefecture = "all";
+      state.municipality = "all";
+      populateMunicipalities();
+      render();
+    }
   });
+}
 
-  els.clearMapSelection.addEventListener("click", () => {
-    setLocationFilter("all", "all", { scroll: false });
-  });
+function resetFilters() {
+  state.query = "";
+  state.prefecture = "all";
+  state.municipality = "all";
+  state.category = "all";
+  state.age = "all";
+  state.status = "all";
+  state.dateScope = "upcoming";
+  state.sort = state.mode === "places" ? "type" : "date";
+  state.motenashiOnly = false;
+  state.freeOnly = false;
+  state.indoorOnly = false;
+  state.outdoorOnly = false;
+  state.decision = "none";
+  state.visiblePlaceCount = 12;
+  els.searchInput.value = "";
+  populateFilters();
+  render();
+}
 
-  els.resetButton.addEventListener("click", () => {
-    state.query = "";
-    state.prefecture = "all";
-    state.municipality = "all";
-    state.category = "all";
-    state.age = "all";
-    state.status = "all";
-    state.dateScope = "upcoming";
-    state.sort = "date";
-    state.motenashiOnly = false;
-    state.freeOnly = false;
-    state.indoorOnly = false;
-    state.decision = "none";
-    els.searchInput.value = "";
-    els.categorySelect.value = "all";
-    els.ageSelect.value = "all";
-    populateMunicipalities();
-    render();
-  });
+function clearFilter(filter) {
+  const clearers = {
+    query: () => { state.query = ""; els.searchInput.value = ""; },
+    prefecture: () => { state.prefecture = "all"; state.municipality = "all"; },
+    municipality: () => { state.municipality = "all"; },
+    date: () => { state.dateScope = "upcoming"; },
+    category: () => { state.category = "all"; },
+    age: () => { state.age = "all"; },
+    status: () => { state.status = "all"; },
+    free: () => { state.freeOnly = false; },
+    indoor: () => { state.indoorOnly = false; },
+    outdoor: () => { state.outdoorOnly = false; },
+    motenashi: () => { state.motenashiOnly = false; },
+  };
+  clearers[filter]?.();
+  state.decision = "none";
+  populateFilters();
+  render();
 }
 
 function setMunicipality(name, { scroll = false } = {}) {
@@ -575,8 +619,22 @@ function render() {
       ? "イベント名・会場・地域"
       : "施設名・地域・特徴";
   }
-  if (els.resultsTitle) els.resultsTitle.textContent = state.mode === "events" ? "イベントを探す" : "遊び場を探す";
-  if (els.resultCount) els.resultCount.textContent = `${sorted.length.toLocaleString("ja-JP")}件`;
+  if (els.resultsTitle) {
+    const scopeLabels = { upcoming: "開催予定", all: "全期間", weekend: "今週末", month: "今月", past: "過去のイベント" };
+    els.resultsTitle.textContent = state.mode === "events" ? (scopeLabels[state.dateScope] || "イベント") : "遊び場";
+  }
+  if (els.resultCount) {
+    const noun = state.mode === "events" ? "件" : "施設";
+    els.resultCount.textContent = `${sorted.length.toLocaleString("ja-JP")}${noun}`;
+  }
+  if (state.mode === "places" && state.sort !== "area" && state.sort !== "type") state.sort = "type";
+  if (state.mode === "events" && state.sort !== "area" && state.sort !== "date") state.sort = "date";
+  if (els.dataUpdated) {
+    const updatedAt = state.data?.meta?.generated_at;
+    const dateLabel = updatedAt ? updatedAt.replaceAll("-", "/") : "未設定";
+    els.dataUpdated.textContent = `データ更新 ${dateLabel} · 営業・開催状況は詳細ページの公式情報をご確認ください`;
+  }
+  renderSortControl();
   if (els.decisionLabel) els.decisionLabel.textContent = state.mode === "events" ? "こだわり" : "遊び場の特徴";
   els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
   els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
@@ -584,10 +642,7 @@ function render() {
   renderDateChips();
   renderAgeChips();
   renderCategoryChips();
-  renderCoverage();
-  renderMapSelection();
   renderListContext();
-  renderWeekendHighlight();
   renderList(sorted);
   syncStateToUrl();
 }
@@ -597,6 +652,7 @@ function applyDecision(decision, { toggle = true, scroll = true, skipRender = fa
   state.decision = next;
   state.freeOnly = false;
   state.indoorOnly = false;
+  state.outdoorOnly = false;
   state.motenashiOnly = false;
   state.status = "all";
 
@@ -607,11 +663,18 @@ function applyDecision(decision, { toggle = true, scroll = true, skipRender = fa
     state.category = "all";
   } else if (next === "rain") {
     state.mode = "places";
+    state.sort = "type";
     state.indoorOnly = true;
     state.age = "all";
     state.category = "all";
   } else if (next === "free") {
     state.freeOnly = true;
+  } else if (next === "outdoor") {
+    state.mode = "places";
+    state.sort = "type";
+    state.outdoorOnly = true;
+    state.age = "all";
+    state.category = "all";
   } else if (next === "infant") {
     state.age = "infant";
   } else if (next === "verified") {
@@ -651,7 +714,8 @@ function renderDecisionChips() {
         ["verified", "公式確認済み", "check"],
       ]
     : [
-        ["rain", "屋内で遊ぶ", "home"],
+        ["rain", "屋内", "home"],
+        ["outdoor", "屋外", "sun"],
         ["free", "無料", "yen"],
         ["infant", "乳幼児向け", "baby"],
         ["verified", "公式確認済み", "check"],
@@ -664,144 +728,56 @@ function renderDecisionChips() {
     .join("");
 }
 
+function renderSortControl() {
+  const options = state.mode === "events"
+    ? [["date", "開催日順"], ["area", "地域順"]]
+    : [["type", "種別順"], ["area", "地域順"]];
+  if (!options.some(([value]) => value === state.sort)) state.sort = options[0][0];
+  els.sortSelect.innerHTML = options
+    .map(([value, label]) => `<option value="${value}">${label}</option>`)
+    .join("");
+  els.sortSelect.value = state.sort;
+}
+
+function weekendDateLabel() {
+  const { start, end } = weekendRange();
+  return start === end
+    ? `今週末 ${formatDateCompact(start, { includeYear: false })}`
+    : `今週末 ${formatDateCompact(start, { includeYear: false })}〜${formatDateCompact(end, { includeYear: false })}`;
+}
+
 function renderListContext() {
   if (!els.listContext) return;
-  const parts = [];
-  parts.push(state.mode === "events" ? "イベント" : "遊び場");
-
-  if (state.decision === "rain") {
-    parts.push("雨の日屋内に切り替えました");
-  } else if (state.decision === "weekend") {
-    parts.push("今週末");
-  } else if (state.decision === "free") {
-    parts.push("無料");
-  } else if (state.decision === "infant") {
-    parts.push("乳幼児向け");
-  } else if (state.decision === "motenashi") {
-    parts.push("もてなし広場");
-  } else if (state.decision === "verified") {
-    parts.push("確認済み");
+  const filters = [];
+  const add = (key, label) => filters.push(`<button type="button" class="active-filter" data-clear-filter="${key}">${escapeHtml(label)}<span aria-hidden="true">×</span><span class="sr-only">を解除</span></button>`);
+  if (state.query) add("query", `検索: ${els.searchInput?.value?.trim() || state.query}`);
+  if (state.prefecture !== "all") add("prefecture", state.prefecture);
+  if (state.municipality !== "all") add("municipality", state.municipality);
+  if (state.mode === "events" && state.dateScope !== "upcoming") {
+    const labels = { all: "全期間", weekend: weekendDateLabel(), month: "今月", past: "過去" };
+    add("date", labels[state.dateScope] || state.dateScope);
   }
-
-  if (state.prefecture !== "all") parts.push(state.prefecture);
-  if (state.municipality !== "all") parts.push(state.municipality);
-  if (state.decision !== "motenashi" && state.motenashiOnly) parts.push("もてなし広場");
-  if (state.decision !== "free" && state.freeOnly) parts.push("無料");
-  if (state.decision !== "rain" && state.indoorOnly) parts.push("屋内");
-  if (state.mode === "events" && state.dateScope !== "upcoming" && state.decision !== "weekend") {
-    const dateLabels = { all: "すべて", weekend: "今週末", month: "今月", past: "過去" };
-    parts.push(dateLabels[state.dateScope] || state.dateScope);
-  }
-  if (state.age !== "all" && state.decision !== "infant") {
+  if (state.age !== "all") {
     const age = ageGroups.find((group) => group.id === state.age);
-    if (age) parts.push(age.label);
+    if (age) add("age", age.label);
   }
   if (state.category !== "all") {
     const group = currentCategoryGroups().find((item) => item.id === state.category);
-    if (group) parts.push(group.label);
+    if (group) add("category", group.label);
   }
-  if (state.query) parts.push(`「${els.searchInput?.value?.trim() || state.query}」`);
+  if (state.status !== "all") add("status", "公式確認済み");
+  if (state.freeOnly) add("free", "無料");
+  if (state.indoorOnly) add("indoor", "屋内");
+  if (state.outdoorOnly) add("outdoor", "屋外");
+  if (state.motenashiOnly) add("motenashi", "もてなし広場");
 
-  const hasFilter =
-    state.decision !== "none" ||
-    state.prefecture !== "all" ||
-    state.municipality !== "all" ||
-    state.motenashiOnly ||
-    state.freeOnly ||
-    state.indoorOnly ||
-    state.age !== "all" ||
-    state.category !== "all" ||
-    Boolean(state.query) ||
-    (state.mode === "events" && state.dateScope !== "upcoming");
-
-  if (!hasFilter) {
+  if (!filters.length) {
     els.listContext.hidden = true;
-    els.listContext.textContent = "";
+    els.listContext.innerHTML = "";
     return;
   }
-
   els.listContext.hidden = false;
-  els.listContext.textContent = parts.join(" · ");
-}
-
-function renderWeekendHighlight() {
-  if (!els.weekendHighlight) return;
-  if (state.mode !== "events" || state.dateScope === "past") {
-    els.weekendHighlight.hidden = true;
-    els.weekendHighlight.innerHTML = "";
-    return;
-  }
-
-  const weekendEvents = sortRecords(
-    state.data.events.filter((event) => {
-      if (!matchesWeekend(event)) return false;
-      if (state.motenashiOnly && !isMotenashiEvent(event)) return false;
-      if (state.prefecture !== "all" && event.prefecture !== state.prefecture) return false;
-      if (state.municipality !== "all" && event.municipality !== state.municipality) return false;
-      if (state.category !== "all" && !matchesSelectedCategory(event.category)) return false;
-      if (state.status !== "all" && event.status !== state.status) return false;
-      if (state.freeOnly && !isFreeRecord(event)) return false;
-      if (!matchesAgeGroup(event)) return false;
-      if (!state.query) return true;
-
-      const haystack = [
-        event.title,
-        event.prefecture,
-        event.municipality,
-        event.area_label,
-        event.venue_name,
-        event.address,
-        event.category,
-        event.organizer,
-        event.summary,
-        event.source_names,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-
-      return haystack.includes(state.query);
-    })
-  );
-
-  if (!weekendEvents.length) {
-    els.weekendHighlight.hidden = true;
-    els.weekendHighlight.innerHTML = "";
-    return;
-  }
-
-  const { start, end } = weekendRange();
-  const rangeLabel = start === end ? formatDateCompact(start) : `${formatDateCompact(start, { includeYear: false })}〜${formatDateCompact(end, { includeYear: false })}`;
-
-  els.weekendHighlight.hidden = false;
-  els.weekendHighlight.innerHTML = `
-    <div class="weekend-strip">
-      <span class="weekend-strip__icon">${uiIcon("calendar")}</span>
-      <p><strong>今週末 ${escapeHtml(rangeLabel)}</strong><span>${weekendEvents.length.toLocaleString("ja-JP")}件のイベント</span></p>
-      <button type="button" class="ghost-button" data-decision="weekend">週末のイベントを見る</button>
-    </div>
-  `;
-
-  els.weekendHighlight.querySelectorAll("[data-decision]").forEach((button) => {
-    button.addEventListener("click", () => applyDecision(button.dataset.decision, { toggle: false }));
-  });
-}
-
-function renderMapSelection() {
-  if (!els.gunmaMap) return;
-  const mapVisible = state.prefecture === "群馬県";
-  const mapPanel = els.gunmaMap.closest(".hero-map");
-  if (mapPanel) mapPanel.hidden = !mapVisible;
-  const selected = state.municipality;
-  els.gunmaMap.querySelectorAll(".gunma-region").forEach((region) => {
-    region.classList.toggle("is-active", region.dataset.municipality === selected);
-  });
-  els.gunmaMap.querySelectorAll(".gunma-label").forEach((label) => {
-    label.classList.toggle("is-active", label.dataset.municipality === selected);
-  });
-  if (els.clearMapSelection) {
-    els.clearMapSelection.hidden = selected === "all";
-  }
+  els.listContext.innerHTML = `<span class="active-filter-label">絞り込み中</span>${filters.join("")}<button type="button" class="clear-filters" data-clear-all>すべて解除</button>`;
 }
 
 function renderDateChips() {
@@ -812,7 +788,7 @@ function renderDateChips() {
   }
   els.dateChips.hidden = false;
   const scopes = [
-    ["all", "すべて", "list"],
+    ["all", "全期間", "list"],
     ["upcoming", "開催予定", "ticket"],
     ["weekend", "今週末", "calendar"],
     ["month", "今月", "calendar"],
@@ -956,47 +932,31 @@ function matchesAgeGroup(record) {
   return detectAgeTags(record).includes(state.age);
 }
 
-function renderCoverage() {
-  const allRecords = currentRecords();
-  const records = allRecords.filter((record) =>
-    state.prefecture === "all" || record.prefecture === state.prefecture
-  );
-  const counts = new Map();
-  records.forEach((record) => {
-    if (!record.prefecture || !record.municipality) return;
-    const key = `${record.prefecture}::${record.municipality}`;
-    counts.set(key, (counts.get(key) || 0) + 1);
-  });
-  const total = allRecords.length;
-
-  const items = [
-    `<button type="button" class="coverage-item ${state.prefecture === "all" && state.municipality === "all" ? "is-active" : ""}" data-location-filter="all">
-      <strong>${uiIcon("map")}掲載中のすべて</strong>
-      <span>${total}件</span>
-    </button>`,
-  ].concat(
-    Array.from(counts.entries())
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"))
-      .slice(0, 12)
-      .map(([key, count]) => {
-        const [prefecture, municipality] = key.split("::");
-        const active = state.prefecture === prefecture && state.municipality === municipality ? "is-active" : "";
-        const label = state.prefecture === "all" ? `${prefecture} ${municipality}` : municipality;
-        return `
-          <button type="button" class="coverage-item ${active}" data-location-filter="municipality" data-prefecture="${escapeHtml(prefecture)}" data-municipality="${escapeHtml(municipality)}">
-            <strong>${uiIcon("pin")}${escapeHtml(label)}</strong>
-            <span>${count}件</span>
-          </button>
-        `;
-      })
-  );
-
-  els.coverageList.innerHTML = items.join("");
-}
-
 function renderList(records) {
+  const resultSetKey = `${state.mode}:${records.map((record) => record.id).join("|")}`;
+  if (resultSetKey !== state.resultSetKey) {
+    state.resultSetKey = resultSetKey;
+    state.visiblePlaceCount = 12;
+  }
+
   if (records.length === 0) {
-    els.eventList.innerHTML = `<div class="empty-state">条件に一致するデータがありません。</div>`;
+    const hasCustomFilter = state.query || state.prefecture !== "all" || state.municipality !== "all" ||
+      state.category !== "all" || state.age !== "all" || state.status !== "all" || state.freeOnly ||
+      state.indoorOnly || state.outdoorOnly || state.motenashiOnly || (state.mode === "events" && state.dateScope !== "upcoming");
+    const actions = [];
+    if (state.mode === "events" && state.dateScope === "upcoming") {
+      actions.push(`<button class="empty-action" type="button" data-empty-action="all-dates">全期間で見る</button>`);
+    }
+    if (state.prefecture !== "all" || state.municipality !== "all") {
+      actions.push(`<button class="empty-action" type="button" data-empty-action="expand-area">地域を広げる</button>`);
+    }
+    if (hasCustomFilter) actions.push(`<button class="empty-action" type="button" data-empty-action="reset">条件をすべて解除</button>`);
+    els.eventList.innerHTML = `
+      <div class="empty-state">
+        <strong>条件に合う${state.mode === "events" ? "イベント" : "遊び場"}が見つかりません</strong>
+        <p>地域や日程、キーワードを変えると見つかる場合があります。</p>
+        ${actions.length ? `<div class="empty-state__actions">${actions.join("")}</div>` : ""}
+      </div>`;
     return;
   }
 
@@ -1012,7 +972,17 @@ function renderList(records) {
       .map(([key, items]) => renderDateGroup(key, items, cardFn))
       .join("");
   } else {
-    els.eventList.innerHTML = records.map(cardFn).join("");
+    const visibleRecords = state.mode === "places" ? records.slice(0, state.visiblePlaceCount) : records;
+    const remaining = records.length - visibleRecords.length;
+    els.eventList.innerHTML = visibleRecords.map(cardFn).join("");
+    if (remaining > 0) {
+      els.eventList.insertAdjacentHTML("beforeend", `
+        <div class="more-results">
+          <p>${visibleRecords.length.toLocaleString("ja-JP")} / ${records.length.toLocaleString("ja-JP")}施設を表示中</p>
+          <button type="button" class="load-more-button" data-show-more-places>さらに12施設を見る（残り${remaining.toLocaleString("ja-JP")}施設）</button>
+        </div>
+      `);
+    }
   }
 
   hydrateGooglePhotoTargets(els.eventList);
@@ -1085,6 +1055,7 @@ function eventCard(event) {
           <span class="meta-item event-card__location">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>
         </p>
         ${event.summary ? `<p class="event-card__summary">${escapeHtml(compactText(event.summary, 100))}</p>` : ""}
+        ${event.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(event.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(event.price_note, 52)))}</span></div>
       </div>
     </a>
@@ -1112,6 +1083,7 @@ function placeCard(place) {
         <p class="event-card__place-hours">${uiIcon("clock")}<span>${escapeHtml(compactText(place.hours_note || "利用時間は公式案内をご確認ください", 90))}</span></p>
         ${place.closed_note ? `<p class="event-card__place-closed"><strong>休館：</strong>${escapeHtml(compactText(place.closed_note, 76))}</p>` : ""}
         <p class="event-card__summary">${escapeHtml(compactText(place.features || "施設の設備や利用条件は詳細をご確認ください", 100))}</p>
+        ${place.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(place.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(place.price_note, 52)))}</span></div>
       </div>
     </a>
@@ -1523,6 +1495,7 @@ function filteredPlaces() {
     if (state.status !== "all" && place.status !== state.status) return false;
     if (state.freeOnly && !isFreeRecord(place)) return false;
     if (state.indoorOnly && !isIndoorFriendly(place)) return false;
+    if (state.outdoorOnly && !isOutdoorFriendly(place)) return false;
     if (!matchesAgeGroup(place)) return false;
     if (!state.query) return true;
 
@@ -1636,6 +1609,10 @@ function isFreeRecord(record) {
 
 function isIndoorFriendly(place) {
   return place.indoor_outdoor === "indoor" || place.indoor_outdoor === "both";
+}
+
+function isOutdoorFriendly(place) {
+  return place.indoor_outdoor === "outdoor" || place.indoor_outdoor === "both";
 }
 
 function statusPill(record) {
