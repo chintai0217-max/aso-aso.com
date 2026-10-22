@@ -4,7 +4,7 @@ window.EVENT_DATA = {
     "event_count": 247,
     "source_count": 322,
     "child_play_place_count": 102,
-    "image_asset_count": 1285
+    "image_asset_count": 1288
   },
   "events": [
     {
@@ -11231,7 +11231,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/1404.html",
       "notes": "開会式は13時30分から。荒天中止。すいとん・味噌こんにゃく・古代米の無料配布はなくなり次第終了、勾玉づくりは先着100人です。",
       "source_names": "高崎市 第16回かみつけの里古墳祭り",
-      "images": []
+      "images": [
+        {
+          "id": 2822,
+          "entity_id": 150,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/44027.JPG",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/1404.html",
+          "title": "第16回かみつけの里古墳祭り",
+          "alt_text": "かみつけの里古墳祭りで王の儀式を再現する様子",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-23",
+          "last_verified_at": "2026-10-23",
+          "notes": "高崎市公式ページ掲載の古墳祭り写真。"
+        }
+      ]
     },
     {
       "id": 151,
@@ -11285,7 +11304,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/7005.html",
       "notes": "17日のキッズドリルは参加チーム関係者のみ観覧可。18日のパレードは雨天等で中止の場合があります。アリーナ公演のチケット状況は主催者案内をご確認ください。",
       "source_names": "高崎市 第37回高崎マーチングフェスティバル開催案内",
-      "images": []
+      "images": [
+        {
+          "id": 2823,
+          "entity_id": 152,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/6229.jpg",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/photos/3501.html",
+          "title": "第37回高崎マーチングフェスティバル",
+          "alt_text": "高崎市内をパレードするマーチングフェスティバル参加者",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-23",
+          "last_verified_at": "2026-10-23",
+          "notes": "高崎市公式写真集掲載の過去開催写真。"
+        }
+      ]
     },
     {
       "id": 153,
@@ -11588,7 +11626,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.isesaki.lg.jp/soshiki/siminbu/tabunka/kyoseisuishin/19277.html",
       "notes": "入場無料。絣の郷と伊勢崎福島病院の指定駐車場を利用できます。",
       "source_names": "伊勢崎市 多文化共生フェスタいせさき2026",
-      "images": []
+      "images": [
+        {
+          "id": 2824,
+          "entity_id": 161,
+          "image_url": "https://www.city.isesaki.lg.jp/material/images/group/27/aozai.jpeg",
+          "source_page_url": "https://www.city.isesaki.lg.jp/soshiki/siminbu/tabunka/kyoseisuishin/19277.html",
+          "title": "多文化共生フェスタいせさき2026",
+          "alt_text": "多文化共生フェスタで紹介されるアオザイの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-23",
+          "last_verified_at": "2026-10-23",
+          "notes": "伊勢崎市公式イベントページ掲載の文化紹介写真。"
+        }
+      ]
     },
     {
       "id": 162,
@@ -49491,6 +49548,63 @@ window.EVENT_DATA = {
       "discovered_at": "2026-10-22",
       "last_verified_at": "2026-10-22",
       "notes": "藤岡市公式ページ掲載の2025年開催時の写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2822,
+      "entity_id": 150,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/44027.JPG",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/1404.html",
+      "title": "第16回かみつけの里古墳祭り",
+      "alt_text": "かみつけの里古墳祭りで王の儀式を再現する様子",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-23",
+      "last_verified_at": "2026-10-23",
+      "notes": "高崎市公式ページ掲載の古墳祭り写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2823,
+      "entity_id": 152,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/6229.jpg",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/photos/3501.html",
+      "title": "第37回高崎マーチングフェスティバル",
+      "alt_text": "高崎市内をパレードするマーチングフェスティバル参加者",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-23",
+      "last_verified_at": "2026-10-23",
+      "notes": "高崎市公式写真集掲載の過去開催写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2824,
+      "entity_id": 161,
+      "image_url": "https://www.city.isesaki.lg.jp/material/images/group/27/aozai.jpeg",
+      "source_page_url": "https://www.city.isesaki.lg.jp/soshiki/siminbu/tabunka/kyoseisuishin/19277.html",
+      "title": "多文化共生フェスタいせさき2026",
+      "alt_text": "多文化共生フェスタで紹介されるアオザイの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "自治体公式ページ掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-23",
+      "last_verified_at": "2026-10-23",
+      "notes": "伊勢崎市公式イベントページ掲載の文化紹介写真。",
       "entity_type": "event"
     }
   ],
