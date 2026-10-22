@@ -578,6 +578,11 @@
   font-size: 12px;
 }
 
+.finder-page .event-card .media-thumb.is-empty {
+  border: 1px dashed #bdcbd2;
+  background: #f7f9fa;
+}
+
 .finder-page .event-main {
   display: grid;
   align-content: start;

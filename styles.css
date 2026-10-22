@@ -2629,6 +2629,19 @@ button.coverage-item.is-active .ui-icon {
   object-fit: contain;
 }
 
+.static-detail-image-credit {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.static-detail-image-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .detail-carousel {
   position: relative;
   margin: 0;

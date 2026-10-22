@@ -6,7 +6,7 @@ import shutil
 from datetime import date
 from html import escape
 from pathlib import Path
-from urllib.parse import quote as url_quote
+from urllib.parse import quote as url_quote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -439,8 +439,23 @@ def detail_hero_html(record, alt):
     images = collect_gallery_images(record, alt)
     if not images:
         return ""
+    credits = []
+    seen_sources = set()
+    for image in images:
+        source_url = image.get("source_page_url")
+        if not source_url or source_url in seen_sources:
+            continue
+        seen_sources.add(source_url)
+        label = image.get("credit") or urlparse(source_url).netloc.removeprefix("www.") or "掲載元ページ"
+        credits.append(
+            f'<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>'
+        )
+    credit_html = (
+        '<p class="static-detail-image-credit">写真出典：' + "・".join(credits) + "</p>"
+        if credits else ""
+    )
     if len(images) == 1:
-        return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt)
+        return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt) + credit_html
     slides = []
     dots = []
     total = len(images)
@@ -475,7 +490,7 @@ def detail_hero_html(record, alt):
         f'<span class="detail-carousel__count" data-carousel-count>1 / {total}</span>'
         "</div>"
         "</div>"
-    )
+    ) + credit_html
 
 
 def gallery_html(images, alt):
@@ -765,7 +780,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261015a">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261022a">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">

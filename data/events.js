@@ -1,10 +1,10 @@
 window.EVENT_DATA = {
   "meta": {
-    "generated_at": "2026-10-19",
+    "generated_at": "2026-10-23",
     "event_count": 247,
     "source_count": 322,
     "child_play_place_count": 102,
-    "image_asset_count": 1237
+    "image_asset_count": 1285
   },
   "events": [
     {
@@ -9082,7 +9082,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://maebashi-biennale.com/",
       "notes": "会期・休場日は公式サイトで確認。",
       "source_names": "第一回前橋国際芸術祭2026 公式サイト",
-      "images": []
+      "images": [
+        {
+          "id": 2810,
+          "entity_id": 91,
+          "image_url": "https://maebashi-biennale.com/websys/wp-content/uploads/2026/05/alexa_art.jpg",
+          "source_page_url": "https://maebashi-biennale.com/",
+          "title": "第一回 前橋国際芸術祭2026",
+          "alt_text": "アレクサ・クミコ・ハタナカ《儚い》の展示風景と作家の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式サイト掲載の芸術祭作品・展示風景。"
+        }
+      ]
     },
     {
       "id": 92,
@@ -9132,7 +9151,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.flower-park.jp/night-bloom/",
       "notes": "料金・休園日は公式案内で確認。",
       "source_names": "Gunma Flower Park+ Night Bloom 2026",
-      "images": []
+      "images": [
+        {
+          "id": 2774,
+          "entity_id": 93,
+          "image_url": "https://www.flower-park.jp/wp/wp-content/themes/night-bloom/assets/img/garden_blue.jpg",
+          "source_page_url": "https://www.flower-park.jp/night-bloom/",
+          "title": "Night Bloom 2026",
+          "alt_text": "ライトアップされた花壇と来園者の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.flower-park.jp/wp/wp-content/themes/night-bloom/assets/img/garden_blue.jpg"
     },
     {
       "id": 94,
@@ -9307,7 +9346,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.gmnh.pref.gunma.jp/event/id11471/",
       "notes": "入館は16時30分まで。休館日・観覧料は公式案内で確認してください。",
       "source_names": "群馬県立自然史博物館 開館30周年記念企画展「北米ジュラ紀の恐竜たち」",
-      "images": []
+      "images": [
+        {
+          "id": 2812,
+          "entity_id": 100,
+          "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+          "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+          "title": "開館30周年記念企画展「北米ジュラ紀の恐竜たち」",
+          "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "会場施設の実写真。今回の企画展そのものの展示写真ではありません。"
+        }
+      ]
     },
     {
       "id": 101,
@@ -9332,7 +9390,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.gmnh.pref.gunma.jp/event/id15055/",
       "notes": "開催日は11月14日・21日・28日。小学1～3年生は保護者と参加。公式ページから事前申込。",
       "source_names": "群馬県立自然史博物館 11月サイエンス・サタデー 化石ミニ発掘体験",
-      "images": []
+      "images": [
+        {
+          "id": 2813,
+          "entity_id": 101,
+          "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+          "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+          "title": "11月サイエンス・サタデー「化石ミニ発掘体験 北米ジュラ紀編」",
+          "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "会場施設の実写真。今回の発掘体験そのものの写真ではありません。"
+        }
+      ]
     },
     {
       "id": 102,
@@ -9382,9 +9459,29 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.astron.pref.gunma.jp/events/261212geminids.html",
       "notes": "12月12日～14日、各日18時～24時。入場は23時30分まで。悪天候時は中止し21時閉館。説明会は各日18時・19時開始、各回先着約70名です。",
       "source_names": "ぐんま天文台 ふたご座流星群観察会2026",
-      "images": [],
+      "images": [
+        {
+          "id": 2775,
+          "entity_id": 103,
+          "image_url": "https://www.astron.pref.gunma.jp/news/121213geminids6.jpg",
+          "source_page_url": "https://www.astron.pref.gunma.jp/events/261212geminids.html",
+          "title": "ふたご座流星群観察会2026",
+          "alt_text": "ぐんま天文台の流星群観察会場の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
       "recommended_for": "流星群を観察したい方。夜間のため防寒が必要です",
-      "best_scenes": "冬の夜空を見上げながら流星群を観察したいとき"
+      "best_scenes": "冬の夜空を見上げながら流星群を観察したいとき",
+      "primary_image_url": "https://www.astron.pref.gunma.jp/news/121213geminids6.jpg"
     },
     {
       "id": 104,
@@ -9409,7 +9506,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.takasaki-kankoukyoukai.or.jp/?p=12824",
       "notes": "平日15時～21時、土日祝11時～21時。",
       "source_names": "高崎観光協会 オクトーバーフェスト高崎2026",
-      "images": []
+      "images": [
+        {
+          "id": 2809,
+          "entity_id": 104,
+          "image_url": "https://newscast.jp/attachments/e07CBvRMGf5xH1MrUd8S.jpeg",
+          "source_page_url": "https://newscast.jp/news/2281154",
+          "title": "オクトーバーフェスト高崎2026",
+          "alt_text": "過去開催時のオクトーバーフェスト会場で演奏する出演者の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "主催者の2026年開催告知に掲載された過去開催時の会場写真。"
+        }
+      ]
     },
     {
       "id": 105,
@@ -9484,7 +9600,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7208",
       "notes": "入館は16時30分まで。休館日などは公式案内で確認してください。",
       "source_names": "群馬県立近代美術館 第77回群馬県美術展覧会（美術）",
-      "images": []
+      "images": [
+        {
+          "id": 2776,
+          "entity_id": 107,
+          "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/第77回群馬県美術展覧会（県展-美術）過去の会場風景.jpg",
+          "source_page_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7208",
+          "title": "第77回群馬県美術展覧会（県展 美術）",
+          "alt_text": "群馬県美術展覧会の過去の会場風景",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/第77回群馬県美術展覧会（県展-美術）過去の会場風景.jpg"
     },
     {
       "id": 108,
@@ -9509,7 +9645,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7218",
       "notes": "入館は16時30分まで。月曜休館など休館日の例外があるため公式カレンダーを確認してください。",
       "source_names": "群馬県立近代美術館 ウジェーヌ・ブーダン展",
-      "images": []
+      "images": [
+        {
+          "id": 2804,
+          "entity_id": 108,
+          "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/企画展示「ウジェーヌ・ブーダン展」.jpg",
+          "source_page_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7218",
+          "title": "ウジェーヌ・ブーダン展 印象派の父―光を求めて",
+          "alt_text": "ウジェーヌ・ブーダン展で紹介される作品の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/企画展示「ウジェーヌ・ブーダン展」.jpg"
     },
     {
       "id": 109,
@@ -9534,7 +9690,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7214",
       "notes": "入館は16時30分まで。休館日などは公式案内で確認してください。",
       "source_names": "群馬県立近代美術館 第77回群馬県書道展覧会（書道）",
-      "images": []
+      "images": [
+        {
+          "id": 2816,
+          "entity_id": 109,
+          "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/第77回群馬県書道展覧会（県展-書道）過去の会場風景.jpg",
+          "source_page_url": "https://mmag.pref.gunma.jp/",
+          "title": "第77回群馬県書道展覧会（県展 書道）",
+          "alt_text": "過去の県展書道会場に作品が展示された様子",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "群馬県立近代美術館の公式サイトに掲載された過去開催時の会場写真。"
+        }
+      ]
     },
     {
       "id": 110,
@@ -9609,7 +9784,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.tochigiji.or.jp/event/e39787/",
       "notes": null,
       "source_names": "とちぎ旅ネット 宇都宮餃子祭り2026",
-      "images": []
+      "images": [
+        {
+          "id": 2777,
+          "entity_id": 112,
+          "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2022/10/5c56947974f31f19d42297b18f5c4054-1024x683.jpg",
+          "source_page_url": "https://www.tochigiji.or.jp/event/e39787/",
+          "title": "宇都宮餃子祭り2026",
+          "alt_text": "過去開催時の宇都宮餃子祭りの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2022/10/5c56947974f31f19d42297b18f5c4054-1024x683.jpg"
     },
     {
       "id": 113,
@@ -9634,7 +9829,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.utsunomiya-cvb.org/event/detail_30068.html",
       "notes": "会場ごとの内容や最新情報は宇都宮観光公式ページで確認してください。",
       "source_names": "宇都宮観光コンベンション協会 うつのみやイルミネーション2026",
-      "images": []
+      "images": [
+        {
+          "id": 2778,
+          "entity_id": 113,
+          "image_url": "https://www.utsunomiya-cvb.org/lsc/upfile/spot/0003/0068/30068_1_l.jpg",
+          "source_page_url": "https://www.utsunomiya-cvb.org/event/detail_30068.html",
+          "title": "うつのみやイルミネーション2026",
+          "alt_text": "宇都宮市内のイルミネーション写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.utsunomiya-cvb.org/lsc/upfile/spot/0003/0068/30068_1_l.jpg"
     },
     {
       "id": 114,
@@ -9684,7 +9899,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.tochigiji.or.jp/event/e16760/",
       "notes": "点灯は16時30分～17時頃。11月上旬～1月上旬は閉園時間が延長される予定です。",
       "source_names": "とちぎ旅ネット あしかがフラワーパーク 光の花の庭2026",
-      "images": []
+      "images": [
+        {
+          "id": 2779,
+          "entity_id": 115,
+          "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/3249C13D5C369C1FB5C96C9E09B5E743.jpg",
+          "source_page_url": "https://www.tochigiji.or.jp/event/e16760/",
+          "title": "あしかがフラワーパーク 光の花の庭～フラワーファンタジー2026～",
+          "alt_text": "あしかがフラワーパークのイルミネーション写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/3249C13D5C369C1FB5C96C9E09B5E743.jpg"
     },
     {
       "id": 116,
@@ -9784,7 +10019,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.tochigiji.or.jp/event/e17560/",
       "notes": "雨天決行。最終日は16時まで。各店舗・テントで営業時間が異なります。",
       "source_names": "とちぎ旅ネット 第114回益子秋の陶器市",
-      "images": []
+      "images": [
+        {
+          "id": 2780,
+          "entity_id": 119,
+          "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/40C515FCE0D41655B8EEDD77BDF13D45.jpg",
+          "source_page_url": "https://www.tochigiji.or.jp/event/e17560/",
+          "title": "第114回益子秋の陶器市",
+          "alt_text": "過去開催時の益子秋の陶器市の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/40C515FCE0D41655B8EEDD77BDF13D45.jpg"
     },
     {
       "id": 120,
@@ -9809,7 +10064,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.tochigiji.or.jp/event/e16066",
       "notes": null,
       "source_names": "とちぎ旅ネット 第18回鹿沼そば天国",
-      "images": []
+      "images": [
+        {
+          "id": 2781,
+          "entity_id": 120,
+          "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2026/10/084fa1589059d9d1a194e9f754e4de74.jpg",
+          "source_page_url": "https://www.tochigiji.or.jp/event/e16066",
+          "title": "第18回鹿沼そば天国",
+          "alt_text": "鹿沼そば天国でそばを打つ様子",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2026/10/084fa1589059d9d1a194e9f754e4de74.jpg"
     },
     {
       "id": 121,
@@ -9834,7 +10109,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
       "notes": "Night Bloomは17時から点灯。1周年記念イベント（10月10～12日）は終了しています。運行日や入園情報は公式ページで確認してください。",
       "source_names": "群馬県 Gunma Flower Park+ リニューアルオープン1周年イベント",
-      "images": []
+      "images": [
+        {
+          "id": 2782,
+          "entity_id": 121,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/639151.jpg",
+          "source_page_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
+          "title": "AUTUMN BLOOM FAIR／Night Bloom 2026",
+          "alt_text": "Gunma Flower Park+限定ローズの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.pref.gunma.jp/uploaded/image/639151.jpg"
     },
     {
       "id": 122,
@@ -9884,7 +10179,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
       "notes": "観覧受付は16時30分まで。火曜休館（11月3日は開館、11月4日は休館）。関連講演・ワークショップの日程は公式ページで確認してください。",
       "source_names": "群馬県 土屋文明記念文学館 第130回企画展",
-      "images": []
+      "images": [
+        {
+          "id": 2805,
+          "entity_id": 123,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/638357.png",
+          "source_page_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+          "title": "第130回企画展「三島由紀夫のアオハル 中島飛行機からの出発」",
+          "alt_text": "三島由紀夫の石膏像の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.pref.gunma.jp/uploaded/image/638357.png"
     },
     {
       "id": 124,
@@ -9959,7 +10274,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://gunma-kanko.jp/events/341",
       "notes": "受付・スタート時間は8:30～13:00、ゴールは16:30まで。スマートフォンアプリが必要です。",
       "source_names": "心にググっと観光ぐんま 駅からハイキング「秋の八ッ場あがつま周遊湖コース」",
-      "images": []
+      "images": [
+        {
+          "id": 2783,
+          "entity_id": 126,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTQyNzMsInB1ciI6ImJsb2JfaWQifX0=--ce0b36409a5b51c3a2f60ae4345baf0a871852a5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/yambadum_sub2.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/341",
+          "title": "駅からハイキング「秋の八ッ場あがつま周遊湖コース」",
+          "alt_text": "八ッ場ダム周辺のハイキングコース写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTQyNzMsInB1ciI6ImJsb2JfaWQifX0=--ce0b36409a5b51c3a2f60ae4345baf0a871852a5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/yambadum_sub2.jpg"
     },
     {
       "id": 127,
@@ -9984,7 +10319,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://gunma-kanko.jp/events/318",
       "notes": "会場ごとに開場時間・休館日が異なります。原則水曜休場（9月23日は開場、9月24日は振替休場）。",
       "source_names": "心にググっと観光ぐんま 第一回 前橋国際芸術祭2026",
-      "images": []
+      "images": [
+        {
+          "id": 2811,
+          "entity_id": 127,
+          "image_url": "https://maebashi-biennale.com/websys/wp-content/uploads/2026/05/alexa_art.jpg",
+          "source_page_url": "https://maebashi-biennale.com/",
+          "title": "第一回 前橋国際芸術祭2026",
+          "alt_text": "アレクサ・クミコ・ハタナカ《儚い》の展示風景と作家の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式サイト掲載の芸術祭作品・展示風景。"
+        }
+      ]
     },
     {
       "id": 128,
@@ -10009,7 +10363,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://gunma-kanko.jp/events/310",
       "notes": "受付・予約条件、参加料金は特設ページで確認してください。",
       "source_names": "心にググっと観光ぐんま NATURE in BLUE―ECHOES OF SHIMA―",
-      "images": []
+      "images": [
+        {
+          "id": 2784,
+          "entity_id": 128,
+          "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIwNjAsInB1ciI6ImJsb2JfaWQifX0=--d46f41bb7591e09668806a02675177cd32d263df/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/1783997935380-1.jpg",
+          "source_page_url": "https://gunma-kanko.jp/events/310",
+          "title": "NATURE in BLUE―ECHOES OF SHIMA―",
+          "alt_text": "四万温泉の自然と展示の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIwNjAsInB1ciI6ImJsb2JfaWQifX0=--d46f41bb7591e09668806a02675177cd32d263df/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/1783997935380-1.jpg"
     },
     {
       "id": 129,
@@ -10034,7 +10408,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.astron.pref.gunma.jp/events/26kenmin.html",
       "notes": "工作は10:30～12:00、3Dシアターは14:00、謎解きは15:00～16:30、星空案内は18:30・19:30、天体観望は19:00～22:00。天候により屋外企画の内容が変わります。",
       "source_names": "ぐんま天文台 2026年県民の日イベント",
-      "images": []
+      "images": [
+        {
+          "id": 2817,
+          "entity_id": 129,
+          "image_url": "https://www.astron.pref.gunma.jp/images/icons/150cm-200x200.jpg",
+          "source_page_url": "https://www.astron.pref.gunma.jp/events/events_everyday.html",
+          "title": "群馬県民の日イベント「ぐんま天文台からの挑戦状」",
+          "alt_text": "ぐんま天文台の150cm望遠鏡の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "会場施設の実写真。イベント当日の様子ではありません。"
+        }
+      ]
     },
     {
       "prefecture": "群馬県",
@@ -10042,7 +10435,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2818,
+          "entity_id": 130,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/18407.jpg",
+          "source_page_url": "https://www.pref.gunma.jp/page/20748.html",
+          "title": "群馬県蚕糸技術センター一般公開",
+          "alt_text": "群馬県蚕糸技術センターで研究されている繭の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "群馬県の蚕糸技術センター公式ページに掲載された研究写真。"
+        }
+      ],
       "id": 130,
       "title": "群馬県蚕糸技術センター一般公開",
       "municipality": "前橋市",
@@ -10097,7 +10509,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2819,
+          "entity_id": 132,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/25448.jpg",
+          "source_page_url": "https://www.pref.gunma.jp/page/20810.html",
+          "title": "令和8年度 水産試験場公開",
+          "alt_text": "水産試験場の研究対象であるニジマスの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "群馬県水産試験場の公式ページに掲載されたニジマスの写真。"
+        }
+      ],
       "id": 132,
       "title": "令和8年度 水産試験場公開",
       "municipality": "前橋市",
@@ -10124,7 +10555,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2785,
+          "entity_id": 133,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/638470.jpg",
+          "source_page_url": "https://www.pref.gunma.jp/site/houdou/774144.html",
+          "title": "第115回企画展 現代によみがえる能装束―縫の精緻 箔の輝き―",
+          "alt_text": "企画展で紹介される能装束の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
       "id": 133,
       "title": "第115回企画展 現代によみがえる能装束―縫の精緻 箔の輝き―",
       "municipality": "高崎市",
@@ -10143,7 +10593,8 @@ window.EVENT_DATA = {
       "best_scenes": "親子で日本の工芸や群馬の養蚕の歴史にふれたいとき",
       "canonical_url": "https://www.pref.gunma.jp/site/houdou/774144.html",
       "notes": "会期は11月23日まで。開館時間は9時30分～17時（入館16時30分まで）。月曜休館ですが11月23日は開館します。",
-      "source_names": "群馬県立歴史博物館 第115回企画展 能装束"
+      "source_names": "群馬県立歴史博物館 第115回企画展 能装束",
+      "primary_image_url": "https://www.pref.gunma.jp/uploaded/image/638470.jpg"
     },
     {
       "prefecture": "群馬県",
@@ -10151,7 +10602,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2786,
+          "entity_id": 134,
+          "image_url": "https://www.pref.gunma.jp/uploaded/image/636099.jpg",
+          "source_page_url": "https://www.pref.gunma.jp/site/houdou/755649.html",
+          "title": "特別展示「孤高の彫刻家 村山琴泉」",
+          "alt_text": "企画展で紹介される村山琴泉の彫刻写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
       "id": 134,
       "title": "特別展示「孤高の彫刻家 村山琴泉」",
       "municipality": "高崎市",
@@ -10170,7 +10640,8 @@ window.EVENT_DATA = {
       "best_scenes": "美術館で親子一緒に彫刻を鑑賞したいとき",
       "canonical_url": "https://www.pref.gunma.jp/site/houdou/755649.html",
       "notes": "会期は11月8日まで。開館時間は9時30分～17時（入館16時30分まで）。月曜休館。10月28日（群馬県民の日）は観覧無料です。",
-      "source_names": "群馬県立近代美術館 特別展示 村山琴泉"
+      "source_names": "群馬県立近代美術館 特別展示 村山琴泉",
+      "primary_image_url": "https://www.pref.gunma.jp/uploaded/image/636099.jpg"
     },
     {
       "prefecture": "群馬県",
@@ -10231,7 +10702,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2787,
+          "entity_id": 137,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/68057.jpg",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/page/77332.html",
+          "title": "星と映画の夜",
+          "alt_text": "月の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
       "id": 137,
       "title": "星と映画の夜",
       "municipality": "高崎市",
@@ -10250,7 +10740,8 @@ window.EVENT_DATA = {
       "parking_note": "専用駐車場なし。近隣のコインパーキングを利用",
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/77332.html",
       "notes": "10月23日は18時30分～22時、24日は15時～18時30分（開場は各30分前）。天候により観望会を星空解説会に変更する場合があります。",
-      "source_names": "高崎市 星と映画の夜2026"
+      "source_names": "高崎市 星と映画の夜2026",
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/68057.jpg"
     },
     {
       "prefecture": "群馬県",
@@ -10258,7 +10749,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2814,
+          "entity_id": 138,
+          "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+          "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+          "title": "企画展特別講演会「恐竜研究最前線in2026」",
+          "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "会場施設の実写真。今回の講演そのものの写真ではありません。"
+        }
+      ],
       "id": 138,
       "title": "企画展特別講演会「恐竜研究最前線in2026」",
       "municipality": "富岡市",
@@ -10284,7 +10794,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2815,
+          "entity_id": 139,
+          "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+          "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+          "title": "企画展ワークショップ「つくって学ぼう！北米ジュラ紀の恐竜ペーパークラフト」",
+          "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "会場施設の実写真。今回のワークショップそのものの写真ではありません。"
+        }
+      ],
       "id": 139,
       "title": "企画展ワークショップ「つくって学ぼう！北米ジュラ紀の恐竜ペーパークラフト」",
       "municipality": "富岡市",
@@ -10310,7 +10839,26 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": [],
+      "images": [
+        {
+          "id": 2820,
+          "entity_id": 140,
+          "image_url": "https://www.city.maebashi.gunma.jp/material/images/group/46/1124event.jpg",
+          "source_page_url": "https://www.city.maebashi.gunma.jp/soshiki/kankyo/kankyoseisaku/gyomu/1_1/46670.html",
+          "title": "紅葉の森を巡る〜森林ウォーキング〜",
+          "alt_text": "前橋市内の森で紅葉した葉を撮影した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "前橋市公式ページ掲載の森林ウォーキング関連写真。"
+        }
+      ],
       "id": 140,
       "title": "紅葉の森を巡る〜森林ウォーキング〜",
       "municipality": "前橋市",
@@ -10385,7 +10933,27 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": []
+      "images": [
+        {
+          "id": 2806,
+          "entity_id": 142,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66293.jpg",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+          "title": "収蔵作品展「Human Figure 人を見つめ、かたちづくる」",
+          "alt_text": "収蔵作品「裸婦立像」の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66293.jpg"
     },
     {
       "title": "企画展「日本画の窓―旅する風景」",
@@ -10413,7 +10981,27 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": []
+      "images": [
+        {
+          "id": 2807,
+          "entity_id": 143,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/67825.jpg",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+          "title": "企画展「日本画の窓―旅する風景」",
+          "alt_text": "企画展で紹介される日本画の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/67825.jpg"
     },
     {
       "title": "企画展「昭和のカタチ」",
@@ -10467,7 +11055,27 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": []
+      "images": [
+        {
+          "id": 2808,
+          "entity_id": 145,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66394.jpg",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/94699.html",
+          "title": "多胡碑記念館 収蔵拓本コレクション展2「三国・晋・南北朝の時代」",
+          "alt_text": "爨宝子碑の拓本の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66394.jpg"
     },
     {
       "title": "ファミリーコンサート（2026年）",
@@ -10522,7 +11130,27 @@ window.EVENT_DATA = {
       "confidence": "high",
       "discovered_at": "2026-10-15",
       "last_verified_at": "2026-10-15",
-      "images": []
+      "images": [
+        {
+          "id": 2788,
+          "entity_id": 147,
+          "image_url": "https://www.astron.pref.gunma.jp/news/161113hajimete1.jpg",
+          "source_page_url": "https://www.astron.pref.gunma.jp/events/26hajimete.html",
+          "title": "はじめての望遠鏡教室 〜見てみよう、あの星空を〜",
+          "alt_text": "ぐんま天文台の望遠鏡教室会場の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.astron.pref.gunma.jp/news/161113hajimete1.jpg"
     },
     {
       "title": "双眼鏡で天体を探そう（11月）",
@@ -10738,7 +11366,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/2795.html",
       "notes": "両日とも9時～13時。回収品の種類や持ち込み条件、処理困難物の料金は公式案内をご確認ください。",
       "source_names": "高崎市 リユースセンターのイベント2026年11月",
-      "images": []
+      "images": [
+        {
+          "id": 2789,
+          "entity_id": 155,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/43971.JPG",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/page/2795.html",
+          "title": "高崎市リユースセンターのイベント",
+          "alt_text": "リユースセンターの素焼き交換会で扱う品物の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/43971.JPG"
     },
     {
       "id": 156,
@@ -10819,7 +11467,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/sightseeing/96053.html",
       "notes": "事前申込不要。雨天や強風等で中止となる場合があります。近隣の市営駐車場が利用できます。",
       "source_names": "高崎市 音楽ライブ榛名湖ステージ2026",
-      "images": []
+      "images": [
+        {
+          "id": 2790,
+          "entity_id": 158,
+          "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66519.JPG",
+          "source_page_url": "https://www.city.takasaki.gunma.jp/site/sightseeing/96053.html",
+          "title": "音楽ライブ「榛名湖ステージ」（10月31日）",
+          "alt_text": "榛名湖上ステージの観覧席の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66519.JPG"
     },
     {
       "id": 159,
@@ -10846,7 +11514,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/fujimi/gyomu/4/17704.html",
       "notes": "会場駐車場には限りがあります。雨天決行、荒天中止。",
       "source_names": "前橋市 第29回富士見産業祭2026",
-      "images": []
+      "images": [
+        {
+          "id": 2791,
+          "entity_id": 159,
+          "image_url": "https://www.city.maebashi.gunma.jp/material/images/group/23/F11.JPG",
+          "source_page_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/fujimi/gyomu/4/17704.html",
+          "title": "第29回 富士見産業祭 ～スローシティフェスティバルinふじみ～",
+          "alt_text": "前回開催時のリース体験・スローシティコーナーの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.maebashi.gunma.jp/material/images/group/23/F11.JPG"
     },
     {
       "id": 160,
@@ -11035,7 +11723,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
       "notes": "両日とも9時30分開演。雨天決行、荒天中止。駐車場と無料シャトルバスの案内は公式ページで確認してください。",
       "source_names": "渋川市 上三原田の歌舞伎舞台「創建者150年大遠忌公演」と公開見学会",
-      "images": []
+      "images": [
+        {
+          "id": 2792,
+          "entity_id": 166,
+          "image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ac5ca876.jpg",
+          "source_page_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
+          "title": "上三原田の歌舞伎舞台「創建者150年大遠忌公演」",
+          "alt_text": "上三原田の歌舞伎舞台の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ac5ca876.jpg"
     },
     {
       "id": 167,
@@ -11062,7 +11770,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
       "notes": "平日は14時～15時、土日は10時30分～11時30分。雨天決行、荒天中止です。",
       "source_names": "渋川市 上三原田の歌舞伎舞台「創建者150年大遠忌公演」と公開見学会",
-      "images": []
+      "images": [
+        {
+          "id": 2793,
+          "entity_id": 167,
+          "image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ce3326a3.jpg",
+          "source_page_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
+          "title": "上三原田の歌舞伎舞台 公開見学会",
+          "alt_text": "上三原田の歌舞伎舞台公開見学会の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ce3326a3.jpg"
     },
     {
       "id": 168,
@@ -11494,7 +12222,26 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.fujioka.gunma.jp/soshiki/kikakubu/hisho/1/reiwa8/11171.html",
       "notes": "雨天実施。会場は旧日野西小学校です。",
       "source_names": "藤岡市 2026年秋の催し・周遊観光キャンペーン",
-      "images": []
+      "images": [
+        {
+          "id": 2821,
+          "entity_id": 183,
+          "image_url": "https://www.city.fujioka.gunma.jp/material/images/group/2/CCC_3283.JPG",
+          "source_page_url": "https://www.city.fujioka.gunma.jp/soshiki/kikakubu/hisho/3/topix/5_3/10468.html",
+          "title": "第3回 日野の秋祭り",
+          "alt_text": "前回開催の日野の秋祭りの様子",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "藤岡市公式ページ掲載の2025年開催時の写真。"
+        }
+      ]
     },
     {
       "id": 184,
@@ -11548,7 +12295,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://gunma-kodomonokuni.jp/xo_event/%E7%B4%99%E3%83%92%E3%82%B3%E3%83%BC%E3%82%AD%E6%95%99%E5%AE%A4-84/",
       "notes": "受付は12:50から野外ステージ。雨天中止。",
       "source_names": "ぐんまこどもの国 紙ヒコーキ教室（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2794,
+          "entity_id": 185,
+          "image_url": "https://gunma-kodomonokuni.jp/info/wp-content/uploads/2023/01/img_kamihikoki.jpg",
+          "source_page_url": "https://gunma-kodomonokuni.jp/xo_event/%E7%B4%99%E3%83%92%E3%82%B3%E3%83%BC%E3%82%AD%E6%95%99%E5%AE%A4-84/",
+          "title": "紙ヒコーキ教室（ぐんまこどもの国）",
+          "alt_text": "紙ヒコーキ教室で遊ぶ子どもたちの写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://gunma-kodomonokuni.jp/info/wp-content/uploads/2023/01/img_kamihikoki.jpg"
     },
     {
       "id": 186,
@@ -11683,7 +12450,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://t-csm.jp/event/6790",
       "notes": "定員60名、応募多数の場合は抽選。申込受付は10月17日15:00まで。雨天・曇天時は室内解説に変更。光る靴は不可。",
       "source_names": "栃木県子ども総合科学館 星をみる会（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2795,
+          "entity_id": 190,
+          "image_url": "https://t-csm.jp/wp/wp-content/uploads/2021/01/4b2a3f444246d015e54594994424ee58.jpg",
+          "source_page_url": "https://t-csm.jp/event/6790",
+          "title": "星をみる会（栃木県子ども総合科学館・2026年11月）",
+          "alt_text": "栃木県子ども総合科学館の天文台の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://t-csm.jp/wp/wp-content/uploads/2021/01/4b2a3f444246d015e54594994424ee58.jpg"
     },
     {
       "id": 191,
@@ -11953,7 +12740,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.saitama-shizen.info/event/event.html#BWFF01",
       "notes": "9:30～11:00。事前申込制、11月1日9:00から電話受付。雨天・荒天中止。観察中ベビーカーは使えません。",
       "source_names": "埼玉県自然学習センター 家族で楽しむバードウォッチング（2026年）",
-      "images": []
+      "images": [
+        {
+          "id": 2796,
+          "entity_id": 200,
+          "image_url": "https://www.saitama-shizen.info/img/e_birdwatchingff01.jpg",
+          "source_page_url": "https://www.saitama-shizen.info/event/event.html#BWFF01",
+          "title": "家族で楽しむバードウォッチング ～水鳥編（2026年）",
+          "alt_text": "バードウォッチングの様子を写した写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.saitama-shizen.info/img/e_birdwatchingff01.jpg"
     },
     {
       "id": 201,
@@ -12007,7 +12814,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.saitama-shizen.info/event/event.html#autumnOL",
       "notes": "各日9:30～15:30。期間中は当日受付、自由参加。雨天開催。",
       "source_names": "埼玉県自然学習センター 秋の自然観察オリエンテーリング（2026年）",
-      "images": []
+      "images": [
+        {
+          "id": 2803,
+          "entity_id": 202,
+          "image_url": "https://www.saitama-shizen.info/img/e_autumnOL2021.jpg",
+          "source_page_url": "https://www.saitama-shizen.info/event/event.html#autumnOL",
+          "title": "秋の自然観察オリエンテーリング（2026年）",
+          "alt_text": "秋の自然観察オリエンテーリングの過去開催写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式ページ上でイベントに関連する写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.saitama-shizen.info/img/e_autumnOL2021.jpg"
     },
     {
       "id": 203,
@@ -12061,7 +12888,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.saitama.lg.jp/008/004/007/p116624.html",
       "notes": "10:00～14:00。雨天中止。",
       "source_names": "さいたま市 アグリ・ミニフェスタ2026",
-      "images": []
+      "images": [
+        {
+          "id": 2797,
+          "entity_id": 204,
+          "image_url": "https://www.city.saitama.lg.jp/008/004/007/p116624_d/img/001_s.jpg",
+          "source_page_url": "https://www.city.saitama.lg.jp/008/004/007/p116624.html",
+          "title": "アグリ・ミニフェスタ2026",
+          "alt_text": "アグリ・ミニフェスタの過去開催時の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.saitama.lg.jp/008/004/007/p116624_d/img/001_s.jpg"
     },
     {
       "id": 205,
@@ -12817,7 +13664,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.parks.or.jp/sczoo/event/006/006349.html",
       "notes": "土日祝開催、定員15人。15:00までに案内所で当日券購入。開催日を公式で確認。",
       "source_names": "埼玉県こども動物自然公園 キリンのバックヤードツアー",
-      "images": []
+      "images": [
+        {
+          "id": 2798,
+          "entity_id": 232,
+          "image_url": "https://www.parks.or.jp/sczoo/event/files/6349/006349/att_0000004.jpg",
+          "source_page_url": "https://www.parks.or.jp/sczoo/event/006/006349.html",
+          "title": "キリンのバックヤードツアー",
+          "alt_text": "キリンのバックヤードツアーの様子",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.parks.or.jp/sczoo/event/files/6349/006349/att_0000004.jpg"
     },
     {
       "id": 233,
@@ -13006,7 +13873,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
       "notes": "両日10:00～15:00。歴史民俗資料館・文書館は9:00～16:30。荒天中止、一部文化財は雨天時に公開制限。駐車場・トイレは公開場所ごとに案内。",
       "source_names": "常陸大宮市文化財公開「集中曝涼」",
-      "images": []
+      "images": [
+        {
+          "id": 2799,
+          "entity_id": 239,
+          "image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1722481164_107.jpg?1722481384742",
+          "source_page_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
+          "title": "常陸大宮市文化財公開「集中曝涼」",
+          "alt_text": "立野神社の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1722481164_107.jpg?1722481384742"
     },
     {
       "id": 240,
@@ -13033,7 +13920,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
       "notes": "雨天時は11月8日に順延。開始時刻や集合場所は常陸大宮市美和地域センターへ確認。",
       "source_names": "常陸大宮市文化財公開「集中曝涼」",
-      "images": []
+      "images": [
+        {
+          "id": 2800,
+          "entity_id": 240,
+          "image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1787536125_107.jpg?1787536145141",
+          "source_page_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
+          "title": "上檜沢館跡と周辺の歴史探索ツアー",
+          "alt_text": "上檜沢館跡の切岸の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1787536125_107.jpg?1787536145141"
     },
     {
       "id": 241,
@@ -13141,7 +14048,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.tsukuba.museum.ibk.ed.jp/saturday.html",
       "notes": "定員80人。事前申込50人（10月29日17時まで）、当日受付30人（13時開始）。",
       "source_names": "茨城県つくば美術館 第7回土曜講座",
-      "images": []
+      "images": [
+        {
+          "id": 2801,
+          "entity_id": 244,
+          "image_url": "https://www.tsukuba.museum.ibk.ed.jp/img/img_saturday.jpg",
+          "source_page_url": "https://www.tsukuba.museum.ibk.ed.jp/saturday.html",
+          "title": "つくば美術館 第7回土曜講座「THE HEADLINERS 2026 キュン発力の時代」",
+          "alt_text": "つくば美術館土曜講座の会場風景",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://www.tsukuba.museum.ibk.ed.jp/img/img_saturday.jpg"
     },
     {
       "id": 245,
@@ -13168,7 +14095,27 @@ window.EVENT_DATA = {
       "canonical_url": "https://kyoiku.pref.ibaraki.jp/post-41514/",
       "notes": "定員350人、先着順・要申込。受付開始済み。受付13:15。",
       "source_names": "茨城県教育の日・教育月間シンポジウム",
-      "images": []
+      "images": [
+        {
+          "id": 2802,
+          "entity_id": 245,
+          "image_url": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/09/shinagawa.png",
+          "source_page_url": "https://kyoiku.pref.ibaraki.jp/post-41514/",
+          "title": "いばらき教育の日・教育月間シンポジウム",
+          "alt_text": "シンポジウム登壇者の写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": null,
+          "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+          "status": "verified",
+          "confidence": "medium",
+          "discovered_at": "2026-10-22",
+          "last_verified_at": "2026-10-22",
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+        }
+      ],
+      "primary_image_url": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/09/shinagawa.png"
     },
     {
       "id": 246,
@@ -47633,6 +48580,918 @@ window.EVENT_DATA = {
       "discovered_at": "2026-07-28",
       "last_verified_at": "2026-07-28",
       "notes": "refresh_representative_images"
+    },
+    {
+      "entity_type": "event",
+      "id": 2774,
+      "entity_id": 93,
+      "image_url": "https://www.flower-park.jp/wp/wp-content/themes/night-bloom/assets/img/garden_blue.jpg",
+      "source_page_url": "https://www.flower-park.jp/night-bloom/",
+      "title": "Night Bloom 2026",
+      "alt_text": "ライトアップされた花壇と来園者の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2775,
+      "entity_id": 103,
+      "image_url": "https://www.astron.pref.gunma.jp/news/121213geminids6.jpg",
+      "source_page_url": "https://www.astron.pref.gunma.jp/events/261212geminids.html",
+      "title": "ふたご座流星群観察会2026",
+      "alt_text": "ぐんま天文台の流星群観察会場の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2776,
+      "entity_id": 107,
+      "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/第77回群馬県美術展覧会（県展-美術）過去の会場風景.jpg",
+      "source_page_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7208",
+      "title": "第77回群馬県美術展覧会（県展 美術）",
+      "alt_text": "群馬県美術展覧会の過去の会場風景",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2777,
+      "entity_id": 112,
+      "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2022/10/5c56947974f31f19d42297b18f5c4054-1024x683.jpg",
+      "source_page_url": "https://www.tochigiji.or.jp/event/e39787/",
+      "title": "宇都宮餃子祭り2026",
+      "alt_text": "過去開催時の宇都宮餃子祭りの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2778,
+      "entity_id": 113,
+      "image_url": "https://www.utsunomiya-cvb.org/lsc/upfile/spot/0003/0068/30068_1_l.jpg",
+      "source_page_url": "https://www.utsunomiya-cvb.org/event/detail_30068.html",
+      "title": "うつのみやイルミネーション2026",
+      "alt_text": "宇都宮市内のイルミネーション写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2779,
+      "entity_id": 115,
+      "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/3249C13D5C369C1FB5C96C9E09B5E743.jpg",
+      "source_page_url": "https://www.tochigiji.or.jp/event/e16760/",
+      "title": "あしかがフラワーパーク 光の花の庭～フラワーファンタジー2026～",
+      "alt_text": "あしかがフラワーパークのイルミネーション写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2780,
+      "entity_id": 119,
+      "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2021/09/40C515FCE0D41655B8EEDD77BDF13D45.jpg",
+      "source_page_url": "https://www.tochigiji.or.jp/event/e17560/",
+      "title": "第114回益子秋の陶器市",
+      "alt_text": "過去開催時の益子秋の陶器市の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2781,
+      "entity_id": 120,
+      "image_url": "https://www.tochigiji.or.jp/wp-content/uploads/event/2026/10/084fa1589059d9d1a194e9f754e4de74.jpg",
+      "source_page_url": "https://www.tochigiji.or.jp/event/e16066",
+      "title": "第18回鹿沼そば天国",
+      "alt_text": "鹿沼そば天国でそばを打つ様子",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2782,
+      "entity_id": 121,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/639151.jpg",
+      "source_page_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
+      "title": "AUTUMN BLOOM FAIR／Night Bloom 2026",
+      "alt_text": "Gunma Flower Park+限定ローズの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2783,
+      "entity_id": 126,
+      "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTQyNzMsInB1ciI6ImJsb2JfaWQifX0=--ce0b36409a5b51c3a2f60ae4345baf0a871852a5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/yambadum_sub2.jpg",
+      "source_page_url": "https://gunma-kanko.jp/events/341",
+      "title": "駅からハイキング「秋の八ッ場あがつま周遊湖コース」",
+      "alt_text": "八ッ場ダム周辺のハイキングコース写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2784,
+      "entity_id": 128,
+      "image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIwNjAsInB1ciI6ImJsb2JfaWQifX0=--d46f41bb7591e09668806a02675177cd32d263df/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/1783997935380-1.jpg",
+      "source_page_url": "https://gunma-kanko.jp/events/310",
+      "title": "NATURE in BLUE―ECHOES OF SHIMA―",
+      "alt_text": "四万温泉の自然と展示の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2785,
+      "entity_id": 133,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/638470.jpg",
+      "source_page_url": "https://www.pref.gunma.jp/site/houdou/774144.html",
+      "title": "第115回企画展 現代によみがえる能装束―縫の精緻 箔の輝き―",
+      "alt_text": "企画展で紹介される能装束の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2786,
+      "entity_id": 134,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/636099.jpg",
+      "source_page_url": "https://www.pref.gunma.jp/site/houdou/755649.html",
+      "title": "特別展示「孤高の彫刻家 村山琴泉」",
+      "alt_text": "企画展で紹介される村山琴泉の彫刻写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2787,
+      "entity_id": 137,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/68057.jpg",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/page/77332.html",
+      "title": "星と映画の夜",
+      "alt_text": "月の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2788,
+      "entity_id": 147,
+      "image_url": "https://www.astron.pref.gunma.jp/news/161113hajimete1.jpg",
+      "source_page_url": "https://www.astron.pref.gunma.jp/events/26hajimete.html",
+      "title": "はじめての望遠鏡教室 〜見てみよう、あの星空を〜",
+      "alt_text": "ぐんま天文台の望遠鏡教室会場の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2789,
+      "entity_id": 155,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/43971.JPG",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/page/2795.html",
+      "title": "高崎市リユースセンターのイベント",
+      "alt_text": "リユースセンターの素焼き交換会で扱う品物の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2790,
+      "entity_id": 158,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66519.JPG",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/sightseeing/96053.html",
+      "title": "音楽ライブ「榛名湖ステージ」（10月31日）",
+      "alt_text": "榛名湖上ステージの観覧席の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2791,
+      "entity_id": 159,
+      "image_url": "https://www.city.maebashi.gunma.jp/material/images/group/23/F11.JPG",
+      "source_page_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/fujimi/gyomu/4/17704.html",
+      "title": "第29回 富士見産業祭 ～スローシティフェスティバルinふじみ～",
+      "alt_text": "前回開催時のリース体験・スローシティコーナーの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2792,
+      "entity_id": 166,
+      "image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ac5ca876.jpg",
+      "source_page_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
+      "title": "上三原田の歌舞伎舞台「創建者150年大遠忌公演」",
+      "alt_text": "上三原田の歌舞伎舞台の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2793,
+      "entity_id": 167,
+      "image_url": "https://www.city.shibukawa.lg.jp/manage/contents/upload/6a992ce3326a3.jpg",
+      "source_page_url": "https://www.city.shibukawa.lg.jp/kankou-site/kyouiku/000135/000139/p015781.html",
+      "title": "上三原田の歌舞伎舞台 公開見学会",
+      "alt_text": "上三原田の歌舞伎舞台公開見学会の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2794,
+      "entity_id": 185,
+      "image_url": "https://gunma-kodomonokuni.jp/info/wp-content/uploads/2023/01/img_kamihikoki.jpg",
+      "source_page_url": "https://gunma-kodomonokuni.jp/xo_event/%E7%B4%99%E3%83%92%E3%82%B3%E3%83%BC%E3%82%AD%E6%95%99%E5%AE%A4-84/",
+      "title": "紙ヒコーキ教室（ぐんまこどもの国）",
+      "alt_text": "紙ヒコーキ教室で遊ぶ子どもたちの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2795,
+      "entity_id": 190,
+      "image_url": "https://t-csm.jp/wp/wp-content/uploads/2021/01/4b2a3f444246d015e54594994424ee58.jpg",
+      "source_page_url": "https://t-csm.jp/event/6790",
+      "title": "星をみる会（栃木県子ども総合科学館・2026年11月）",
+      "alt_text": "栃木県子ども総合科学館の天文台の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2796,
+      "entity_id": 200,
+      "image_url": "https://www.saitama-shizen.info/img/e_birdwatchingff01.jpg",
+      "source_page_url": "https://www.saitama-shizen.info/event/event.html#BWFF01",
+      "title": "家族で楽しむバードウォッチング ～水鳥編（2026年）",
+      "alt_text": "バードウォッチングの様子を写した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2797,
+      "entity_id": 204,
+      "image_url": "https://www.city.saitama.lg.jp/008/004/007/p116624_d/img/001_s.jpg",
+      "source_page_url": "https://www.city.saitama.lg.jp/008/004/007/p116624.html",
+      "title": "アグリ・ミニフェスタ2026",
+      "alt_text": "アグリ・ミニフェスタの過去開催時の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2798,
+      "entity_id": 232,
+      "image_url": "https://www.parks.or.jp/sczoo/event/files/6349/006349/att_0000004.jpg",
+      "source_page_url": "https://www.parks.or.jp/sczoo/event/006/006349.html",
+      "title": "キリンのバックヤードツアー",
+      "alt_text": "キリンのバックヤードツアーの様子",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2799,
+      "entity_id": 239,
+      "image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1722481164_107.jpg?1722481384742",
+      "source_page_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
+      "title": "常陸大宮市文化財公開「集中曝涼」",
+      "alt_text": "立野神社の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2800,
+      "entity_id": 240,
+      "image_url": "https://www.city.hitachiomiya.lg.jp/data/img/1787536125_107.jpg?1787536145141",
+      "source_page_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/kankou_bunka/history/shuchubakuryou/page011077.html",
+      "title": "上檜沢館跡と周辺の歴史探索ツアー",
+      "alt_text": "上檜沢館跡の切岸の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2801,
+      "entity_id": 244,
+      "image_url": "https://www.tsukuba.museum.ibk.ed.jp/img/img_saturday.jpg",
+      "source_page_url": "https://www.tsukuba.museum.ibk.ed.jp/saturday.html",
+      "title": "つくば美術館 第7回土曜講座「THE HEADLINERS 2026 キュン発力の時代」",
+      "alt_text": "つくば美術館土曜講座の会場風景",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2802,
+      "entity_id": 245,
+      "image_url": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/09/shinagawa.png",
+      "source_page_url": "https://kyoiku.pref.ibaraki.jp/post-41514/",
+      "title": "いばらき教育の日・教育月間シンポジウム",
+      "alt_text": "シンポジウム登壇者の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2803,
+      "entity_id": 202,
+      "image_url": "https://www.saitama-shizen.info/img/e_autumnOL2021.jpg",
+      "source_page_url": "https://www.saitama-shizen.info/event/event.html#autumnOL",
+      "title": "秋の自然観察オリエンテーリング（2026年）",
+      "alt_text": "秋の自然観察オリエンテーリングの過去開催写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体・観光協会等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページ上でイベントに関連する写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2804,
+      "entity_id": 108,
+      "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/企画展示「ウジェーヌ・ブーダン展」.jpg",
+      "source_page_url": "https://mmag.pref.gunma.jp/exhibition/exhibition-7218",
+      "title": "ウジェーヌ・ブーダン展 印象派の父―光を求めて",
+      "alt_text": "ウジェーヌ・ブーダン展で紹介される作品の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2805,
+      "entity_id": 123,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/638357.png",
+      "source_page_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+      "title": "第130回企画展「三島由紀夫のアオハル 中島飛行機からの出発」",
+      "alt_text": "三島由紀夫の石膏像の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2806,
+      "entity_id": 142,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66293.jpg",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+      "title": "収蔵作品展「Human Figure 人を見つめ、かたちづくる」",
+      "alt_text": "収蔵作品「裸婦立像」の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2807,
+      "entity_id": 143,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/67825.jpg",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+      "title": "企画展「日本画の窓―旅する風景」",
+      "alt_text": "企画展で紹介される日本画の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+    },
+    {
+      "entity_type": "event",
+      "id": 2808,
+      "entity_id": 145,
+      "image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/66394.jpg",
+      "source_page_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/94699.html",
+      "title": "多胡碑記念館 収蔵拓本コレクション展2「三国・晋・南北朝の時代」",
+      "alt_text": "爨宝子碑の拓本の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "主催者・自治体等の掲載画像。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
+    },
+    {
+      "id": 2809,
+      "entity_id": 104,
+      "image_url": "https://newscast.jp/attachments/e07CBvRMGf5xH1MrUd8S.jpeg",
+      "source_page_url": "https://newscast.jp/news/2281154",
+      "title": "オクトーバーフェスト高崎2026",
+      "alt_text": "過去開催時のオクトーバーフェスト会場で演奏する出演者の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "主催者の2026年開催告知に掲載された過去開催時の会場写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2810,
+      "entity_id": 91,
+      "image_url": "https://maebashi-biennale.com/websys/wp-content/uploads/2026/05/alexa_art.jpg",
+      "source_page_url": "https://maebashi-biennale.com/",
+      "title": "第一回 前橋国際芸術祭2026",
+      "alt_text": "アレクサ・クミコ・ハタナカ《儚い》の展示風景と作家の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式サイト掲載の芸術祭作品・展示風景。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2811,
+      "entity_id": 127,
+      "image_url": "https://maebashi-biennale.com/websys/wp-content/uploads/2026/05/alexa_art.jpg",
+      "source_page_url": "https://maebashi-biennale.com/",
+      "title": "第一回 前橋国際芸術祭2026",
+      "alt_text": "アレクサ・クミコ・ハタナカ《儚い》の展示風景と作家の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "公式サイト掲載の芸術祭作品・展示風景。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2812,
+      "entity_id": 100,
+      "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+      "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+      "title": "開館30周年記念企画展「北米ジュラ紀の恐竜たち」",
+      "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "会場施設の実写真。今回の企画展そのものの展示写真ではありません。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2813,
+      "entity_id": 101,
+      "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+      "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+      "title": "11月サイエンス・サタデー「化石ミニ発掘体験 北米ジュラ紀編」",
+      "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "会場施設の実写真。今回の発掘体験そのものの写真ではありません。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2814,
+      "entity_id": 138,
+      "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+      "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+      "title": "企画展特別講演会「恐竜研究最前線in2026」",
+      "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "会場施設の実写真。今回の講演そのものの写真ではありません。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2815,
+      "entity_id": 139,
+      "image_url": "https://www.gmnh.pref.gunma.jp/wp-content/uploads/top_sp2-1.jpg",
+      "source_page_url": "https://www.gmnh.pref.gunma.jp/",
+      "title": "企画展ワークショップ「つくって学ぼう！北米ジュラ紀の恐竜ペーパークラフト」",
+      "alt_text": "群馬県立自然史博物館の恐竜展示を撮影した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "会場施設の実写真。今回のワークショップそのものの写真ではありません。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2816,
+      "entity_id": 109,
+      "image_url": "https://mmag.pref.gunma.jp/cms/wp-content/uploads/2026/07/第77回群馬県書道展覧会（県展-書道）過去の会場風景.jpg",
+      "source_page_url": "https://mmag.pref.gunma.jp/",
+      "title": "第77回群馬県書道展覧会（県展 書道）",
+      "alt_text": "過去の県展書道会場に作品が展示された様子",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "群馬県立近代美術館の公式サイトに掲載された過去開催時の会場写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2817,
+      "entity_id": 129,
+      "image_url": "https://www.astron.pref.gunma.jp/images/icons/150cm-200x200.jpg",
+      "source_page_url": "https://www.astron.pref.gunma.jp/events/events_everyday.html",
+      "title": "群馬県民の日イベント「ぐんま天文台からの挑戦状」",
+      "alt_text": "ぐんま天文台の150cm望遠鏡の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "会場施設の実写真。イベント当日の様子ではありません。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2818,
+      "entity_id": 130,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/18407.jpg",
+      "source_page_url": "https://www.pref.gunma.jp/page/20748.html",
+      "title": "群馬県蚕糸技術センター一般公開",
+      "alt_text": "群馬県蚕糸技術センターで研究されている繭の写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "群馬県の蚕糸技術センター公式ページに掲載された研究写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2819,
+      "entity_id": 132,
+      "image_url": "https://www.pref.gunma.jp/uploaded/image/25448.jpg",
+      "source_page_url": "https://www.pref.gunma.jp/page/20810.html",
+      "title": "令和8年度 水産試験場公開",
+      "alt_text": "水産試験場の研究対象であるニジマスの写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "群馬県水産試験場の公式ページに掲載されたニジマスの写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2820,
+      "entity_id": 140,
+      "image_url": "https://www.city.maebashi.gunma.jp/material/images/group/46/1124event.jpg",
+      "source_page_url": "https://www.city.maebashi.gunma.jp/soshiki/kankyo/kankyoseisaku/gyomu/1_1/46670.html",
+      "title": "紅葉の森を巡る〜森林ウォーキング〜",
+      "alt_text": "前橋市内の森で紅葉した葉を撮影した写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "前橋市公式ページ掲載の森林ウォーキング関連写真。",
+      "entity_type": "event"
+    },
+    {
+      "id": 2821,
+      "entity_id": 183,
+      "image_url": "https://www.city.fujioka.gunma.jp/material/images/group/2/CCC_3283.JPG",
+      "source_page_url": "https://www.city.fujioka.gunma.jp/soshiki/kikakubu/hisho/3/topix/5_3/10468.html",
+      "title": "第3回 日野の秋祭り",
+      "alt_text": "前回開催の日野の秋祭りの様子",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": null,
+      "license_note": "公式・主催者掲載写真。再利用条件は未確認のため、出典ページへのリンクを記録。",
+      "status": "verified",
+      "confidence": "medium",
+      "discovered_at": "2026-10-22",
+      "last_verified_at": "2026-10-22",
+      "notes": "藤岡市公式ページ掲載の2025年開催時の写真。",
+      "entity_type": "event"
     }
   ],
   "sources": [

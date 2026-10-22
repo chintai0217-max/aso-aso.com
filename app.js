@@ -1035,14 +1035,13 @@ function dateGroupHeadingHtml(key, count) {
 function eventCard(event) {
   const time = [event.start_time, event.end_time].filter(Boolean).join(" - ");
   const displayImage = bestThumbImage(event);
-  const fallbackImage = eventFallbackImage(event);
+  const thumbnail = (event.images || []).find((item) => item && item.image_url === displayImage);
   const image = mediaThumb(
-    displayImage || fallbackImage,
-    displayImage ? event.title : `${categoryLabel(event.category)}のイベントイメージ`,
-    categoryLabel(event.category),
+    displayImage,
+    thumbnail?.alt_text || event.title,
+    displayImage ? categoryLabel(event.category) : "公式写真未掲載",
     event.images,
-    event,
-    fallbackImage
+    event
   );
   const venue = event.venue_name || event.area_label || "";
   const placeLine = [formatRecordLocation(event), venue].filter(Boolean).join(" / ");
@@ -1068,14 +1067,6 @@ function eventCard(event) {
       </div>
     </a>
   `;
-}
-
-function eventFallbackImage(event = {}) {
-  const label = escapeHtml(compactText(categoryLabel(event.category), 14) || "おでかけ");
-  const hash = Array.from(String(event.category || "event")).reduce((sum, char) => (sum * 31 + char.charCodeAt(0)) % 360, 0);
-  const hue = (hash + 178) % 360;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl(${hue} 66% 34%)"/><stop offset="1" stop-color="hsl(${(hue + 42) % 360} 72% 57%)"/></linearGradient></defs><rect width="240" height="240" rx="24" fill="url(#bg)"/><circle cx="190" cy="48" r="62" fill="#fff" opacity=".12"/><circle cx="35" cy="202" r="76" fill="#fff" opacity=".09"/><path d="M77 82h86a14 14 0 0 1 14 14v57a14 14 0 0 1-14 14H77a14 14 0 0 1-14-14V96a14 14 0 0 1 14-14Z" fill="#fff" opacity=".94"/><path d="M63 108h114" stroke="hsl(${hue} 55% 39%)" stroke-width="10"/><path d="M89 70v25m62-25v25" stroke="#fff" stroke-width="10" stroke-linecap="round"/><path d="m101 139 13 13 27-31" fill="none" stroke="hsl(${hue} 55% 39%)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><text x="120" y="205" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="17" font-weight="700">${label}</text></svg>`;
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 }
 
 function placeCard(place) {
@@ -1140,11 +1131,11 @@ function formatDateCompact(value, { includeYear = true } = {}) {
   return `${year}/${month}/${day}（${week}）`;
 }
 
-function mediaThumb(url, alt, fallbackLabel, images = [], record = {}, fallbackImage = "") {
+function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
   const googlePlaceId = googlePhotoCandidate(record) ? record.google_place_id : "";
   const extraCount = Math.max(0, (images || []).length - 1);
   return `
-    <div class="media-thumb ${url ? "" : googlePlaceId ? "is-google-pending" : "is-empty"}" ${fallbackImage ? `style="background-image:url('${escapeHtml(fallbackImage)}')"` : ""} ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
+    <div class="media-thumb ${url ? "" : googlePlaceId ? "is-google-pending" : "is-empty"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
       <span>${escapeHtml(fallbackLabel || "画像")}</span>
       ${extraCount ? `<em class="photo-count">+${extraCount}</em>` : ""}
       ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded');if(this.naturalWidth<180)this.closest('.media-thumb').classList.add('is-lowres')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
