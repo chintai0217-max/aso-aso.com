@@ -1563,3 +1563,18 @@
 }
 
 .finder-page .event-card .media-thumb { align-self: start; }
+
+/* Align the filter controls without inherited label margins. */
+.finder-page .field { margin: 0; }
+.finder-page .field select {
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+@media (min-width: 761px) {
+  .finder-page .mode-switch {
+    box-sizing: border-box;
+    height: 43px;
+    padding: 3px;
+  }
+  .finder-page .mode-button { min-height: 0; }
+}
