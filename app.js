@@ -102,7 +102,7 @@ const placeTypeGroups = [
 ];
 
 const ageGroups = [
-  { id: "infant", label: "乳幼児" },
+  { id: "infant", label: "乳幼児の記載あり" },
   { id: "preschool", label: "未就学" },
   { id: "elementary", label: "小学生" },
   { id: "general", label: "中高生・一般" },
@@ -116,7 +116,6 @@ const agePatterns = {
 };
 
 const openAgePattern = /年齢制限なし|だれでも|どなたでも|自由利用/;
-const familyAgePattern = /子ども|子供|親子/;
 
 const els = {};
 
@@ -233,7 +232,6 @@ function buildListSearchParams() {
   if (state.indoorOnly) params.set("indoor", "1");
   if (state.outdoorOnly) params.set("outdoor", "1");
   if (state.sort !== (state.mode === "places" ? "type" : "date")) params.set("sort", state.sort);
-  if (state.decision !== "none") params.set("decision", state.decision);
   return params;
 }
 
@@ -326,6 +324,7 @@ function bindEvents() {
       state.indoorOnly = false;
       state.outdoorOnly = false;
       state.freeOnly = false;
+      state.status = "all";
       state.motenashiOnly = false;
       state.decision = "none";
       state.dateScope = "upcoming";
@@ -648,54 +647,27 @@ function render() {
 }
 
 function applyDecision(decision, { toggle = true, scroll = true, skipRender = false } = {}) {
-  const next = toggle && state.decision === decision ? "none" : decision;
-  state.decision = next;
-  state.freeOnly = false;
-  state.indoorOnly = false;
-  state.outdoorOnly = false;
-  state.motenashiOnly = false;
-  state.status = "all";
-
-  if (next === "weekend") {
+  const nextValue = (current) => toggle ? !current : true;
+  if (decision === "weekend") {
     state.mode = "events";
-    state.dateScope = "weekend";
-    state.age = "all";
-    state.category = "all";
-  } else if (next === "rain") {
+    state.dateScope = toggle && state.dateScope === "weekend" ? "upcoming" : "weekend";
+  } else if (decision === "rain" || decision === "outdoor") {
     state.mode = "places";
     state.sort = "type";
-    state.indoorOnly = true;
-    state.age = "all";
-    state.category = "all";
-  } else if (next === "free") {
-    state.freeOnly = true;
-  } else if (next === "outdoor") {
-    state.mode = "places";
-    state.sort = "type";
-    state.outdoorOnly = true;
-    state.age = "all";
-    state.category = "all";
-  } else if (next === "infant") {
-    state.age = "infant";
-  } else if (next === "verified") {
-    state.status = "verified";
-  } else if (next === "motenashi") {
+    const key = decision === "rain" ? "indoorOnly" : "outdoorOnly";
+    state[key] = nextValue(state[key]);
+  } else if (decision === "free") {
+    state.freeOnly = nextValue(state.freeOnly);
+  } else if (decision === "infant") {
+    state.age = toggle && state.age === "infant" ? "all" : "infant";
+  } else if (decision === "verified") {
+    state.status = toggle && state.status === "verified" ? "all" : "verified";
+  } else if (decision === "motenashi") {
     state.mode = "events";
     state.prefecture = "群馬県";
-    state.motenashiOnly = true;
+    state.motenashiOnly = nextValue(state.motenashiOnly);
     state.municipality = "all";
-    state.age = "all";
-    state.category = "all";
-  } else if (next === "none") {
-    if (state.dateScope === "weekend") state.dateScope = "upcoming";
   }
-
-  if (els.modeEventsButton && els.modePlacesButton) {
-    els.modeEventsButton.classList.toggle("is-active", state.mode === "events");
-    els.modePlacesButton.classList.toggle("is-active", state.mode === "places");
-  }
-  if (els.ageSelect) els.ageSelect.value = state.age;
-  if (els.categorySelect) els.categorySelect.value = state.category;
   if (!skipRender && state.data) {
     populateFilters();
     render();
@@ -709,21 +681,25 @@ function renderDecisionChips() {
   if (!els.decisionChips) return;
   const chips = state.mode === "events"
     ? [
-        ["free", "無料", "yen"],
-        ["infant", "乳幼児向け", "baby"],
+        ["free", "無料の記載あり", "yen"],
+        ["infant", "乳幼児の記載あり", "baby"],
         ["verified", "公式確認済み", "check"],
       ]
     : [
         ["rain", "屋内", "home"],
         ["outdoor", "屋外", "sun"],
-        ["free", "無料", "yen"],
-        ["infant", "乳幼児向け", "baby"],
+        ["free", "無料の記載あり", "yen"],
+        ["infant", "乳幼児の記載あり", "baby"],
         ["verified", "公式確認済み", "check"],
       ];
+  const active = {
+    free: state.freeOnly, infant: state.age === "infant", verified: state.status === "verified",
+    rain: state.indoorOnly, outdoor: state.outdoorOnly,
+  };
   els.decisionChips.innerHTML = chips
     .map(
       ([value, label, icon]) =>
-        `<button type="button" class="chip decision-chip ${state.decision === value ? "is-active" : ""}" data-decision="${value}">${uiIcon(icon)}${label}</button>`
+        `<button type="button" class="chip decision-chip ${active[value] ? "is-active" : ""}" data-decision="${value}" aria-pressed="${Boolean(active[value])}">${uiIcon(icon)}${label}</button>`
     )
     .join("");
 }
@@ -766,7 +742,7 @@ function renderListContext() {
     if (group) add("category", group.label);
   }
   if (state.status !== "all") add("status", "公式確認済み");
-  if (state.freeOnly) add("free", "無料");
+  if (state.freeOnly) add("free", "無料の記載あり");
   if (state.indoorOnly) add("indoor", "屋内");
   if (state.outdoorOnly) add("outdoor", "屋外");
   if (state.motenashiOnly) add("motenashi", "もてなし広場");
@@ -790,7 +766,7 @@ function renderDateChips() {
   const scopes = [
     ["all", "全期間", "list"],
     ["upcoming", "開催予定", "ticket"],
-    ["weekend", "今週末", "calendar"],
+    ["weekend", weekendDateLabel(), "calendar"],
     ["month", "今月", "calendar"],
     ["past", "過去", "clock"],
   ];
@@ -914,14 +890,10 @@ function detectAgeTags(record) {
     tags.add("elementary");
   }
 
-  if (!tags.size && familyAgePattern.test(text)) {
-    return ["infant", "preschool", "elementary"];
-  }
-
   if (!tags.size) {
     // イベントは年齢記載が少ないため、明示がないものは中高生・一般扱い
     if (record.start_date || record.title) return ["general"];
-    return ageGroups.map((group) => group.id);
+    return [];
   }
 
   return Array.from(tags);
@@ -992,7 +964,7 @@ function renderDateGroup(key, items, cardFn) {
   const cards = items.map(cardFn).join("");
   const count = items.length;
   const isMonth = /^\d{4}-\d{2}$/.test(key);
-  const collapseByDefault = key === "開催中" || (isMonth && key !== TODAY.slice(0, 7));
+  const collapseByDefault = state.dateScope !== "weekend" && (key === "開催中" || (isMonth && key !== TODAY.slice(0, 7)));
 
   if (!collapseByDefault) {
     return `${dateGroupHeadingHtml(key, count)}${cards}`;
@@ -1426,23 +1398,8 @@ function matchesWeekend(event) {
   const startDate = event.start_date;
   const endDate = event.end_date || event.start_date;
   if (!startDate || endDate < TODAY) return false;
-  if (isLongRunningEvent(event)) return false;
   const { start, end } = weekendRange();
   return startDate <= end && endDate >= start;
-}
-
-function isLongRunningEvent(event) {
-  return eventSpanDays(event) >= 14;
-}
-
-function eventSpanDays(event) {
-  const startDate = event.start_date;
-  const endDate = event.end_date || event.start_date;
-  if (!startDate || !endDate) return 0;
-  const start = Date.parse(`${startDate}T00:00:00Z`);
-  const end = Date.parse(`${endDate}T00:00:00Z`);
-  if (Number.isNaN(start) || Number.isNaN(end) || end < start) return 0;
-  return Math.round((end - start) / 86400000) + 1;
 }
 
 function matchesThisMonth(event) {
