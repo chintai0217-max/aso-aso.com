@@ -404,7 +404,8 @@ def collect_gallery_images(record, alt, limit=8):
     primary = record.get("primary_image_url")
     raw_list = []
     if primary:
-        raw_list.append({"image_url": primary, "alt_text": alt})
+        primary_entry = next((im for im in record.get("images") or [] if isinstance(im, dict) and im.get("image_url") == primary), None)
+        raw_list.append(primary_entry or {"image_url": primary, "alt_text": alt})
     for image in record.get("images") or []:
         if isinstance(image, dict) and image.get("image_url"):
             raw_list.append(image)
@@ -446,14 +447,16 @@ def detail_hero_html(record, alt):
         if not source_url or source_url in seen_sources:
             continue
         seen_sources.add(source_url)
-        label = image.get("credit") or urlparse(source_url).netloc.removeprefix("www.") or "掲載元ページ"
-        credits.append(
-            f'<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>'
-        )
-    credit_html = (
-        '<p class="static-detail-image-credit">写真出典：' + "・".join(credits) + "</p>"
-        if credits else ""
-    )
+        if image.get("reference_photo"):
+            label = " / ".join(filter(None, [image.get("title"), image.get("credit")]))
+            license_name = image.get("license_note") or ""
+            license_url = image.get("license_url") or ""
+            license_html = (f' / <a href="{html(license_url)}" target="_blank" rel="noopener noreferrer">{html(license_name)}</a>' if license_url else f' / {html(license_name)}')
+            credits.append(f'会場・施設の参考写真（表示枠でトリミングあり）：<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>{license_html}')
+        else:
+            label = image.get("credit") or urlparse(source_url).netloc.removeprefix("www.") or "掲載元ページ"
+            credits.append(f'<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>')
+    credit_html = '<p class="static-detail-image-credit">写真出典：' + "・".join(credits) + "</p>" if credits else ""
     if len(images) == 1:
         return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt) + credit_html
     slides = []
@@ -866,7 +869,7 @@ def event_structured_data(event, canonical):
         event_schema["startDate"] = event["start_date"]
     if event.get("end_date"):
         event_schema["endDate"] = event["end_date"]
-    if event.get("primary_image_url") or (event.get("images") or []):
+    if not any(im.get("reference_photo") for im in event.get("images") or [] if isinstance(im, dict)) and (event.get("primary_image_url") or (event.get("images") or [])):
         image = best_display_image(event)
         if image:
             event_schema["image"] = [image]
@@ -889,7 +892,7 @@ def place_structured_data(place, canonical):
             "streetAddress": place.get("address"),
         },
     }
-    if place.get("primary_image_url") or (place.get("images") or []):
+    if not any(im.get("reference_photo") for im in place.get("images") or [] if isinstance(im, dict)) and (place.get("primary_image_url") or (place.get("images") or [])):
         image = best_display_image(place)
         if image:
             place_schema["image"] = [image]
@@ -993,7 +996,7 @@ def render_event(event):
         title,
         description,
         canonical,
-        display_image,
+        "" if any(im.get("reference_photo") for im in event.get("images") or [] if isinstance(im, dict)) else display_image,
         f"{prefecture}のイベント",
         event.get("title"),
         kicker,
@@ -1267,6 +1270,14 @@ def hub_media(image_url, label):
     return '<div class="hub-card__media hub-card__media--empty" aria-hidden="true"></div>'
 
 
+def hub_image_credit(record, image_url):
+    image = next((im for im in record.get("images") or [] if isinstance(im, dict) and im.get("image_url") == image_url and im.get("reference_photo")), None)
+    if not image:
+        return ""
+    credit = " / ".join(filter(None, [image.get("title"), image.get("credit"), image.get("license_note")]))
+    return f'<p class="card-image-credit">会場・施設の参考写真（トリミングあり）：{html(credit)}。出典・ライセンスは詳細へ</p>'
+
+
 def hub_card_event(event):
     href = f"../events/{event['id']}.html"
     title = event.get("title") or ""
@@ -1293,6 +1304,7 @@ def hub_card_event(event):
         f"<strong>{html(title)}</strong>"
         f"{when_html}"
         f'<p class="card-kicker card-kicker--where">{"".join(where_bits)}</p>'
+        f"{hub_image_credit(event, display_image)}"
         f"</div>"
         f"</a>"
     )
@@ -1317,6 +1329,7 @@ def hub_card_place(place):
         f"<strong>{html(title)}</strong>"
         f'<p class="card-kicker card-kicker--when">{"".join(when_bits)}</p>'
         f'<p class="card-kicker card-kicker--where"><span class="meta-item">{ui_icon("yen")}{html(fact_or_confirm(compact_text(place.get("price_note"), 28)))}</span></p>'
+        f"{hub_image_credit(place, display_image)}"
         f"</div>"
         f"</a>"
     )

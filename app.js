@@ -1041,6 +1041,7 @@ function eventCard(event) {
         ${event.summary ? `<p class="event-card__summary">${escapeHtml(compactText(event.summary, 100))}</p>` : ""}
         ${event.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(event.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(event.price_note, 52)))}</span></div>
+        ${cardImageCredit(event, displayImage)}
       </div>
     </a>
   `;
@@ -1069,9 +1070,17 @@ function placeCard(place) {
         <p class="event-card__summary">${escapeHtml(compactText(place.features || "施設の設備や利用条件は詳細をご確認ください", 100))}</p>
         ${place.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(place.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(place.price_note, 52)))}</span></div>
+        ${cardImageCredit(place, displayImage)}
       </div>
     </a>
   `;
+}
+
+function cardImageCredit(record, url) {
+  const image = (record.images || []).find((item) => item.image_url === url && item.reference_photo);
+  if (!image) return "";
+  const attribution = [image.title, image.credit, image.license_note].filter(Boolean).join(" / ");
+  return `<p class="card-image-credit">会場・施設の参考写真（トリミングあり）：${escapeHtml(attribution)}。出典・ライセンスは詳細へ</p>`;
 }
 
 function eventDateRangeLabel(event) {

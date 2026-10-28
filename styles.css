@@ -4710,3 +4710,5 @@ a {
     grid-template-columns: 80px minmax(0, 1fr);
   }
 }
+
+.card-image-credit { margin: 5px 0 0; color: #526a79; font-size: 11px; line-height: 1.45; overflow-wrap: anywhere; }
