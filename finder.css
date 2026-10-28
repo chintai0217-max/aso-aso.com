@@ -586,6 +586,8 @@
 .finder-page .event-main {
   display: grid;
   align-content: start;
+  justify-content: stretch;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: start;
   gap: 6px;
   min-width: 0;
