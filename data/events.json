@@ -4,7 +4,7 @@
     "event_count": 247,
     "source_count": 322,
     "child_play_place_count": 102,
-    "image_asset_count": 1363
+    "image_asset_count": 1369
   },
   "events": [
     {
@@ -13158,7 +13158,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_10.html",
       "notes": "公式ページで開催日・会場・対象・定員を確認。開始時刻、参加費、予約の要否は主催者の詳細案内で確認してください。",
       "source_names": "埼玉県SDGsポータル ボタニカルラボ野草の天ぷら編（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2900,
+          "entity_type": "event",
+          "entity_id": 193,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 194,
@@ -13212,7 +13235,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_11.html",
       "notes": "開催日・対象・定員を県公式案内で確認。時間、費用、申込条件は主催者詳細を確認してください。",
       "source_names": "埼玉県SDGsポータル 里山の森の生き物調査隊（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2901,
+          "entity_type": "event",
+          "entity_id": 195,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 196,
@@ -13239,7 +13285,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_12.html",
       "notes": "県公式案内で開催日・対象・会場を確認。時間、費用、申込方法は主催者詳細を確認してください。",
       "source_names": "埼玉県SDGsポータル 米づくり 脱穀・唐箕選別（2026年）",
-      "images": []
+      "images": [
+        {
+          "id": 2902,
+          "entity_type": "event",
+          "entity_id": 196,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 197,
@@ -13293,7 +13362,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_13.html",
       "notes": "開催日・対象・定員を県公式案内で確認。時間、費用、申込方法は主催者詳細を確認してください。",
       "source_names": "埼玉県SDGsポータル 里山キッズスクール（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2903,
+          "entity_type": "event",
+          "entity_id": 198,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 199,
@@ -13394,7 +13486,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_15.html",
       "notes": "開催日・対象・定員を県公式案内で確認。時間、費用、申込方法は主催者詳細を確認してください。",
       "source_names": "埼玉県SDGsポータル ボタニカルラボ里山の草花で遊ぼう（2026年11月）",
-      "images": []
+      "images": [
+        {
+          "id": 2904,
+          "entity_type": "event",
+          "entity_id": 201,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 202,
@@ -13468,7 +13583,30 @@
       "canonical_url": "https://www.pref.saitama.lg.jp/saitama-sdgs/event/event-list/event260916_16.html",
       "notes": "開催日・対象・定員を県公式案内で確認。時間、費用、申込方法は主催者詳細を確認してください。",
       "source_names": "埼玉県SDGsポータル 里山の素材でクラフト工作 どんぐり工作（2026年）",
-      "images": []
+      "images": [
+        {
+          "id": 2905,
+          "entity_type": "event",
+          "entity_id": 203,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+          "title": "Saitama-Midorinomori.JPG",
+          "alt_text": "さいたま緑の森博物館の参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Nyao148",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 204,
@@ -52809,6 +52947,132 @@
       "last_verified_at": "2026-10-28",
       "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。",
       "reference_photo_label": "会場・施設の参考写真"
+    },
+    {
+      "id": 2900,
+      "entity_type": "event",
+      "entity_id": 193,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2901,
+      "entity_type": "event",
+      "entity_id": 195,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2902,
+      "entity_type": "event",
+      "entity_id": 196,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2903,
+      "entity_type": "event",
+      "entity_id": 198,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2904,
+      "entity_type": "event",
+      "entity_id": 201,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2905,
+      "entity_type": "event",
+      "entity_id": 203,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Saitama-Midorinomori.JPG/960px-Saitama-Midorinomori.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Saitama-Midorinomori.JPG",
+      "title": "Saitama-Midorinomori.JPG",
+      "alt_text": "さいたま緑の森博物館の参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Nyao148",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
     }
   ],
   "sources": [
