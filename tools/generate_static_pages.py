@@ -983,6 +983,7 @@ def render_event(event):
                 ("情報確認日", format_verified_date(event.get("last_verified_at")) or event.get("last_verified_at")),
             ],
         )
+        + (f'<section class="static-detail-section detail-section"><h2>開催情報の出典</h2><p class="detail-copy"><a href="{html(event.get("calendar_source_url"))}" target="_blank" rel="noopener noreferrer">高崎市の公式イベントカレンダー</a>（掲載情報の確認日：{html(format_verified_date(event.get("last_verified_at")))}）</p></section>' if event.get("calendar_source_url") else "")
         + action_links(
             event.get("canonical_url"),
             "公式ページで最新を確認",
