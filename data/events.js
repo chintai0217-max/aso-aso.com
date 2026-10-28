@@ -4,7 +4,7 @@ window.EVENT_DATA = {
     "event_count": 247,
     "source_count": 322,
     "child_play_place_count": 102,
-    "image_asset_count": 1369
+    "image_asset_count": 1372
   },
   "events": [
     {
@@ -10333,7 +10333,30 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.pref.gunma.jp/page/777585.html",
       "notes": "クーポンは予定数に達すると配布終了。参加方法・対象スポットは公式ページで確認してください。",
       "source_names": "群馬県 八ッ場全力スタンプラリー",
-      "images": []
+      "images": [
+        {
+          "id": 2908,
+          "entity_type": "event",
+          "entity_id": 122,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Yanba_Dam_2021-05_1.jpg/960px-Yanba_Dam_2021-05_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Yanba_Dam_2021-05_1.jpg",
+          "title": "Yanba Dam 2021-05 1.jpg",
+          "alt_text": "Yanba Dam 2021-05 1.jpgの参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Qurren",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Yanba_Dam_2021-05_1.jpg/960px-Yanba_Dam_2021-05_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 123,
@@ -11574,7 +11597,30 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.pref.gunma.jp/site/houdou/776424.html",
       "notes": "直接会場へ。愛犬同伴可。県庁舎内には介助犬を除き動物は入れません。荒天中止です。",
       "source_names": "群馬県 Life with Pet ～ぐんまペット共生フェス2026～",
-      "images": []
+      "images": [
+        {
+          "id": 2906,
+          "entity_type": "event",
+          "entity_id": 151,
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Gunma_pref-office_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Gunma_pref-office_1.jpg",
+          "title": "Gunma pref-office 1.jpg",
+          "alt_text": "Gunma pref-office 1.jpgの参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Bakkai at Japanese Wikipedia",
+          "license_note": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Gunma_pref-office_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
     },
     {
       "id": 152,
@@ -11674,7 +11720,30 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/50171.html",
       "notes": "高崎駅西口から徒歩約3分。会場に駐車場はありません。",
       "source_names": "高崎市 上信電鉄感謝フェア2026",
-      "images": []
+      "images": [
+        {
+          "id": 2907,
+          "entity_type": "event",
+          "entity_id": 154,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Joushindenetsushaoku.jpg/960px-Joushindenetsushaoku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Joushindenetsushaoku.jpg",
+          "title": "Joushindenetsushaoku.jpg",
+          "alt_text": "Joushindenetsushaoku.jpgの参考写真",
+          "image_kind": "representative",
+          "width": null,
+          "height": null,
+          "credit": "Tokyodesert",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "reference_photo": true,
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-10-28",
+          "last_verified_at": "2026-10-28",
+          "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Joushindenetsushaoku.jpg/960px-Joushindenetsushaoku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": 155,
@@ -53067,6 +53136,69 @@ window.EVENT_DATA = {
       "credit": "Nyao148",
       "license_note": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2906,
+      "entity_type": "event",
+      "entity_id": 151,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Gunma_pref-office_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Gunma_pref-office_1.jpg",
+      "title": "Gunma pref-office 1.jpg",
+      "alt_text": "Gunma pref-office 1.jpgの参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Bakkai at Japanese Wikipedia",
+      "license_note": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2907,
+      "entity_type": "event",
+      "entity_id": 154,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Joushindenetsushaoku.jpg/960px-Joushindenetsushaoku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Joushindenetsushaoku.jpg",
+      "title": "Joushindenetsushaoku.jpg",
+      "alt_text": "Joushindenetsushaoku.jpgの参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Tokyodesert",
+      "license_note": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_photo": true,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-10-28",
+      "last_verified_at": "2026-10-28",
+      "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
+    },
+    {
+      "id": 2908,
+      "entity_type": "event",
+      "entity_id": 122,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Yanba_Dam_2021-05_1.jpg/960px-Yanba_Dam_2021-05_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Yanba_Dam_2021-05_1.jpg",
+      "title": "Yanba Dam 2021-05 1.jpg",
+      "alt_text": "Yanba Dam 2021-05 1.jpgの参考写真",
+      "image_kind": "representative",
+      "width": null,
+      "height": null,
+      "credit": "Qurren",
+      "license_note": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "reference_photo": true,
       "status": "verified",
       "confidence": "high",
