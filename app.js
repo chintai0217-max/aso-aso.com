@@ -1043,10 +1043,10 @@ function eventCard(event) {
 
 function placeCard(place) {
   const displayImage = bestThumbImage(place);
-  const image = displayImage ? mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place) : "";
+  const image = mediaThumb(displayImage, place.name, placeTypeLabel(place.place_type), place.images, place);
   const indoorOutdoor = indoorOutdoorLabel(place.indoor_outdoor);
   return `
-    <a class="event-card event-card--place ${displayImage ? "has-image" : "no-image"} ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
+    <a class="event-card event-card--place has-image ${isCandidate(place) ? "is-candidate" : ""}" href="${escapeHtml(recordPageHref(place, "place"))}">
       ${image}
       <div class="event-main">
         <div class="event-card__topline">
@@ -1104,15 +1104,31 @@ function formatDateCompact(value, { includeYear = true } = {}) {
 }
 
 function mediaThumb(url, alt, fallbackLabel, images = [], record = {}) {
-  const googlePlaceId = googlePhotoCandidate(record) ? record.google_place_id : "";
-  const extraCount = Math.max(0, (images || []).length - 1);
+  const googlePlaceId = !url && googlePhotoCandidate(record) ? record.google_place_id : "";
+  const candidates = url
+    ? [url, ...collectImageCandidates(record).map((item) => item.url).filter((candidate) => candidate !== url)].slice(0, 5)
+    : [];
   return `
     <div class="media-thumb ${url ? "" : googlePlaceId ? "is-google-pending" : "is-empty"}" ${googlePlaceId ? `data-google-place-id="${escapeHtml(googlePlaceId)}" data-google-photo-alt="${escapeHtml(alt)}"` : ""}>
-      <span>${escapeHtml(fallbackLabel || "画像")}</span>
-      ${extraCount ? `<em class="photo-count">+${extraCount}</em>` : ""}
-      ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.closest('.media-thumb').classList.add('is-loaded');if(this.naturalWidth<180)this.closest('.media-thumb').classList.add('is-lowres')" onerror="this.closest('.media-thumb').classList.add('is-failed')">` : ""}
+      <span>写真準備中</span>
+      ${url ? `<img src="${escapeHtml(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-image-candidates="${escapeHtml(JSON.stringify(candidates))}" data-image-index="0" onload="this.closest('.media-thumb').classList.add('is-loaded');if(this.naturalWidth<180)this.closest('.media-thumb').classList.add('is-lowres')" onerror="retryCardImage(this)">` : ""}
     </div>
   `;
+}
+
+function retryCardImage(image) {
+  const target = image.closest(".media-thumb");
+  const candidates = JSON.parse(image.dataset.imageCandidates || "[]");
+  const next = Number(image.dataset.imageIndex || 0) + 1;
+  if (next < candidates.length) {
+    image.dataset.imageIndex = String(next);
+    image.src = candidates[next];
+    return;
+  }
+  target.classList.remove("is-loaded");
+  target.classList.add("is-failed");
+  const label = target.querySelector("span");
+  if (label) label.textContent = "画像を表示できません";
 }
 
 function upgradeImageUrl(url = "") {

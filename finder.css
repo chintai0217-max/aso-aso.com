@@ -1524,3 +1524,20 @@
 }
 
 .finder-page .filter-note { margin: 4px 0 0; color: #536979; font-size: 12px; line-height: 1.5; }
+
+/* Keep image and text aligned even when a photo is unavailable. */
+.finder-page .event-card .media-thumb.is-empty,
+.finder-page .event-card .media-thumb.is-failed {
+  border: 1px solid #d8e4e8;
+  background: linear-gradient(145deg, #eaf4f3, #f6f3e9);
+}
+.finder-page .event-card .media-thumb span {
+  padding: 8px;
+  color: #526b78;
+  font-size: 11px;
+  font-weight: 700;
+}
+@media (max-width: 680px) {
+  .finder-page .event-card { grid-template-columns: 88px minmax(0, 1fr); }
+  .finder-page .event-card .media-thumb { width: 88px; height: 88px; min-height: 88px; }
+}
