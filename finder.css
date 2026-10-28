@@ -1541,3 +1541,25 @@
   .finder-page .event-card { grid-template-columns: 88px minmax(0, 1fr); }
   .finder-page .event-card .media-thumb { width: 88px; height: 88px; min-height: 88px; }
 }
+
+/* Keep explanatory text in the filter content column, not the narrow label column. */
+.finder-page .quick-filter-section .filter-note {
+  grid-column: 2;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+.finder-page .sort-control { flex: 0 0 auto; }
+.finder-page .sort-control select { width: auto; min-width: 108px; }
+@media (max-width: 760px) {
+  .finder-page .location-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .finder-page .field select { width: 100%; min-width: 0; }
+  .finder-page .sort-control select { min-width: 95px; }
+  .finder-page .app-header { padding: 16px 0 18px; }
+  .finder-page .app-header h1 { font-size: clamp(21px, 5.6vw, 28px); }
+}
+@media (max-width: 390px) {
+  .finder-page .quick-filter-section .filter-note { grid-column: 1; }
+}
+
+.finder-page .event-card .media-thumb { align-self: start; }

@@ -766,7 +766,7 @@ function renderDateChips() {
   const scopes = [
     ["all", "全期間", "list"],
     ["upcoming", "開催予定", "ticket"],
-    ["weekend", weekendDateLabel(), "calendar"],
+    ["weekend", "今週末", "calendar"],
     ["month", "今月", "calendar"],
     ["past", "過去", "clock"],
   ];
@@ -940,8 +940,13 @@ function renderList(records) {
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(record);
     });
-    els.eventList.innerHTML = Array.from(groups.entries())
-      .map(([key, items]) => renderDateGroup(key, items, cardFn))
+    const firstUpcoming = Array.from(groups.keys()).find((key) => key !== "開催中") || "開催中";
+    const entries = Array.from(groups.entries());
+    if (state.dateScope === "weekend") {
+      entries.sort(([a], [b]) => Number(a === "開催期間が長いイベント") - Number(b === "開催期間が長いイベント"));
+    }
+    els.eventList.innerHTML = entries
+      .map(([key, items]) => renderDateGroup(key, items, cardFn, key === firstUpcoming))
       .join("");
   } else {
     const visibleRecords = state.mode === "places" ? records.slice(0, state.visiblePlaceCount) : records;
@@ -960,11 +965,11 @@ function renderList(records) {
   hydrateGooglePhotoTargets(els.eventList);
 }
 
-function renderDateGroup(key, items, cardFn) {
+function renderDateGroup(key, items, cardFn, isFirstUpcoming = false) {
   const cards = items.map(cardFn).join("");
   const count = items.length;
   const isMonth = /^\d{4}-\d{2}$/.test(key);
-  const collapseByDefault = state.dateScope !== "weekend" && (key === "開催中" || (isMonth && key !== TODAY.slice(0, 7)));
+  const collapseByDefault = state.dateScope !== "weekend" && !isFirstUpcoming && (key === "開催中" || isMonth);
 
   if (!collapseByDefault) {
     return `${dateGroupHeadingHtml(key, count)}${cards}`;
@@ -1619,6 +1624,11 @@ function formatMonthDay(value) {
 function groupKey(record) {
   const start = record.start_date || "";
   if (!start) return "未定";
+  if (state.dateScope === "weekend") {
+    const end = record.end_date || start;
+    const duration = (Date.parse(`${end}T00:00:00Z`) - Date.parse(`${start}T00:00:00Z`)) / 86400000 + 1;
+    return duration >= 14 ? "開催期間が長いイベント" : "今週末の短期イベント";
+  }
   if (state.dateScope !== "past" && start < TODAY) return "開催中";
   return start.slice(0, 7);
 }
@@ -1626,6 +1636,7 @@ function groupKey(record) {
 function monthHeading(key) {
   if (key === "未定") return "日程未定";
   if (key === "開催中") return "開催中・通年";
+  if (key === "開催期間が長いイベント" || key === "今週末の短期イベント") return key;
   const [year, month] = key.split("-");
   return `${year}年${Number(month)}月`;
 }
