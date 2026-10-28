@@ -452,7 +452,8 @@ def detail_hero_html(record, alt):
             license_name = image.get("license_note") or ""
             license_url = image.get("license_url") or ""
             license_html = (f' / <a href="{html(license_url)}" target="_blank" rel="noopener noreferrer">{html(license_name)}</a>' if license_url else f' / {html(license_name)}')
-            credits.append(f'会場・施設の参考写真（表示枠でトリミングあり）：<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>{license_html}')
+            reference_label = image.get("reference_photo_label") or "会場・施設の参考写真"
+            credits.append(f'{html(reference_label)}（表示枠でトリミングあり）：<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>{license_html}')
         else:
             label = image.get("credit") or urlparse(source_url).netloc.removeprefix("www.") or "掲載元ページ"
             credits.append(f'<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>')
@@ -1275,7 +1276,7 @@ def hub_image_credit(record, image_url):
     if not image:
         return ""
     credit = " / ".join(filter(None, [image.get("title"), image.get("credit"), image.get("license_note")]))
-    return f'<p class="card-image-credit">会場・施設の参考写真（トリミングあり）：{html(credit)}。出典・ライセンスは詳細へ</p>'
+    return f'<p class="card-image-credit">{html(image.get("reference_photo_label") or "会場・施設の参考写真")}（トリミングあり）：{html(credit)}。出典・ライセンスは詳細へ</p>'
 
 
 def hub_card_event(event):

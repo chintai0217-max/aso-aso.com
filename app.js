@@ -1080,7 +1080,7 @@ function cardImageCredit(record, url) {
   const image = (record.images || []).find((item) => item.image_url === url && item.reference_photo);
   if (!image) return "";
   const attribution = [image.title, image.credit, image.license_note].filter(Boolean).join(" / ");
-  return `<p class="card-image-credit">会場・施設の参考写真（トリミングあり）：${escapeHtml(attribution)}。出典・ライセンスは詳細へ</p>`;
+  return `<p class="card-image-credit">${escapeHtml(image.reference_photo_label || "会場・施設の参考写真")}（トリミングあり）：${escapeHtml(attribution)}。出典・ライセンスは詳細へ</p>`;
 }
 
 function eventDateRangeLabel(event) {
