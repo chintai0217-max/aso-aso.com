@@ -846,7 +846,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102n">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102o">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -1100,9 +1100,9 @@ def render_place(place):
         + (f'<p class="experience-intro">{html(place.get("hero_copy"))}</p>' if place.get("hero_copy") else "")
         + fact_strip(
             [
-                ("対象", compact_text(place.get("target_age_note"))),
-                ("料金", compact_text(place.get("price_note"))),
-                ("時間", compact_text(place.get("hours_note"))),
+                ("対象", place.get("target_age_note")),
+                ("料金", place.get("price_note")),
+                ("時間", place.get("hours_note")),
                 ("屋内/屋外", indoor if indoor and indoor != "屋内外未設定" else ""),
             ]
         )

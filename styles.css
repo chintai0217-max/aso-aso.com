@@ -4702,7 +4702,7 @@ p,
   }
 
   .static-detail-page .static-detail .detail-fact-strip > span {
-    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-columns: 92px minmax(0, 1fr);
     gap: 8px;
     padding: 11px 12px;
   }
