@@ -1013,7 +1013,7 @@ def render_event(event):
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">{html(prefecture)}のイベント</p><h1>{html(event.get("title"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
-        + (f'<p class="experience-intro">{html(event.get("hero_copy"))}</p>' if event.get("hero_copy") else "")
+        + (f'<p class="experience-intro">{html(event.get("hero_copy") or event.get("summary"))}</p>' if event.get("hero_copy") or event.get("summary") else "")
         + fact_strip(
             [
                 ("開催日", date_short),
@@ -1027,11 +1027,10 @@ def render_event(event):
         + "</div><div class=\"static-detail-body\">"
         + (editorial_sections(event) if event.get("experience_cards") else
            section_paragraph("このイベントの魅力", event.get("appeal"))
-           + section_paragraph("概要", event.get("summary"))
            + event_highlights(event.get("highlights")))
         + recommend_section(event)
         + detail_section("参加前に確認したいこと", list((event.get("visitor_info") or {}).items()))
-        + section_paragraph("補足", event.get("notes") if not event.get("experience_cards") else None)
+        + section_paragraph("補足", event.get("notes"))
         + detail_section(
             "会場・アクセス",
             [
@@ -1097,7 +1096,7 @@ def render_place(place):
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">{html(prefecture)}の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
-        + (f'<p class="experience-intro">{html(place.get("hero_copy"))}</p>' if place.get("hero_copy") else "")
+        + (f'<p class="experience-intro">{html(place.get("hero_copy") or place.get("features"))}</p>' if place.get("hero_copy") or place.get("features") else "")
         + fact_strip(
             [
                 ("対象", place.get("target_age_note")),
@@ -1109,8 +1108,7 @@ def render_place(place):
         + "</div><div class=\"static-detail-body\">"
         + (editorial_sections(place) if place.get("experience_cards") else
            section_paragraph("この遊び場の魅力", place.get("appeal"))
-           + event_highlights(place.get("highlights"))
-           + section_paragraph("特徴", place.get("features")))
+           + event_highlights(place.get("highlights")))
         + detail_section("お出かけ前に確認したいこと", list((place.get("visitor_info") or {}).items()))
         + section_paragraph("補足", place.get("notes"))
         + detail_section(

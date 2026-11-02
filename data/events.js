@@ -11958,9 +11958,9 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-10-15",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/fujimi/gyomu/4/17704.html",
-      "notes": "会場駐車場には限りがあります。雨天決行、荒天中止。",
+      "notes": "出店・体験の内容は変更される場合があります。",
       "source_names": "前橋市 第29回富士見産業祭2026",
       "images": [
         {
@@ -11979,10 +11979,32 @@ window.EVENT_DATA = {
           "confidence": "medium",
           "discovered_at": "2026-10-22",
           "last_verified_at": "2026-10-22",
-          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
+          "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。",
+          "reference_photo": true,
+          "reference_photo_label": "過去の開催時の参考写真"
         }
       ],
-      "primary_image_url": "https://www.city.maebashi.gunma.jp/material/images/group/23/F11.JPG"
+      "primary_image_url": "https://www.city.maebashi.gunma.jp/material/images/group/23/F11.JPG",
+      "hero_copy": "富士見地域の農産物や文化に出会える一日。マルシェ、ステージ、子ども向けの体験を会場ごとに楽しめます。",
+      "experience_cards": [
+        {
+          "title": "富士見の味を探す",
+          "body": "公民館駐車場のマルシェでは、地域の農産物や野菜、米、パン・焼菓子などの販売を予定しています。"
+        },
+        {
+          "title": "公民館で展示やステージ",
+          "body": "公民館内では地域団体の展示・体験コーナーとステージイベントを予定しています。"
+        },
+        {
+          "title": "公園で車両展示やポニー体験",
+          "body": "隣接する田島なかよし広場公園には、消防・警察車両の展示やポニー乗馬体験が予定されています。"
+        }
+      ],
+      "visitor_info": {
+        "開催時間": "11月3日 9:30〜14:30。",
+        "会場": "富士見公民館・田島なかよし広場公園。",
+        "事前確認": "出店や催しの詳細、雨天時の対応や駐車場は公式案内をご確認ください。"
+      }
     },
     {
       "id": 160,
@@ -21721,23 +21743,39 @@ window.EVENT_DATA = {
       "start_time": null,
       "end_time": null,
       "category": "performance",
-      "price_note": null,
+      "price_note": "各回500円。未就学児は保護者の膝上に限り無料（席が必要な場合は有料）。",
       "organizer": null,
-      "summary": "太田市の公式案内に掲載された催し。会場は太田市民会館 スタジオ。",
+      "summary": "竹を使った楽器の演奏を楽しむ、東京楽竹団のワンコインコンサート。ファミリー向けと一般向けの2公演があります。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-29",
-      "last_verified_at": "2026-10-29",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://www.city.ota.gunma.jp/page/1065664.html",
-      "notes": "太田市公式カレンダーの掲載情報です。 開催時間・日程：1回目 13時00分開演 ファミリー向け 2回目 15時30分開演 一般向け",
+      "notes": "予約後の支払い期限や車いす席については公式案内をご確認ください。",
       "source_names": "太田市公式イベントカレンダー",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "市カレンダーに「事前申込必要」と記載。最新の受付状況は公式情報をご確認ください。"
+      "reservation_note": "チケットの購入が必要。販売状況や購入方法は公式情報をご確認ください。",
+      "hero_copy": "竹の音色を楽しむ2つの公演。13時の回は小さな子どもも楽しめるファミリー向けの曲目が多めです。",
+      "experience_cards": [
+        {
+          "title": "13時はファミリー向け",
+          "body": "1回目は13:00開演、12:30開場。公式案内では、ファミリー向けの曲目が多く、小さな子どもから楽しめると紹介されています。"
+        },
+        {
+          "title": "15時30分は一般向け",
+          "body": "2回目は15:30開演、15:00開場。一般向けの公演です。"
+        }
+      ],
+      "visitor_info": {
+        "料金": "各回自由席500円。未就学児は膝上のみ無料。",
+        "チケット": "販売予定枚数に達し次第、受付終了。最新の販売状況を公式ページでご確認ください。",
+        "会場": "太田市民会館 スタジオ"
+      }
     },
     {
       "id": 436,
@@ -22132,7 +22170,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://www.city.isesaki.lg.jp/soshiki/kyoikubu/toshokan/7845.html",
       "notes": "入場無料。",
       "source_names": "伊勢崎市公式ホームページ",
@@ -22140,7 +22178,27 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "hero_copy": "読み聞かせや工作、講演、マルシェまで。本をきっかけに家族で楽しめる図書館のお祭りです。",
+      "experience_cards": [
+        {
+          "title": "本との出会いを楽しむ",
+          "body": "読み聞かせライブやブックトーク、読書に関する展示、リユース本の配布を予定しています。"
+        },
+        {
+          "title": "手を動かして楽しむ",
+          "body": "まゆクラフトやオリジナルしおり作り、ライブラリー・クイズラリーなどが予定されています。"
+        },
+        {
+          "title": "講演や屋外の催しも",
+          "body": "児童書作家いとうみくさんの講演会・サイン会や、のっぱらマルシェなども案内されています。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "11月3日 10:00〜16:00。図書館は17:00まで開館。",
+        "会場": "伊勢崎市図書館・赤石楽舎・広瀬川緑地。",
+        "料金": "入場無料。各企画の詳細や参加条件は公式案内をご確認ください。"
+      }
     },
     {
       "id": 449,
