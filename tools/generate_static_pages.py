@@ -976,6 +976,7 @@ def render_event(event):
             ]
         )
         + "</div><div class=\"static-detail-body\">"
+        + section_paragraph("このイベントの魅力", event.get("appeal"))
         + section_paragraph("概要", event.get("summary"))
         + event_highlights(event.get("highlights"))
         + recommend_section(event)
@@ -1054,6 +1055,8 @@ def render_place(place):
             ]
         )
         + "</div><div class=\"static-detail-body\">"
+        + section_paragraph("この遊び場の魅力", place.get("appeal"))
+        + event_highlights(place.get("highlights"))
         + section_paragraph("特徴", place.get("features"))
         + section_paragraph("補足", place.get("notes"))
         + detail_section(

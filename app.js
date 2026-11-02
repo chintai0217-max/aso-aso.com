@@ -1038,7 +1038,7 @@ function eventCard(event) {
           ${time ? `<span class="meta-item">${uiIcon("clock")}${escapeHtml(time)}</span>` : ""}
           <span class="meta-item event-card__location">${uiIcon("pin")}${escapeHtml(placeLine || "地域未設定")}</span>
         </p>
-        ${event.summary ? `<p class="event-card__summary">${escapeHtml(compactText(event.summary, 100))}</p>` : ""}
+        ${event.appeal || event.summary ? `<p class="event-card__summary">${escapeHtml(compactText(event.appeal || event.summary, 100))}</p>` : ""}
         ${event.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(event.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(event.price_note, 52)))}</span></div>
         ${cardImageCredit(event, displayImage)}
@@ -1067,7 +1067,7 @@ function placeCard(place) {
         </p>
         <p class="event-card__place-hours">${uiIcon("clock")}<span>${escapeHtml(compactText(place.hours_note || "利用時間は公式案内をご確認ください", 90))}</span></p>
         ${place.closed_note ? `<p class="event-card__place-closed"><strong>休館：</strong>${escapeHtml(compactText(place.closed_note, 76))}</p>` : ""}
-        <p class="event-card__summary">${escapeHtml(compactText(place.features || "施設の設備や利用条件は詳細をご確認ください", 100))}</p>
+        <p class="event-card__summary">${escapeHtml(compactText(place.appeal || place.features || "施設の設備や利用条件は詳細をご確認ください", 100))}</p>
         ${place.reservation_note ? `<p class="record-note"><strong>予約：</strong>${escapeHtml(compactText(place.reservation_note, 68))}</p>` : ""}
         <div class="event-card__bottom"><span class="event-card__fee">${uiIcon("yen")}${escapeHtml(displayOrConfirm(compactText(place.price_note, 52)))}</span></div>
         ${cardImageCredit(place, displayImage)}

@@ -9797,7 +9797,8 @@ window.EVENT_DATA = {
         "受付": "13:30～15:30、最終受付15:00。",
         "会場": "群馬県立館林美術館 別館ワークショップ室。"
       },
-      "reservation_note": "申込不要。直接会場へ"
+      "reservation_note": "申込不要。直接会場へ",
+      "appeal": "わたに色をつけ、ふわふわの作品づくり。完成した作品はカプセルに入れて持ち帰れます。"
     },
     {
       "id": 111,
@@ -10938,7 +10939,8 @@ window.EVENT_DATA = {
         "駐車場": "当日は元気21の駐車場が大変混み合う見込みです。",
         "注意": "発表内容や時間は変更される場合があります。"
       },
-      "reservation_note": "観覧方法は公式案内を確認"
+      "reservation_note": "観覧方法は公式案内を確認",
+      "appeal": "作品展や読み聞かせ、ステージ発表を巡りながら、子どもたちの学校での取り組みに触れられます。"
     },
     {
       "prefecture": "群馬県",
@@ -12933,7 +12935,8 @@ window.EVENT_DATA = {
         "服装": "長袖・長ズボン・靴を着用。",
         "天候": "雨天時および雨天の翌日は利用できません。",
         "利用上の注意": "落ち葉の中に潜ることはできません。"
-      }
+      },
+      "appeal": "山盛りの落ち葉の中に入って遊べる、秋の公園ならではの体験です。"
     },
     {
       "id": 187,
@@ -22815,7 +22818,8 @@ window.EVENT_DATA = {
       "visitor_info": {
         "集合場所": "2階アトリエから",
         "参加方法": "開催時間内は入退場自由。申込不要。"
-      }
+      },
+      "appeal": "ミッションに挑戦しながら作品を見て、最後はオリジナル缶バッジ作りも楽しめます。"
     },
     {
       "id": 471,
@@ -22876,7 +22880,8 @@ window.EVENT_DATA = {
       "visitor_info": {
         "集合場所": "2階アトリエから",
         "参加方法": "開催時間内は入退場自由。申込不要。"
-      }
+      },
+      "appeal": "作品のぬりえをしてから本物と見比べる、親子で参加できる美術鑑賞です。"
     },
     {
       "id": 472,
@@ -22937,7 +22942,8 @@ window.EVENT_DATA = {
       "visitor_info": {
         "集合場所": "2階展示室入口から",
         "参加方法": "開催時間内は入退場自由。申込不要。"
-      }
+      },
+      "appeal": "絵の中に描かれたお宝を探すビンゴで、作品をじっくり見る楽しさに出会えます。"
     },
     {
       "id": 473,
@@ -22998,7 +23004,8 @@ window.EVENT_DATA = {
       "visitor_info": {
         "集合場所": "2階展示室入口から",
         "参加方法": "開催時間内は入退場自由。申込不要。"
-      }
+      },
+      "appeal": "シルエットを手がかりに作品を探し、展示室を巡るアートツアーです。"
     },
     {
       "id": 474,
@@ -24129,7 +24136,8 @@ window.EVENT_DATA = {
         "天候": "雨天中止。",
         "持ち物・服装": "望遠鏡を持っている方は持参。暖かい服装でお越しください。",
         "駐車場": "17:30以降は第一駐車場を利用。"
-      }
+      },
+      "appeal": "月や土星を観察しながら、月明かりの下で音楽ライブも楽しめる夕方の公園イベントです。"
     },
     {
       "id": 510,
@@ -24191,7 +24199,8 @@ window.EVENT_DATA = {
         "持ち物": "子どもの世話用品、飲み物。",
         "申込": "11月11日締切。空きがあれば当日受付も可能。",
         "その他": "途中入退場・再入場可。"
-      }
+      },
+      "appeal": "親子で色遊びを学んだ後は、絵本や知育玩具で自由遊び。子育て相談もできます。"
     },
     {
       "id": 511,
@@ -31320,7 +31329,8 @@ window.EVENT_DATA = {
         "受付": "9:30から歴史博物館前。",
         "持ち物": "敷き物、バンダナ、飲み物。",
         "天候": "天候などにより内容が変更される場合があります。"
-      }
+      },
+      "appeal": "森の色合わせなどのネイチャーゲームを通して、紅葉の公園で秋の自然に親しめます。"
     },
     {
       "id": 740,
@@ -38200,7 +38210,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "medium",
       "discovered_at": "2026-07-05",
-      "last_verified_at": "2026-07-05",
+      "last_verified_at": "2026-11-02",
       "notes": null,
       "source_names": "前橋市 児童文化センター",
       "images": [
@@ -38264,7 +38274,13 @@ window.EVENT_DATA = {
       ],
       "primary_image_url": "https://www.city.maebashi.gunma.jp/material/images/group/104/015_88762459.jpg",
       "google_place_id": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "appeal": "信号や横断歩道のある公園で交通ルールに親しみ、児童文化センターではプラネタリウムも楽しめます。",
+      "highlights": [
+        "交通学習ゾーンでは、親子で歩いたり足踏みカートに乗ったりできます。",
+        "大型遊具やゴーカートがあり、児童文化センターには図書室やプラネタリウムがあります。",
+        "自転車教室中は交通学習ゾーンや一部遊具を利用できない時間があります。"
+      ]
     },
     {
       "id": 24,
@@ -39579,7 +39595,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-07-05",
-      "last_verified_at": "2026-07-05",
+      "last_verified_at": "2026-11-02",
       "notes": null,
       "source_names": "ぐんまこどもの国児童会館 公式サイト",
       "images": [
@@ -39795,7 +39811,13 @@ window.EVENT_DATA = {
       ],
       "primary_image_url": "https://kodomonokuni.or.jp/info/wp-content/uploads/R8夏_HPスライダ.jpg",
       "google_place_id": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "appeal": "科学に触れた後に工作や絵本も楽しめる、遊び方を選べる屋内施設。公園と合わせて訪れることもできます。",
+      "highlights": [
+        "サイエンスワンダーランドでは、目の錯覚などを体験できます。",
+        "クラフトルームやこども図書室、プレイルームがあります。",
+        "スペースシアターやイベントもあり、利用内容は公式案内で確認できます。"
+      ]
     },
     {
       "id": 1,
@@ -39819,7 +39841,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-07-05",
-      "last_verified_at": "2026-07-05",
+      "last_verified_at": "2026-11-02",
       "notes": null,
       "source_names": "ぐんまこどもの国 公式サイト",
       "images": [
@@ -39921,7 +39943,13 @@ window.EVENT_DATA = {
       ],
       "primary_image_url": "https://gunma-kodomonokuni.jp/info/wp-content/uploads/topimg/img_top01.jpg",
       "google_place_id": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "appeal": "遊具や芝生で体を動かしたり、自然を観察したり。屋外遊びと工房でのものづくりを組み合わせられる公園です。",
+      "highlights": [
+        "大型遊具や芝生広場があり、外遊びを楽しめます。",
+        "ふれあい工房では、木工や陶芸の体験ができます。",
+        "園内には児童会館があり、工作や科学に親しむ施設もあります。"
+      ]
     },
     {
       "id": 27,
@@ -44492,7 +44520,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-07-05",
-      "last_verified_at": "2026-07-05",
+      "last_verified_at": "2026-11-02",
       "notes": null,
       "source_names": "観音山ファミリーパーク 公式サイト",
       "images": [
@@ -44632,7 +44660,13 @@ window.EVENT_DATA = {
       ],
       "primary_image_url": "https://kfp-tomo.org/wp-content/uploads/2023/02/eye-gekkanyoteihyo01-550x550.jpg",
       "google_place_id": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "appeal": "森に囲まれた広い芝生で遊んだり、ふわふわドームやローラーすべり台に挑戦したり。自然の中で体を動かせる公園です。",
+      "highlights": [
+        "森の芝生広場は、サッカーコート約3面分の広さ。",
+        "水と花の広場にはふわふわドームや遊具があり、噴水では季節限定で水遊びができます。",
+        "全長約62メートルのローラーすべり台や、自然の森の散策コースもあります。"
+      ]
     },
     {
       "id": 6,
