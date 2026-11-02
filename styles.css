@@ -2803,6 +2803,17 @@ button.coverage-item.is-active .ui-icon {
   line-height: 1.35;
 }
 
+.event-highlights-list {
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+.event-highlights-list li + li {
+  margin-top: 0.45em;
+}
+
 .static-detail-section p {
   margin: 0;
   color: var(--ink);

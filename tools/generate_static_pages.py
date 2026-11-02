@@ -588,6 +588,20 @@ def section_paragraph(title, text):
     )
 
 
+def event_highlights(items):
+    """Render source-checked highlights when an event has editorial detail."""
+    if not items:
+        return ""
+    entries = "".join(f'<li>{html(item)}</li>' for item in items if item)
+    if not entries:
+        return ""
+    return (
+        '<section class="static-detail-section detail-section event-highlights">'
+        '<h2>見どころ・体験できること</h2>'
+        f'<ul class="event-highlights-list">{entries}</ul></section>'
+    )
+
+
 def recommend_section(event):
     recommended = str(event.get("recommended_for") or "").strip()
     scenes = str(event.get("best_scenes") or "").strip()
@@ -784,7 +798,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261022a">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102j">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -957,11 +971,15 @@ def render_event(event):
                 ("時間", time_text(event)),
                 ("会場", event.get("venue_name")),
                 ("料金", event.get("price_note")),
+                ("対象", event.get("target_audience")),
+                ("予約", event.get("reservation_note") if event.get("highlights") else None),
             ]
         )
         + "</div><div class=\"static-detail-body\">"
         + section_paragraph("概要", event.get("summary"))
+        + event_highlights(event.get("highlights"))
         + recommend_section(event)
+        + detail_section("参加前に確認したいこと", list((event.get("visitor_info") or {}).items()))
         + section_paragraph("補足", event.get("notes"))
         + detail_section(
             "会場・アクセス",

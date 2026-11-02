@@ -9754,13 +9754,13 @@
       "start_time": "13:30",
       "end_time": "15:30",
       "category": "workshop",
-      "price_note": "無料（展示観覧は別途）",
+      "price_note": "無料",
       "organizer": "群馬県立館林美術館",
-      "summary": "色わたを使った子ども向けアートプログラム。",
+      "summary": "色をつけたわたを使い、自分だけの「ふわふわ色わた」を作るワークショップ。完成した作品はカプセルに入れて持ち帰れます。美術館の別館ワークショップ室で開催します。",
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-10-15",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://gmat.pref.gunma.jp/event/ev/20261114/",
       "notes": "予約不要。対象などの詳細は公式ページで確認してください。",
       "source_names": "群馬県立館林美術館 たてび☆びじゅつ部 ふわふわ色わたアート",
@@ -9787,7 +9787,17 @@
           "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Gunma_Museum_of_Art%2C_Tatebayashi_1.jpg/960px-Gunma_Museum_of_Art%2C_Tatebayashi_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Gunma_Museum_of_Art%2C_Tatebayashi_1.jpg/960px-Gunma_Museum_of_Art%2C_Tatebayashi_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "highlights": [
+        "わたに好きな色をつけ、ふわふわの作品を作ります。",
+        "開催時間中の好きな時間に参加でき、制作時間は約30分。"
+      ],
+      "target_audience": "幼児～一般（小学3年生以下は保護者同伴）",
+      "visitor_info": {
+        "受付": "13:30～15:30、最終受付15:00。",
+        "会場": "群馬県立館林美術館 別館ワークショップ室。"
+      },
+      "reservation_note": "申込不要。直接会場へ"
     },
     {
       "id": 111,
@@ -10874,7 +10884,7 @@
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-10-15",
+      "last_verified_at": "2026-11-02",
       "images": [
         {
           "id": 2892,
@@ -10912,13 +10922,23 @@
       "category": "festival",
       "price_note": "公式ページに参加費の記載なし",
       "organizer": "前橋市 学務管理課",
-      "summary": "市内の小・中・特別支援学校、幼稚園、市立前橋高校の文化活動を発表するイベント。図工美術作品展、こども図書館のリレーおはなし会、ステージ・展示・ブース発表などを予定しています。",
+      "summary": "前橋市内の学校や幼稚園の子どもたちが、日頃取り組んでいる文化活動を発表する学校文化祭。図工・美術作品の展示や読み聞かせ、ステージ発表などを会場の各フロアで楽しめます。",
       "recommended_for": "子どもたちの発表や作品展示を見たい家族",
       "best_scenes": "前橋中心部で、親子で学校文化にふれたい週末",
       "canonical_url": "https://www.city.maebashi.gunma.jp/11/51256.html",
       "notes": "開催時間は両日10時～16時。内容や時間は変更となる場合があります。",
       "source_names": "前橋市 まえばし学校フェスタ2026",
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi_Plaza_Genki_21_building.JPG/960px-Maebashi_Plaza_Genki_21_building.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi_Plaza_Genki_21_building.JPG/960px-Maebashi_Plaza_Genki_21_building.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "highlights": [
+        "1階では図工美術作品展、2階の前橋こども図書館ではリレーおはなし会。",
+        "3階ではステージ発表や展示・ブース発表などを予定。"
+      ],
+      "visitor_info": {
+        "開催時間": "11月14日・15日とも10:00～16:00。",
+        "駐車場": "当日は元気21の駐車場が大変混み合う見込みです。",
+        "注意": "発表内容や時間は変更される場合があります。"
+      },
+      "reservation_note": "観覧方法は公式案内を確認"
     },
     {
       "prefecture": "群馬県",
@@ -12870,13 +12890,13 @@
       "category": "kids",
       "price_note": "無料",
       "organizer": "ぐんまこどもの国",
-      "summary": "園内に用意された山盛りの落ち葉に入って遊べる季節の体験です。",
+      "summary": "ぐんまこどもの国に、山盛りの落ち葉を使った遊び場が登場。落ち葉の中に入って、秋ならではの自然に触れながら遊べます。11月21日から23日まで、どなたでも無料で参加できます。",
       "recommended_for": "落ち葉遊びを楽しみたい子どもと家族",
       "best_scenes": "屋外で秋の自然にふれながら、体を使って遊びたいとき",
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-10-15",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://gunma-kodomonokuni.jp/xo_event/%E8%90%BD%E3%81%A1%E8%91%89%E3%83%97%E3%83%BC%E3%83%AB-3/",
       "notes": "対象はどなたでも。雨天時と雨天翌日は利用不可。長袖・長ズボン・靴を着用し、保護者の見守りが必要です。",
       "source_names": "ぐんまこどもの国 落ち葉プール（2026年11月）",
@@ -12903,7 +12923,17 @@
           "notes": "Wikimedia Commons; 施設・会場の参考写真。画像は表示枠でトリミングされる場合があります。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%2810%29.jpg/960px-%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%2810%29.jpg/960px-%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "highlights": [
+        "山盛りの落ち葉に入って遊べる季節の体験。",
+        "参加無料。小さな子どもは保護者が見守ってください。"
+      ],
+      "target_audience": "どなたでも",
+      "visitor_info": {
+        "服装": "長袖・長ズボン・靴を着用。",
+        "天候": "雨天時および雨天の翌日は利用できません。",
+        "利用上の注意": "落ち葉の中に潜ることはできません。"
+      }
     },
     {
       "id": 187,
@@ -22739,23 +22769,53 @@
       "start_time": "14:00",
       "end_time": "16:00",
       "category": "experience",
-      "price_note": "参加無料。",
+      "price_note": "参加無料（家族も無料）",
       "organizer": null,
-      "summary": "ミッションに挑戦しながら作品を鑑賞。",
+      "summary": "群馬県立近代美術館で、ワークシートを使って作品を楽しむ子ども向けアートツアー。今回のテーマは「わくわくアートミッション！」。美術館が初めての子どもも参加でき、ツアー後にはオリジナル缶バッジも作れます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://mmag.pref.gunma.jp/event/event-7273",
       "notes": "幼児～中学生が対象。家族も参加無料。終了後に缶バッジ作りもできます。",
       "source_names": "群馬県立近代美術館公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10470,
+          "entity_type": "event",
+          "entity_id": 470,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_The_Museum_of_Modern_Art,_Gunma_Takasaki_Japan05s3.jpg",
+          "title": "261010 The Museum of Modern Art, Gunma Takasaki Japan05s3.jpg",
+          "alt_text": "群馬県立近代美術館の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込不要、入退場自由。"
+      "reservation_note": "申込不要・入退場自由",
+      "highlights": [
+        "ミッションに挑戦しながら、作品を見るためのウォーミングアップをします。",
+        "ワークシートを使って展示作品を鑑賞します。",
+        "ツアーの後は、オリジナル缶バッジ作りも楽しめます。"
+      ],
+      "target_audience": "幼児～中学生と家族",
+      "visitor_info": {
+        "集合場所": "2階アトリエから",
+        "参加方法": "開催時間内は入退場自由。申込不要。"
+      }
     },
     {
       "id": 471,
@@ -22770,23 +22830,53 @@
       "start_time": "14:00",
       "end_time": "16:00",
       "category": "experience",
-      "price_note": "参加無料。",
+      "price_note": "参加無料（家族も無料）",
       "organizer": null,
-      "summary": "作品のぬりえをして本物と見比べます。",
+      "summary": "群馬県立近代美術館で、ワークシートを使って作品を楽しむ子ども向けアートツアー。今回のテーマは「ぬりえコレクション」。美術館が初めての子どもも参加でき、ツアー後にはオリジナル缶バッジも作れます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://mmag.pref.gunma.jp/event/event-7273",
       "notes": "幼児～中学生が対象。家族も参加無料。終了後に缶バッジ作りもできます。",
       "source_names": "群馬県立近代美術館公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10471,
+          "entity_type": "event",
+          "entity_id": 471,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_The_Museum_of_Modern_Art,_Gunma_Takasaki_Japan05s3.jpg",
+          "title": "261010 The Museum of Modern Art, Gunma Takasaki Japan05s3.jpg",
+          "alt_text": "群馬県立近代美術館の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込不要、入退場自由。"
+      "reservation_note": "申込不要・入退場自由",
+      "highlights": [
+        "作品のぬりえをして、展示されている本物と見比べます。",
+        "ワークシートを使って展示作品を鑑賞します。",
+        "ツアーの後は、オリジナル缶バッジ作りも楽しめます。"
+      ],
+      "target_audience": "幼児～中学生と家族",
+      "visitor_info": {
+        "集合場所": "2階アトリエから",
+        "参加方法": "開催時間内は入退場自由。申込不要。"
+      }
     },
     {
       "id": 472,
@@ -22801,23 +22891,53 @@
       "start_time": "14:00",
       "end_time": "16:00",
       "category": "experience",
-      "price_note": "参加無料。",
+      "price_note": "参加無料（家族も無料）",
       "organizer": null,
-      "summary": "展示室の作品の中からお宝を探します。",
+      "summary": "群馬県立近代美術館で、ワークシートを使って作品を楽しむ子ども向けアートツアー。今回のテーマは「アートのかけらビンゴ」。美術館が初めての子どもも参加でき、ツアー後にはオリジナル缶バッジも作れます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://mmag.pref.gunma.jp/event/event-7273",
       "notes": "幼児～中学生が対象。家族も参加無料。終了後に缶バッジ作りもできます。",
       "source_names": "群馬県立近代美術館公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10472,
+          "entity_type": "event",
+          "entity_id": 472,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_The_Museum_of_Modern_Art,_Gunma_Takasaki_Japan05s3.jpg",
+          "title": "261010 The Museum of Modern Art, Gunma Takasaki Japan05s3.jpg",
+          "alt_text": "群馬県立近代美術館の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込不要、入退場自由。"
+      "reservation_note": "申込不要・入退場自由",
+      "highlights": [
+        "作品の中に描かれた「お宝」を探しながらビンゴに挑戦します。",
+        "ワークシートを使って展示作品を鑑賞します。",
+        "ツアーの後は、オリジナル缶バッジ作りも楽しめます。"
+      ],
+      "target_audience": "幼児～中学生と家族",
+      "visitor_info": {
+        "集合場所": "2階展示室入口から",
+        "参加方法": "開催時間内は入退場自由。申込不要。"
+      }
     },
     {
       "id": 473,
@@ -22832,23 +22952,53 @@
       "start_time": "14:00",
       "end_time": "16:00",
       "category": "experience",
-      "price_note": "参加無料。",
+      "price_note": "参加無料（家族も無料）",
       "organizer": null,
-      "summary": "シルエットを頼りに作品を探します。",
+      "summary": "群馬県立近代美術館で、ワークシートを使って作品を楽しむ子ども向けアートツアー。今回のテーマは「どんな色かな」。美術館が初めての子どもも参加でき、ツアー後にはオリジナル缶バッジも作れます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://mmag.pref.gunma.jp/event/event-7273",
       "notes": "幼児～中学生が対象。家族も参加無料。終了後に缶バッジ作りもできます。",
       "source_names": "群馬県立近代美術館公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10473,
+          "entity_type": "event",
+          "entity_id": 473,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_The_Museum_of_Modern_Art,_Gunma_Takasaki_Japan05s3.jpg",
+          "title": "261010 The Museum of Modern Art, Gunma Takasaki Japan05s3.jpg",
+          "alt_text": "群馬県立近代美術館の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg/1280px-261010_The_Museum_of_Modern_Art%2C_Gunma_Takasaki_Japan05s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込不要、入退場自由。"
+      "reservation_note": "申込不要・入退場自由",
+      "highlights": [
+        "シルエットを手がかりに、展示室の中から作品を探します。",
+        "ワークシートを使って展示作品を鑑賞します。",
+        "ツアーの後は、オリジナル缶バッジ作りも楽しめます。"
+      ],
+      "target_audience": "幼児～中学生と家族",
+      "visitor_info": {
+        "集合場所": "2階展示室入口から",
+        "参加方法": "開催時間内は入退場自由。申込不要。"
+      }
     },
     {
       "id": 474,
@@ -23935,21 +24085,51 @@
       "category": "experience",
       "price_note": null,
       "organizer": null,
-      "summary": "月のクレーターや土星などを観察し、音楽ライブも楽しめる星空観察会。",
+      "summary": "群馬の森の大芝生広場で、月のクレーターや土星などを観察する夕方からの催しです。月明かりの下では音楽ライブも同時開催。家族や友人と夜空を見上げながら、天体と音楽を楽しめます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://gunmori.com/nature/1863/",
       "notes": "雨天中止。17:30以降は第一駐車場を利用。防寒のうえ、望遠鏡がある方は持参。",
       "source_names": "群馬の森公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10509,
+          "entity_type": "event",
+          "entity_id": 509,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "title": "261010 Forest of Gunma Takasaki Japan01s3.jpg",
+          "alt_text": "群馬の森の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場のある公園の参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": null
+      "reservation_note": null,
+      "highlights": [
+        "望遠鏡で月のクレーターや土星などを観察。",
+        "音楽ライブ「ソウルレコード」を同時開催。"
+      ],
+      "target_audience": "家族・友人と参加可",
+      "visitor_info": {
+        "天候": "雨天中止。",
+        "持ち物・服装": "望遠鏡を持っている方は持参。暖かい服装でお越しください。",
+        "駐車場": "17:30以降は第一駐車場を利用。"
+      }
     },
     {
       "id": 510,
@@ -23964,23 +24144,54 @@
       "start_time": "10:00",
       "end_time": "11:30",
       "category": "experience",
-      "price_note": "親子1組1,000円。",
+      "price_note": "親子1組1,000円",
       "organizer": null,
-      "summary": "色あそびのミニレッスンと親子の自由あそび。",
+      "summary": "群馬の森の多目的室で開かれる、0～3歳児と保護者のための子育てサロン。今回は子どもの成長に合わせた色遊びを紹介する「色彩知育」のミニレッスンと、親子の自由遊びを楽しみます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-10-30",
+      "last_verified_at": "2026-11-02",
       "canonical_url": "https://gunmori.com/recreation/1852/",
       "notes": "0〜3歳児の親子、先着5組。途中入退場可能。",
       "source_names": "群馬の森公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10510,
+          "entity_type": "event",
+          "entity_id": 510,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "title": "261010 Forest of Gunma Takasaki Japan01s3.jpg",
+          "alt_text": "群馬の森の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場のある公園の参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "11月11日までに申込。空きがあれば当日受付可。"
+      "reservation_note": "事前申込。空きがあれば当日受付可",
+      "highlights": [
+        "家庭でも取り入れられる色遊びを紹介。",
+        "自由遊びの時間には絵本や知育玩具を利用でき、子育て相談も歓迎。"
+      ],
+      "target_audience": "0～3歳児と保護者",
+      "visitor_info": {
+        "定員": "先着5組",
+        "持ち物": "子どもの世話用品、飲み物。",
+        "申込": "11月11日締切。空きがあれば当日受付も可能。",
+        "その他": "途中入退場・再入場可。"
+      }
     },
     {
       "id": 511,
@@ -31065,7 +31276,7 @@
       "category": "自然",
       "price_note": "無料",
       "organizer": null,
-      "summary": "森の色合わせなど、秋の自然に親しむネイチャーゲーム。",
+      "summary": "紅葉の季節の群馬の森で、はるなネイチャーゲームの会が行う自然遊び。森の色を探したり、自然を題材にした活動を楽しんだりしながら、秋の自然に親しみます。",
       "recommended_for": null,
       "best_scenes": null,
       "status": "verified",
@@ -31075,11 +31286,41 @@
       "canonical_url": "https://gunmori.com/recreation/1875/",
       "notes": "誰でも参加可能。定員20名程度。受付は9時30分から歴史博物館前。敷き物、バンダナ、飲み物を持参。",
       "source_names": "主催施設・自治体の公式案内",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 10739,
+          "entity_type": "event",
+          "entity_id": 739,
+          "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
+          "title": "261010 Forest of Gunma Takasaki Japan01s3.jpg",
+          "alt_text": "群馬の森の参考写真",
+          "image_kind": "reference",
+          "credit": "663highland",
+          "license_note": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "reference_photo": true,
+          "reference_photo_label": "会場のある公園の参考写真（2026年10月撮影）",
+          "status": "verified",
+          "confidence": "high",
+          "discovered_at": "2026-11-02",
+          "last_verified_at": "2026-11-02"
+        }
+      ],
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "参加方法は主催者へ確認"
+      "reservation_note": "参加方法は主催者へ確認",
+      "highlights": [
+        "「森の色合わせ」「自然の紋」「バーティカルポエム」「かさね色」などを予定。",
+        "どなたでも参加可能。定員は20名程度。"
+      ],
+      "target_audience": "どなたでも",
+      "visitor_info": {
+        "受付": "9:30から歴史博物館前。",
+        "持ち物": "敷き物、バンダナ、飲み物。",
+        "天候": "天候などにより内容が変更される場合があります。"
+      }
     },
     {
       "id": 740,
