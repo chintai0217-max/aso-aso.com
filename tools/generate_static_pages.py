@@ -466,7 +466,8 @@ def detail_hero_html(record, alt):
     historical = any("2011年" in (image.get("reference_photo_label") or "") for image in references)
     note = (
         '<p class="static-detail-image-note">'
-        + ("2011年撮影の写真を含みます。現在の設備と異なる場合があります。" if historical else "会場・施設の参考写真を含みます。")
+        + ("2011年撮影の写真を含みます。現在の設備と異なる場合があります。" if historical else
+           f'{html(references[0].get("reference_photo_label") or "会場・施設の参考写真")}を含みます。')
         + ' 写真の出典はページ末尾をご確認ください。</p>'
     ) if references else ""
     if len(images) == 1:
@@ -611,6 +612,42 @@ def event_highlights(items):
         '<h2>見どころ・体験できること</h2>'
         f'<ul class="event-highlights-list">{entries}</ul></section>'
     )
+
+
+def editorial_sections(record):
+    """Optional, source-checked experiences and a suggested visit sequence."""
+    cards = record.get("experience_cards") or []
+    steps = record.get("visit_steps") or []
+    sections = []
+    if cards:
+        image_by_id = {im.get("id"): im for im in record.get("images") or [] if isinstance(im, dict)}
+        entries = []
+        for card in cards:
+            image = image_by_id.get(card.get("image_id"))
+            picture = ""
+            if image and image.get("image_url"):
+                caption = card.get("image_caption") or "参考写真"
+                picture = (
+                    '<figure class="experience-card__figure">'
+                    f'<img src="{html(image["image_url"])}" alt="{html(image.get("alt_text") or caption)}" '
+                    'loading="lazy" decoding="async" referrerpolicy="no-referrer" '
+                    'onerror="this.closest(\'figure\').hidden=true">'
+                    f'<figcaption>{html(caption)}</figcaption></figure>'
+                )
+            entries.append(
+                '<article class="experience-card">' + picture
+                + '<div class="experience-card__body">'
+                + f'<h3>{html(card.get("title"))}</h3><p>{html(card.get("body"))}</p>'
+                + '</div></article>'
+            )
+        sections.append('<section class="static-detail-section experience-section"><h2>見どころ・体験できること</h2>'
+                        + '<div class="experience-grid">' + ''.join(entries) + '</div></section>')
+    if steps:
+        entries = ''.join(f'<li><strong>{html(step.get("title"))}</strong><span>{html(step.get("body"))}</span></li>' for step in steps)
+        sections.append('<section class="static-detail-section visit-section"><h2>おすすめの過ごし方</h2>'
+                        '<p class="visit-section__intro">施設・イベントの案内をもとにした過ごし方の一例です。</p>'
+                        f'<ol class="visit-steps">{entries}</ol></section>')
+    return ''.join(sections)
 
 
 def recommend_section(event):
@@ -809,7 +846,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102m">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102n">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -976,6 +1013,7 @@ def render_event(event):
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">{html(prefecture)}のイベント</p><h1>{html(event.get("title"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
+        + (f'<p class="experience-intro">{html(event.get("hero_copy"))}</p>' if event.get("hero_copy") else "")
         + fact_strip(
             [
                 ("開催日", date_short),
@@ -987,12 +1025,13 @@ def render_event(event):
             ]
         )
         + "</div><div class=\"static-detail-body\">"
-        + section_paragraph("このイベントの魅力", event.get("appeal"))
-        + section_paragraph("概要", event.get("summary"))
-        + event_highlights(event.get("highlights"))
+        + (editorial_sections(event) if event.get("experience_cards") else
+           section_paragraph("このイベントの魅力", event.get("appeal"))
+           + section_paragraph("概要", event.get("summary"))
+           + event_highlights(event.get("highlights")))
         + recommend_section(event)
         + detail_section("参加前に確認したいこと", list((event.get("visitor_info") or {}).items()))
-        + section_paragraph("補足", event.get("notes"))
+        + section_paragraph("補足", event.get("notes") if not event.get("experience_cards") else None)
         + detail_section(
             "会場・アクセス",
             [
@@ -1058,6 +1097,7 @@ def render_place(place):
         + '<div class="static-detail-head">'
         + f'<p class="eyebrow">{html(prefecture)}の子どもの遊び場</p><h1>{html(place.get("name"))}</h1>'
         + f'<p class="lead">{html(kicker)}</p>'
+        + (f'<p class="experience-intro">{html(place.get("hero_copy"))}</p>' if place.get("hero_copy") else "")
         + fact_strip(
             [
                 ("対象", compact_text(place.get("target_age_note"))),
@@ -1067,9 +1107,11 @@ def render_place(place):
             ]
         )
         + "</div><div class=\"static-detail-body\">"
-        + section_paragraph("この遊び場の魅力", place.get("appeal"))
-        + event_highlights(place.get("highlights"))
-        + section_paragraph("特徴", place.get("features"))
+        + (editorial_sections(place) if place.get("experience_cards") else
+           section_paragraph("この遊び場の魅力", place.get("appeal"))
+           + event_highlights(place.get("highlights"))
+           + section_paragraph("特徴", place.get("features")))
+        + detail_section("お出かけ前に確認したいこと", list((place.get("visitor_info") or {}).items()))
         + section_paragraph("補足", place.get("notes"))
         + detail_section(
             "利用案内",

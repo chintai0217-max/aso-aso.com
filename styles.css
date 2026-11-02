@@ -4962,3 +4962,117 @@ a {
     width: calc(100% - 36px);
   }
 }
+
+/* Editorial details for places and events with verified visit guidance. */
+.static-detail-page .static-detail .experience-intro {
+  max-width: 46rem;
+  margin: 16px 0 0;
+  color: #174b65;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.experience-section,
+.visit-section {
+  margin-top: 32px;
+}
+
+.static-detail-page .static-detail .experience-section h2,
+.static-detail-page .static-detail .visit-section h2 {
+  margin-bottom: 14px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.experience-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dce8ee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.experience-card:not(:has(.experience-card__figure)) {
+  grid-column: 1 / -1;
+}
+
+.experience-card__figure {
+  margin: 0;
+  background: #eaf1f4;
+}
+
+.experience-card__figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.experience-card__figure figcaption {
+  padding: 6px 12px;
+  color: #526a79;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.experience-card__body {
+  padding: 16px;
+}
+
+.static-detail-page .static-detail .experience-card h3 {
+  margin: 0 0 8px;
+  color: #123d54;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.static-detail-page .static-detail .experience-card p,
+.static-detail-page .static-detail .visit-section__intro {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.visit-section {
+  padding: 20px;
+  border: 1px solid #d6e8ed;
+  border-radius: 12px;
+  background: #f3f9f8;
+}
+
+.static-detail-page .static-detail .visit-section__intro {
+  color: #536a7a;
+}
+
+.visit-steps {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0 0;
+  padding: 0 0 0 1.5em;
+}
+
+.visit-steps li {
+  padding-left: 4px;
+  line-height: 1.7;
+}
+
+.visit-steps li::marker {
+  color: #205e5a;
+  font-weight: 800;
+}
+
+.visit-steps strong { display: block; color: #183c4d; }
+.visit-steps span { display: block; color: var(--ink); font-size: 0.9375rem; }
+
+@media (max-width: 680px) {
+  .experience-grid { grid-template-columns: 1fr; }
+  .experience-card__figure img { aspect-ratio: 16 / 9; }
+  .experience-card__body { padding: 14px; }
+  .visit-section { padding: 16px; }
+}
