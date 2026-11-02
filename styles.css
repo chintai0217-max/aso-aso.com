@@ -4937,3 +4937,28 @@ a {
     min-height: 32px;
   }
 }
+
+/* Photo source details belong after the article; keep only a short context near the image. */
+.static-detail-page .static-detail > .static-detail-image-note {
+  width: calc(100% - 2 * clamp(22px, 4vw, 40px));
+  margin: 8px auto 0;
+  color: #536a7a;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.static-detail-page .static-detail-body .static-detail-image-credit {
+  margin: 28px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #dce7ee;
+  color: #536a7a;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 680px) {
+  .static-detail-page .static-detail > .static-detail-image-note {
+    width: calc(100% - 36px);
+  }
+}

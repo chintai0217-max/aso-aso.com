@@ -436,10 +436,8 @@ def collect_gallery_images(record, alt, limit=8):
     return items[:limit]
 
 
-def detail_hero_html(record, alt):
+def detail_image_credits(record, alt):
     images = collect_gallery_images(record, alt)
-    if not images:
-        return ""
     credits = []
     seen_sources = set()
     for image in images:
@@ -457,9 +455,22 @@ def detail_hero_html(record, alt):
         else:
             label = image.get("credit") or urlparse(source_url).netloc.removeprefix("www.") or "掲載元ページ"
             credits.append(f'<a href="{html(source_url)}" target="_blank" rel="noopener noreferrer">{html(label)}</a>')
-    credit_html = '<p class="static-detail-image-credit">写真出典：' + "・".join(credits) + "</p>" if credits else ""
+    return '<p class="static-detail-image-credit">写真出典：' + "・".join(credits) + "</p>" if credits else ""
+
+
+def detail_hero_html(record, alt):
+    images = collect_gallery_images(record, alt)
+    if not images:
+        return ""
+    references = [image for image in images if image.get("reference_photo")]
+    historical = any("2011年" in (image.get("reference_photo_label") or "") for image in references)
+    note = (
+        '<p class="static-detail-image-note">'
+        + ("2011年撮影の写真を含みます。現在の設備と異なる場合があります。" if historical else "会場・施設の参考写真を含みます。")
+        + ' 写真の出典はページ末尾をご確認ください。</p>'
+    ) if references else ""
     if len(images) == 1:
-        return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt) + credit_html
+        return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt) + note
     slides = []
     dots = []
     total = len(images)
@@ -494,7 +505,7 @@ def detail_hero_html(record, alt):
         f'<span class="detail-carousel__count" data-carousel-count>1 / {total}</span>'
         "</div>"
         "</div>"
-    ) + credit_html
+    ) + note
 
 
 def gallery_html(images, alt):
@@ -798,7 +809,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102l">
+    <link rel="stylesheet" href="{asset_prefix}styles.css?v=20261102m">
     <script type="application/ld+json">{json_ld(structured_data)}</script>
   </head>
   <body class="{html(body_class)}">
@@ -1011,6 +1022,7 @@ def render_event(event):
             maps_url(event),
             prefecture,
         )
+        + detail_image_credits(event, event.get("title"))
         + "</div>"
     )
     return layout(
@@ -1097,6 +1109,7 @@ def render_place(place):
             maps_url(place),
             prefecture,
         )
+        + detail_image_credits(place, place.get("name"))
         + "</div>"
     )
     return layout(
