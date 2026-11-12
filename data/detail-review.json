@@ -6994,8 +6994,8 @@
   },
   "place:17": {
     "content_status": "施設公式案内で営業時間・遊びの内容を照合。未確認の料金・対象条件は確認待ちとした。",
-    "image_status": "既存の施設掲載画像は再利用条件と撮影時期が未確認のため表示保留。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "施設が入るイオンモール太田（2009年9月撮影）。増床前の外観で、アニタッチPARKの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://ota.aeonmall.jp/shop/ec8e7d3c-458b-4e1d-bc45-1831a4a24506",
     "notes": "施設公式サイトのリニューアル内容とモール案内を照合。3歳以下の料金は要確認。 利用可能な写真を引き続き調査。",
     "candidate_photos": [
@@ -7151,7 +7151,9 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:AEON_Mall_Ota.jpg",
+    "image_research_note": "施設公式案内でイオンモール太田WEST MALL 1階にあることを確認。https://www.ota.anitouch.com/"
   },
   "event:211": {
     "content_status": "茨城県公式案内で日程・会場・出演内容・雨天対応を照合。土浦会場の当日の実施は未確認。",
@@ -7601,8 +7603,8 @@
   },
   "place:2": {
     "content_status": "施設公式案内で開館・開園時間、料金、利用条件を照合。",
-    "image_status": "児童会館の写真は利用条件・撮影時期を確認できず未確保。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://kodomonokuni.or.jp/",
     "notes": "園内写真を児童会館の写真と誤認させないよう掲載せず。既存の公式画像は保留。",
     "candidate_photos": [
@@ -7816,8 +7818,9 @@
         "notes": "auto_collected_score=158"
       }
     ],
-    "image_research_note": "Wikimedia Commonsの「ぐんまこどもの国」写真群を確認。公園の遊具写真を含むが、この催し・児童会館の被写体と一致すると確認できず不採用。",
-    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land"
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/",
+    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg"
   },
   "place:1": {
     "content_status": "施設公式案内で開館・開園時間、料金、利用条件を照合。",
@@ -8474,8 +8477,8 @@
   },
   "place:21": {
     "content_status": "各店舗の公式案内で所在地・施設内容と記載できる利用条件を照合。",
-    "image_status": "既存画像の再利用条件・撮影時期は未確認のため表示保留。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "店舗が入るイオンモール太田（2009年9月撮影）。増床前の外観で、猫カフェ店内の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://catmocha.jp/shop/ota/",
     "notes": "公式案内で対象・付き添い条件・営業時間を確認。 利用可能な写真は未確保。",
     "candidate_photos": [
@@ -8555,7 +8558,9 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:AEON_Mall_Ota.jpg",
+    "image_research_note": "施設公式案内でイオンモール太田1階にあることを確認。https://catmocha.jp/shop/ota/"
   },
   "place:20": {
     "content_status": "施設公式案内で料金・対象と遊びの内容を照合。",
@@ -14276,11 +14281,13 @@
   },
   "place:235": {
     "content_status": "市の公園案内で所在地・施設・利用許可・アクセスを照合。現在の遊具や施設の状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-04",
+    "image_status": "園内運動場の参考写真を掲載（2011年11月26日撮影）。現在の設備は未確認。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.isesaki.lg.jp/soshiki/tokeibu/koen/ijikannri/kouen/1414.html",
-    "notes": "掲載写真の再利用条件と撮影時期は未確認。",
-    "candidate_photos": []
+    "notes": "市公式案内と写真の名称・位置を照合。2011年撮影のため現在の遊具等は未確認。",
+    "candidate_photos": [],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Azuma_sougou_kouen_-_panoramio.jpg",
+    "image_research_note": "市公式公園案内で施設名と所在地を確認。Commonsの写真名・座標を照合。Iizuka 龍、CC BY 3.0。https://www.city.isesaki.lg.jp/kanko_bunka_sports/shizen_koen_seibutsu/17662.html"
   },
   "place:236": {
     "content_status": "桐生市と県観光案内で施設概要を照合。現在の遊具、時間・料金は未確認。",
@@ -14377,8 +14384,8 @@
   },
   "event:73": {
     "content_status": "施設の2026年10月31日更新案内で開催日・料金・予約方法を照合し、8月までだった終了日を11月23日に更新。日ごとの実施・予約残数は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "表示画像未確保。施設外観写真はCommonsの権利注意と表示時のトリミングを確認できるまで候補扱い。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://dino-nakasato.org/news/kaseki-sagasi-2022/",
     "additional_source_urls": [],
     "notes": "取得済み画像は利用条件・撮影時期未確認のため表示対象から外し候補に保存。開催期間内でも指定日のみ。 公式案内は屋外テント設置・雨天開催・センター総合案内での受付を記載。別途、施設外観の2021年写真 https://commons.wikimedia.org/wiki/File:Kanna_Dinosaur_Center_1.jpg は撮影者Qurren、CC BY-SA 4.0だが、Commonsに画像内の一部著作物とトリミングに関する注意があるため未採用。体験自体の写真も未確保。",
@@ -14441,7 +14448,8 @@
         "notes": "auto_collected_score=32"
       }
     ],
-    "candidate_primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2022/04/画像３-1536x1152.jpeg"
+    "candidate_primary_image_url": "https://dino-nakasato.org/wp-content/uploads/2022/04/画像３-1536x1152.jpeg",
+    "image_research_note": "公式案内は恐竜センター横での体験と総合案内での受付を記載。施設外観写真はCommonsの一部著作物に関する注意があり、表示枠でトリミングされるため未採用。"
   },
   "event:23": {
     "content_status": "町の2026年開催案内と主催協会で日程・場所・アクセスを照合。11月22日の個別の最新出店・実施状況は未確認。",
@@ -16031,15 +16039,19 @@
   },
   "event:477": {
     "content_status": "施設・市の公式案内照合済み。一部料金・申込状況は要確認",
-    "image_status": "利用条件・撮影時期を確認できた写真未確保",
-    "reviewed_at": "2026-11-05",
-    "source_url": "https://kodomonokuni.or.jp/event/pc_autumn/"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "source_url": "https://kodomonokuni.or.jp/event/pc_autumn/",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:478": {
     "content_status": "施設・市の公式案内照合済み。一部料金・申込状況は要確認",
-    "image_status": "利用条件・撮影時期を確認できた写真未確保",
-    "reviewed_at": "2026-11-05",
-    "source_url": "https://kodomonokuni.or.jp/event/asobo_kendama-koma/"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "source_url": "https://kodomonokuni.or.jp/event/asobo_kendama-koma/",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:487": {
     "content_status": "施設・市の公式案内照合済み。一部料金・申込状況は要確認",
@@ -19002,20 +19014,24 @@
   },
   "event:746": {
     "content_status": "公式開催案内と照合済み・実施状況未確認",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://kodomonokuni.or.jp/event/craft_nikotto/",
-    "notes": "対象、時間、申込条件を公式案内と照合。画像は未確保。 2026年11月6日、施設の公式案内で開催内容と条件を再照合。実写写真は未確保。 施設公式個別案内に入場・駐車場無料とあるが、当工作の材料費は明記なし。"
+    "notes": "対象、時間、申込条件を公式案内と照合。画像は未確保。 2026年11月6日、施設の公式案内で開催内容と条件を再照合。実写写真は未確保。 施設公式個別案内に入場・駐車場無料とあるが、当工作の材料費は明記なし。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:748": {
     "content_status": "施設登録の県民カレッジ案内の検索収録内容で内容・対象・無料を照合。実施結果未確認。",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://kodomonokuni.or.jp/event/shizen_hushigi_1400/",
     "notes": "対象、時間、申込条件を公式案内と照合。画像は未確保。 2026年11月6日の再確認で公式URLが404。代替資料の確認が必要。 2026年11月7日、施設登録の県民カレッジ案内の検索収録内容で参加費無料・対象・定員を確認。実施結果と写真は未確認。",
     "additional_source_urls": [
       "https://gunma.manabi365.net/G0000272/system/event/27378.html"
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:769": {
     "content_status": "公式開催案内と照合済み・実施状況未確認",
@@ -23134,30 +23150,38 @@
   "event:459": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://kodomonokuni.or.jp/event/juggling/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月7日、施設公式案内で日別の時刻・出演者・対象を再確認。参加費は個別案内に記載がなく未確認。"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月7日、施設公式案内で日別の時刻・出演者・対象を再確認。参加費は個別案内に記載がなく未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:479": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://kodomonokuni.or.jp/event/craft_sand_art/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日の再確認時、登録された施設案内を閲覧ツールで取得できず、代替の公式資料または復旧確認が必要。 2026年11月7日、施設公式イベント一覧で受付締切を確認。個別詳細ページは引き続き再確認が必要。 2026年11月7日、主催施設の公式案内の検索収録内容で日時・内容・参加条件を再照合。写真の利用権と撮影時期は引き続き要確認。"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日の再確認時、登録された施設案内を閲覧ツールで取得できず、代替の公式資料または復旧確認が必要。 2026年11月7日、施設公式イベント一覧で受付締切を確認。個別詳細ページは引き続き再確認が必要。 2026年11月7日、主催施設の公式案内の検索収録内容で日時・内容・参加条件を再照合。写真の利用権と撮影時期は引き続き要確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:480": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://kodomonokuni.or.jp/event/omoshiro/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日の再確認時、登録された施設案内を閲覧ツールで取得できず、代替の公式資料または復旧確認が必要。 2026年11月7日、施設公式案内で内容・対象・参加条件を再確認。実際の催しの写真は未確保。"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日の再確認時、登録された施設案内を閲覧ツールで取得できず、代替の公式資料または復旧確認が必要。 2026年11月7日、施設公式案内で内容・対象・参加条件を再確認。実際の催しの写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:482": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://kodomonokuni.or.jp/event/boardgame_big/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 児童会館の公式案内で日時・対象・入場条件を再確認。実際の催しの写真は未確保。"
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 児童会館の公式案内で日時・対象・入場条件を再確認。実際の催しの写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg",
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/"
   },
   "event:161": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23246,9 +23270,11 @@
   "event:439": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.ota.gunma.jp/page/1029724.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で当年の内容・日時を再確認。最新状況と実際の催しの写真は未確認。"
+    "image_status": "会場が入るイオンモール太田（2009年9月撮影）。増床前の外観で、展示当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で当年の内容・日時を再確認。最新状況と実際の催しの写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:AEON_Mall_Ota.jpg",
+    "image_research_note": "太田市公式案内で会場がイオンモール太田2階イオンホールであることを確認。https://www.city.ota.gunma.jp/page/1029724.html"
   },
   "event:440": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23260,9 +23286,11 @@
   "event:441": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.ota.gunma.jp/page/1062771.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で内容・日程・参加条件を再確認。最新状況と実際の催しの写真は未確認。"
+    "image_status": "会場の縁切寺満徳寺資料館に関する参考写真（2012年1月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で内容・日程・参加条件を再確認。最新状況と実際の催しの写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ota_Gunma_Mantokuji_Museum_1.JPG",
+    "image_research_note": "太田市公式案内で満徳寺跡に復元本堂・資料館が設けられていることを確認。https://www.city.ota.gunma.jp/site/kankou/1031630.html"
   },
   "event:443": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23291,9 +23319,11 @@
   "event:453": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.maebashi.gunma.jp/11/51458.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で当年の内容と開催条件を再確認。最新状況と催し自体の写真は未確認。"
+    "image_status": "会場の昌賢学園まえばしホール（2020年11月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で当年の内容と開催条件を再確認。最新状況と催し自体の写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Maebashi_Civic_Cultural_Hall.jpg",
+    "image_research_note": "前橋市公式案内で昌賢学園まえばしホール小ホールが会場であることを確認。https://www.city.maebashi.gunma.jp/11/51458.html"
   },
   "event:110": {
     "content_status": "主催者の公式案内で日時・内容・対象を照合。受付状況は未確認",
@@ -23611,9 +23641,11 @@
   "event:458": {
     "content_status": "主催者・自治体の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
     "source_url": "https://gunma-sports.or.jp/wakuwaku/about/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
-    "notes": "公式案内に明記のない条件は未確認。 2026年11月7日、主催者開催概要で体験内容、対象、費用、持ち物、人数制限の可能性を再確認。写真は未確保。"
+    "image_status": "会場の一つ、ぐんまアリーナ（2010年2月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "公式案内に明記のない条件は未確認。 2026年11月7日、主催者開催概要で体験内容、対象、費用、持ち物、人数制限の可能性を再確認。写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Gunma_arena_100227_1.jpg",
+    "image_research_note": "群馬県スポーツ協会の開催概要でぐんまアリーナが会場の一つであることを確認。https://gunma-sports.or.jp/wakuwaku/about/"
   },
   "event:483": {
     "content_status": "主催者・自治体の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
@@ -24769,9 +24801,11 @@
   "event:319": {
     "content_status": "高崎市公式案内と照合。開催結果は市公式に明記のある場合のみ記載",
     "source_url": "https://www.city.takasaki.gunma.jp/page/31330.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、市公式案内で開催概要を再照合。催しの実写写真と開催結果は未確認。"
+    "image_status": "会場の一つ、高崎市箕郷支所（2012年12月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、市公式案内で開催概要を再照合。催しの実写写真と開催結果は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_city_Misato_branch_office.jpg",
+    "image_research_note": "高崎市公式案内で箕郷支所とふれあい公園が会場であることを確認。https://www.city.takasaki.gunma.jp/page/31330.html"
   },
   "event:311": {
     "content_status": "主催者・高崎市公式案内と照合。開催後の実施状況は未確認",
@@ -24901,9 +24935,11 @@
   "event:519": {
     "content_status": "町の開催案内の検索収録内容で日時・会場・予定内容・天候対応を確認。開催結果未確認。",
     "source_url": "https://www.pref.gunma.jp/page/657693.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月7日、町公式案内の検索収録内容で展示・体験・車両・飲食・ステージと天候時対応を確認。実施結果は未確認。"
+    "image_status": "会場の明和町役場（2009年9月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月7日、町公式案内の検索収録内容で展示・体験・車両・飲食・ステージと天候時対応を確認。実施結果は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Meiwa_town_hall_in_Gunma.jpg",
+    "image_research_note": "明和町公式案内で会場が役場駐車場であることを確認。https://www.town.meiwa.gunma.jp/life/topics/5864.html"
   },
   "event:520": {
     "content_status": "自治体・観光協会の案内を照合。未確認の内容や開催後の実施状況は保留",
@@ -25581,9 +25617,11 @@
   "event:533": {
     "content_status": "板倉町の開催報告で日付・会場・同時開催・大声コンテストを確認。",
     "source_url": "https://www.town.itakura.gunma.jp/cont/s001000/d001010/d000030/d000030/20261027155439.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した催しの写真は未確保。 町の10月28日付開催報告に直接リンクを更新。報告掲載の写真は撮影時期の文脈があるが転載条件は未確認。"
+    "image_status": "会場の板倉町役場（2019年3月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した催しの写真は未確保。 町の10月28日付開催報告に直接リンクを更新。報告掲載の写真は撮影時期の文脈があるが転載条件は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Itakura_town_office_1.jpg",
+    "image_research_note": "板倉町公式案内で役場南側駐車場が会場であることを確認。https://www.town.itakura.gunma.jp/cont/s001000/d001010/d000030/d000030/20261027155439.html"
   },
   "event:534": {
     "content_status": "県観光一覧で両日の予定、町の活動記録で25日の開催を確認。24日の実施結果は未確認",
@@ -25758,11 +25796,12 @@
   "event:481": {
     "content_status": "施設公式案内で日時・対象・観覧条件・料金を照合",
     "source_url": "https://kodomonokuni.or.jp/event/r8omoiyaripurane/",
-    "image_status": "再利用条件と撮影時期を確認できた催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "対象・上映時間・入退場・減免条件を公式案内で照合。 2026年11月6日の再確認時、登録された施設案内を閲覧ツールで取得できず、代替の公式資料または復旧確認が必要。 2026年11月7日、施設の公式案内の検索収録内容で投影形式、対象、時間、観覧条件・減免を再確認。利用できる催しの写真は未確保。",
-    "image_research_note": "Wikimedia Commonsの「ぐんまこどもの国」写真群を確認。公園の遊具写真を含むが、この催し・児童会館の被写体と一致すると確認できず不採用。",
-    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land"
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/",
+    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg"
   },
   "event:523": {
     "content_status": "市公式案内の検索収録内容で日時・予定内容・各体験の料金を照合。実施結果は未確認。",
@@ -25807,11 +25846,12 @@
       "https://kodomonokuni.or.jp/event/ちょこっとプラネタリウム/",
       "https://kodomonokuni.or.jp/spacetheater/"
     ],
-    "image_status": "利用条件と撮影時期を確認できた催しの写真は未確保",
-    "reviewed_at": "2026-11-11",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "施設公式11月号4ページで11月14日12時〜12時20分、季節の星座解説とさそり座の物語、観覧無料を確認。対象は公式イベント一覧でどなたでも、未就学児は館内利用時に保護者同伴。定員と写真は未確認。 スペースシアター案内は影絵調の黄道12星座の物語として同プログラムを紹介。当回の定員は確認できない。",
-    "image_research_note": "Wikimedia Commonsの「ぐんまこどもの国」写真群を確認。公園の遊具写真を含むが、この催し・児童会館の被写体と一致すると確認できず不採用。",
-    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land"
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/",
+    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg"
   },
   "event:5": {
     "content_status": "高崎観光協会の出店募集案内で日程・会場を照合",
@@ -26530,11 +26570,12 @@
       "https://kodomonokuni.or.jp/info/wp-content/uploads/2026.11%E6%9C%88%E5%8F%B7.pdf",
       "https://happy-terrace.com/blog/oota_20261024/"
     ],
-    "image_status": "利用条件と撮影時期を確認できた催しの写真は未確保",
-    "reviewed_at": "2026-11-11",
+    "image_status": "参考写真：児童会館のある「ぐんまこどもの国」の屋外（2011年5月撮影）。児童会館や催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "児童会館11月号4ページの工作プログラム欄に10月1日〜11月3日の工作名、対象18歳までのこども、受付16時30分までと記載。未就学児の館内利用は保護者同伴。11月の案内であり10月の受付時間、個別の材料・料金・実施状況は未確認。 公式10月号・11月号のカレンダーで期間中の休館日を確認。 2026年10月24日の参加者を含む施設ブログは同工作の体験を記録するが、全期間の実施や料金の根拠にはならない。",
-    "image_research_note": "Wikimedia Commonsの「ぐんまこどもの国」写真群を確認。公園の遊具写真を含むが、この催し・児童会館の被写体と一致すると確認できず不採用。",
-    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land"
+    "image_research_note": "児童会館の施設公式案内で金山総合公園内の児童館であることを確認。https://kodomonokuni.or.jp/guide/about/",
+    "image_research_source_url": "https://commons.wikimedia.org/wiki/Category:Gunma_Children%27s_Land",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(4).jpg"
   },
   "event:460": {
     "content_status": "公園公式案内で日程・場所・出演者・無料観覧・雨天時の扱いを照合",
