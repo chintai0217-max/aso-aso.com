@@ -5415,7 +5415,7 @@
   },
   "place:32": {
     "content_status": "みどり市公式のリニューアル案内・利用案内で料金、開館時間、個別体験の受付中止を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を4枚追加。追加分は撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を2枚追加。撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.city.midori.gunma.jp/iwajuku/1004729/1005050.html",
     "notes": "2026年10月の料金改定に伴い旧料金を修正。市公式画像は再利用条件未確認で保留。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -5558,16 +5558,18 @@
       "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_2.jpg",
       "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_01.jpg",
       "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_6.jpg",
-      "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_3.jpg"
+      "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_3.jpg",
+      "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_4.jpg",
+      "https://commons.wikimedia.org/wiki/File:Iwajuku_Museum_5.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:3": {
     "content_status": "指定管理者の公式案内で料金、季節別営業時間と休園日を照合。市公式ページの冬季開園時間と記載差があり、指定管理者の案内を採用。",
-    "image_status": "実景の参考写真を追加。各写真に出典、撮影日、ライセンスを表示。現況とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を2枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://lunapark.maebashi-park.com/guide/",
-    "notes": "公式・市の冬季開園時刻に9:30と10:00の差があるため事前確認を推奨。既存の公式画像は再利用条件未確認。 指定管理者のアクセス案内で駐車場220台、P1・P2専用、P3は土日祝のみ臨時かつ無料、P4は無料と確認。P1・P2の料金は同案内で未確認。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。",
+    "notes": "公式・市の冬季開園時刻に9:30と10:00の差があるため事前確認を推奨。既存の公式画像は再利用条件未確認。 指定管理者のアクセス案内で駐車場220台、P1・P2専用、P3は土日祝のみ臨時かつ無料、P4は無料と確認。P1・P2の料金は同案内で未確認。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [
       {
         "id": 2746,
@@ -5615,8 +5617,11 @@
       "https://commons.wikimedia.org/wiki/File:Lunar_Park_(Maebashi).JPG",
       "https://commons.wikimedia.org/wiki/File:261011_Luna_Park_Maebashi_Japan01s3.jpg",
       "https://commons.wikimedia.org/wiki/File:261011_Luna_Park_Maebashi_Japan04s3.jpg",
-      "https://commons.wikimedia.org/wiki/File:%E5%89%8D%E6%A9%8B%E3%82%8B%E3%81%AA%E3%81%B1%E3%81%82%E3%81%8F_-_panoramio.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:%E5%89%8D%E6%A9%8B%E3%82%8B%E3%81%AA%E3%81%B1%E3%81%82%E3%81%8F_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:261011_Luna_Park_Maebashi_Japan02s3.jpg",
+      "https://commons.wikimedia.org/wiki/File:261011_Luna_Park_Maebashi_Japan03s3.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:7": {
     "content_status": "公式料金・営業時間案内と伊勢崎市案内で料金、付き添い条件、営業時間、施設の特色を照合。",
@@ -8865,7 +8870,7 @@
   },
   "place:11": {
     "content_status": "公式案内の施設情報と料金・開館時間を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を1枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を2枚追加。撮影日・著作者・再利用条件を確認済み。うち2枚は原画像640×480ピクセルの低解像度。現在の展示内容は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.gmnh.pref.gunma.jp/guide/aboutmuseum/",
     "notes": "公式料金は企画展開催期間と常設展のみの期間で異なる。写真出典 https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_01.jpg 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -8970,16 +8975,18 @@
       "https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_01.jpg",
       "https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_02.jpg",
       "https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_04.jpg",
-      "https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_03.jpg"
+      "https://commons.wikimedia.org/wiki/File:Gunma_Museum_of_Natural_History_03.jpg",
+      "https://commons.wikimedia.org/wiki/File:Shizensi-kyoryu.jpg",
+      "https://commons.wikimedia.org/wiki/File:Shizensihaku.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:13": {
     "content_status": "公式案内の施設情報と料金・開館時間を照合。",
-    "image_status": "実景参考写真を計5枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/site/giw/617213.html",
-    "notes": "料金 https://www.pref.gunma.jp/site/giw/612071.html 。利用可能な施設写真は未確保。 かやぶき民家の写真を追加。2010年8月14日撮影、作者・権利者によるパブリックドメイン提供をCommonsで確認。里山生活体験は県公式プログラム一覧を参照。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を2枚追加。",
+    "notes": "料金 https://www.pref.gunma.jp/site/giw/612071.html 。利用可能な施設写真は未確保。 かやぶき民家の写真を追加。2010年8月14日撮影、作者・権利者によるパブリックドメイン提供をCommonsで確認。里山生活体験は県公式プログラム一覧を参照。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を2枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [
       {
         "id": 291,
@@ -9158,12 +9165,18 @@
       "https://commons.wikimedia.org/wiki/File:Japanese_rhinoceros_beetle_at_Gunma_Insect_World.jpg",
       "https://commons.wikimedia.org/wiki/File:Karabuki-Minka_of_Gunma_Insect_World.jpg",
       "https://commons.wikimedia.org/wiki/File:A_road_for_walk_at_Gunma_Insect_World.jpg",
-      "https://commons.wikimedia.org/wiki/File:Takydromus_tachydromoides_at_Gunma_Insect_World.jpg"
+      "https://commons.wikimedia.org/wiki/File:Takydromus_tachydromoides_at_Gunma_Insect_World.jpg",
+      "https://commons.wikimedia.org/wiki/File:Idea_leuconoe_at_Gunma_Insect_World.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kallima_inachus_at_Gunma_Insect_World.jpg",
+      "https://commons.wikimedia.org/wiki/File:Common_Mormon_at_Gunma_Insect_World.jpg",
+      "https://commons.wikimedia.org/wiki/File:Atrophaneura_alcinous_at_Gunma_Insect_World.jpg",
+      "https://commons.wikimedia.org/wiki/File:Argynnini(upper)_and_Satyrinae(lower)_at_Gunma_Insect_World.jpg"
     ],
     "additional_source_urls": [
       "https://www.pref.gunma.jp/site/giw/629706.html",
       "https://commons.wikimedia.org/wiki/File:Karabuki-Minka_of_Gunma_Insect_World.jpg"
-    ]
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:54": {
     "content_status": "公式資料を照合。一部の利用条件は問い合わせが必要。",
@@ -9862,10 +9875,10 @@
   },
   "place:33": {
     "content_status": "2026年2月改定後の公式料金、年齢区分、駐車場と営業時間を照合。",
-    "image_status": "実景参考写真を計4枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を1枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://safari.co.jp/admission/",
-    "notes": "営業時間 https://safari.co.jp/faq/faq_tax/admission/ 、写真 https://commons.wikimedia.org/wiki/File:Gunma_SafariPark%27s_Feeding_experience_bus.jpg 。旧画像は利用条件と撮影時期が未確認。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。",
+    "notes": "営業時間 https://safari.co.jp/faq/faq_tax/admission/ 、写真 https://commons.wikimedia.org/wiki/File:Gunma_SafariPark%27s_Feeding_experience_bus.jpg 。旧画像は利用条件と撮影時期が未確認。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [
       {
         "id": 368,
@@ -9967,8 +9980,10 @@
       "https://commons.wikimedia.org/wiki/File:Gunma_SafariPark%27s_Feeding_experience_bus.jpg",
       "https://commons.wikimedia.org/wiki/File:Gunma_Safari_Park.jpg",
       "https://commons.wikimedia.org/wiki/File:Flying_show.jpg",
-      "https://commons.wikimedia.org/wiki/File:White_tiger-Gunma_Safari_Park.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:White_tiger-Gunma_Safari_Park.jpg",
+      "https://commons.wikimedia.org/wiki/File:White_tiger2.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:59": {
     "content_status": "町の公式案内と子育て資料を照合。一部の利用条件は要確認。",
@@ -11692,7 +11707,7 @@
   },
   "place:12": {
     "content_status": "自治体の公式情報を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を4枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を3枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.city.tatebayashi.gunma.jp/kagakukan/",
     "notes": "公式館内案内 https://www.city.tatebayashi.gunma.jp/kagakukan/010/070/octsuke.pdf にて料金を確認。写真 https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum.jpg 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -11873,16 +11888,19 @@
       "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_02.jpg",
       "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_03.jpg",
       "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_01.jpg",
-      "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_Subaru_Plane.jpg"
+      "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_Subaru_Plane.jpg",
+      "https://commons.wikimedia.org/wiki/File:Mukai_Chiaki_Children%27s_Science_Museum_Subaru_Plane_engine.jpg",
+      "https://commons.wikimedia.org/wiki/File:Tatebayashi_KagakuKan.JPG",
+      "https://commons.wikimedia.org/wiki/File:TatebayashiScienceMuseum.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:43": {
     "content_status": "館林市公式資料で施設情報・利用条件を照合。",
-    "image_status": "実景の参考写真を追加。各写真に出典、撮影日、ライセンスを表示。現況とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を2枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.tatebayashi.gunma.jp/tsutsuji/",
-    "notes": "館林市FAQ https://www.city.tatebayashi.gunma.jp/tsutsuji/010/120/20201111112422.html で有料期間を確認。「常時利用可」の根拠不足を訂正。写真未確保。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。",
+    "notes": "館林市FAQ https://www.city.tatebayashi.gunma.jp/tsutsuji/010/120/20201111112422.html で有料期間を確認。「常時利用可」の根拠不足を訂正。写真未確保。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [
       {
         "id": 406,
@@ -12041,8 +12059,11 @@
       "https://commons.wikimedia.org/wiki/File:TsutsujiParkTatebayashi20100502.jpg",
       "https://commons.wikimedia.org/wiki/File:TsutsujiGaokaKoen.jpg",
       "https://commons.wikimedia.org/wiki/File:TsutsujiKoenTunnel.jpg",
-      "https://commons.wikimedia.org/wiki/File:TsutsujiKouen.JPG"
-    ]
+      "https://commons.wikimedia.org/wiki/File:TsutsujiKouen.JPG",
+      "https://commons.wikimedia.org/wiki/File:Tsutsujigaoka_Park_Gate,_Tatebayashi.JPG",
+      "https://commons.wikimedia.org/wiki/File:TsutsujiTatebayashi.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:42": {
     "content_status": "館林市公式資料で施設情報・利用条件を照合。",
@@ -13824,10 +13845,10 @@
   },
   "place:88": {
     "content_status": "公園公式の概要・施設案内と利用条件を照合。",
-    "image_status": "実景参考写真を計9枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの参考写真を1枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.park-tochigi.com/wanpaku/faq",
-    "notes": "施設紹介 https://www.park-tochigi.com/wanpaku/about 写真出典 https://commons.wikimedia.org/wiki/File:Mibu_Tochigi_Wanpaku_Park_1.JPG。写真は撮影時点の参考。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。",
+    "notes": "施設紹介 https://www.park-tochigi.com/wanpaku/about 写真出典 https://commons.wikimedia.org/wiki/File:Mibu_Tochigi_Wanpaku_Park_1.JPG。写真は撮影時点の参考。 追加写真はWikimedia Commonsのファイルページで撮影日・再利用条件を確認。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Mibu_Tochigi_Wanpaku_Park_1.JPG",
@@ -13838,8 +13859,10 @@
       "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%82%93%E3%81%B1%E3%81%8F%E5%85%AC%E5%9C%92_%E3%81%B1%E3%81%AA%E3%81%B1%E3%81%AA%E3%81%AE%E3%81%BE%E3%81%A1_-_panoramio.jpg",
       "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%82%93%E3%81%B1%E3%81%8F%E5%85%AC%E5%9C%92_%E9%A2%A8%E3%81%AE%E5%8E%9F%E3%81%A3%E3%81%B1_-_panoramio.jpg",
       "https://commons.wikimedia.org/wiki/File:Mibu_Tochigi_Wanpaku_Park_Centaurea_1.JPG",
-      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%82%93%E3%81%B1%E3%81%8F%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%82%93%E3%81%B1%E3%81%8F%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:C58_5_in_Tochigi_Wanpaku_Park.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:90": {
     "content_status": "公園公式の概要・施設案内と利用条件を照合。",
@@ -13859,7 +13882,7 @@
   },
   "place:89": {
     "content_status": "公式案内で設備・時間・料金・利用条件を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を4枚追加。追加分は撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を4枚追加。撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.park-tochigi.com/tochinoki/information",
     "notes": "宇都宮市または施設公式案内に基づく。 写真出典 https://commons.wikimedia.org/wiki/File:Entrance_of_Tochinoki_Family_Land.jpg。写真は撮影時点の参考。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -13868,13 +13891,17 @@
       "https://commons.wikimedia.org/wiki/File:Ferris_wheel_of_Tochinoki_Family_Land.jpg",
       "https://commons.wikimedia.org/wiki/File:Pond_in_Tochinoki_Family_Land.jpg",
       "https://commons.wikimedia.org/wiki/File:TFL_Roller_Coaster.jpg",
-      "https://commons.wikimedia.org/wiki/File:Raisama_Storm.jpg"
+      "https://commons.wikimedia.org/wiki/File:Raisama_Storm.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%A8%E3%81%A1%E3%81%AE%E3%81%8D%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89(%E5%A4%A7%E8%A6%B3%E8%A6%A7%E8%BB%8A)_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%A8%E3%81%A1%E3%81%AE%E3%81%8D%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89(%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0)_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%A8%E3%81%A1%E3%81%AE%E3%81%8D%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89(%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%B7%E3%83%83%E3%83%97)_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%A8%E3%81%A1%E3%81%AE%E3%81%8D%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89(%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%91%E3%83%B3%E3%83%80)_-_panoramio.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:87": {
     "content_status": "施設公式案内で開館時間・料金・休館日を照合。屋外すべり台休止の告知を反映。",
-    "image_status": "Wikimedia Commonsの参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を3枚追加。撮影日・著作者・再利用条件を確認済み。現在の展示内容は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://t-csm.jp/guide",
     "notes": "休止告知 https://t-csm.jp/info/10130 。写真 https://commons.wikimedia.org/wiki/File:Tochigi-Science-Museum.jpg の作者・ライセンス・撮影日はWikimedia Commons APIのimageinfoで確認。改修前の参考写真。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -13884,7 +13911,10 @@
       "https://commons.wikimedia.org/wiki/File:Tochigi_Science_Museum_H-II_mock-up_1.jpg",
       "https://commons.wikimedia.org/wiki/File:Tochigi_Science_Museum_H-II_mock-up_2.jpg",
       "https://commons.wikimedia.org/wiki/File:Foucault_pendulum_in_Tochigi_Science_Museum,_01.jpg",
-      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%81%8F%E3%82%8F%E3%81%8F%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E7%A7%91%E5%AD%A6%E3%83%A9%E3%83%B3%E3%83%89_-_panoramio.jpg"
+      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%81%8F%E3%82%8F%E3%81%8F%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E7%A7%91%E5%AD%A6%E3%83%A9%E3%83%B3%E3%83%89_-_panoramio.jpg",
+      "https://commons.wikimedia.org/wiki/File:Foucault_pendulum_in_Tochigi_Science_Museum,_03.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%81%8F%E3%82%8F%E3%81%8F%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E7%A7%91%E5%AD%A6%E3%83%A9%E3%83%B3%E3%83%89_-_panoramio_(1).jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%82%8F%E3%81%8F%E3%82%8F%E3%81%8F%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E7%A7%91%E5%AD%A6%E3%83%A9%E3%83%B3%E3%83%89_-_panoramio_(2).jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
@@ -13898,29 +13928,40 @@
   },
   "place:92": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。一部料金は未確認。",
-    "image_status": "参考写真：京浜にけ / Wikimedia Commons、CC BY-SA 3.0、2012年4月4日撮影。",
+    "image_status": "今回Wikimedia Commonsの参考写真を1枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.saitama-shizen.info/koen/index.html",
-    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 年末年始の特別開館 https://www.saitama-shizen.info/kaikan/index.html 。",
-    "candidate_photos": []
+    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 年末年始の特別開館 https://www.saitama-shizen.info/kaikan/index.html 。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
+    "candidate_photos": [],
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Black_katydid_-_Eobiana_engelhardti_-_%E5%A7%AB%E8%9E%BD%E6%96%AF(%E3%83%92%E3%83%A1%E3%82%AE%E3%82%B9)_(5798504048).jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:93": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。一部料金は未確認。",
-    "image_status": "実景参考写真を計4枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの参考写真を6枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001586.html",
-    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 駐車場閉鎖予定 https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001581.html 。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。",
+    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 駐車場閉鎖予定 https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001581.html 。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Tokorozawa_Aviation_Commemorative_Park.jpg",
       "https://commons.wikimedia.org/wiki/File:Koku-koen_20090815.jpg",
       "https://commons.wikimedia.org/wiki/File:Koku-koen_Open_Stage_Tokorozawa.jpg",
-      "https://commons.wikimedia.org/wiki/File:Koku-koen_Announcement_Tower.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:Koku-koen_Announcement_Tower.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ys-11_2006-9-10-01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kokukoen-FirstFlight-1911-CommemorativeSignage.jpg",
+      "https://commons.wikimedia.org/wiki/File:Koku-koen_Dog-run_Tokorozawa_09.jpg",
+      "https://commons.wikimedia.org/wiki/File:Saisho-tei_sign_Koku-koen_Tokorozawa.jpg",
+      "https://commons.wikimedia.org/wiki/File:Koku-koen-Tokorozawa-Muse.jpg",
+      "https://commons.wikimedia.org/wiki/File:Lovely_family-Tokorozawa_Aviation_Memorial_Park.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:94": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。一部料金は未確認。",
-    "image_status": "Wikimedia Commonsの参考写真を3枚追加。追加分は撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を2枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.seibu-la.co.jp/misato-yoshikawa/facility/misato.html",
     "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -13928,13 +13969,19 @@
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Misato_20251129_160447.jpg",
       "https://commons.wikimedia.org/wiki/File:Misato_Misato-Park_Japanese_Iris_1.JPG",
-      "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_at_Misato_Park_01.jpg"
+      "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_at_Misato_Park_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Playground_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Playground_02.jpg",
+      "https://commons.wikimedia.org/wiki/File:Playground_03.jpg",
+      "https://commons.wikimedia.org/wiki/File:Playground_04.jpg",
+      "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_at_Misato_Park_02.jpg",
+      "https://commons.wikimedia.org/wiki/File:Misato-koen_001_Misato-shi_Saitama-ken.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:95": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を4枚追加。追加分は撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を1枚追加。撮影日・著作者・再利用条件を確認済み。現在の飼育状況は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.parks.or.jp/sczoo/guide/000/000412.html",
     "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 アスレチック休止 https://www.parks.or.jp/sczoo/guide/008/008780.html 、なかよしコーナー閉鎖 https://www.parks.or.jp/sczoo/guide/007/007769.html 。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -13943,24 +13990,35 @@
       "https://commons.wikimedia.org/wiki/File:SCzoo_Children%27s_Castle.jpg",
       "https://commons.wikimedia.org/wiki/File:SCzoo_Koala.jpg",
       "https://commons.wikimedia.org/wiki/File:SCzoo_Saipoppo_Shuttle.jpg",
-      "https://commons.wikimedia.org/wiki/File:Capybaras_in_Saitama_Children%27s_Zoo.JPG"
+      "https://commons.wikimedia.org/wiki/File:Capybaras_in_Saitama_Children%27s_Zoo.JPG",
+      "https://commons.wikimedia.org/wiki/File:SCZoo_Quokka.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ctenodactylus_gundi_SCZoo.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%82%86%E3%81%86%E3%81%9B%E3%82%93_%E3%81%AE%E3%81%9E%E3%81%8D%E3%83%9E%E3%83%89_(54063510439).jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9_(8440644699).jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9_(8441736504).jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
   "place:96": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
-    "image_status": "実景参考写真を計5枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.hitachi.lg.jp/zoo/",
-    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。",
+    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_01.jpg",
       "https://commons.wikimedia.org/wiki/File:Kamine_Park%2C_Ibaraki_02.jpg",
       "https://commons.wikimedia.org/wiki/File:Kamine_Park%2C_Ibaraki_03.jpg",
       "https://commons.wikimedia.org/wiki/File:Kamine_Park%2C_Ibaraki_08.jpg",
-      "https://commons.wikimedia.org/wiki/File:Kamine_Park%2C_Ibaraki_13.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park%2C_Ibaraki_13.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_04.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_05.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_06.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_07.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_09.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:97": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
@@ -13976,7 +14034,7 @@
   },
   "place:98": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を4枚追加。追加分は撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を1枚追加。撮影日・著作者・再利用条件を確認済み。現在の展示内容は未確認。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.nat.museum.ibk.ed.jp/",
     "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
@@ -13985,7 +14043,12 @@
       "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_1.jpg",
       "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum%27s_Mammuthus_sungari.JPG",
       "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum%27s_Tyrannosaurus_rex.jpg",
-      "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_01.jpg"
+      "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_gate.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_02.jpg",
+      "https://commons.wikimedia.org/wiki/File:Giant_squid_-_Ibaraki_Nature_Museum_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ibaraki_Nature_Museum_entrance_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Camarasaurus-mount.jpg"
     ],
     "image_reviewed_at": "2026-11-13"
   },
@@ -14001,18 +14064,24 @@
   },
   "place:100": {
     "content_status": "公式施設案内で所在地・施設・利用条件を照合。一部料金等は未確認。",
-    "image_status": "実景参考写真を計5枚表示。各写真に出典・撮影日・再利用条件を記載。現在の様子とは異なる場合があります。",
+    "image_status": "今回Wikimedia Commonsの参考写真を3枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.hitachikaihin.jp/park_spot.php?code=28&mode=detail",
-    "notes": "写真の撮影日・ライセンスはCommons API imageinfoで確認。画像は公園全体の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。",
+    "notes": "写真の撮影日・ライセンスはCommons API imageinfoで確認。画像は公園全体の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Hitachinaka_20090405_131104.jpg",
       "https://commons.wikimedia.org/wiki/File:Cycling_Course_%28Hitachi_Seaside_Park%29.JPG",
       "https://commons.wikimedia.org/wiki/File:Daisogen_%28Hitachi_Seaside_Park%29.JPG",
       "https://commons.wikimedia.org/wiki/File:Giant_Ferris_Wheel_%28Hitachi_Seaside_Park%29.JPG",
-      "https://commons.wikimedia.org/wiki/File:Hitachi_beach_park20260422a.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:Hitachi_beach_park20260422a.jpg",
+      "https://commons.wikimedia.org/wiki/File:Pleasure_Garden_Area_(Hitachi_Seaside_Park).JPG",
+      "https://commons.wikimedia.org/wiki/File:Hitachinaka_20070414_154320.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ferris_wheel_of_the_Hitachi_beach_park,hitachi-kaihin-koen,hitachinaka-city,japan.JPG",
+      "https://commons.wikimedia.org/wiki/File:Entrance_of_the_National_Hitachi.jpg",
+      "https://commons.wikimedia.org/wiki/File:Hitachi_beach_park20260422b.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "place:101": {
     "content_status": "公式施設案内で所在地・施設・利用条件を照合。一部料金等は未確認。",
@@ -18509,10 +18578,10 @@
   },
   "event:48": {
     "content_status": "桐生市の公式案内で2026年日程・日別時間・終了を照合",
-    "image_status": "過去の桐生八木節まつり実写2点（2018年8月3・4日、DanceWithNyanko、CC BY-SA 4.0）。2026年の写真は未確保",
+    "image_status": "過去開催の実写4枚を掲載。既存2枚は2018年撮影、今回追加の2枚は2018年・2009年撮影。いずれも2026年開催回の写真ではなく、2026年当日の写真は未確保。",
     "reviewed_at": "2026-11-06",
     "source_url": "https://www.city.kiryu.lg.jp/kankou/event/1025571.html",
-    "notes": "市の案内で2026年8月7〜9日、7日15〜22時、8・9日12〜22時と終了を確認。共通開始時刻12時は初日に適用されないため空欄化。個別行事の実施結果は未確認。掲載する2枚は2018年撮影の過去写真で、各Commonsページにて撮影者とCC BY-SA 4.0を確認。2026年当日の写真ではない。 自治体・観光協会の案内を再確認し紹介文を整備。",
+    "notes": "市の案内で2026年8月7〜9日、7日15〜22時、8・9日12〜22時と終了を確認。共通開始時刻12時は初日に適用されないため空欄化。個別行事の実施結果は未確認。既存の2枚は2018年撮影の過去写真で、各Commonsページにて撮影者とCC BY-SA 4.0を確認。2026年当日の写真ではない。 自治体・観光協会の案内を再確認し紹介文を整備。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
     "image_candidates": [
       {
         "id": 168,
@@ -18536,8 +18605,11 @@
     ],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Kiryu_yagi_bushi_festival_vehicle-free_promenade.jpg",
-      "https://commons.wikimedia.org/wiki/File:Kiryu_yagi_bushi_festival.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:Kiryu_yagi_bushi_festival.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kiryu_yagi_bushi_festival_vehicle-free_promenade_2.jpg",
+      "https://commons.wikimedia.org/wiki/File:%E6%A1%90%E7%94%9F%E5%85%AB%E6%9C%A8%E7%AF%80%E3%81%BE%E3%81%A4%E3%82%8A,_Kiryu_Honcho_Street_in_the_Festival_-_panoramio.jpg"
+    ],
+    "image_reviewed_at": "2026-11-13"
   },
   "event:49": {
     "content_status": "藤岡市の公式案内と特設サイトで2026年日程・会場・体験会条件・終了を照合",
