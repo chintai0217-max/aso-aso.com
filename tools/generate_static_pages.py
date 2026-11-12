@@ -461,13 +461,14 @@ def detail_image_credits(record, alt):
 def detail_hero_html(record, alt):
     images = collect_gallery_images(record, alt)
     if not images:
-        return ""
+        return '<p class="static-detail-image-note">写真は準備中です。</p>'
     references = [image for image in images if image.get("reference_photo")]
     historical = any("2011年" in (image.get("reference_photo_label") or "") for image in references)
     note = (
         '<p class="static-detail-image-note">'
         + ("2011年撮影の写真を含みます。現在の設備と異なる場合があります。" if historical else
            f'{html(references[0].get("reference_photo_label") or "会場・施設の参考写真")}を含みます。')
+        + (' 催しの写真は準備中です。' if record.get('title') and len(references) == len(images) else '')
         + ' 写真の出典はページ末尾をご確認ください。</p>'
     ) if references else ""
     if len(images) == 1:

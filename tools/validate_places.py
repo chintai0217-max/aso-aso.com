@@ -9,6 +9,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 import re
 import sys
@@ -190,14 +191,26 @@ def validate_dataset(data: dict, *, strict_new: bool = False) -> list[dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--strict-new", action="store_true")
+    parser.add_argument(
+        "--summary", action="store_true",
+        help="group findings by issue and count affected places; validation and exit status are unchanged",
+    )
     args = parser.parse_args()
     data = json.loads(DATA_JSON.read_text(encoding="utf-8"))
     issues = validate_dataset(data, strict_new=args.strict_new)
     errors = [i for i in issues if i["level"] == "error"]
     warnings = [i for i in issues if i["level"] == "warning"]
-    for i in issues:
-        loc = f"#{i['id']}" if i["id"] is not None else "dataset"
-        print(f"[{i['level']}] {loc}: {i['message']}")
+    if args.summary:
+        grouped = Counter((i["level"], i["message"]) for i in issues)
+        for (level, message), count in grouped.most_common():
+            affected = len({i["id"] for i in issues if i["level"] == level and i["message"] == message and i["id"] is not None})
+            print(f"[{level}] {count} finding(s), {affected} place(s): {message}")
+        affected_errors = len({i["id"] for i in errors if i["id"] is not None})
+        print(f"\n{affected_errors} place(s) have errors; missing fields indicate absent data, not necessarily incorrect facts.")
+    else:
+        for i in issues:
+            loc = f"#{i['id']}" if i["id"] is not None else "dataset"
+            print(f"[{i['level']}] {loc}: {i['message']}")
     print(f"\n{len(errors)} error(s), {len(warnings)} warning(s), {len(data.get('child_play_places') or [])} places")
     return 1 if errors else 0
 
