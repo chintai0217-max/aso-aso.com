@@ -29,9 +29,11 @@
   },
   "event:435": {
     "content_status": "公式案内照合済み",
-    "image_status": "画像なし・調査要",
-    "reviewed_at": "2026-11-02",
-    "source_url": "https://www.city.ota.gunma.jp/page/1065664.html"
+    "image_status": "参考写真：会場の太田市民会館（2022年6月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "source_url": "https://www.city.ota.gunma.jp/page/1065664.html",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E7%94%B0%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8.jpg",
+    "image_research_note": "施設公式 https://www.otacivichall.net/?eo_month=2026-07 に催し掲載あり。登録の市ページは2026-11-12時点で取得404、内容を再確認。"
   },
   "event:448": {
     "content_status": "公式案内照合済み",
@@ -3594,16 +3596,18 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:414": {
     "content_status": "2025年の市公式カレンダーで内容・時間を照合",
-    "image_status": "写真未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。ライブ当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2025",
     "notes": "過去の予定。実施状況は未確認。動的カレンダーのため個別資料も追確認が必要。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:416": {
     "content_status": "2025年の市公式カレンダーで内容・時間を照合",
@@ -3614,12 +3618,13 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:417": {
     "content_status": "2026年10月27日市報道発表と配布資料で第39回の正しい開催年・日時・会場を照合。",
-    "image_status": "写真未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。祭り当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/page/99630.html",
     "additional_sources": [
       "https://www.city.takasaki.gunma.jp/page/5227.html",
@@ -3630,7 +3635,8 @@
       "https://www.city.takasaki.gunma.jp/uploaded/attachment/44651.pdf"
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:418": {
     "content_status": "2025年の市の報道資料で対象・2回の製作日・設置予定を照合",
@@ -3649,7 +3655,8 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:420": {
     "content_status": "2025年の市公式カレンダーで内容・時間を照合",
@@ -3660,14 +3667,16 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:421": {
     "content_status": "2025年の市公式カレンダーで内容・時間を照合",
-    "image_status": "写真未確保",
-    "reviewed_at": "2026-11-02",
+    "image_status": "参考写真：会場の高崎市文化会館（2016年2月撮影）。祭り当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2025",
-    "notes": "過去の予定。実施状況は未確認。動的カレンダーのため個別資料も追確認が必要。"
+    "notes": "過去の予定。実施状況は未確認。動的カレンダーのため個別資料も追確認が必要。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_Cultural_Hall.JPG"
   },
   "place:103": {
     "content_status": "高崎市社会福祉協議会の利用案内・施設紹介・電話番号を照合",
@@ -4352,10 +4361,11 @@
   },
   "event:391": {
     "content_status": "2025年の高崎市個別告知または広報で日時・対象・料金・内容を照合",
-    "image_status": "イベント写真未確保",
-    "reviewed_at": "2026-11-02",
+    "image_status": "会場の道の駅外観（2014年5月4日撮影・落語会の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/page/35859.html",
-    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。"
+    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_Kurabuchi.JPG"
   },
   "event:392": {
     "content_status": "2025年の高崎市個別告知または広報で日時・対象・料金・内容を照合",
@@ -4374,7 +4384,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:395": {
     "content_status": "2025年の高崎市個別告知または広報で日時・対象・料金・内容を照合",
@@ -4393,7 +4404,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:470": {
     "content_status": "群馬県立近代美術館の年度案内で各回の内容・対象・日時・参加条件を照合",
@@ -4524,7 +4536,8 @@
     "image_status": "イベント写真未確保",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.city.takasaki.gunma.jp/site/senryou/2434.html",
-    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。"
+    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。",
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:411": {
     "content_status": "高崎市の2025年個別告知を照合",
@@ -4548,7 +4561,8 @@
     "image_status": "イベント写真未確保",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.city.takasaki.gunma.jp/site/senryou/70686.html",
-    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。"
+    "notes": "過去の開催予定。実施・変更状況は未確認。写真と利用条件は要調査。",
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:382": {
     "content_status": "2025年の高崎市公式告知と広報で講座・内容・対象を照合",
@@ -4599,7 +4613,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:384": {
     "content_status": "高崎市の個別告知または広報と照合",
@@ -6821,17 +6836,19 @@
   },
   "event:94": {
     "content_status": "群馬県観光公式案内で日時・内容を照合し、行列の実施を2026年11月1日の報道で確認。個別催しは未確認。",
-    "image_status": "利用条件を確認できるイベント写真は未確保。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "会場の一つ・倉賀野神社の鳥居（2020年1月26日撮影・武者行列の写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://gunma-kanko.jp/events/346",
-    "notes": "event:94 と event:125 は同一イベントの可能性が高く両方保持。実施報道 https://news.livedoor.com/article/detail/32707468/"
+    "notes": "event:94 と event:125 は同一イベントの可能性が高く両方保持。実施報道 https://news.livedoor.com/article/detail/32707468/",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Torii_of_Kuragano-jinja_(Takasaki).jpg"
   },
   "event:125": {
     "content_status": "群馬県観光公式案内で日時・内容を照合し、行列の実施を2026年11月1日の報道で確認。個別催しは未確認。",
-    "image_status": "利用条件を確認できるイベント写真は未確保。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "会場の一つ・倉賀野神社の鳥居（2020年1月26日撮影・武者行列の写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://gunma-kanko.jp/events/346",
-    "notes": "event:94 と event:125 は同一イベントの可能性が高く両方保持。実施報道 https://news.livedoor.com/article/detail/32707468/"
+    "notes": "event:94 と event:125 は同一イベントの可能性が高く両方保持。実施報道 https://news.livedoor.com/article/detail/32707468/",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Torii_of_Kuragano-jinja_(Takasaki).jpg"
   },
   "place:16": {
     "content_status": "施設公式案内で営業時間・遊びの内容を照合。未確認の料金・対象条件は確認待ちとした。",
@@ -7442,10 +7459,11 @@
   },
   "event:173": {
     "content_status": "富岡市公式資料で日時・イベント内容を照合。各催しの個別実施状況は未確認。",
-    "image_status": "利用条件を確認できるイベント写真は未確保。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "参考写真：会場周辺の富岡市役所（2018年6月撮影）。祭り当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.tomioka.lg.jp/www/contents/1791364563449/index.html",
-    "notes": "市広報11月号表紙で祭りの写真を確認。各演目の実施状況は未確認。"
+    "notes": "市広報11月号表紙で祭りの写真を確認。各演目の実施状況は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Tomioka_city_office_2018-06.jpg"
   },
   "event:175": {
     "content_status": "富岡市公式資料で日時・イベント内容を照合。会場について公式資料同士に相違があり未確定。",
@@ -9694,8 +9712,8 @@
   },
   "place:10": {
     "content_status": "桐生市・施設公式案内で利用条件を照合。",
-    "image_status": "既存画像は利用条件・撮影時期が未確認のため表示保留。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "施設外観（2011年9月22日撮影・現在の様子と異なる場合があります）。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://caribbe.info/",
     "notes": "料金 https://caribbe.info/price/ 、年齢制限等 https://www.city.kiryu.lg.jp/shisetsu/sports/caribbean/1008384.html 。木曜が祝日の営業は市と施設の記載に差があり要確認。利用可能な写真は未確保。",
     "candidate_photos": [
@@ -9775,7 +9793,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=52"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Caribbean_Beach_Pool.jpg"
   },
   "place:33": {
     "content_status": "2026年2月改定後の公式料金、年齢区分、駐車場と営業時間を照合。",
@@ -11935,11 +11954,13 @@
   },
   "place:42": {
     "content_status": "館林市公式資料で施設情報・利用条件を照合。",
-    "image_status": "利用条件・撮影時期を確認した施設写真は未確保。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "近藤沼公園の東沼（2024年6月撮影）。遊具や水遊び場は中沼周辺にあります。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.tatebayashi.gunma.jp/s068/kurashi/130/120/132/20260727112905.html",
     "notes": "市公式の水遊び2026年運転期間、BBQ年度案内 https://www.city.tatebayashi.gunma.jp/s068/kurashi/130/110/20210415115255.html を照合。地番は公園案内1628外・多目的広場1638で記載差があり既存値を保持。写真未確保。",
-    "candidate_photos": []
+    "candidate_photos": [],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Kondounuma_Higashinuma.jpg",
+    "image_research_note": "館林市の近藤沼公園案内で東沼と中沼の区分を照合。https://www.city.tatebayashi.gunma.jp/s068/map/020/20201030143056.html"
   },
   "place:62": {
     "content_status": "自治体・施設の公式資料で利用条件を照合。",
@@ -12656,10 +12677,10 @@
   },
   "place:23": {
     "content_status": "施設公式案内で時間・料金・展示を照合。",
-    "image_status": "既存画像の利用条件・撮影時期が未確認のため表示保留。",
-    "reviewed_at": "2026-11-02",
+    "image_status": "参考写真：科学館が2階に入る高崎市文化会館の建物（2016年2月撮影）。館内の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/",
-    "notes": "施設公式 https://www.takasaki-foundation.or.jp/t-kagakukan/planet.php で観覧料・65歳以上無料・同伴条件を照合。利用可能な写真は未確保。",
+    "notes": "施設公式 https://www.takasaki-foundation.or.jp/t-kagakukan/planet.php で観覧条件を照合。施設公式 https://www.takasaki-foundation.or.jp/t-kagakukan/news-detail.php?id=19&sid=35 で高崎市文化会館2階に所在することを確認。旧画像候補は引き続き利用条件未確認。",
     "candidate_photos": [
       {
         "id": 1183,
@@ -12701,7 +12722,8 @@
       }
     ],
     "image_research_note": "2026年11月6日にWikimedia Commonsで施設名・英語名を検索。施設と一致し、撮影日および利用条件を確認できる写真は見つからなかった。",
-    "image_research_source_url": "https://commons.wikimedia.org/"
+    "image_research_source_url": "https://commons.wikimedia.org/",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_Cultural_Hall.JPG"
   },
   "place:18": {
     "content_status": "施設・市の公式資料で確認できる内容を照合。",
@@ -14736,35 +14758,39 @@
   },
   "event:95": {
     "content_status": "県案内と県がリンクする周遊案内を照合。県ページに終了年2025の表記があるため、別案内の2026年と差異を記録。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "参考写真：対象施設の一つ、建て替え前の道の駅しもにた（2004年8月撮影）。現在の建物や開催中の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/page/767466.html",
     "additional_source_urls": [
       "https://npogunma.com/g-kabura/3685"
     ],
     "notes": "既存画像は利用条件・撮影時期未確認のため候補として保存し、表示対象から外した。",
     "candidate_photos": [],
-    "candidate_primary_image_url": null
+    "candidate_primary_image_url": null,
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_shimonita.jpg"
   },
   "event:96": {
     "content_status": "県案内で期間・紙スタンプとデジタル登録・賞品配布終了を照合。抽選の最新状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "参考写真：対象施設の一つ、道の駅たくみの里（2005年11月撮影）。開催中の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/page/763747.html",
     "additional_source_urls": [],
     "notes": "既存画像は利用条件・撮影時期未確認のため候補として保存し、表示対象から外した。",
     "candidate_photos": [],
-    "candidate_primary_image_url": null
+    "candidate_primary_image_url": null,
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_takumi_no_sato.jpg"
   },
   "event:98": {
     "content_status": "県案内で2期間・コース・GPSによる参加条件を照合。景品の最新の在庫は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "対象スポット2件の参考写真。撮影年と出典は各画像に記載。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/page/767095.html",
     "additional_source_urls": [],
     "notes": "既存画像は利用条件・撮影時期未確認のため候補として保存し、表示対象から外した。",
     "candidate_photos": [],
-    "candidate_primary_image_url": null
+    "candidate_primary_image_url": null,
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Conodont_Museum_2.jpg",
+    "image_research_note": "群馬県公式 https://www.pref.gunma.jp/page/767095.html のコース2に大間々博物館とながめ余興場を確認。"
   },
   "event:122": {
     "content_status": "県案内で期間・AI判定・クーポン数量と利用条件を照合。クーポンの現在の残数は未確認。",
@@ -14800,8 +14826,8 @@
   },
   "event:25": {
     "content_status": "榛名観光協会の2026年案内で期間と三山・抽選を照合。前橋観光協会の元URLはタイムアウト、詳細な応募条件は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "対象地域の一つ・妙義山の遠景（2009年10月21日撮影・ラリー当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://harunavi.jp/%E3%80%90%E7%AC%AC25%E5%9B%9E%E3%80%80%E4%B8%8A%E6%AF%9B%E4%B8%89%E5%B1%B1%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%83%A9%E3%83%AA%E3%83%BC%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/",
     "notes": "元の画像は利用条件・撮影時期未確認のため候補として保存し表示を外した。",
     "candidate_photos": [
@@ -14847,7 +14873,8 @@
     "candidate_primary_image_url": "https://www.maebashi-cvb.com/image/rendering/attraction_image/4046/keep/1200?v=9d3be8f9544841d778fafeba1afa3b8882ba28a5",
     "additional_source_urls": [
       "https://www.maebashi-cvb.com/event/2032"
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Mt._Myogi_1.JPG"
   },
   "event:47": {
     "content_status": "主催協会の応募要項で期間・撮影時期・公開アカウント等の条件を照合。選考・募集の最新変更は未確認。",
@@ -14976,8 +15003,8 @@
   },
   "event:91": {
     "content_status": "公式サイト・チケット案内で会期、料金、無料対象と会場別条件を照合。実施や混雑状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "会場の参考写真を表示。催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://maebashi-biennale.com/",
     "notes": "取得済み画像は利用条件・撮影時期未確認のため候補に保存し表示から外した。 同じ芸術祭の別レコード（91・127）があるため両方を保持。",
     "candidate_photos": [
@@ -15002,13 +15029,15 @@
     ],
     "candidate_primary_image_url": null,
     "additional_source_urls": [
-      "https://maebashi-biennale.com/tickets/"
-    ]
+      "https://maebashi-biennale.com/tickets/",
+      "https://maebashi-biennale.com/map/"
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Maebashi_Chuo_Shopping_street.jpg"
   },
   "event:127": {
     "content_status": "公式サイト・チケット案内で会期、料金、無料対象と会場別条件を照合。実施や混雑状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "会場の参考写真を表示。催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://maebashi-biennale.com/",
     "notes": "取得済み画像は利用条件・撮影時期未確認のため候補に保存し表示から外した。 同じ芸術祭の別レコード（91・127）があるため両方を保持。",
     "candidate_photos": [
@@ -15033,13 +15062,15 @@
     ],
     "candidate_primary_image_url": null,
     "additional_source_urls": [
-      "https://maebashi-biennale.com/tickets/"
-    ]
+      "https://maebashi-biennale.com/tickets/",
+      "https://maebashi-biennale.com/map/"
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Maebashi_Chuo_Shopping_street.jpg"
   },
   "event:128": {
     "content_status": "主催者特設サイトで期間、受付、時間、端末台数別料金を照合。最新の予約状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "参考写真：四万温泉（2013年9月撮影）。イベントや展示の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://natureinblue.jp/",
     "notes": "取得済み画像は利用条件・撮影時期未確認のため候補に保存し表示から外した。",
     "candidate_photos": [
@@ -15065,21 +15096,23 @@
     "candidate_primary_image_url": "https://gunma-kanko.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIwNjAsInB1ciI6ImJsb2JfaWQifX0=--d46f41bb7591e09668806a02675177cd32d263df/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e3f900e0b8275c6b6bcc78028c234c09cd7be0f4/1783997935380-1.jpg",
     "additional_source_urls": [
       "https://gunma-kanko.jp/events/310"
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E5%9B%9B%E4%B8%87%E6%B8%A9%E6%B3%89_%E4%B8%AD%E4%B9%8B%E6%9D%A1_2013_(9993444756).jpg"
   },
   "event:432": {
     "content_status": "太田市の企画展案内で会期・会場・入館料・展示内容を照合。最新の休館日は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "会場外観（2012年3月8日撮影・企画展の写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.ota.gunma.jp/page/1062288.html",
     "notes": "取得済み画像は利用条件・撮影時期未確認のため候補に保存し表示から外した。",
     "candidate_photos": [],
-    "candidate_primary_image_url": null
+    "candidate_primary_image_url": null,
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ota_Gunma_Ota_City_Nittanosho_History_Museum_1.JPG"
   },
   "event:93": {
     "content_status": "施設公式Night Bloom案内と県報道資料で夜間時間・休園・期間中の入園料を照合。花の現在の開花状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "会場の改装前の昼間の風景（2008年10月10日撮影・ナイトイベントの写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.flower-park.jp/night-bloom/",
     "additional_source_urls": [
       "https://www.flower-park.jp/night-bloom/",
@@ -15106,12 +15139,13 @@
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
     ],
-    "candidate_primary_image_url": "https://www.flower-park.jp/wp/wp-content/themes/night-bloom/assets/img/garden_blue.jpg"
+    "candidate_primary_image_url": "https://www.flower-park.jp/wp/wp-content/themes/night-bloom/assets/img/garden_blue.jpg",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Gunma_Flower_Park_-_Oct_10,_2008.jpg"
   },
   "event:121": {
     "content_status": "施設公式Night Bloom案内と県報道資料で夜間時間・休園・期間中の入園料を照合。花の現在の開花状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "会場の改装前の昼間の風景（2008年10月10日撮影・催しの写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
     "additional_source_urls": [
       "https://www.flower-park.jp/night-bloom/",
@@ -15138,7 +15172,8 @@
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
     ],
-    "candidate_primary_image_url": "https://www.pref.gunma.jp/uploaded/image/639151.jpg"
+    "candidate_primary_image_url": "https://www.pref.gunma.jp/uploaded/image/639151.jpg",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Gunma_Flower_Park_-_Oct_10,_2008.jpg"
   },
   "event:142": {
     "content_status": "高崎市美術館の公式展覧会案内で会期・展示・時間・料金を照合。最新の変更は未確認。",
@@ -15172,8 +15207,8 @@
   },
   "event:143": {
     "content_status": "高崎市タワー美術館の公式案内で会期・展示・時間・料金を照合。関連企画の空き状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保。",
-    "reviewed_at": "2026-11-05",
+    "image_status": "美術館が入る高崎タワー21（2012年5月13日撮影・展示の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
     "additional_source_urls": [],
     "notes": "元画像は利用条件・撮影時期未確認のため候補に保存し表示から外した。",
@@ -15197,7 +15232,8 @@
         "notes": "公式ページに掲載された対象作品の写真。イベントポスター等の画像は選外。"
       }
     ],
-    "candidate_primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/67825.jpg"
+    "candidate_primary_image_url": "https://www.city.takasaki.gunma.jp/uploaded/image/67825.jpg",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_Tower_21.JPG"
   },
   "event:123": {
     "content_status": "県の報道資料で展示内容・会期・料金・火曜および年末年始の休館を照合。最新の変更は未確認。",
@@ -15302,7 +15338,8 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:335": {
     "content_status": "公式案内照合済み（開催直前の変更・申込空きは未確認）",
@@ -15981,9 +16018,10 @@
   },
   "event:176": {
     "content_status": "市の公式案内照合済み。直前の変更・申込状況は要確認",
-    "image_status": "利用条件を確認できたイベント写真未確保",
-    "reviewed_at": "2026-11-05",
-    "source_url": "https://www.city.tomioka.lg.jp/www/contents/1783664001799/index.html"
+    "image_status": "会場の正門（2023年9月13日撮影・演奏会当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "source_url": "https://www.city.tomioka.lg.jp/www/contents/1783664001799/index.html",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Tomioka-shi-shakaikyouiku-kan2.jpg"
   },
   "event:180": {
     "content_status": "市の公式案内照合済み。直前の変更・申込状況は要確認",
@@ -16023,10 +16061,11 @@
   },
   "event:337": {
     "content_status": "市の公式案内を照合。未記載項目・直前変更は要確認",
-    "image_status": "利用条件と撮影時期を確認した写真は未確保",
-    "reviewed_at": "2026-11-05",
+    "image_status": "参考写真：会場の高崎市総合保健センターと中央図書館の建物（2016年2月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/page/49097.html",
-    "notes": "個別の講演会は事前申込が必要であり、元の「事前申込不要」の一律記載を訂正。"
+    "notes": "個別の講演会は事前申込が必要であり、元の「事前申込不要」の一律記載を訂正。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_City_General_Health_Center_and_Central_Library.JPG"
   },
   "event:356": {
     "content_status": "市の公式案内を照合。未記載項目・直前変更は要確認",
@@ -16202,8 +16241,8 @@
   },
   "event:24": {
     "content_status": "富岡市観光協会の公式案内で内容・登録方法・第2弾施設料金を照合、終了日と最新実施状況は未確認",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "妙義山の遠景（2009年10月21日撮影・イベントやコースの写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.tomioka-silk.jp/_event/detail/id=7066",
     "notes": "開始日は https://mt-myogi.net/ の2025年5月案内で確認。公式ページは第3弾2026年7月10日開始、LINE登録、長距離コース、第2弾の施設料金・休館を明記。終了日は不明。画像候補は利用権と撮影時期未確認。 公式案内を再確認し、条件と過去開催の区別を紹介文に反映。",
     "image_candidates": [
@@ -16302,12 +16341,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=32"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Mt._Myogi_1.JPG"
   },
   "event:31": {
     "content_status": "市の当日活動報告と上毛新聞の事後記事で2025年開催を確認。鼓笛演奏は雨天中止。",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-11",
+    "image_status": "会場の参考写真を表示。催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.maebashi-cvb.com/news/2282",
     "notes": "第77回の2025年10月11〜12日、10〜21時、市街地開催を確認。11日小学生鼓笛演奏は雨天中止。市 https://www.city.maebashi.gunma.jp/promotion/enjoy/19739.html は実施主体を前橋まつり実施委員会と記載。2026年第78回を上書きしない。写真の権利・撮影時期は未確認。 公式案内を再確認し、条件と過去開催の区別を紹介文に反映。 前橋市の10月11日の会場美化活動報告と上毛新聞の事後記事で祭りの開催を確認。掲載された当日写真は人物を含み利用許諾未確認のため未採用。",
     "image_candidates": [
@@ -16333,13 +16373,15 @@
     ],
     "additional_source_urls": [
       "https://www.city.maebashi.gunma.jp/soshiki/seisaku/seisakusuishin/gyomu/SDGs/47468.html",
-      "https://kitakan-navi.jp/archives/236045"
-    ]
+      "https://kitakan-navi.jp/archives/236045",
+      "https://maebashi-cci.or.jp/dl/ito_2025.10.pdf"
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Maebashi_Chuo_Shopping_street.jpg"
   },
   "event:45": {
     "content_status": "観光団体の2026年案内で運行日・経路・運賃・定員・予約条件を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "経由地の一つ・沼田城跡の沼田公園（2018年11月24日撮影・バスの写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://agakanren.com/event/3273/",
     "notes": "2026年5月2〜6日、10月10〜12日・31日、11月1日・3日。最寄り駅と三城を結び無料、予約不可、定員39人。ページ先頭の日付10月10日は個別日付欄であり本文の複数日程を採用。実際の全便運行結果は未確認。画像権利・撮影時期未確認。 公式案内を再確認し、個別の紹介文と利用条件を追加。",
     "image_candidates": [
@@ -16438,7 +16480,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Numata_Park_Kabukimon.jpg"
   },
   "event:63": {
     "content_status": "観光協会公式案内で2026年運行期間、発着地、ガイド料、予約条件、道路規制を照合",
@@ -16557,8 +16600,8 @@
   },
   "event:43": {
     "content_status": "沼田市観光協会公式要項で2026年応募期間・対象・応募条件と著作権条項を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の一つ・沼田公園（2018年11月24日撮影・コンテストの写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://numata-kankou.jp/photocon/photo_contest.html",
     "notes": "募集期間、犬猫のみ、観光協会の陣羽織または甲冑、沼田公園内で撮影、無料、1人1点、専用フォーム、投稿画像の著作権は観光協会に属するとの主催者規約を確認。撮影写真の表示利用権・撮影時期未確認。 公式案内を再確認し、個別の紹介文と利用条件を追加。",
     "image_candidates": [
@@ -16657,12 +16700,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Numata_Park_Kabukimon.jpg"
   },
   "event:44": {
     "content_status": "沼田市観光協会公式要項で2026年実施期間・料金・予約期限・受付時間を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：和服体験の特典対象である旧土岐家住宅洋館（2024年1月撮影）。体験当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://numata-kankou.jp/taisho_roman/taiken.html",
     "notes": "2026年4月25日〜12月20日（店舗休業日除く）、10〜16時、受付10〜14時、希望日の3日前までに店舗へ電話予約、現金払い、衣装別料金と取扱店舗を確認。別途11月21〜23日の無料招待キャンペーンは条件が異なるため通常の料金を記載。写真の利用権・撮影時期未確認。 公式案内を再確認し、個別の紹介文と利用条件を追加。",
     "image_candidates": [
@@ -16761,12 +16805,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Former_Toki_House_ac_(1).jpg"
   },
   "event:62": {
     "content_status": "町の公式記録で2026年観賞会の日程・時間・終了を確認",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：上毛高原駅の西口（2021年7月撮影）。ホタルや観賞場所の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.town.minakami.gunma.jp/life/09sumai/kankyou/2016-1013-1155-16.html",
     "notes": "町が2026年6月13日〜7月12日20〜21時の観賞会終了と草むらのヤマビル注意を掲載。観光協会 https://www.enjoy-minakami.jp/hotaru.php にフラッシュ・懐中電灯使用を控える案内。画像の利用権・撮影時期は未確認。 町公式案内で観賞の注意と期間の扱いを再照合。画像利用条件は未確認。",
     "image_candidates": [
@@ -16827,7 +16872,9 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:JR_Joetsu_Shinkansen_Jomo-Kogen_Station_West_Exit.jpg",
+    "image_research_note": "みなかみ町公式案内でホタル観賞コースが上毛高原駅の西側にあることを確認。"
   },
   "event:72": {
     "content_status": "上野村公式案内で開催場所・企画別日程・対象・料金・申込条件を照合",
@@ -17353,8 +17400,8 @@
   },
   "event:26": {
     "content_status": "実施委員会と市の公式案内で2026年の日程・時間・会場・催しを照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の参考写真を表示。催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://maebashi-tanabata.jp/",
     "notes": "第76回2026年7月10〜12日、10・11日10〜21時、12日10〜20時。七夕飾り、短冊、露店等と無料おまつりバスなしを公式案内で確認。市 https://www.city.maebashi.gunma.jp/bunka_sports_kanko/1/2/9719.html と日程を照合。個別催しの実施結果、写真権利・撮影時期は未確認。 主催施設または自治体の案内を再確認し紹介文を整備。",
     "image_candidates": [
@@ -17377,12 +17424,16 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=158"
       }
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Maebashi_Chuo_Shopping_street.jpg",
+    "additional_source_urls": [
+      "https://maebashi-tanabata.jp/"
     ]
   },
   "event:20": {
     "content_status": "主催施設と群馬県の公式案内で2026年日程・時間・会場・料金を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の入口（2023年8月5日撮影・イベント当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://maebashi-akagi.jp/amuse/post-19917",
     "notes": "7月4日10〜19時、5日10〜18時で終了時刻が異なるため共通時刻を空欄化。入場・ステージ観覧無料、飲食・体験有料、店舗フェアは6月6日〜7月5日。県 https://www.pref.gunma.jp/page/758709.html で開催も照合。個別の実施結果、写真利用権・撮影時期は未確認。 主催施設または自治体の案内を再確認し紹介文を整備。",
     "image_candidates": [
@@ -17500,12 +17551,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=20"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E9%81%93%E3%81%AE%E9%A7%85%E3%81%BE%E3%81%88%E3%81%B0%E3%81%97%E8%B5%A4%E5%9F%8E.jpg"
   },
   "event:50": {
     "content_status": "安中市と同志社の事前案内で2026年の日付・場所・内容・料金を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の礼拝堂（2011年9月2日撮影・講演会当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.annaka.lg.jp/page/14142.html",
     "notes": "2026年7月11日13:30〜15:30、13時開場、礼拝堂、無料・事前申込不要。市と同志社 https://150th.doshisha.ed.jp/150th-info/detail/399 で聖歌隊・アニメ上映・パネルの予定を確認。当日の実施結果と写真権利・撮影時期は未確認。 公的機関の案内を再確認し、予定内容と条件を紹介文に反映。 市の掲載URLは404のため、確認できる同志社の事前案内を詳細ページの参照先に設定。",
     "image_candidates": [
@@ -17531,12 +17583,13 @@
     ],
     "additional_source_urls": [
       "https://150th.doshisha.ed.jp/150th-info/detail/399"
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Niijima_Gakuen_Junior_and_Senior_High_School.JPG"
   },
   "event:60": {
     "content_status": "博物館公式案内で2026年会期・展示内容・終了を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場外観（2018年7月14日撮影・展示の写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.midori.gunma.jp/conodont/1004732/1009688.html",
     "notes": "2026年7月18日〜9月27日の展示終了を市が明記。ゴビ砂漠・北米の恐竜骨格はレプリカ・復元模型。観覧料・開館時間と休館日は施設の https://www.city.midori.gunma.jp/conodont/1003589.html で確認。写真の権利・撮影時期は未確認。 公的機関の案内を再確認し、予定内容と条件を紹介文に反映。",
     "image_candidates": [
@@ -17597,12 +17650,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Conodont_Museum_2.jpg"
   },
   "event:19": {
     "content_status": "四万温泉協会案内で2026年日程・時間・体験内容・予約窓口を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：会場周辺の四万温泉（2013年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://nakanojo-kanko.jp/shima/events/%E6%B8%A9%E6%B3%89%E9%83%B7%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%82%B7%E3%82%A2%E3%82%BF%E3%83%BC-2026%E3%80%80%E4%BD%9C%E3%82%8A%E6%89%8B%E3%81%AE%E8%A6%8B%E3%81%88%E3%82%8B%EF%BC%99%E6%97%A5/",
     "notes": "2026年7月18日〜26日10〜17時、四万温泉郷で作家のワークショップ、予約窓口と一部店舗への直接問い合わせを確認。料金と企画ごとの実施結果は未確認。画像の利用権・撮影時期は未確認。 観光案内の当年の日時・内容を再確認。実施結果と写真の利用条件・撮影時期は未確認。",
     "image_candidates": [
@@ -17739,12 +17793,13 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E5%9B%9B%E4%B8%87%E6%B8%A9%E6%B3%89_%E4%B8%AD%E4%B9%8B%E6%9D%A1_2013_(9993444756).jpg"
   },
   "event:66": {
     "content_status": "名称・会期の公式根拠未確認、要再調査",
-    "image_status": "候補は画面配色ボタンであり実写真ではないため除外、代替写真未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "会場外観（2016年6月11日撮影・展示の写真ではありません）。催し自体の写真は未確保。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.vill.shinto.gunma.jp/sightseeing/000245/000253/p001436.html",
     "notes": "「耳飾り展2026」7月18日〜8月30日の固有の案内を確認できず。村公式の夏季企画展は別名称かつ6月27日〜9月6日で、同一と判断できない。元の画像はcolor-normal.pngで画面配色切替ボタン、写真ではない。誤認を避け確認待ちとして記録を保持。 当該催しの主催者を確認できないため、断定表示を取り除いた。",
     "image_candidates": [
@@ -17902,7 +17957,8 @@
       }
     ],
     "image_research_source_url": "https://commons.wikimedia.org/wiki/File:Museum_Of_Earrings.jpg",
-    "image_research_note": "耳飾り館の外観写真候補。Qurren撮影、2016年6月11日、CC BY-SA 3.0。催しそのものの写真ではなく、当該イベントの会場も未確認のため採用しない。"
+    "image_research_note": "耳飾り館の外観写真候補。Qurren撮影、2016年6月11日、CC BY-SA 3.0。催しそのものの写真ではなく、当該イベントの会場も未確認のため採用しない。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Museum_Of_Earrings.jpg"
   },
   "event:16": {
     "content_status": "会場公式案内で2026年日程・二部制・内容・料金・持ち物を照合、実施結果は未確認",
@@ -18114,8 +18170,8 @@
   },
   "event:59": {
     "content_status": "みどり市の7月・8〜9月の公式案内で個別開催日・催し名・会場を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の外観（2023年10月28日撮影・催し当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.midori.gunma.jp/kosodate/1001647/1004756/1005934/1009838.html",
     "notes": "市の6〜7月案内 https://www.city.midori.gunma.jp/kosodate/1001647/1004756/1005934/1009677.html と8〜9月案内を照合。7月19・26日、8月23・29日、9月6・12・13日に異なる催し。期間中毎日開催ではない。各催しの料金・実施結果、画像権利・撮影時期は未確認。 公的機関の案内を再確認し、予定内容と条件を紹介文に反映。",
     "image_candidates": [
@@ -18157,7 +18213,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=158"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Nagame_Theater.jpg"
   },
   "event:17": {
     "content_status": "玉村町の2026年6月広報で開催期間・参加条件・抽選日程を照合",
@@ -18392,8 +18449,8 @@
   },
   "event:35": {
     "content_status": "吾妻観光連盟の案内で2026年日程・対象・料金・荒天時対応を照合",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "集合場所周辺の道の駅（2003年7月12日撮影・催しの写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://agakanren.com/event/3323/",
     "notes": "2026年7月21日9:30受付、10時採集開始、小学生以下・保護者同伴、無料、会場で昆虫を放す企画、荒天時は配布予定と確認。実施結果と写真の利用権・撮影時期は未確認。 公式資料を再確認し、予定内容と参加条件を紹介文に反映。",
     "image_candidates": [
@@ -18549,7 +18606,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_kusatsu_undojaya_park.jpg"
   },
   "event:51": {
     "content_status": "安中市の2026年告知チラシで日程・内容・料金・教室申込条件を照合",
@@ -18581,8 +18639,8 @@
   },
   "event:27": {
     "content_status": "前橋市の公式案内で2026年日程・関連行事・アクセスを照合、開催時間等は未確認",
-    "image_status": "利用権・撮影時期未確認のため表示から除外、代替写真未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：会場近くの大胡駅（2004年2月撮影）。祭りの様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/ogo/gyomu/1/2120.html",
     "notes": "市の案内で7月25・26日、関連行事「天王様、暴れ獅子」は26日・雨天中止なし、駐車場なし・大胡駅から徒歩約3分を確認。祭り全体の16〜22時を公式本文では確認できず空欄化。実施結果と画像権利・撮影時期は未確認。 公式案内を再確認し、条件と過去開催の区別を紹介文に反映。",
     "image_candidates": [
@@ -18605,12 +18663,14 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=158"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ogo_sta.jpg",
+    "image_research_note": "前橋市の公式案内で会場まで大胡駅から徒歩約3分と確認。"
   },
   "event:12": {
     "content_status": "開催案内を照合済み・開催結果未確認",
-    "image_status": "使用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "建て替え前の会場（2004年8月1日撮影・現在の建物や催しの写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://gunma-kanko.jp/events/302",
     "notes": "既存画像は利用条件未確認のため掲載を保留。案内画像や関連施設画像を含み、当該イベントの実写写真としての適合も未確認。 観光案内の当年の日時・内容を再確認。実施結果と写真の利用条件・撮影時期は未確認。",
     "image_candidates": [
@@ -18728,7 +18788,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_shimonita.jpg"
   },
   "event:74": {
     "content_status": "開催案内を照合済み・開催結果未確認",
@@ -19043,10 +19104,12 @@
   },
   "event:665": {
     "content_status": "公式開催案内と照合済み・開催前",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "建て替え前の敷島公園水泳場（2023年5月撮影）。ワークショップや新水泳場の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/page/778438.html",
-    "notes": "日時、参加対象、申込方法を公式資料と照合。画像未確保。 2026年11月6日、主催者公式案内で内容と参加条件を再照合。当該催しの利用条件・撮影時期を確認できる写真は未確保。"
+    "notes": "日時、参加対象、申込方法を公式資料と照合。画像未確保。 2026年11月6日、主催者公式案内で内容と参加条件を再照合。当該催しの利用条件・撮影時期を確認できる写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Gunma_Prefectural_Shikishima_Swimming_Pool_outside.jpg",
+    "image_research_note": "群馬県の公式案内で建て替え工事中の敷島公園新水泳場付近が会場であることを確認。https://www.pref.gunma.jp/page/778438.html"
   },
   "event:666": {
     "content_status": "公式開催案内と照合済み・開催前",
@@ -19402,7 +19465,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:409": {
     "content_status": "2025年の市広報・公式告知を照合済み・実施結果未確認",
@@ -19425,7 +19489,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:371": {
     "content_status": "2025年の公式開催案内照合済み・実施結果未確認",
@@ -19471,7 +19536,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:246": {
     "content_status": "栃木県立博物館の公式予約案内と照合済み",
@@ -19516,8 +19582,8 @@
   },
   "event:113": {
     "content_status": "市観光協会の案内と開催期間・会場を照合・点灯時間と料金は未確認",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：会場の一つ、オリオンスクエアの冬のライトアップ（2015年12月撮影）。2026年の催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.utsunomiya-cvb.org/event/detail_30068.html",
     "notes": "元の公式画像は再利用条件・撮影時期未確認のため掲載を保留。 公式案内を再照合。催し当日の写真は未確保。",
     "image_candidates": [
@@ -19539,7 +19605,8 @@
         "last_verified_at": "2026-10-22",
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Orion_Square_Winter_Night.jpg"
   },
   "event:114": {
     "content_status": "栃木市観光協会の開催案内を照合・時間と料金は未確認",
@@ -19810,8 +19877,8 @@
   },
   "event:204": {
     "content_status": "公式案内を照合・未確認事項あり",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の大崎公園芝生広場（2012年2月撮影）。2026年の催しの写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.saitama.lg.jp/008/004/007/p116624.html",
     "notes": "日時・会場・雨天中止・内容を市公式案内で照合。入場料金は記載なし。元画像は利用条件・撮影時期未確認につき掲載保留。 自治体公式案内で日程・内容・参加条件を再照合。催し自体の写真は未確保。",
     "image_candidates": [
@@ -19833,12 +19900,14 @@
         "last_verified_at": "2026-10-22",
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Saitama_Osaki_Park_1.JPG",
+    "image_research_note": "さいたま市公式案内で2026年の会場が大崎公園芝生広場であることを照合。https://www.city.saitama.lg.jp/008/004/007/p116624.html"
   },
   "event:3": {
     "content_status": "高崎市報道配布資料の主催者チラシで日時・場所・入場無料と内容を照合。開催後の実施状況は未確認。",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.takasaki.gunma.jp/page/92412.html",
     "notes": "市の記者会見で前夜祭の内容・主催を確認。元のイベントページは404。日時・会場・料金は再確認が必要。 元画像は利用条件と撮影時期の確認まで掲載保留。 画像形式の主催者チラシを確認し、従来未確認だった日時・会場・入場無料を照合。催しの写真は未確保。",
     "image_candidates": [
@@ -19885,12 +19954,13 @@
       "https://www.city.takasaki.gunma.jp/uploaded/attachment/42000.pdf"
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:28": {
     "content_status": "公式情報を照合・未確認事項あり",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：会場周辺の赤城大沼（2014年5月撮影）。祭り当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.pref.gunma.jp/site/houdou/764584.html",
     "notes": "群馬県の2026年開催案内で日時・会場・主催・内容を照合。個別の料金は未確認。 元画像は利用条件と撮影時期の確認まで掲載保留。 公的機関または観光協会の案内を再確認し、予定と開催報告を区別して反映。",
     "image_candidates": [
@@ -19932,7 +20002,8 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Lake_Onuma_%40_Mount_Akagi_area_(14018470650).jpg"
   },
   "event:29": {
     "content_status": "大会公式サイトで第70回の開催終了を確認。市案内で日時を照合。",
@@ -20006,8 +20077,8 @@
   },
   "event:56": {
     "content_status": "公式案内を照合・期間等に未確認事項あり",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：ホタルの里を流れる鳴沢川の水源・箱島湧水（2013年9月撮影）。ホタルや観賞場所の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.town.higashiagatsuma.gunma.jp/www/kankou/contents/1204111587824/index.html",
     "notes": "町の一般案内で季節の目安・観賞上の注意を確認。固定の開催期間ではなく、2026年の発生状況は未確認。 元画像は撮影時期・利用条件の確認まで掲載保留。 町公式案内で観賞の注意と期間の扱いを再照合。画像利用条件は未確認。",
     "image_candidates": [
@@ -20049,7 +20120,9 @@
         "last_verified_at": "2026-07-06",
         "notes": "auto_collected_score=28"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Hakoshima_Yusui_1.jpg",
+    "image_research_note": "東吾妻町公式 https://www.town.higashiagatsuma.gunma.jp/www/kankou/contents/1204111587824/ でホタルの里を流れる鳴沢川の水源が箱島湧水であることを確認。"
   },
   "event:38": {
     "content_status": "公式案内を照合・期間等に未確認事項あり",
@@ -20235,8 +20308,8 @@
   },
   "event:4": {
     "content_status": "公式案内と開催条件を照合",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.takasaki-matsuri.jp/",
     "notes": "祭り公式・市観光案内で開催日と催しを確認。花火大会の予定と順延条件も公式案内で照合。 既存画像は利用条件と撮影時期の確認まで掲載保留。 共通の公式案内を再確認し、企画別の条件と過去の予定を反映。",
     "image_candidates": [
@@ -20356,12 +20429,13 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:86": {
     "content_status": "公式案内と開催条件を照合",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.takasaki-matsuri.jp/jyousyuu_takasakiondo/",
     "notes": "公式案内で日時、場所、参加無料・申込不要を確認。翌日のソングフェスと区別。 既存画像は利用条件と撮影時期の確認まで掲載保留。 共通の公式案内を再確認し、企画別の条件と過去の予定を反映。",
     "image_candidates": [
@@ -20462,7 +20536,8 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:39": {
     "content_status": "公式案内を照合・料金に未確認事項あり",
@@ -21142,8 +21217,8 @@
   },
   "event:87": {
     "content_status": "公式案内を照合・未確認事項あり",
-    "image_status": "利用条件と撮影時期を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://www.takasaki-matsuri.jp/jyousyuu_takasakiondo/",
     "notes": "祭り公式の共通案内で日時・場所・無料・申込不要を照合。大盆踊りの開催日と区別。 既存画像は撮影時期・利用条件の確認まで掲載保留。 共通の公式案内を再確認し、企画別の条件と過去の予定を反映。",
     "image_candidates": [
@@ -21244,7 +21319,8 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:37": {
     "content_status": "観光協会の検索結果で日程・内容を照合、個別催しの実施結果は未確認",
@@ -21506,8 +21582,8 @@
   },
   "event:2": {
     "content_status": "開催日・実施状況・料金・主催者は未確認",
-    "image_status": "撮影時期・利用条件を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://furimazukan.com/flea-market/flea-market-314",
     "notes": "第三者掲載と主催者の当該回資料を再照合する必要がある。 画像の権利・撮影時期は未確認のため掲載保留。",
     "image_candidates": [
@@ -21532,12 +21608,13 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:78": {
     "content_status": "開催日・実施状況・料金・主催者は未確認",
-    "image_status": "撮影時期・利用条件を確認できる実写写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "source_url": "https://furimazukan.com/flea-market/flea-market-314",
     "notes": "第三者掲載と主催者の当該回資料を再照合する必要がある。同じ広場が同日に高崎まつりの会場として案内されているため、開催を推定しない。 画像の権利・撮影時期は未確認のため掲載保留。",
     "image_candidates": [
@@ -21562,7 +21639,8 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:498": {
     "content_status": "美術館の公式終了案内で開催条件を照合",
@@ -21653,7 +21731,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:263": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。開催後の実施状況は未確認",
@@ -21674,7 +21753,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:268": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。開催後の実施状況は未確認",
@@ -21695,7 +21775,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:270": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。開催後の実施状況は未確認",
@@ -21716,7 +21797,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:339": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。受付状況は未確認",
@@ -21737,7 +21819,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:347": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。受付状況は未確認",
@@ -21758,7 +21841,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:350": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。受付状況は未確認",
@@ -21779,7 +21863,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:351": {
     "content_status": "高崎市公式講習会案内で日時・内容・対象・定員・料金・申込方法を照合。受付状況は未確認",
@@ -21800,7 +21885,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:272": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21821,7 +21907,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:282": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21842,7 +21929,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:285": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21863,7 +21951,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:286": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21884,7 +21973,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:288": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21905,7 +21995,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:289": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21926,7 +22017,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:291": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21947,7 +22039,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:297": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21958,7 +22051,8 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:298": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -21979,7 +22073,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:300": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22000,7 +22095,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:305": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22021,7 +22117,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:314": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。公式ページに終了と記載。",
@@ -22032,7 +22129,8 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/site/senryou/",
       "https://www.city.takasaki.gunma.jp/site/senryou/1951.html"
-    ]
+    ],
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:316": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22053,7 +22151,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:320": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22074,7 +22173,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:322": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22095,7 +22195,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:324": {
     "content_status": "市公式案内で開催日・内容・対象・料金を照合。開催後の実施状況は未確認",
@@ -22123,7 +22224,8 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:329": {
     "content_status": "市の2026年デジタル広報で日程・時間・対象・料金・当日受付を照合。実施結果は未確認",
@@ -22145,12 +22247,13 @@
       "rights": "市のサイト利用条件は画像の無断使用・転載を禁止。利用許諾は未取得のため掲載不可。",
       "photo_date": "撮影時期未確認",
       "outcome": "写真未掲載。使用可能な実際の会場または催しの写真を引き続き調査。"
-    }
+    },
+    "image_research_note": "高崎写真集に染料植物園と染色体験の写真候補あり（a5938・a6040）。写真データの利用は市への申込みが必要で、撮影時期も未確認のため掲載保留。https://www.city.takasaki.gunma.jp/site/photos/3502.html 利用案内 https://www.city.takasaki.gunma.jp/site/photos/"
   },
   "event:81": {
     "content_status": "未確認：市広報は同日同時間帯・同会場に農業まつりを掲載。フリーマーケットとの関係・実施可否は主催者確認が必要",
     "source_url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/44727.txt",
-    "image_status": "掲載画像の利用権と撮影時期は未確認のため表示から除外",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
     "image_candidates": [
       {
         "id": 2083,
@@ -22172,10 +22275,11 @@
         "notes": "auto_collected_score=158"
       }
     ],
-    "reviewed_at": "2026-11-07",
+    "reviewed_at": "2026-11-12",
     "notes": "既存出典のフリマ図鑑は503、別の情報サイトは11月29日を掲載。11月22日の中止とは断定できない。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:294": {
     "content_status": "高崎市公式案内で日時・対象・料金・申込を照合。開催後の実施状況は未確認",
@@ -22410,8 +22514,8 @@
   "event:89": {
     "content_status": "主催者または登録団体の公式案内で日時・内容を照合。開催後の実施状況は未確認",
     "source_url": "https://bistyle-run.com/guide/",
-    "image_status": "実際の催しの写真は未確保。既存画像の利用条件・撮影時期は未確認",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "案内で確認できない項目は未確認として記載。 既存画像は利用条件が未確認のため表示から除外。 主催者または公的観光案内を再確認し、内容と条件を反映。",
     "image_candidates": [
       {
@@ -22549,13 +22653,14 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:90": {
     "content_status": "主催者または登録団体の公式案内で日時・内容を照合。開催後の実施状況は未確認",
     "source_url": "https://tsk1958.net/gomucar/",
-    "image_status": "実際の催しの写真は未確保。既存画像の利用条件・撮影時期は未確認",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "案内で確認できない項目は未確認として記載。 既存画像は利用条件が未確認のため表示から除外。 主催者または観光協会の案内を再確認し、予定と未確認の実施結果を区別。",
     "image_candidates": [
       {
@@ -22598,7 +22703,8 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:573": {
     "content_status": "主催団体登録の公式案内の検索収録内容で対象・費用・申込条件を照合。実施結果は未確認。",
@@ -22822,16 +22928,24 @@
   "event:535": {
     "content_status": "主催者・自治体の公式案内で日時・内容・参加条件を照合。最新の受付と過去分の開催実績は未確認",
     "source_url": "https://www.town.itakura.gunma.jp/cont/s021000/d021020/agebune.htm",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "掲載画像の利用条件と撮影時期を確認できるまで画像未掲載。 板倉町の共通公式案内で運航日・所要時間・料金を再確認。各便の実施結果と写真は未確認。"
+    "image_status": "発着場のある公園の参考写真を表示。揚舟の催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
+    "notes": "掲載画像の利用条件と撮影時期を確認できるまで画像未掲載。 板倉町の共通公式案内で運航日・所要時間・料金を再確認。各便の実施結果と写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:ItakuraSuigouKoen.jpg",
+    "additional_source_urls": [
+      "https://www.town.itakura.gunma.jp/cont/s021000/map/436shisetsu.html"
+    ]
   },
   "event:536": {
     "content_status": "主催者・自治体の公式案内で日時・内容・参加条件を照合。最新の受付と過去分の開催実績は未確認",
     "source_url": "https://www.town.itakura.gunma.jp/cont/s021000/d021020/agebune.htm",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "掲載画像の利用条件と撮影時期を確認できるまで画像未掲載。 板倉町の共通公式案内で運航日・所要時間・料金を再確認。各便の実施結果と写真は未確認。"
+    "image_status": "発着場のある公園の参考写真を表示。揚舟の催し当日の写真は未確保。",
+    "reviewed_at": "2026-11-12",
+    "notes": "掲載画像の利用条件と撮影時期を確認できるまで画像未掲載。 板倉町の共通公式案内で運航日・所要時間・料金を再確認。各便の実施結果と写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:ItakuraSuigouKoen.jpg",
+    "additional_source_urls": [
+      "https://www.town.itakura.gunma.jp/cont/s021000/map/436shisetsu.html"
+    ]
   },
   "event:369": {
     "content_status": "当時の市公式カレンダーで日付・内容・会場・時刻を照合。一部の実施結果や料金は未確認",
@@ -22995,9 +23109,10 @@
   "event:344": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/49927.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日、高崎市公式案内で開催内容と条件を再照合。催しの実写写真は未確保。"
+    "image_status": "参考写真：会場の高崎市総合保健センターと中央図書館の建物（2016年2月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日、高崎市公式案内で開催内容と条件を再照合。催しの実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_City_General_Health_Center_and_Central_Library.JPG"
   },
   "event:345": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
@@ -23074,9 +23189,10 @@
   "event:162": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/bunka_geijutsu/23740.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で開催日時・催しの内容と参加条件を再照合。実際の催しの写真は未確保。"
+    "image_status": "会場の外観（2026年10月11日撮影・文化祭当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で開催日時・催しの内容と参加条件を再照合。実際の催しの写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Isesaki_Bunka_Hall.jpg"
   },
   "event:163": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23151,16 +23267,18 @@
   "event:443": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.ota.gunma.jp/page/1052662.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で内容・日程・参加条件を再確認。最新状況と実際の催しの写真は未確認。"
+    "image_status": "参考写真：会場の太田市民会館（2022年6月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 太田市公式案内で内容・日程・参加条件を再確認。最新状況と実際の催しの写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E7%94%B0%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8.jpg"
   },
   "event:450": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.maebashi.gunma.jp/9/50851.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で当年の内容と開催条件を再確認。最新状況と催し自体の写真は未確認。"
+    "image_status": "会場の一つ・群馬会館（2019年3月9日撮影・顕彰祭当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない料金や時刻等は未確認。 市公式案内で当年の内容と開催条件を再確認。最新状況と催し自体の写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Gunma_Kaikan_2019-1.jpg"
   },
   "event:452": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23228,8 +23346,8 @@
   "event:245": {
     "content_status": "主催者の公式案内で日時・内容・対象を照合。受付状況は未確認",
     "source_url": "https://kyoiku.pref.ibaraki.jp/post-41514/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の県南生涯学習センターが入るウララビル（写真左、2021年2月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "公式案内に明記のない条件は未確認。既存画像の利用条件・撮影時期が未確認のため表示から除外。 県教育委員会の公式案内を再確認し、申込条件等を反映。",
     "image_candidates": [
       {
@@ -23250,7 +23368,9 @@
         "last_verified_at": "2026-10-22",
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Tsuchiura_Urala_202102.jpg",
+    "image_research_note": "施設公式のアクセス案内で県南生涯学習センターがウララビル5階にあることを確認。https://www.kennan.gakusyu.ibk.ed.jp/access"
   },
   "event:253": {
     "content_status": "主催者の公式案内で日時・内容・対象を照合。受付状況は未確認",
@@ -23410,9 +23530,10 @@
   "event:349": {
     "content_status": "自治体・主催者の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
     "source_url": "https://www.tcue.ac.jp/news/2128.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "公式案内に明記のない条件は未確認。 2026年11月6日、主催者・市公式案内で内容と条件を再照合。利用可能な催しの実写写真は未確保。"
+    "image_status": "集合先の高崎経済大学正門（2011年5月1日撮影・散策コースの写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "公式案内に明記のない条件は未確認。 2026年11月6日、主催者・市公式案内で内容と条件を再照合。利用可能な催しの実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:TCUE-MainGate01.jpg"
   },
   "event:352": {
     "content_status": "自治体・主催者の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
@@ -23482,9 +23603,10 @@
   "event:446": {
     "content_status": "主催者・自治体の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
     "source_url": "https://www.city.ota.gunma.jp/page/1065686.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "公式案内に明記のない条件は未確認。 市公式案内で内容と日時を再確認。実際の催しの写真は未確保。"
+    "image_status": "参考写真：会場の太田市民会館（2022年6月撮影）。催し当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "公式案内に明記のない条件は未確認。 市公式案内で内容と日時を再確認。実際の催しの写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E7%94%B0%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8.jpg"
   },
   "event:458": {
     "content_status": "主催者・自治体の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
@@ -23894,7 +24016,7 @@
   "event:71": {
     "content_status": "主催者・観光協会の案内で日程と内容を照合。開催後の実施状況は未確認。",
     "source_url": "https://uenomura-kankonavi.jp/event/event-3568/",
-    "image_status": "実際の催しの写真は未確保。既存画像は利用条件・撮影時期未確認のため表示から除外",
+    "image_status": "コースの上野ダム（2014年5月10日撮影・大会当日の写真ではありません）。催し自体の写真は未確保。",
     "image_candidates": [
       {
         "id": 976,
@@ -23935,13 +24057,14 @@
         "notes": "auto_collected_score=158"
       }
     ],
-    "reviewed_at": "2026-11-06",
-    "notes": "公式情報で確認できない条件は未確認。 公式資料を再確認し、予定と開催報告を区別して反映。"
+    "reviewed_at": "2026-11-12",
+    "notes": "公式情報で確認できない条件は未確認。 公式資料を再確認し、予定と開催報告を区別して反映。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ueno_Dam.jpg"
   },
   "event:6": {
     "content_status": "主催者・観光協会の案内で日程と内容を照合。主催者に終了の記載あり。",
     "source_url": "https://ryukyunokaze.jp/",
-    "image_status": "実際の催しの写真は未確保。既存画像は利用条件・撮影時期未確認のため表示から除外",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
     "image_candidates": [
       {
         "id": 11,
@@ -23963,10 +24086,11 @@
         "notes": "auto_collected_score=28"
       }
     ],
-    "reviewed_at": "2026-11-07",
+    "reviewed_at": "2026-11-12",
     "notes": "公式情報で確認できない条件は未確認。 主催者または施設の公式案内を再照合し個別紹介文を追加。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:129": {
     "content_status": "県・市の公式案内で日程と内容を照合。開催後の実施状況は未確認",
@@ -24053,9 +24177,10 @@
   "event:141": {
     "content_status": "県・市の公式案内で日程と内容を照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.ota.gunma.jp/site/home-town-ota/1063572.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない条件は未確認。 市の当年案内で日程と一部雨天中止・会場変更を再確認。全体の実施結果と写真は未確認。"
+    "image_status": "参考写真：会場の太田市運動公園（2010年5月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない条件は未確認。 市の当年案内で日程と一部雨天中止・会場変更を再確認。全体の実施結果と写真は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ota_Sports_Park.JPG"
   },
   "event:145": {
     "content_status": "高崎市の公式案内で展示終了を確認",
@@ -24095,9 +24220,11 @@
   "event:153": {
     "content_status": "県・市の公式案内で日程と内容を照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1481.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない条件は未確認。 県・市または主催者の案内を再確認し、予定と利用条件を反映。"
+    "image_status": "会場に隣接する高崎市群馬支所（2023年11月撮影）。マルシェ当日の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "案内に明記のない条件は未確認。 県・市または主催者の案内を再確認し、予定と利用条件を反映。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_city_Gunma_branch_office.jpg",
+    "image_research_note": "高崎市公式案内で会場が群馬支所東側特設会場であることを照合。https://www.city.takasaki.gunma.jp/page/1481.html"
   },
   "event:158": {
     "content_status": "県・市の公式案内で日程と内容を照合。開催後の実施状況は未確認",
@@ -24151,8 +24278,8 @@
   "event:126": {
     "content_status": "群馬県観光公式案内と照合。一部条件・開催後の実施状況は未確認",
     "source_url": "https://gunma-kanko.jp/events/341",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "参考写真：コース周辺の八ッ場ダム（2021年5月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "公式案内に明記のない参加料金等は要確認。既存画像は撮影時期または再利用条件の確認が不足するため表示を保留。 自治体・施設等の案内を再確認し、内容と利用条件を反映。",
     "image_candidates": [
       {
@@ -24173,14 +24300,16 @@
         "last_verified_at": "2026-10-22",
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Yanba_Dam_2021-05_1.jpg"
   },
   "event:554": {
     "content_status": "主催者公式案内で期間・展示内容・観覧料・参加方法を照合",
     "source_url": "https://takuminosato.jp/2026/10/27/wara-takumi-festival-2026/",
-    "image_status": "実際の催しの写真は未確保。公式掲載写真の再利用条件・撮影時期は未確認",
-    "reviewed_at": "2026-11-06",
-    "notes": "公式案内には展示イメージ写真があるが、権利と撮影時期を確認できないため使用保留。 2026年11月6日、主催者・自治体の公式案内で内容と参加条件を再照合。催しの利用可能な実写写真は未確保。"
+    "image_status": "会場の道の駅（2005年11月5日撮影・祭りの写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "公式案内には展示イメージ写真があるが、権利と撮影時期を確認できないため使用保留。 2026年11月6日、主催者・自治体の公式案内で内容と参加条件を再照合。催しの利用可能な実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_takumi_no_sato.jpg"
   },
   "event:475": {
     "content_status": "施設公式案内で日程・内容・参加条件を照合。開催後の実施状況は未確認",
@@ -24202,8 +24331,8 @@
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。当該日程は主催者の一次情報で確認できず、過去の実施結果も未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24227,14 +24356,15 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:80": {
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。当該日程は主催者の一次情報で確認できず、過去の実施結果も未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24258,14 +24388,15 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:82": {
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。開催日は第三者のfmfm掲載で確認したが、主催者の一次情報は未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24289,14 +24420,15 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:83": {
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。開催日は第三者のfmfm掲載で確認したが、主催者の一次情報は未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24320,14 +24452,15 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:84": {
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。開催日は第三者のfmfm掲載で確認したが、主催者の一次情報は未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24351,14 +24484,15 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:85": {
     "content_status": "要確認：開催日・主催者の一次情報未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/1936.html",
     "secondary_source_url": "https://fmfm.jp/event/detail/8354",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "会場住所は高崎市公式施設案内で確認。開催日は第三者のfmfm掲載で確認したが、主催者の一次情報は未確認。既存画像は転載条件・撮影時期・写真であることが未確認のため表示保留。 当該回の主催者・入場料を一次資料で確認できないため、断定表示を取り除いた。",
     "image_candidates": [
       {
@@ -24382,7 +24516,8 @@
       }
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:254": {
     "content_status": "市・施設公式案内と照合。開催後の実施状況は案内に明記された範囲のみ確認",
@@ -24408,9 +24543,10 @@
   "event:258": {
     "content_status": "市・施設公式案内と照合。開催後の実施状況は案内に明記された範囲のみ確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/56554.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。舞台開場時刻は市カレンダーの9時と個別案内の9時30分で相違し、個別案内を採用。 2026年11月6日、高崎市の公式案内で内容と条件を再照合。催しの実写写真は未確保。"
+    "image_status": "参考写真：舞台部門の会場、高崎市文化会館（2016年2月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。舞台開場時刻は市カレンダーの9時と個別案内の9時30分で相違し、個別案内を採用。 2026年11月6日、高崎市の公式案内で内容と条件を再照合。催しの実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_Cultural_Hall.JPG"
   },
   "event:260": {
     "content_status": "市・施設公式案内と照合。開催後の実施状況は案内に明記された範囲のみ確認",
@@ -24482,11 +24618,12 @@
   "event:274": {
     "content_status": "高崎市公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/site/sightseeing/34443.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場の一つ、もてなし広場（2023年9月撮影）。春まつり当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "撮影時期と再利用条件を確認した写真は未確保。 市の案内を再照合して個別紹介文を整備。開催後の実施状況は未確認。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:276": {
     "content_status": "高崎市公式案内と照合。開催後の実施状況は未確認",
@@ -24525,9 +24662,10 @@
   "event:287": {
     "content_status": "高崎市公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/88191.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 市公式案内に基づき個別紹介文を追加。開催後の実施状況は未確認。"
+    "image_status": "会場の道の駅外観（2014年5月4日撮影・落語会の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 市公式案内に基づき個別紹介文を追加。開催後の実施状況は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_Kurabuchi.JPG"
   },
   "event:290": {
     "content_status": "高崎市公式案内と照合。開催結果は市公式に明記のある場合のみ記載",
@@ -24561,9 +24699,10 @@
   "event:299": {
     "content_status": "高崎市公式案内と照合。開催結果は市公式に明記のある場合のみ記載",
     "source_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/88109.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 市公式案内に基づき個別紹介文を追加。"
+    "image_status": "会場の石室（2018年4月17日撮影・ガイドツアー当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 市公式案内に基づき個別紹介文を追加。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:%E6%A8%AA%E7%A9%B4%E5%BC%8F%E7%9F%B3%E5%AE%A4.jpg"
   },
   "event:303": {
     "content_status": "高崎市公式案内と照合。開催結果は市公式に明記のある場合のみ記載",
@@ -24672,16 +24811,18 @@
   "event:327": {
     "content_status": "主催者・高崎市公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/1335.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者公式案内で内容を再照合。催しの実写写真は未確保。"
+    "image_status": "参考写真：榛名神社本殿（2014年4月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者公式案内で内容を再照合。催しの実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Haruna_Honden.JPG"
   },
   "event:328": {
     "content_status": "主催者・高崎市公式案内と照合。雨天中止・延期なしを市公式で確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/31332.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者公式案内で内容を再照合。催しの実写写真は未確保。"
+    "image_status": "会場の一つ・箕輪城跡（2006年撮影・祭りの写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者公式案内で内容を再照合。催しの実写写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Minowajyo.jpg"
   },
   "event:330": {
     "content_status": "主催者・高崎市公式案内と照合。開催後の実施状況は未確認",
@@ -24752,9 +24893,10 @@
   "event:517": {
     "content_status": "自治体・観光協会の案内を照合。未確認の内容や開催後の実施状況は保留",
     "source_url": "https://16106midori.jp/event/9420/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、自治体・観光協会の公式案内で内容と参加条件を再照合。当該催しの写真は未確保。"
+    "image_status": "会場のながめ公園内にある余興場（2023年10月28日撮影・菊花大会の写真ではありません）",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、自治体・観光協会の公式案内で内容と参加条件を再照合。当該催しの写真は未確保。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Nagame_Theater.jpg"
   },
   "event:519": {
     "content_status": "町の開催案内の検索収録内容で日時・会場・予定内容・天候対応を確認。開催結果未確認。",
@@ -24792,27 +24934,30 @@
   "event:315": {
     "content_status": "主催者・自治体公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/6847.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者・自治体公式案内で内容と日時を再照合。催しの実写写真と開催結果は未確認。"
+    "image_status": "参考写真：会場の高崎市総合保健センターと中央図書館の建物（2016年2月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者・自治体公式案内で内容と日時を再照合。催しの実写写真と開催結果は未確認。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Takasaki_City_General_Health_Center_and_Central_Library.JPG"
   },
   "event:321": {
     "content_status": "主催者・自治体公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.takasaki-live.com/guide.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場の一つ、もてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者・自治体公式案内で内容と日時を再照合。催しの実写写真と開催結果は未確認。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:331": {
     "content_status": "主催者公式で2026年のイベント終了を確認",
     "source_url": "https://takasaki-otomachi.com/haikeiboowysama/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。ライブ当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "撮影時期と再利用条件を確認した写真は未確保。 2026年11月6日、主催者・市公式案内で内容と条件を再照合。利用可能な催しの実写写真は未確保。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:363": {
     "content_status": "主催者・自治体公式案内と照合。開催後の実施状況は未確認",
@@ -24838,9 +24983,10 @@
   "event:156": {
     "content_status": "主催施設・市公式案内と照合。開催後の実施状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/site/digital/97899.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "撮影時期と利用条件を確認した写真は未確保。 高崎市の案内を再確認し、企画内容・条件・未確認事項を反映。"
+    "image_status": "参考写真：作品展示エリアの一つ、高崎駅西口周辺（2023年9月撮影）。展示作品の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "撮影時期と利用条件を確認した写真は未確保。 高崎市の案内を再確認し、企画内容・条件・未確認事項を反映。",
+    "image_source_url": "https://photock.jp/photo/takasaki-station-west-exit-3"
   },
   "event:92": {
     "content_status": "前橋観光協会の2026年案内を照合",
@@ -24857,9 +25003,10 @@
   "event:97": {
     "content_status": "県報道発表で日程を確認。以前の登録日との相違があり延長の有無は要確認",
     "source_url": "https://www.pref.gunma.jp/site/houdou/767183.html",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "元の終了日10月31日は証拠を再確認できず。県発表は10月19日。 県・市の公式案内を再確認し、参加条件と展示の終了状況を反映。"
+    "image_status": "参考写真：対象となる県内の道の駅の一例、建て替え前の道の駅しもにた（2004年8月撮影）。現在の建物や開催中の写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "元の終了日10月31日は証拠を再確認できず。県発表は10月19日。 県・市の公式案内を再確認し、参加条件と展示の終了状況を反映。",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Michinoeki_shimonita.jpg"
   },
   "event:32": {
     "content_status": "大会公式サイトの開催後のお礼と日程を確認",
@@ -25340,8 +25487,8 @@
     "content_status": "高崎市公式案内を照合。施設運営サイトに終了表示",
     "source_url": "https://www.city.takasaki.gunma.jp/page/77332.html",
     "additional_source_url": "https://takasaki-comm.jp/denki/",
-    "image_status": "実際の催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
+    "image_status": "会場の高崎電気館（2022年1月撮影・催し当日の写真ではありません）",
+    "reviewed_at": "2026-11-12",
     "notes": "市の月の写真は撮影時期・利用条件が未確認のため表示保留。天文台のカレンダーには23日・25日と異なる記載があり、市と会場の23日・24日を採用。 自治体・施設等の案内を再確認し、内容と利用条件を反映。 市イベント個別URLは404のため、終了表示のある会場運営サイトを参照先に変更。",
     "image_candidates": [
       {
@@ -25365,7 +25512,8 @@
     ],
     "additional_source_urls": [
       "https://takasaki-comm.jp/denki/"
-    ]
+    ],
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:RZ_Takasaki_Denkikan_(8).jpg"
   },
   "event:340": {
     "content_status": "市公式カレンダーと施設共通案内で日時・内容・所在地・講座対象を照合。個別料金・持ち物等は再確認待ち",
@@ -25551,9 +25699,10 @@
     "additional_source_urls": [
       "https://www.city.takasaki.gunma.jp/page/100094.html"
     ],
-    "image_status": "再利用条件と撮影時期を確認できた催しの写真は未確保",
-    "reviewed_at": "2026-11-06",
-    "notes": "市の市長日程に10月30日の点灯式実施の記載あり。無料の根拠は要確認。 高崎市の案内を再確認し、企画内容・条件・未確認事項を反映。"
+    "image_status": "参考写真：会場の高崎駅西口周辺（2023年9月撮影）。イルミネーションの写真ではありません。",
+    "reviewed_at": "2026-11-12",
+    "notes": "市の市長日程に10月30日の点灯式実施の記載あり。無料の根拠は要確認。 高崎市の案内を再確認し、企画内容・条件・未確認事項を反映。",
+    "image_source_url": "https://photock.jp/photo/takasaki-station-west-exit-3"
   },
   "event:273": {
     "content_status": "高崎市の小串カタクリの里案内で行事名・日時・会場・予定内容を照合",
@@ -25667,7 +25816,7 @@
   "event:5": {
     "content_status": "高崎観光協会の出店募集案内で日程・会場を照合",
     "source_url": "https://www.takasaki-kankoukyoukai.or.jp/?p=12585",
-    "image_status": "既存画像は利用条件・撮影時期が未確認のため非表示。催しの写真は未確保",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
     "image_candidates": [
       {
         "id": 2738,
@@ -25708,13 +25857,14 @@
         "notes": "auto_collected_score=158"
       }
     ],
-    "reviewed_at": "2026-11-07",
+    "reviewed_at": "2026-11-12",
     "notes": "掲載時間は出店募集時の予定。開催後の実施状況は未確認。 共通の公式案内を再確認し、企画別の条件と過去の予定を反映。",
     "additional_source_urls": [
       "https://www.takasaki-kankoukyoukai.or.jp/wp-content/uploads/2026/06/01.%E5%87%BA%E5%BA%97%E5%8B%9F%E9%9B%86%E8%A6%81%E9%A0%85.pdf"
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:57": {
     "content_status": "当年の公式案内を再取得できず、日程・参加条件は未確認",
@@ -26014,7 +26164,7 @@
   "event:76": {
     "content_status": "VINTYの2026年告知を照合、日付欄に相違。主催者公式・別名称との関係・実施結果は未確認",
     "source_url": "https://www.instagram.com/p/DVvXg5ekTki/",
-    "image_status": "既存画像は利用条件・撮影時期が未確認のため非表示。催しの写真は未確保",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
     "image_candidates": [
       {
         "id": 2072,
@@ -26169,19 +26319,20 @@
         "notes": "auto_collected_score=133"
       }
     ],
-    "reviewed_at": "2026-11-07",
+    "reviewed_at": "2026-11-12",
     "notes": "既存画像の出典・権利・撮影日を要確認。催しの詳細と開催後の実施状況は再確認中。 未確認の入場料・雨天時の扱い・主催者や出店内容の断定を修正。 VINTYは主催者SNSの引用として7月18日9時頃〜15時頃、もてなし広場、入場無料、雨天開催と記載。ただし同ページの日程欄は7月17〜18日と食い違う。別名称との同一性および実施結果は未確認。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
     "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
     "additional_source_urls": [
       "https://www.vinty.jp/event/1078",
       "https://www.instagram.com/p/DY0xzFwvTYr/"
-    ]
+    ],
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:88": {
     "content_status": "当年の公式案内を再取得できず、日程・参加条件は未確認",
     "source_url": "https://www.instagram.com/p/DWVKuB-k7Cu/",
-    "image_status": "既存画像は利用条件・撮影時期が未確認のため非表示。催しの写真は未確保",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
     "image_candidates": [
       {
         "id": 2104,
@@ -26336,7 +26487,7 @@
         "notes": "auto_collected_score=133"
       }
     ],
-    "reviewed_at": "2026-11-07",
+    "reviewed_at": "2026-11-12",
     "notes": "既存画像の出典・権利・撮影日を要確認。催しの詳細と開催後の実施状況は再確認中。 同日・同名イベントについて茨城県古河市会場とする外部一覧を確認。元の高崎開催と同一か不明のため開催地は未確定。土曜日と誤記していた紹介文も修正。 VINTYには主催者SNS引用として9月13日古河公方公園の案内があるが、日付欄は12〜13日と食い違う。GOOD ANTIQUESには高崎住所と埼玉県の説明が混在。同一性・高崎開催を確定できない。",
     "additional_source_urls": [
       "https://www.vinty.jp/event/1150",
@@ -26344,7 +26495,8 @@
       "https://good-antiques.com/blogs/places-events/985229498959"
     ],
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   },
   "event:259": {
     "content_status": "高崎市広報と大学の活動報告で内容を照合。終了時刻に資料間の相違あり",
@@ -26401,10 +26553,11 @@
       "https://www.gunlabo.net/event/event.shtml?id=6862",
       "https://takasaki.goguynet.jp/2026/07/16/thai_fes_takasaki/"
     ],
-    "image_status": "利用条件と撮影時期を確認できた催しの写真は未確保",
-    "reviewed_at": "2026-11-07",
+    "image_status": "参考写真：会場のもてなし広場（2023年9月撮影）。催し当日の様子ではありません。",
+    "reviewed_at": "2026-11-12",
     "notes": "主催者公式の詳細と実際の開催状況は未確認。候補のまま維持。 号外NETの7月16日の記事で出店・ライブ・トゥクトゥク体験の開催予定を確認。主催者一次情報の再取得、実施結果、入場料は未確認のため、入場無料の断定を取り除いた。",
     "image_research_source_url": "https://photock.org/photo/takasaki-motenashi-plaza-2",
-    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。"
+    "image_research_note": "フォトックの2023年9月18日撮影の会場写真を発見。写真の利用規約はWeb素材利用を認める一方、被写体の権利・撮影許可は別途で自動収集についての規定もあるため、利用方法と条件の確認を終えるまで未採用。イベント当日の写真ではない。",
+    "image_source_url": "https://photock.jp/photo/takasaki-motenashi-plaza-2"
   }
 }
