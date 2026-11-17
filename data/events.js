@@ -1,8 +1,8 @@
 window.EVENT_DATA = {
   "meta": {
     "generated_at": "2026-11-17",
-    "event_count": 863,
-    "source_count": 636,
+    "event_count": 904,
+    "source_count": 673,
     "child_play_place_count": 385,
     "image_asset_count": 1676
   },
@@ -914,10 +914,10 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-07-05",
-      "last_verified_at": "2026-11-05",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.maebashi-cvb.com/event/2032",
-      "notes": null,
-      "source_names": "前橋まるごとガイド イベント",
+      "notes": "開催期間は前橋まるごとガイドの公式イベント一覧と榛名観光協会の第25回案内で照合。前橋まるごとガイドの個別詳細URLは調査時に503を返したため、応募条件・対象ポイントの現況は要確認。",
+      "source_names": "前橋まるごとガイド イベント／榛名観光協会 第25回上毛三山スタンプラリー案内",
       "images": [
         {
           "id": 30019,
@@ -946,19 +946,19 @@ window.EVENT_DATA = {
       "hero_copy": "赤城山・榛名山・妙義山を巡り、スタンプを集める上毛三山の周遊企画。自然や温泉を楽しみながら参加できます。",
       "experience_cards": [
         {
-          "title": "見どころ",
-          "body": "3つの山を巡ってスタンプを集めると、抽選で賞品が当たります。"
+          "title": "三山をめぐるスタンプラリー",
+          "body": "赤城山・榛名山・妙義山の3つの山を巡りスタンプを集める企画。榛名観光協会の第25回案内では、3つ集めると賞品抽選に応募できるとしています。"
         },
         {
-          "title": "参加・来場前に",
-          "body": "開催期間は2026年7月1日～2027年1月31日。対象施設・応募条件と現在の営業状況を確認してください。"
+          "title": "参加前に確認",
+          "body": "開催期間は2026年7月1日〜2027年1月31日。前橋まるごとガイドの詳細ページは取得時503のため、期間は公式観光協会の案内と公式イベント一覧で照合しました。応募条件と対象施設の営業は最新案内をご確認ください。"
         }
       ],
       "visitor_info": {
-        "期間": "開催期間は2026年7月1日～2027年1月31日。対象施設・応募条件と現在の営業状況を確認してください。",
-        "コース": "赤城山・榛名山・妙義山。",
-        "問い合わせ": "榛名観光協会 027-374-6712",
-        "料金": "企画の参加費や各施設の料金は要確認。"
+        "期間": "2026年7月1日〜2027年1月31日。前橋まるごとガイドのイベント一覧と榛名観光協会の第25回案内で一致。",
+        "内容": "赤城山・榛名山・妙義山を巡ってスタンプを集める企画。3山分のスタンプを集めると抽選で賞品が当たる旨を観光協会が案内。",
+        "応募条件": "応募方法・賞品内容・対象ポイントの営業状況は最新の公式案内で確認してください。",
+        "問い合わせ": "榛名観光協会 027-374-6712"
       }
     },
     {
@@ -7506,7 +7506,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "images": [
         {
           "id": 22139,
@@ -7536,12 +7536,12 @@ window.EVENT_DATA = {
       "start_date": "2026-11-29",
       "end_date": "2026-11-29",
       "category": "workshop",
-      "price_note": "参加費は後日公式発表。",
+      "price_note": "600円（企画展観覧券の提示が必要）",
       "organizer": "群馬県立自然史博物館",
       "summary": "ペーパークラフトを作りながら、北米ジュラ紀の恐竜について学ぶ企画展関連ワークショップです。",
       "recommended_for": "小学3年生以上。小学生は保護者と一緒に参加",
       "best_scenes": "恐竜展を見たあと、工作を通して学びを深めたいとき",
-      "reservation_note": "11月12日までオンライン申込み、抽選。",
+      "reservation_note": "公式ページで申込受付終了を確認（申込期間終了）。開催日の参加可否は主催者に確認してください。",
       "canonical_url": "https://www.gmnh.pref.gunma.jp/event/id13306/",
       "notes": "開催時間は10時30分～12時、13時30分～15時。参加費など詳細は博物館の続報をご確認ください。",
       "source_names": "群馬県立自然史博物館 北米ジュラ紀の恐竜ペーパークラフト",
@@ -7549,14 +7549,14 @@ window.EVENT_DATA = {
       "experience_cards": [
         {
           "title": "恐竜を学び、紙で作る",
-          "body": "北米ジュラ紀の恐竜について学んだ後、恐竜のペーパークラフトを作ります。"
+          "body": "2026年11月29日、午前・午後の2回を予定。公式ページで申込受付終了を確認しています。参加可否は博物館へお問い合わせください。"
         }
       ],
       "target_audience": "小学3年生以上。小学生は保護者同伴。",
       "visitor_info": {
         "対象": "小学3年生以上。小学生は保護者同伴。",
-        "料金": "参加費は後日公式発表。",
-        "参加・開催情報": "10:30〜12:00、13:30〜15:00の2回。各回30人程度、抽選。11月12日までオンライン申込み。",
+        "料金": "600円。企画展観覧券の提示が必要です。",
+        "参加・開催情報": "11月29日、午前10時30分〜正午・午後1時30分〜3時の2回。公式ページで申込受付終了を確認。参加可否は博物館へお問い合わせください。",
         "問い合わせ": "群馬県立自然史博物館 0274-60-1200",
         "最新情報": "予定や条件は公式案内をご確認ください。"
       },
@@ -7987,7 +7987,7 @@ window.EVENT_DATA = {
       "summary": "初めての方向けに、参加者自身が望遠鏡を動かして月や土星などを観察する体験学習です。",
       "recommended_for": "小学生から大人まで。小学生は保護者同伴",
       "best_scenes": "親子やグループで望遠鏡の操作と星空観察を体験したいとき",
-      "reservation_note": "オンライン受付は10月30日〜11月5日、応募多数の場合は抽選。各回5組・1組6人まで。",
+      "reservation_note": "公式のオンライン申込期間（2026年10月30日〜11月5日）は終了。追加受付・参加枠の有無は主催者に確認してください。",
       "canonical_url": "https://www.astron.pref.gunma.jp/events/26hajimete.html",
       "notes": "11月21日、17時50分と19時30分開始の2回（各1時間）。曇雨天は中止です。",
       "source_names": "ぐんま天文台 はじめての望遠鏡教室2026",
@@ -7996,7 +7996,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-05",
+      "last_verified_at": "2026-11-17",
       "images": [
         {
           "id": 24147,
@@ -8030,13 +8030,13 @@ window.EVENT_DATA = {
         },
         {
           "title": "2回の教室から選ぶ",
-          "body": "17:50と19:30開始、各回1時間。各回5組・1組6人までで、応募多数の場合は抽選です。"
+          "body": "11月21日17:50・19:30開始、各回1時間。申込期間は11月5日まででした。追加受付の有無はぐんま天文台へ確認してください。"
         }
       ],
       "visitor_info": {
         "日時": "2026年11月21日 17:50・19:30から各1時間",
         "対象": "小学生〜大人。小学生は保護者同伴、未就学児は参加不可。",
-        "申込": "オンライン受付は10月30日〜11月5日。応募多数の場合は抽選。",
+        "申込": "公式のオンライン受付期間（10月30日〜11月5日）は終了。追加受付・参加枠の有無は天文台へ確認してください。",
         "料金": "参加無料、別途観覧料が必要。",
         "天候": "曇り・雨など天候不良の場合は中止。",
         "問い合わせ": "ぐんま天文台 0279-70-5300"
@@ -8534,7 +8534,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/digital/97899.html",
       "notes": "市公式案内は29人・20か所と記載。展示場所などは変更の場合あり。",
       "source_names": "高崎市デジタル広報 アートプロジェクト",
@@ -9009,12 +9009,12 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/93770.html",
       "notes": "13時30分開場。未就学児は入場できません。",
       "source_names": "高崎市 高崎寄席in箕郷2026",
       "images": [],
-      "reservation_note": "9月18日10時から一般発売。箕郷文化会館での電話予約は発売翌日〜12月11日。",
+      "reservation_note": "一般発売は2026年9月18日開始。箕郷文化会館での電話予約期間は発売翌日から12月11日まで。現時点の残席・販売状況は会館へ確認してください。",
       "hero_copy": "落語と動物ものまねを楽しむ、箕郷文化会館の寄席。",
       "experience_cards": [
         {
@@ -9411,12 +9411,12 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://shibukawa-civichall.com/independent.html",
-      "notes": "13時15分開場。未就学児は入場できません。",
+      "notes": "前売券は11月7日発売。渋川市民会館公式ページの現行表示は11月17日時点で「前売券発売中」。残席・当日券の有無は別途確認が必要。",
       "source_names": "渋川市民会館 2026年秋・2027年新春主催事業",
       "images": [],
-      "reservation_note": "前売券は2026年11月7日発売。会館窓口は9時、電話予約は13時から。",
+      "reservation_note": "公式ページの現行表示は「前売券発売中」（2026年11月17日再確認）。残席・当日券の有無は渋川市民会館へ確認してください。",
       "hero_copy": "群馬交響楽団と迎える新年。キンボー・イシイ指揮、木嶋真優のヴァイオリンを渋川で。",
       "experience_cards": [
         {
@@ -9697,9 +9697,9 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-15",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1731639288502/index.html",
-      "notes": "13時開場。未就学児は入場できません。",
+      "notes": "富岡市公式案内で11月1日からチケット発売、前売券完売の場合は当日券販売なしと確認。現時点の販売・残席状況は未確認。",
       "source_names": "富岡市 第35回ニューイヤーコンサート 東儀秀樹×三浦一馬",
       "images": [
         {
@@ -9726,7 +9726,7 @@ window.EVENT_DATA = {
         }
       ],
       "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Gunma_Museum_Of_Natural_History_and_Tomioka_Kabura_Bunka_Hall.jpg/960px-Gunma_Museum_Of_Natural_History_and_Tomioka_Kabura_Bunka_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "reservation_note": "11月1日9時発売。電話予約はかぶら文化ホールのみ。",
+      "reservation_note": "公式案内の発売日（2026年11月1日）は経過。残席・前売券および当日券の有無は、かぶら文化ホールへ確認してください。",
       "hero_copy": "篳篥や笙とバンドネオンが交わる、新年のコンサート。",
       "experience_cards": [
         {
@@ -18950,7 +18950,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/95417.html",
       "notes": "受付13時から。先着30人。",
       "source_names": "高崎市公式イベントカレンダー 2026年11月",
@@ -18958,7 +18958,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "11月5日締切、榛名歴史民俗資料館へ電話申込。",
+      "reservation_note": "公式案内の申込締切（2026年11月5日）は終了。追加受付・参加枠の有無は榛名歴史民俗資料館へ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2026",
       "hero_copy": "榛名山麓の道祖神信仰から、地域の歴史をたどる。",
       "experience_cards": [
@@ -18993,7 +18993,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/4688.html",
       "notes": "講座は手話通訳あり、映画はバリアフリー上映。 会場公式案内では授乳室2か所、多目的トイレ3か所を設置。利用状況は事前に会場へ確認。",
       "source_names": "高崎市公式イベントカレンダー 2026年11月",
@@ -19001,7 +19001,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": "施設の共用駐車場257台（うち身体障がい者用14台）。当日の利用状況は会場に確認。",
-      "reservation_note": "フォームまたは電話で申込。",
+      "reservation_note": "公式案内の申込期限（2026年11月13日）は終了。追加受付・当日参加の可否は人権プラザへ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2026",
       "hero_copy": "人権を考える講座と、映画のバリアフリー上映。",
       "experience_cards": [
@@ -19011,7 +19011,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年11月20日13〜15時30分、高崎市市民活動センター・ソシアス。入場無料、先着200人。11月13日までに窓口・電話・フォームで申込。"
+          "body": "2026年11月20日13〜15時30分、高崎市市民活動センター・ソシアス。無料・先着200人。申込期限は11月13日でした。追加受付・当日参加は人権プラザに確認してください。"
         }
       ]
     },
@@ -19174,7 +19174,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/2529.html",
       "notes": "8時45分までに牛伏ドリームセンター集合。小学生以上で約5km歩ける人が対象、50人。悪天候時中止の場合あり。",
       "source_names": "高崎市公式イベントカレンダー 2026年11月",
@@ -19225,7 +19225,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月30日17時までフォームで応募。応募多数の場合は抽選。",
+      "reservation_note": "公式案内の応募期限（2026年10月30日17時）は終了。キャンセル枠・参加可否は主催者へ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2026",
       "hero_copy": "秋の牛伏山を、体力に合わせたコースで歩こう。",
       "experience_cards": [
@@ -19260,7 +19260,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/senryou/95782.html",
       "notes": "11月28日・29日の2日間。高校生以上、定員6人。裁縫道具や定規、コンパス、昼食など持ち物は日によって異なります。公式案内をご確認ください。 最新の開催状況は公式案内をご確認ください。",
       "source_names": "高崎市染料植物園 公式講習会案内",
@@ -19268,7 +19268,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "往復はがき・ファクス・メールで申込。2026年11月10日必着、定員超過時は抽選。受付状況は公式窓口にご確認ください。",
+      "reservation_note": "公式案内の申込締切（2026年11月10日必着）は終了。空き・追加受付の有無は染料植物園へ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2026",
       "hero_copy": "立涌絞りのウールショールを、ラックで明るい赤紫色に。",
       "experience_cards": [
@@ -19278,7 +19278,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "参加条件",
-          "body": "2026年11月28・29日の各10〜15時、高校生以上、定員6人、6,000円。申込は11月10日必着、定員超過時は抽選。受付状況は公式窓口へ。"
+          "body": "2026年11月28・29日の各10〜15時、高校生以上、定員6人、6,000円。申込締切は11月10日必着でした。追加受付の有無は染料植物園へ確認してください。"
         }
       ],
       "visitor_info": {
@@ -19368,9 +19368,9 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.tcue.ac.jp/news/2128.html",
-      "notes": "18歳以上で5km以上歩ける人が対象、定員12人。高崎経済大学集合・解散。",
+      "notes": "公式ページで11月29日開催、18歳以上・5km以上歩ける方、定員12人、抽選、参加費2,500円、申込締切10月23日必着を確認。締切後の抽選結果・参加可否は未確認。",
       "source_names": "高崎市公式イベントカレンダー 2026年11月",
       "images": [
         {
@@ -19396,7 +19396,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/TCUE-MainGate01.jpg/960px-TCUE-MainGate01.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月23日必着、応募多数の場合は抽選。",
+      "reservation_note": "公式案内の申込締切（2026年10月23日必着）は経過。抽選結果・参加可否は高崎経済大学地域科学研究所へ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=11&y=2026",
       "hero_copy": "佐野の渡しや山名宿を歩き、身近な地域の歴史に触れる。",
       "experience_cards": [
@@ -19477,7 +19477,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/site/senryou/95783.html",
       "notes": "開催日は2026年12月11日と2027年1月29日の2回です。高校生以上、定員6人。裁縫道具や古いバスタオルなど、各回の持ち物は公式案内をご確認ください。 最新の開催状況は公式案内をご確認ください。",
       "source_names": "高崎市染料植物園 公式講習会案内",
@@ -19485,7 +19485,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "往復はがき・ファクス・メールで申込。2026年11月17日必着、定員超過時は抽選。",
+      "reservation_note": "申込締切は2026年11月17日必着（本日）。現在の受付可否は染料植物園へ確認してください。定員超過時は抽選。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=12&y=2026",
       "hero_copy": "三浦絞りを施した浴衣地一反を、藍で染める2回コース。",
       "experience_cards": [
@@ -19566,7 +19566,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-28",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/page/97085.html",
       "notes": "13時30分開場、未就学児は入場できません。",
       "source_names": "高崎市公式イベントカレンダー 2026年12月",
@@ -19574,7 +19574,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "11月12日10時発売。新町文化ホールでの電話予約は発売翌日〜12月11日。",
+      "reservation_note": "一般発売は2026年11月12日開始。新町文化ホールでの電話予約は発売翌日から12月11日まで。現時点の残席・販売状況は会館へ確認してください。",
       "calendar_source_url": "https://www.city.takasaki.gunma.jp/calendar/index.php?d=1&dsp=1&m=12&y=2026",
       "hero_copy": "映画を観た後は、監督の言葉にも耳を傾ける。",
       "experience_cards": [
@@ -24209,7 +24209,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-29",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.ota.gunma.jp/page/1052662.html",
       "notes": "会場は太田市民会館、定員800人。開始時刻は市公式ページ本文で未確認。",
       "source_names": "太田市公式イベントカレンダー",
@@ -24237,7 +24237,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/%E5%A4%AA%E7%94%B0%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8.jpg/960px-%E5%A4%AA%E7%94%B0%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月7日〜11月18日募集。11月4日時点でオンライン申込に一時障害があり、電話・FAXも利用可能。",
+      "reservation_note": "公式案内で募集期間の延長を確認。締切は2026年11月27日（金）。当日参加は定員に余裕がある場合のみ。",
       "hero_copy": "作家あさのあつこさんと、自分らしい生き方を考える。",
       "experience_cards": [
         {
@@ -24271,15 +24271,15 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-29",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.ota.gunma.jp/site/gyousei-center/1064405.html",
-      "notes": "対象は市内在住または在勤の方。定員20人、応募多数の場合は抽選。",
+      "notes": "太田市公式ページで12月2日19〜21時、市内在住・在勤者対象、定員20人・応募多数の場合は抽選、参加費3,000円を確認。申込期限（11月13日15時）は経過。",
       "source_names": "太田市公式イベントカレンダー",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "11月13日15時までにLoGoフォームまたは電話で申込。",
+      "reservation_note": "公式案内の申込期限（2026年11月13日15時）は経過。抽選結果・追加受付の有無は韮川行政センターへ確認してください。",
       "hero_copy": "植物を束ねて、部屋を彩るクリスマススワッグを。",
       "experience_cards": [
         {
@@ -26693,7 +26693,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://kodomonokuni.or.jp/event/omoshiro/",
       "notes": "小学生〜中学生対象、小学3年生以下は保護者同伴。定員20人。スマホまたはタブレット、筆記用具などを持参。",
       "source_names": "ぐんまこどもの国児童会館公式案内",
@@ -26721,7 +26721,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%284%29.jpg/960px-%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_%284%29.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月24日9時〜11月15日17時にフォームで事前申込。公式一覧では受付中（2026年11月7日確認）。",
+      "reservation_note": "公式案内で申込終了日が2026年11月22日（日）17時まで延長されたことを確認。最新の受付表示は申込フォームで確認してください。",
       "hero_copy": "2枚の写真が立体に見える不思議を、工作と撮影で探る。",
       "experience_cards": [
         {
@@ -27009,7 +27009,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.pref.gunma.jp/page/779432.html",
       "notes": "小学生と保護者が対象、定員30人。受付12時30分〜13時。会場はサンデンフォレスト森の教室。",
       "source_names": "群馬県公式案内",
@@ -27017,7 +27017,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "11月16日までメールで申込、先着順。",
+      "reservation_note": "公式案内の申込期限（2026年11月16日）は経過。追加受付・キャンセル待ちの有無は群馬県林政課へ確認してください。",
       "hero_copy": "落ち葉や木の実を使い、家族で秋の森を楽しもう。",
       "experience_cards": [
         {
@@ -27026,7 +27026,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年11月23日13〜15時20分、サンデンフォレスト森の教室。小学生と保護者30人、無料。11月16日締切・先着順です。"
+          "body": "2026年11月23日13〜15時20分、サンデンフォレスト森の教室。小学生と保護者30人、無料。申込期限（11月16日）は経過しており、追加受付は群馬県林政課へ確認してください。"
         }
       ]
     },
@@ -27160,7 +27160,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.maebashi.gunma.jp/bunka_sports_kanko/1/1/25695.html",
       "notes": "前橋市在住の小中学生と保護者10組20人、抽選。子ども1人につき保護者1人。",
       "source_names": "前橋市公式案内",
@@ -27187,7 +27187,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi_Plaza_Genki_21_building.JPG/1280px-Maebashi_Plaza_Genki_21_building.JPG",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込方法と受付状況は市公式案内を確認。",
+      "reservation_note": "公式案内の申込期限（2026年10月19日）は終了。参加可否は主催者へ確認してください。",
       "hero_copy": "お米農家に教わり、稲わらでしめ縄を手作り。",
       "experience_cards": [
         {
@@ -27855,7 +27855,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/2/4/1/50366.html",
       "notes": "8か月〜2歳の子どもと保護者が対象、抽選12組。バスタオルやヨガマット等を持参。",
       "source_names": "前橋市公式案内",
@@ -27882,7 +27882,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi_Plaza_Genki_21_building.JPG/1280px-Maebashi_Plaza_Genki_21_building.JPG",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "申込フォームで9月1日〜10月9日受付。",
+      "reservation_note": "公式案内の申込期限（2026年10月9日）は終了。追加受付の有無は主催者へ確認してください。",
       "hero_copy": "赤ちゃんと一緒に、発達に合わせた遊びを楽しもう。",
       "experience_cards": [
         {
@@ -27958,7 +27958,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.kiryu.lg.jp/sangyou/nougyoushinko/ringyou/1020681.html",
       "notes": "Aコースは9時15分〜11時45分、Bコースは13時〜16時。県内在住の小学生と保護者が対象。",
       "source_names": "桐生市公式案内",
@@ -27966,7 +27966,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "9月30日申込締切、応募多数の場合は抽選。受付終了。",
+      "reservation_note": "公式ページで申込み受付終了を確認。イベント参加の可否は桐生市林業振興担当へ確認してください。",
       "hero_copy": "木の長イスや時計を作る、親子の木工教室。",
       "experience_cards": [
         {
@@ -28302,16 +28302,16 @@ window.EVENT_DATA = {
       "category": "experience",
       "price_note": null,
       "organizer": null,
-      "summary": "月のクレーターや土星などを観察する星空観察会。月光の下で音楽ライブも同時開催されます。",
-      "recommended_for": null,
-      "best_scenes": null,
+      "summary": "2026年11月21日に予定されていた星空観察会は、園内で野生動物の目撃が相次ぎ、来園者の安全を考慮して中止と公式発表されました。",
+      "recommended_for": "中止となったイベントの記録です。来園前に群馬の森公式サイトで最新情報をご確認ください。",
+      "best_scenes": "このイベントは中止です。星空観察会には参加できません。",
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
-      "canonical_url": "https://gunmori.com/nature/1863/",
-      "notes": "雨天中止。防寒して参加し、望遠鏡を持っている人は持参。17時30分以降は第1駐車場を利用。",
-      "source_names": "群馬の森 公式イベント案内",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://gunmori.com/recreation/1933/",
+      "notes": "2026年11月17日、アイ・ディー・エー群馬の森が星空観察会の中止を発表。公園内で野生動物の目撃が相次ぎ、来園者の安全を考慮した判断。予定時刻は当初案内の記録で、実施されません。",
+      "source_names": "アイ・ディー・エー群馬の森 星空観察会中止のお知らせ（2026年11月17日）",
       "images": [
         {
           "id": 10509,
@@ -28336,27 +28336,29 @@ window.EVENT_DATA = {
       "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg/1280px-261010_Forest_of_Gunma_Takasaki_Japan01s3.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "公式案内に申込方法の記載はありません。",
+      "reservation_note": "2026年11月17日、主催公園が開催中止を告知。",
       "highlights": [
         "望遠鏡で月のクレーターや土星などを観察。",
         "音楽ライブ「ソウルレコード」を同時開催。"
       ],
       "target_audience": "家族・友人と参加可",
       "visitor_info": {
-        "天候": "雨天中止。",
-        "持ち物・服装": "望遠鏡を持っている方は持参。暖かい服装でお越しください。",
-        "駐車場": "17:30以降は第一駐車場を利用。"
+        "開催状況": "中止（主催公園が2026年11月17日に発表）",
+        "中止理由": "園内で野生動物の目撃が相次ぎ、来園者の安全を考慮。",
+        "当初の開催予定": "2026年11月21日 16:30〜19:00。実施されません。",
+        "会場": "アイ・ディー・エー群馬の森 大芝生広場（当初予定）",
+        "問い合わせ": "アイ・ディー・エー群馬の森 027-346-2269"
       },
       "appeal": "月や土星を観察しながら、月明かりの下で音楽ライブも楽しめる夕方の公園イベントです。",
-      "hero_copy": "月や土星を観察しながら、月明かりの下で音楽ライブも楽しめる夕方の公園イベントです。",
+      "hero_copy": "【開催中止】群馬の森の公式案内で、2026年11月21日の星空観察会中止が発表されています。",
       "experience_cards": [
         {
-          "title": "月や土星を観察",
-          "body": "月のクレーターや土星など、夜空に見える天体を観察します。"
+          "title": "開催中止のお知らせ",
+          "body": "主催公園は2026年11月21日に予定していた星空観察会を中止すると、11月17日に発表しました。園内で野生動物の目撃が相次ぎ、来園者の安全を考慮したためです。"
         },
         {
-          "title": "音楽ライブも同時開催",
-          "body": "月明かりの下での音楽ライブ「ソウルレコード」も楽しめます。"
+          "title": "当初の開催予定",
+          "body": "当初は大芝生広場で16時30分〜19時に開催予定でしたが、実施されません。関連する音楽ライブの変更情報は別のお知らせとして掲載されているため、星空観察会と混同しないようご注意ください。"
         }
       ]
     },
@@ -28780,7 +28782,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/2/1/31963.html",
       "notes": "先着15組。バスタオルまたはブランケット、親子の飲み物や着替え等を持参。",
       "source_names": "前橋市公式案内",
@@ -28788,7 +28790,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月5日〜11月13日に専用フォームで申込。",
+      "reservation_note": "公式案内の申込期間（2026年10月5日〜11月13日）は終了。追加受付の有無は主催者へ確認してください。",
       "hero_copy": "子どもの育ちに合わせた遊びを、親子で楽しもう。",
       "experience_cards": [
         {
@@ -28797,7 +28799,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年12月3日10〜11時30分、富士見公民館。無料・先着15組、申込は10月5日〜11月13日。バスタオルまたはブランケットなどを持参します。"
+          "body": "2026年12月3日10〜11時30分、富士見公民館。無料・先着15組。公式案内の申込期間は11月13日まででした。追加受付の有無は主催者へ確認してください。"
         }
       ]
     },
@@ -29310,9 +29312,9 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1789111953465/index.html",
-      "notes": "11月23日、小雨決行。ツアー9時〜正午、スタンプラリー9時30分〜15時。ツアーは約4.2kmの起伏のある道を歩きます。",
+      "notes": "富岡市公式ページを再確認。近代化遺産ツアーは定員到達により申込受付終了。一方、スタンプラリーは11月23日9:30〜15:00、受付9:30〜14:00に実施予定として掲載。小学生以下は保護者同伴。",
       "source_names": "富岡市公式案内",
       "images": [
         {
@@ -29382,18 +29384,24 @@ window.EVENT_DATA = {
       "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Seidenfabrik_in_Tomioka_%E5%AF%8C%E5%B2%A1%E8%A3%BD%E7%B3%B8%E5%A0%B4_6.jpg/500px-Seidenfabrik_in_Tomioka_%E5%AF%8C%E5%B2%A1%E8%A3%BD%E7%B3%B8%E5%A0%B4_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "ツアーは11月4日〜16日にフォームまたは電話で事前申込、先着20人。",
+      "reservation_note": "近代化遺産ツアー（事前申込・先着20人）は定員到達で受付終了。スタンプラリーは9:30〜15:00開催予定で、公式案内に予約要否の記載はありません。",
       "hero_copy": "富岡の近代化を伝える建物を、歩いて訪ねる。",
       "experience_cards": [
         {
-          "title": "催しの内容",
-          "body": "文化財専門職員の解説付きツアーでは通常非公開の御殿・黒門も見学。別途、一ノ宮地区の遺産を巡るスタンプラリーもあります。"
+          "title": "近代化遺産ツアー",
+          "body": "文化財専門職員の解説付きで4か所を巡るツアーは、公式ページで定員到達・受付終了と告知されています。"
         },
         {
-          "title": "開催と参加条件",
-          "body": "2026年11月23日、ツアーは9〜12時、500円・先着20人で11月4〜16日に申込。約4.2kmを歩きます。ラリーは9時30分〜15時、小学生以下は保護者同伴。"
+          "title": "スタンプラリー",
+          "body": "一ノ宮地区の3か所を巡るスタンプラリーは11月23日9:30〜15:00、受付は14:00までの予定。小学生以下は保護者同伴。一部は外観見学です。"
         }
-      ]
+      ],
+      "visitor_info": {
+        "日時": "2026年11月23日（月・祝）。小雨決行。",
+        "ツアー": "9:00〜12:00。事前申込・先着20人。公式案内で定員到達による受付終了を確認。",
+        "スタンプラリー": "9:30〜15:00。受付は市営一ノ宮駐車場で9:30〜14:00。予約要否は公式ページに明記なし。",
+        "注意": "小学生以下は保護者同伴。一部は外観見学。御殿・黒門はツアー参加者のみ見学できます。"
+      }
     },
     {
       "id": 527,
@@ -29416,7 +29424,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1789540900938/index.html",
       "notes": "富岡市内・甘楽郡内の小学3〜6年生が対象。受付9時〜9時15分、雨天決行。",
       "source_names": "富岡市公式案内",
@@ -29424,7 +29432,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月13日〜11月15日にフォームで申込。定員超過時は抽選。",
+      "reservation_note": "公式案内の申込期間（2026年10月13日〜11月15日）は終了。追加受付・参加可否は富岡市へ確認してください。",
       "hero_copy": "起伏あるコースを走る、小学生のクロスカントリー大会。",
       "experience_cards": [
         {
@@ -29433,7 +29441,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年11月29日、競技10時から。富岡市・甘楽郡内の小学3〜6年生対象、各部門30人。11月15日までに申込、定員超過時は抽選です。"
+          "body": "2026年11月29日、競技10時から。富岡市・甘楽郡内の小学3〜6年生対象、各部門30人。申込期間は11月15日まででした。追加受付は富岡市へ確認してください。"
         }
       ]
     },
@@ -29458,7 +29466,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1753229616405/index.html",
       "notes": "富岡市内在住者対象、先着5組。雨天決行、豪雨時は12月6日に順延。",
       "source_names": "富岡市公式案内",
@@ -29466,7 +29474,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10月23日17時までフォームで申込。",
+      "reservation_note": "公式案内の申込期限（2026年10月23日17時）は終了。追加受付・参加可否は主催者へ確認してください。",
       "hero_copy": "下仁田ねぎと大根を収穫し、生産者と交流。",
       "experience_cards": [
         {
@@ -30857,15 +30865,15 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-10-30",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://gunma.manabi365.net/G0000216/system/event/23693.html",
-      "notes": "群馬県立北毛青少年自然の家で開催。対象や参加費は確認できた案内では未確認。",
+      "notes": "2026年12月5日9時15分〜11時45分、県立北毛青少年自然の家。県内の小・中学生と家族対象、家族単位の事前申込、500円/人。公式案内の締切（11月7日）は経過。案内には申込受付開始日の年表記に不整合があるため始期は断定せず、追加受付は施設に確認。",
       "source_names": "群馬県立北毛青少年自然の家公式案内",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "最新の募集条件は主催者に確認。",
+      "reservation_note": "公式案内の申込締切（2026年11月7日）は経過。追加受付・参加可否は北毛青少年自然の家へ確認してください。",
       "hero_copy": "手のひらサイズの門松と、昔遊びを家族で楽しむ。",
       "experience_cards": [
         {
@@ -30874,7 +30882,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年12月5日9時15分〜11時45分。県内の小中学生と家族が対象、1人500円、家族単位で事前申込。公式の申込開始日の表記に不整合があり、詳細は施設へ確認してください。"
+          "body": "2026年12月5日9時15分〜11時45分。県内の小・中学生と家族、500円/人。申込締切は11月7日でした。公式案内の受付開始日の表記に不整合があり、締切後の追加受付は施設へ確認してください。"
         }
       ]
     },
@@ -36769,15 +36777,15 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.fujioka.gunma.jp/library/1/10384.html",
-      "notes": "定員10人、抽選。離れて過ごしても大丈夫なぬいぐるみを持参。迎えは12月5日または6日で、図書館利用カードを持参。",
+      "notes": "藤岡市公式ページで申込期間11月10〜15日、定員10人・抽選、当選者への電話連絡は11月17〜18日と確認。申込期間終了後の新規参加はできると確認できていません。",
       "source_names": "主催施設・自治体の公式案内",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "2026年11月10日から15日まで窓口または電子申請。",
+      "reservation_note": "申込期間（2026年11月10日〜15日）は終了。定員10人の抽選結果は当選者に11月17〜18日に電話連絡予定と公式案内。新規受付・当落は図書館へ確認してください。",
       "hero_copy": "大切なぬいぐるみとおはなし会へ。図書館でのおとまりも楽しみに。",
       "experience_cards": [
         {
@@ -38974,15 +38982,15 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/43862.pdf",
-      "notes": "11時と15時の2回。各回7組、予約制・先着順。両日4回とも同じ内容で、参加は1回のみ。開始10分前までに来館。",
+      "notes": "高崎市公式チラシで11月20日11時・15時の2回、各30分、各回先着7組、電話予約制を確認。受付開始は10月15日14時。現時点の空き・開催状況は未確認。",
       "source_names": "主催施設・自治体の公式案内",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "電話予約。10月15日14時から受付。",
+      "reservation_note": "電話予約制（各回先着7組）。受付開始は2026年10月15日14時。申込開始後の現在の空き状況は子育てなんでもセンターへ確認してください。",
       "hero_copy": "読み聞かせと歌遊びを、親子でゆったり楽しむ時間。",
       "experience_cards": [
         {
@@ -39934,7 +39942,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.kiryu.lg.jp/forest/mori/1026402.html",
       "notes": "小学生以上の子どもと保護者、全8回の連続講座。",
       "source_names": "主催施設・自治体の公式案内",
@@ -39962,7 +39970,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/%E6%A1%90%E7%94%9F%E8%87%AA%E7%84%B6%E8%A6%B3%E5%AF%9F%E3%81%AE%E6%A3%AE_%E5%85%A5%E5%8F%A3%2C_Kiryu_Forest_for_Nature_observing_-_panoramio.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "連続講座の申込みは終了。親子6組・先着順。",
+      "reservation_note": "公式ページで連続講座の申込み受付終了を確認。11月22日回の参加可否は桐生自然観察の森へ確認してください。",
       "hero_copy": "森の植物や生きものにふれ、歩きながら自然の不思議を親子で学ぶ、全8回の連続講座です。",
       "experience_cards": [
         {
@@ -40002,7 +40010,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.kiryu.lg.jp/forest/mori/1026402.html",
       "notes": "小学生以上の子どもと保護者、全8回の連続講座。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40030,7 +40038,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/%E6%A1%90%E7%94%9F%E8%87%AA%E7%84%B6%E8%A6%B3%E5%AF%9F%E3%81%AE%E6%A3%AE_%E5%85%A5%E5%8F%A3%2C_Kiryu_Forest_for_Nature_observing_-_panoramio.jpg",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "連続講座の申込みは終了。親子6組・先着順。",
+      "reservation_note": "公式ページで連続講座の申込み受付終了を確認。12月6日回の参加可否は桐生自然観察の森へ確認してください。",
       "hero_copy": "森の植物や生きものにふれ、歩きながら自然の不思議を親子で学ぶ、全8回の連続講座です。",
       "experience_cards": [
         {
@@ -40070,26 +40078,32 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1792662698770/index.html",
-      "notes": "小学生以下向けのお菓子つかみ取りは参加無料。",
-      "source_names": "主催施設・自治体の公式案内",
+      "notes": "富岡市の2026年10月26日定例記者会見資料を再確認。11月29日10:00〜15:00、黒岩地域づくりセンター、キッチンカー・フリーマーケット・小学生以下無料のお菓子つかみ取り・絵本読み聞かせを掲載。問い合わせは黒岩地域づくりセンター 0274-62-1827。",
+      "source_names": "富岡市 2026年10月26日定例記者会見（公式）",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "参加方法の詳細は主催者に確認。",
+      "reservation_note": "公式の記者会見資料では事前申込の記載なし。参加条件・最新情報は主催者へ確認してください。",
       "hero_copy": "黒岩で、グルメと出会いを楽しむ初めてのマルシェ。",
       "experience_cards": [
         {
-          "title": "催しの内容",
-          "body": "地域の青年部が企画。キッチンカーやフリーマーケット、絵本の読み聞かせが予定され、小学生以下は無料のお菓子のつかみ取りも楽しめます。"
+          "title": "地域のマルシェ",
+          "body": "富岡市の記者会見資料では、キッチンカーやフリーマーケット、お菓子つかみ取り、絵本読み聞かせなどを予定しています。"
         },
         {
-          "title": "開催と参加条件",
-          "body": "2026年11月29日10〜15時、黒岩地域づくりセンター。最新の出店・開催情報は公式案内へ。"
+          "title": "開催情報",
+          "body": "11月29日10:00〜15:00、黒岩地域づくりセンター。小学生以下のお菓子つかみ取りは無料。詳細は主催者の最新案内でご確認ください。"
         }
-      ]
+      ],
+      "visitor_info": {
+        "日時": "2026年11月29日（日）10:00〜15:00。",
+        "会場": "黒岩地域づくりセンター（富岡市上黒岩174）。",
+        "内容": "キッチンカー、フリーマーケット、小学生以下無料のお菓子つかみ取り、国生さゆりさんの絵本読み聞かせなど。",
+        "問い合わせ": "黒岩地域づくりセンター 0274-62-1827。"
+      }
     },
     {
       "id": 724,
@@ -40154,7 +40168,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.tomioka.lg.jp/www/contents/1792662698770/index.html",
       "notes": "小学4年生〜中学3年生対象。9時〜12時、13時〜16時の2回で各回10人、抽選。参加費1,000円。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40162,7 +40176,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "2026年11月1日〜16日に専用フォームから申込。",
+      "reservation_note": "公式案内の申込期間（2026年11月1日〜16日）は終了。追加受付・参加可否は富岡市へ確認してください。",
       "hero_copy": "3Dゲーム制作を通して、プログラミングに挑戦。",
       "experience_cards": [
         {
@@ -40171,7 +40185,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年11月28日、9〜12時と13〜16時の2回、ウイングプラザとみおか。小学4年〜中学3年対象、各回10人抽選、参加費1,000円。11月1〜16日に申込。"
+          "body": "2026年11月28日、9〜12時と13〜16時の2回、ウイングプラザとみおか。小学4年〜中学3年対象、各回10人抽選、参加費1,000円。申込期限（11月16日）は経過、追加受付は富岡市へ確認してください。"
         }
       ]
     },
@@ -40280,7 +40294,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1004962/1009963.html",
       "notes": "全席指定。3歳以下は膝上無料、4歳以上は要チケット。前売券完売の場合、当日券の発売はありません。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40288,7 +40302,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "チケット購入が必要。販売場所等の詳細は公式案内を確認。",
+      "reservation_note": "公式案内のチケット発売日（2026年9月26日）は経過。全席指定、4歳以上は要チケット。現時点の残席・当日券は公式プレイガイドへ確認してください。",
       "hero_copy": "0歳から楽しめる、アンサンブルのクリスマスコンサート。",
       "experience_cards": [
         {
@@ -40322,7 +40336,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.midori.gunma.jp/kosodate/1001647/1009957.html",
       "notes": "コンサートのチケットを持つ小学生以上が対象。各楽器先着10人、計50人。受付10時から10時20分。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40330,7 +40344,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "楽器体験の申込フォームから事前申込。別途コンサートチケットが必要。",
+      "reservation_note": "公式申込フォームによる事前申込、各楽器先着10人・計50人。現時点の申込受付・残枠は主催者へ確認してください。コンサートチケットも必要です。",
       "hero_copy": "コンサートの出演者と、楽器に触れてみよう。",
       "experience_cards": [
         {
@@ -40721,7 +40735,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.tamagohall.com/jidou-event/",
       "notes": "対象は小学生、定員12人。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40747,7 +40761,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Takasaki_General_Welfare_Center.JPG/1280px-Takasaki_General_Welfare_Center.JPG",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "12人。11月15日までにWebまたは往復はがきで申し込み。",
+      "reservation_note": "公式ページで申込み終了を確認（締切は11月15日）。開催日参加の可否は児童センターへ確認してください。",
       "hero_copy": "好きなイラストを選び、色の組み合わせを考えながら油性マーカーで塗ります。",
       "experience_cards": [
         {
@@ -40759,7 +40773,7 @@ window.EVENT_DATA = {
       "visitor_info": {
         "対象": "小学生",
         "料金": "100円",
-        "申込み": "12人。11月15日までにWebまたは往復はがきで申し込み。",
+        "申込み": "公式ページで申込み終了を確認（11月15日締切）。開催日参加の可否は児童センターへ確認してください。",
         "確認先": "受付状況や変更は公式案内をご確認ください。",
         "駐車場（施設案内）": "総合福祉センターの駐車場は8:30〜22:30。指定管理者の案内では2026年4月から無料。年末年始と全館点検日（5月3〜5日）は入出庫できません。変更は施設へ確認。"
       }
@@ -40785,7 +40799,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.tamagohall.com/jidou-event/",
       "notes": "対象は4～6歳の未就学児と保護者、15組（抽選）。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40811,7 +40825,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Takasaki_General_Welfare_Center.JPG/1280px-Takasaki_General_Welfare_Center.JPG",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "15組・抽選。11月15日までにWebまたは往復はがきで申し込み。",
+      "reservation_note": "公式ページで申込み終了を確認（締切は11月15日）。開催日参加の可否は児童センターへ確認してください。",
       "hero_copy": "クリスマスをテーマに英語を学ぶ親子向け講座です。",
       "experience_cards": [
         {
@@ -40823,7 +40837,7 @@ window.EVENT_DATA = {
       "visitor_info": {
         "対象": "4〜6歳の未就学児と保護者",
         "料金": "無料",
-        "申込み": "15組・抽選。11月15日までにWebまたは往復はがきで申し込み。",
+        "申込み": "公式ページで申込み終了を確認（11月15日締切）。開催日参加の可否は児童センターへ確認してください。",
         "確認先": "受付状況や変更は公式案内をご確認ください。",
         "駐車場（施設案内）": "総合福祉センターの駐車場は8:30〜22:30。指定管理者の案内では2026年4月から無料。年末年始と全館点検日（5月3〜5日）は入出庫できません。変更は施設へ確認。"
       }
@@ -40849,7 +40863,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-02",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.tamagohall.com/jidou-event/",
       "notes": "対象は小学生、定員10人（抽選）。",
       "source_names": "主催施設・自治体の公式案内",
@@ -40875,7 +40889,7 @@ window.EVENT_DATA = {
       "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Takasaki_General_Welfare_Center.JPG/1280px-Takasaki_General_Welfare_Center.JPG",
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "10人・抽選。11月15日までにWebまたは往復はがきで申し込み。",
+      "reservation_note": "公式ページで申込み終了を確認（締切は11月15日）。開催日参加の可否は児童センターへ確認してください。",
       "hero_copy": "松葉や竹を使ってミニ門松を一基作ります。",
       "experience_cards": [
         {
@@ -40887,7 +40901,7 @@ window.EVENT_DATA = {
       "visitor_info": {
         "対象": "小学生",
         "料金": "300円",
-        "申込み": "10人・抽選。11月15日までにWebまたは往復はがきで申し込み。",
+        "申込み": "公式ページで申込み終了を確認（11月15日締切）。開催日参加の可否は児童センターへ確認してください。",
         "確認先": "受付状況や変更は公式案内をご確認ください。"
       }
     },
@@ -42373,15 +42387,15 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
-      "canonical_url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/5_1/2_1/6/33582.html",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/kamikawa/33581.html",
       "notes": "小学1〜6年生20名。1・2年生は保護者同伴必須。安全管理上、未就学児の同伴不可。上履き・はさみ持参、汚れてもよい服装。終了時刻は前後する場合あり。",
-      "source_names": "主催施設・自治体の公式案内",
+      "source_names": "前橋市 上川淵市民サービスセンター公式案内（小学生対象・ミニ門松づくり）",
       "images": [],
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "2026年11月2日〜12日に上川淵公民館へ電話または案内チラシの二次元コードから申込。電話は平日9〜17時。",
+      "reservation_note": "公式案内の申込期間（2026年11月2日〜12日）は終了。追加受付・参加可否は上川淵公民館へ確認してください。",
       "hero_copy": "手作りのミニ門松を飾って、お正月を迎えよう。",
       "experience_cards": [
         {
@@ -42390,7 +42404,7 @@ window.EVENT_DATA = {
         },
         {
           "title": "開催と参加条件",
-          "body": "2026年12月6日10〜11時、上北分館ホール。小学生20人、材料費300円。1・2年生は保護者同伴、未就学児の同伴不可。申込は11月2〜12日です。"
+          "body": "2026年12月6日10〜11時、上北分館ホール。小学生20人、材料費300円。1・2年生は保護者同伴、未就学児同伴不可。申込期間は11月12日まででした。追加受付は上川淵公民館へ確認してください。"
         }
       ]
     },
@@ -42415,7 +42429,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/jounan/gyomu/1/51463.html",
       "notes": "市内在住・在学の小学生と保護者15組。未就学児のきょうだいも参加可。材料費は工作する子ども1人100円。応募多数の場合は抽選。",
       "source_names": "主催施設・自治体の公式案内",
@@ -42423,7 +42437,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "2026年10月30日〜11月17日に各教室の申込フォームから申込。",
+      "reservation_note": "申込期間は2026年11月17日まで（本日）。フォーム受付が継続中か、抽選結果・追加受付の有無は城南公民館へ確認してください。",
       "hero_copy": "親子で風船や折り紙を使い、つくる楽しさに出会う冬の工作教室。",
       "experience_cards": [
         {
@@ -42464,7 +42478,7 @@ window.EVENT_DATA = {
       "status": "verified",
       "confidence": "high",
       "discovered_at": "2026-11-02",
-      "last_verified_at": "2026-11-06",
+      "last_verified_at": "2026-11-17",
       "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/jounan/gyomu/1/51463.html",
       "notes": "市内在住・在学の小学3〜6年生、定員15名。応募多数の場合は抽選。書道用具一式、清書用書き初め用紙、お手本を持参。",
       "source_names": "主催施設・自治体の公式案内",
@@ -42472,7 +42486,7 @@ window.EVENT_DATA = {
       "primary_image_url": null,
       "google_place_id": null,
       "parking_note": null,
-      "reservation_note": "2026年10月30日〜11月17日に各教室の申込フォームから申込。",
+      "reservation_note": "申込期間は2026年11月17日まで（本日）。フォーム受付が継続中か、抽選結果・追加受付の有無は城南公民館へ確認してください。",
       "hero_copy": "毛筆を手に、年末に書き初めを仕上げる小学生向け教室。",
       "experience_cards": [
         {
@@ -47057,6 +47071,2357 @@ window.EVENT_DATA = {
         "申込み（当時の案内）": "広報に事前受付の指定なし（開催当時）",
         "記録について": "広報掲載時の予定を記録しています。実際の開催状況は未確認です。"
       }
+    },
+    {
+      "id": 870,
+      "title": "第17回群馬県からくり工夫展",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "群馬産業技術センター",
+      "address": "群馬県前橋市亀里町884-1",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-13",
+      "start_time": "10:00",
+      "end_time": "16:00",
+      "category": "ものづくり・体験",
+      "price_note": "入場無料",
+      "organizer": "群馬県からくり工夫展実行委員会",
+      "summary": "県内企業のからくり改善機器、からくり人形芝居、からくりおもちゃやVRなどの展示・体験を楽しむものづくりイベント。手回しトロッコ「てトロ」や観光バスの乗車体験なども案内されています。",
+      "recommended_for": "ものづくりやからくりに興味のある人、子ども連れの家族。",
+      "best_scenes": "動く仕掛けを見たり体験したりしながら、製造現場の工夫に触れる時間。",
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.pref.gunma.jp/page/782275.html",
+      "notes": "群馬県公式ページの見出しは「第17回」だが本文紹介には「第16回」との記載があり、回数表記に不整合。日時・会場・無料・展示内容は同ページで確認。写真はイベント当日のものを未確保。",
+      "source_names": "群馬県公式ホームページ",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "県公式案内には入場無料と記載。事前申込の案内は見当たらないが、最新情報は公式ページで確認。",
+      "hero_copy": "からくりの仕掛けを見て、動かして、ものづくりの工夫に出会う。",
+      "experience_cards": [
+        {
+          "title": "動く仕掛けを体験",
+          "body": "からくりおもちゃやVR、手回しトロッコ「てトロ」などの展示・体験が案内されています。"
+        },
+        {
+          "title": "開催案内",
+          "body": "2026年12月12日・13日、群馬産業技術センターで開催予定。入場無料です。回数表記に公式ページ内の不整合があるため、来場前に最新案内をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月12日・13日 10:00〜16:00",
+        "会場": "群馬産業技術センター（前橋市亀里町884-1）",
+        "内容": "県内企業のからくり改善機器、からくり人形芝居、からくりおもちゃ・VR、手回しトロッコ、キャビン・アイサイト・観光バス乗車体験など",
+        "料金": "入場無料",
+        "問い合わせ": "群馬県 地域企業支援課 ものづくりイノベーション室 技術開発係 027-226-3352",
+        "注意": "開催回数について公式ページの見出しと本文に異なる表記があります。"
+      },
+      "source_id": 644
+    },
+    {
+      "id": 871,
+      "title": "第28回「群馬の絹」展～観る、買う、装う、シルクとの出会い～",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "群馬県立日本絹の里",
+      "address": "群馬県高崎市金古町888-1",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-23",
+      "start_time": "09:30",
+      "end_time": "17:00",
+      "category": "展示・体験",
+      "price_note": "展示期間中は観覧無料（関連販売・体験は条件別）",
+      "organizer": "群馬県立日本絹の里",
+      "summary": "群馬の絹を使った織物・ニット・工芸品などを展示・販売する5日間の催し。繭クラフトや手織りなどの当日受付体験も予定されています。藍染め体験は主催者が中止を告知しています。",
+      "recommended_for": "群馬の絹や染織・工芸に関心のある人、ものづくり体験を楽しみたい人。",
+      "best_scenes": "絹製品を見比べ、繭や手織りの体験を通して素材に親しむひととき。",
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.nippon-kinunosato.or.jp/exhibition/11722/",
+      "notes": "会期中の観覧無料を公式「次回の展示」で確認。施設通常開館時間は9:30〜17:00。藍染体験は公式イベントページで中止表示。繭クラフト・手織り等は当日先着枠、着付け体験は事前予約制。写真は未確保。",
+      "source_names": "群馬県立日本絹の里 公式サイト",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "展示は観覧無料。繭クラフト・手織り等の体験は当日先着受付、きもの着付け体験は事前電話予約制。藍染め体験は中止。各体験の定員・受付時刻を主催者ページで確認。",
+      "hero_copy": "群馬の絹を使った品々を見て、手仕事の体験にもふれる5日間。",
+      "experience_cards": [
+        {
+          "title": "絹の展示と販売",
+          "body": "スカーフや着物、バッグなど群馬の絹製品のほか、開発中の絹糸素材や工芸品の展示が予定されています。"
+        },
+        {
+          "title": "関連体験",
+          "body": "繭クラフト、手織り、桑の木ストラップ作りなど。藍染め体験は中止と告知されています。着付け体験は予約制です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月19日（木）〜23日（月・祝）、9:30〜17:00",
+        "会場": "群馬県立日本絹の里（高崎市金古町888-1）",
+        "料金": "会期中の展示観覧無料。関連体験は内容により無料または有料。",
+        "内容": "絹製品・工芸品の展示販売、繭クラフト・手織りなどの関連体験。藍染め体験は中止。",
+        "申込": "体験ごとに異なる。当日先着受付または事前電話予約制。",
+        "問い合わせ": "群馬県立日本絹の里 027-360-6300"
+      },
+      "source_id": 645
+    },
+    {
+      "id": 872,
+      "title": "特別展「まゆクラフトと絹の作品展」",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "群馬県立日本絹の里",
+      "address": "群馬県高崎市金古町888-1",
+      "start_date": "2026-11-29",
+      "end_date": "2027-02-07",
+      "start_time": "09:30",
+      "end_time": "17:00",
+      "category": "展示",
+      "price_note": "高校生以上は企画展観覧料が必要（一般400円、大学生・高校生250円）",
+      "organizer": "群馬県立日本絹の里",
+      "summary": "繭の形や質感を活かした公募作品と、工芸作家・友の会会員による染色、織物、人形、刺繍などを展示する特別展。会期中には繭クラフトや染色・手織りの関連体験も予定されています。",
+      "recommended_for": "繭クラフトや染織・絹工芸に関心のある人。関連体験には対象年齢や申込条件があります。",
+      "best_scenes": "繭の形を活かした作品や、絹を使ったさまざまな手仕事を見比べる時間。",
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.nippon-kinunosato.or.jp/exhibition/11742/",
+      "notes": "会期・展示内容・関連体験は主催館公式ページで確認。開館時間・企画展観覧料・休館日は施設利用案内で確認。関連体験の受付開始日は過ぎており、空き状況や受付終了状況は未確認。イベント当日の写真は未確保。",
+      "source_names": "群馬県立日本絹の里 公式サイト",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "展示自体の予約要否は公式案内に明記なし。関連体験は電話予約・先着順の枠があり、現在の空き状況は未確認。一部体験は当日先着受付。",
+      "hero_copy": "繭のクラフトと、絹を使った染め・織り・刺繍の作品に出会う特別展。",
+      "experience_cards": [
+        {
+          "title": "繭と絹の作品展示",
+          "body": "公募されたまゆクラフト作品のほか、工芸作家や友の会会員による染色・織物・人形・刺繍などを展示。"
+        },
+        {
+          "title": "関連体験も開催予定",
+          "body": "繭クラフト、シルクストール染色、手織りなど。体験ごとに対象・定員・料金・予約条件が異なります。"
+        }
+      ],
+      "visitor_info": {
+        "会期": "2026年11月29日（日）〜2027年2月7日（日）",
+        "開館時間": "9:30〜17:00",
+        "会場": "群馬県立日本絹の里（高崎市金古町888-1）",
+        "休館日": "毎週火曜日、12月27日〜1月5日（臨時休館を含む）",
+        "観覧料": "一般400円、大学生・高校生250円。中学生以下無料。団体料金等は施設案内を確認。",
+        "関連体験": "繭クラフト・染色・手織りなど。事前電話予約制または当日受付の体験があり、定員・対象・費用は体験ごとに異なる。",
+        "問い合わせ": "群馬県立日本絹の里 027-360-6300"
+      },
+      "source_id": 646
+    },
+    {
+      "id": 873,
+      "title": "ほんトモりんぐ（前橋市立図書館・参加書店めぐり）",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "前橋市立図書館・市内参加書店など",
+      "address": null,
+      "start_date": "2026-11-05",
+      "end_date": "2026-12-27",
+      "start_time": null,
+      "end_time": null,
+      "category": "図書館・まち歩き",
+      "price_note": "参加無料（書店での購入等は各自負担）",
+      "organizer": "前橋市立図書館",
+      "summary": "図書館や参加書店をめぐり、貸出・買い物・イベント参加などでポイントを集める回遊企画。4ポイントでオリジナルグッズ抽選、5ポイントで本にまつわる仕事体験への応募ができます。",
+      "recommended_for": "本や書店、図書館めぐりを楽しみたい人。",
+      "best_scenes": "図書館と街の書店を訪ね、本や人との出会いを重ねるまち歩き。",
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.maebashi.gunma.jp/library/event/51596.html",
+      "notes": "ポイント付与は11月5日〜12月27日、リワード交換は12月1日〜2027年1月31日。フライヤー配布場所・参加店舗・書店2店以上など条件あり。2027年1月の公開収録・出店販売は開催予定のみで日程未公表のため、この記録には開催日として含めない。",
+      "source_names": "前橋市立図書館公式ホームページ",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "図書館本館・市内分館・参加書店等で配布するフライヤーを入手し、ポイントカードを利用。4ポイント特典は抽選、5ポイントは仕事体験応募。参加無料だが買い物等の実費は各自負担。",
+      "hero_copy": "図書館と街の書店をめぐり、本と人との出会いを集める。",
+      "experience_cards": [
+        {
+          "title": "本と街をめぐるポイント企画",
+          "body": "図書館での貸出やイベント、参加書店での買い物・イベント参加、スタッフとの会話などでポイントを集めます。4ポイント達成には参加書店2店舗以上の条件があります。"
+        },
+        {
+          "title": "特典と期間",
+          "body": "4ポイントでオリジナルグッズ抽選、5ポイントで本にまつわる仕事体験への応募が可能。ポイント付与は2026年12月27日まで、景品交換は2027年1月31日までです。"
+        }
+      ],
+      "visitor_info": {
+        "ポイント付与期間": "2026年11月5日〜12月27日",
+        "リワード交換期間": "2026年12月1日〜2027年1月31日",
+        "参加方法": "フライヤーを入手し、裏面のポイントカードを使って図書館・参加書店をめぐる。",
+        "ポイント条件": "4ポイント達成には参加書店2店舗以上の条件あり。5ポイントでミニレビューを記入または投稿。",
+        "特典": "4ポイントでオリジナルグッズ抽選、5ポイントで本にまつわる仕事体験への応募。",
+        "問い合わせ": "前橋市立図書館"
+      },
+      "source_id": 647
+    },
+    {
+      "id": 874,
+      "title": "上州伊勢崎冬牛蒡「甘久郎（かんくろう）」フェア",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "伊勢崎市内の販売店・参加店",
+      "address": null,
+      "start_date": "2026-11-20",
+      "end_date": "2026-12-13",
+      "start_time": null,
+      "end_time": null,
+      "category": "食・地域産品",
+      "price_note": null,
+      "organizer": "伊勢崎市「農＆食」戦略会議 ゴボウ部会ほか",
+      "summary": "上州伊勢崎冬牛蒡「甘久郎」を市内の直売所やスーパーで販売し、地産地消推進の店などがオリジナルメニューを提供する期間企画。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/soshiki/nousei/nosei/suisin/5785.html",
+      "source_id": 648,
+      "notes": "開催期間と販売店は伊勢崎市公式ページで確認。販売状況・各店のメニュー提供日は店舗に要確認。",
+      "source_names": "上州伊勢崎冬牛蒡「甘久郎」フェア（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "市内販売店・協力店ごとに販売・提供状況が異なるため、来店前に公式販売店一覧と各店舗へ確認。",
+      "hero_copy": "冬ごぼう「甘久郎」を市内のお店で味わう期間限定フェア。",
+      "experience_cards": [
+        {
+          "title": "販売とメニュー",
+          "body": "直売所やスーパーでの販売のほか、協力店によるオリジナルメニュー提供が予定されています。"
+        },
+        {
+          "title": "開催期間",
+          "body": "2026年11月20日から12月13日まで。店舗ごとの在庫や提供日は各店へご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "期間": "2026年11月20日〜12月13日",
+        "内容": "市内の直売所・スーパー等で甘久郎を販売し、地産地消推進の店などがオリジナルメニューを提供。",
+        "販売店": "公式ページ掲載の販売店一覧を確認。",
+        "問い合わせ": "伊勢崎市 農政課 農業推進係"
+      }
+    },
+    {
+      "id": 875,
+      "title": "伊勢崎シティマラソン",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "華蔵寺公園運動施設",
+      "address": "群馬県伊勢崎市堤西町93",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-06",
+      "start_time": "08:00",
+      "end_time": null,
+      "category": "スポーツ",
+      "price_note": "種目により500〜3,500円（参加料。別途手数料）",
+      "organizer": "伊勢崎市・伊勢崎シティマラソン実行委員会",
+      "summary": "ハーフ、10km、5km、1.5kmの種目で行われる市民マラソン。市公式案内では午前8時開会、種目別にスタート時刻と定員が設定されています。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/soshiki/kensui/sport/sportssinkou/event/7280.html",
+      "source_id": 649,
+      "notes": "大会は12月6日開催予定。公式参加申込期間は9月1日〜10月1日で終了。新規エントリー・当日参加の有無は未確認。観覧・交通規制は大会公式ページ・市の最新案内を確認。",
+      "source_names": "伊勢崎シティマラソン（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "競技参加のRUNNET申込は2026年10月1日まで。期間終了後の追加受付は未確認。",
+      "hero_copy": "距離ごとに部門が分かれた、華蔵寺公園運動施設発着の市民マラソン。",
+      "experience_cards": [
+        {
+          "title": "4つの種目",
+          "body": "1.5km、5km、10km、ハーフマラソンを予定。コースや部門の詳細は公式案内をご確認ください。"
+        },
+        {
+          "title": "参加受付",
+          "body": "市の案内に記載された申込期間は10月1日までです。締切後の追加募集は確認できていません。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月6日（日）午前8時開会、雨天決行。",
+        "会場": "華蔵寺公園運動施設",
+        "種目": "1.5km（小学生）、5km、10km、ハーフマラソン。スタートは種目ごとに異なる。",
+        "申込": "公式申込期間は2026年9月1日〜10月1日。締切済み。追加受付は未確認。",
+        "注意": "未成年は保護者の同意が必要。コース・交通規制は大会公式サイト等を確認。",
+        "問い合わせ": "伊勢崎市 スポーツ振興課 0270-27-2747"
+      }
+    },
+    {
+      "id": 876,
+      "title": "いせさき楽市（2026年11月開催）",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "伊勢崎駅南口駅前広場",
+      "address": null,
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "10:00",
+      "end_time": "15:00",
+      "category": "マルシェ・地域イベント",
+      "price_note": null,
+      "organizer": "伊勢崎市まちなか活性化支援会議",
+      "summary": "農産物や加工食品、生活雑貨の販売、子ども向け企画や参加無料の体験を予定する駅前マーケット。雨天・強風時は中止または自由通路で実施する場合があります。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
+      "source_id": 650,
+      "notes": "2026年11月21日開催の市公式チラシ・ページを確認。雨天・荒天時の変更や各企画の先着受付は公式案内で確認。",
+      "source_names": "いせさき楽市（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "カラオケ広場等は10時から先着受付。事前予約不可と記載された企画あり。無料臨時駐車場あり。",
+      "hero_copy": "伊勢崎駅前で、食や暮らしの品と参加型企画を楽しむ土曜市。",
+      "experience_cards": [
+        {
+          "title": "駅前で楽しむマーケット",
+          "body": "農産物や加工食品、生活雑貨などの販売に加え、カラオケや子ども向け企画も案内されています。"
+        },
+        {
+          "title": "天候と受付",
+          "body": "雨天・強風時は中止の場合があります。各企画は先着受付のものがあり、最新情報をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）10:00〜15:00",
+        "会場": "伊勢崎駅南口駅前広場",
+        "内容": "農産物・加工食品・生活雑貨の販売、カラオケ広場、お菓子すくい、花苗配布等。",
+        "天候": "雨天・強風時は中止の場合あり。企画により伊勢崎駅自由通路で実施。",
+        "駐車場": "伊勢崎駅北側、アイオー信用金庫大手町出張所南側の臨時駐車場を案内。",
+        "問い合わせ": "伊勢崎市 商工労働課 まちなか活性化係 0270-27-8807"
+      }
+    },
+    {
+      "id": 877,
+      "title": "いせさき軽トラ朝市（11月開催）",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "いせさき明治館通り",
+      "address": null,
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "08:30",
+      "end_time": "11:30",
+      "category": "マルシェ",
+      "price_note": null,
+      "organizer": "伊勢崎商工会議所 地域振興委員会",
+      "summary": "明治館前の通りを歩行者天国にし、農畜産物・加工品・工芸品などを販売する朝市。11月のいせさき楽市と同日開催です。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
+      "source_id": 650,
+      "notes": "伊勢崎市公式楽市チラシに同日開催情報を掲載。雨天中止。開催状況は主催者へ確認。",
+      "source_names": "いせさき楽市（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "事前予約の案内なし。雨天中止と公式チラシに記載。",
+      "hero_copy": "明治館前の通りで、地元の農産物や加工品を探す朝市。",
+      "experience_cards": [
+        {
+          "title": "通りを歩いて買い物",
+          "body": "明治館前の約200mを歩行者天国にして出店が並ぶ予定です。"
+        },
+        {
+          "title": "雨天時",
+          "body": "雨天中止と案内されています。来場前に開催状況をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）8:30〜11:30",
+        "会場": "いせさき明治館通り",
+        "内容": "農畜産物、食加工品、工芸品等の販売。",
+        "天候": "雨天中止。",
+        "問い合わせ": "伊勢崎商工会議所 地域振興委員会 0270-24-2211"
+      }
+    },
+    {
+      "id": 878,
+      "title": "伊勢崎駅ピアノ ミニコンサート",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "伊勢崎駅構内自由通路「伊勢崎駅ピアノ」",
+      "address": null,
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "11:00",
+      "end_time": "11:30",
+      "category": "音楽",
+      "price_note": "観覧無料",
+      "organizer": null,
+      "summary": "伊勢崎駅の自由通路に設置された駅ピアノで、クラシックやJ-POPなどを演奏する観覧無料のミニコンサート。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
+      "source_id": 650,
+      "notes": "出演者・時間・会場は伊勢崎市の11月楽市公式チラシで確認。",
+      "source_names": "いせさき楽市（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "観覧無料。事前申込の記載なし。",
+      "hero_copy": "駅の自由通路で気軽に聴ける、30分間のピアノ演奏。",
+      "experience_cards": [
+        {
+          "title": "演奏を聴く",
+          "body": "クラシックやJ-POPなど、幅広いジャンルの演奏が予定されています。"
+        },
+        {
+          "title": "開催案内",
+          "body": "11月21日11時から、伊勢崎駅の自由通路で開催予定。観覧無料です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）11:00〜11:30",
+        "会場": "伊勢崎駅構内自由通路「伊勢崎駅ピアノ」",
+        "内容": "クラシックやJ-POPなどの演奏。",
+        "料金": "観覧無料"
+      }
+    },
+    {
+      "id": 879,
+      "title": "さかい赤レンガまつり・境宿六斎市",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "境赤レンガ倉庫前",
+      "address": null,
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "10:00",
+      "end_time": "15:00",
+      "category": "まつり・市",
+      "price_note": null,
+      "organizer": "さかい赤レンガまつり実行委員会",
+      "summary": "伊勢崎市のまちなか関連事業として開催される赤レンガまつり。同日開催の境宿六斎市とともに、境赤レンガ倉庫前で行われます。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
+      "source_id": 650,
+      "notes": "伊勢崎市公式「いせさき楽市」ページのまちなか関連イベント欄で確認。具体的な出店内容は別途主催者案内を確認。",
+      "source_names": "いせさき楽市（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込・入場条件の記載なし。内容は主催者案内を確認。",
+      "hero_copy": "赤レンガ倉庫前で、まつりと境宿六斎市を一緒に楽しむ日。",
+      "experience_cards": [
+        {
+          "title": "同日開催",
+          "body": "さかい赤レンガまつりと境宿六斎市が同日に開かれます。"
+        },
+        {
+          "title": "開催案内",
+          "body": "2026年11月21日、境赤レンガ倉庫前で10時から15時までの予定です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）10:00〜15:00",
+        "会場": "境赤レンガ倉庫前",
+        "同時開催": "境宿六斎市",
+        "主催": "さかい赤レンガまつり実行委員会"
+      }
+    },
+    {
+      "id": 880,
+      "title": "第64回伊勢崎市農業まつり",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "venue_name": "アイオーしんきん伊勢崎アリーナ・華蔵寺公園運動施設周辺",
+      "address": null,
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "09:00",
+      "end_time": "14:00",
+      "category": "農業・食",
+      "price_note": null,
+      "organizer": "伊勢崎市農業まつり事務局（JA佐波伊勢崎 営農支援課）",
+      "summary": "伊勢崎市の農畜産物を紹介・販売する恒例の農業まつり。オープニングセレモニーと農畜産物直売コーナーなどが予定されています。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.isesaki.lg.jp/sangyo_nyusatsu_kaihatsu/nogyo_ringyo_suisangyo/nogyo/oshirase/19254.html",
+      "source_id": 651,
+      "notes": "市公式ページで日時・会場・連絡先を確認。具体的な出店内容は掲載チラシを確認。",
+      "source_names": "第64回伊勢崎市農業まつり（伊勢崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "入場予約の記載なし。詳細は公式チラシと主催事務局へ確認。",
+      "hero_copy": "地元の農畜産物に出会える、伊勢崎の秋の農業まつり。",
+      "experience_cards": [
+        {
+          "title": "農畜産物直売",
+          "body": "地場産品の親しみと消費拡大を目的に開催。直売コーナーなどが予定されています。"
+        },
+        {
+          "title": "会場",
+          "body": "アイオーしんきん伊勢崎アリーナと華蔵寺公園運動施設周辺です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）9:00オープニング、9:00〜14:00直売コーナー等",
+        "会場": "アイオーしんきん伊勢崎アリーナ（市民体育館）、華蔵寺公園運動施設周辺",
+        "問い合わせ": "伊勢崎市農業まつり事務局（JA佐波伊勢崎 営農支援課）0270-27-3030"
+      }
+    },
+    {
+      "id": 881,
+      "title": "DOYOU ILLUMI OTA 2026-2027",
+      "prefecture": "群馬県",
+      "municipality": "太田市",
+      "area_label": "太田市",
+      "venue_name": "OPEN HOUSE ARENA OTA前",
+      "address": null,
+      "start_date": "2026-12-12",
+      "end_date": "2027-02-28",
+      "start_time": "17:00",
+      "end_time": "22:00",
+      "category": "イルミネーション",
+      "price_note": null,
+      "organizer": "東毛経済同友会",
+      "summary": "太田市内の市民活動団体による冬のイルミネーション。12月12日に点灯式を行い、翌年2月28日まで点灯予定です。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.ota.gunma.jp/page/1052623.html",
+      "source_id": 652,
+      "notes": "太田市公式「1％まちづくり事業」一覧に掲載された予定情報。中止・変更の場合があると市が注意喚起。",
+      "source_names": "1％まちづくり事業のイベント（太田市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "予約不要の屋外イルミネーションとして案内。開催変更は太田市公式情報を確認。",
+      "hero_copy": "冬の夜、OPEN HOUSE ARENA OTA前を彩るイルミネーション。",
+      "experience_cards": [
+        {
+          "title": "点灯式と期間",
+          "body": "12月12日17時から点灯式、点灯は2027年2月28日までの予定です。"
+        },
+        {
+          "title": "会場",
+          "body": "OPEN HOUSE ARENA OTA前。開催状況は太田市の最新案内をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "点灯式": "2026年12月12日（土）17:00〜18:00",
+        "点灯期間": "2026年12月12日〜2027年2月28日 17:00〜22:00",
+        "会場": "OPEN HOUSE ARENA OTA前",
+        "主催": "東毛経済同友会",
+        "注意": "市の案内では中止・変更の可能性あり。"
+      }
+    },
+    {
+      "id": 882,
+      "title": "桐生の店と人を巡るツアー",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "area_label": "桐生市",
+      "venue_name": "桐生市内（集合：古民家カフェ プラスアンカー）",
+      "address": "群馬県桐生市本町6丁目382",
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-05",
+      "start_time": "11:00",
+      "end_time": "16:30",
+      "category": "まち歩き・交流",
+      "price_note": "1人2,000円（昼食・保険代込み）",
+      "organizer": "桐生市移住支援フロント むすびすむ桐生",
+      "summary": "桐生のショップを見学し、昼食や徒歩での店舗巡り、桐生AIR見学を通して街の人や店に出会う移住交流ツアー。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.kiryu.lg.jp/shisei/machi/iinekiryu/event/1027811.html",
+      "source_id": 653,
+      "notes": "桐生市公式ページで日時・集合場所・定員・費用・締切を確認。県外参加者優先、応募多数の場合は抽選。",
+      "source_names": "桐生の店と人を巡るツアー（桐生市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込締切は2026年12月2日。10人程度、県外参加者優先・応募多数時抽選。申込状況は未確認。",
+      "hero_copy": "桐生の店や人を訪ね、徒歩で街の魅力にふれる交流ツアー。",
+      "experience_cards": [
+        {
+          "title": "店と人に出会う",
+          "body": "ショップ見学や昼食、桐生AIRの訪問など、桐生市内をめぐるプログラムです。"
+        },
+        {
+          "title": "申込と定員",
+          "body": "10人程度で、県外からの参加者を優先。応募多数の場合は抽選、締切は12月2日です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月5日（土）11:00〜16:30",
+        "集合": "古民家カフェ プラスアンカー駐車場（桐生市本町6丁目382）、10:50受付",
+        "内容": "交流ゲーム、ショップ見学・昼食、徒歩での店舗巡り・桐生AIR見学。",
+        "定員": "10人程度。県外参加者優先、応募多数時抽選。",
+        "参加費": "2,000円（昼食・保険代込み、当日現地払い）",
+        "申込締切": "2026年12月2日",
+        "問い合わせ": "050-3529-6573（10〜17時）"
+      }
+    },
+    {
+      "id": 883,
+      "title": "古民家リノベーションワークショップ体感ツアー",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "area_label": "桐生市",
+      "venue_name": "桐生市内（集合：古民家カフェ プラスアンカー）",
+      "address": "群馬県桐生市本町6丁目382",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "start_time": "11:00",
+      "end_time": "18:00",
+      "category": "まち歩き・体験",
+      "price_note": "1人1,000円（飲み物・保険代込み。昼食・交流会は別）",
+      "organizer": "桐生市移住支援フロント むすびすむ桐生",
+      "summary": "桐生市内の古民家や物件を見学し、まち歩きとリノベーションワークショップを体験する移住交流企画。希望者向けに夜の交流会も予定されています。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.kiryu.lg.jp/shisei/machi/iinekiryu/event/1027797.html",
+      "source_id": 654,
+      "notes": "桐生市公式ページで日時・集合場所・費用・締切・内容を確認。県外参加者優先・応募多数時抽選。",
+      "source_names": "古民家リノベーションワークショップ体感ツアー（桐生市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込締切は2026年11月25日。10人程度。締切前の現在の受付状況は未確認。",
+      "hero_copy": "古民家や空き物件を歩いて見て、リノベーションを体験する桐生ツアー。",
+      "experience_cards": [
+        {
+          "title": "まち歩きとワークショップ",
+          "body": "市内の物件を見学し、リノベーションのワークショップを体験します。"
+        },
+        {
+          "title": "参加条件",
+          "body": "10人程度、県外参加者優先で応募多数の場合は抽選。申込締切は11月25日です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月28日（土）11:00〜18:00。希望者は19時から交流会。",
+        "集合": "古民家カフェ プラスアンカー（桐生市本町6丁目382）",
+        "内容": "物件見学、まち歩き、リノベーションワークショップ。",
+        "定員": "10人程度。県外参加者優先、応募多数時抽選。",
+        "参加費": "1,000円（飲み物・保険代込み）。昼食は各自。交流会は別途料金。",
+        "申込締切": "2026年11月25日",
+        "問い合わせ": "050-3529-6573（10〜17時）"
+      }
+    },
+    {
+      "id": 884,
+      "title": "冬の親子キャンプ教室（桐生市青少年野外活動センター）",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "area_label": "桐生市",
+      "venue_name": "桐生市青少年野外活動センター",
+      "address": null,
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-06",
+      "start_time": "10:00",
+      "end_time": null,
+      "category": "キャンプ・自然体験",
+      "price_note": "高校生以上2,000円、小中学生1,000円、未就学児（3歳以上）500円",
+      "organizer": null,
+      "summary": "テント設営やクラフト、野外炊事、山登りを体験する1泊2日の冬のキャンプ教室。20歳以上の付き添いがあれば親子以外の組み合わせも参加可能です。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.city.kiryu.lg.jp/kosodate/ikusei/yagai/1001674.html",
+      "source_id": 655,
+      "notes": "桐生市公式ページの申込期間は11月7日9時〜13日17時で終了。追加枠・キャンセル枠は確認できていない。",
+      "source_names": "青少年野外活動センター主催事業（桐生市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "先着順の申込期間は終了（11月13日17時）。追加募集・キャンセル枠は未確認。",
+      "hero_copy": "テント泊や野外炊事、山登りに挑戦する1泊2日の冬キャンプ。",
+      "experience_cards": [
+        {
+          "title": "親子で野外活動",
+          "body": "テント設営、クラフト、野外炊事、山登りなどを体験します。"
+        },
+        {
+          "title": "申込状況",
+          "body": "申込期間は11月13日で終了。追加募集やキャンセル枠は確認できていません。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月5日10:00〜12月6日正午",
+        "対象・定員": "親子12組。20歳以上の付き添いがあれば親子でなくても参加可。",
+        "内容": "テント設営、クラフト、野外炊事、山登り。",
+        "料金": "高校生以上2,000円、小中学生1,000円、未就学児（3歳以上）500円。",
+        "申込": "11月7日9時〜11月13日17時、申込フォームで先着順。締切済み。追加枠は未確認。",
+        "持ち物": "寝袋、ランタン等、飲料、1日目昼食・夕食と2日目朝食の食材、軍手、防寒具など。"
+      }
+    },
+    {
+      "id": 885,
+      "title": "第3回デジスポISESAKIフェス",
+      "municipality": "伊勢崎市",
+      "venue_name": "メガネのイタガキ文化ホール伊勢崎",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-06",
+      "start_time": "10:00",
+      "end_time": "17:00",
+      "category": "eスポーツ・デジタル体験",
+      "price_note": null,
+      "organizer": "ISESAKI eスポーツ実行委員会（共催：伊勢崎市）",
+      "summary": "eスポーツ大会や高校生選手権、レトロゲーム・デジタル体験、ワークショップ、関連企業ブース、ステージ、キッチンカーなどを予定するデジタル技術の体験イベント。大会種目は事前エントリーが必要です。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/21190.html",
+      "source_id": 656,
+      "source_names": "第3回デジスポISESAKIフェス（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで開催日時、会場、内容を確認。ゲーム大会は事前エントリーが必要で、未エントリーでは参加不可。体験会・ワークショップ等の整理券配布予定。各プログラムの参加条件・受付状況は特設サイトで要確認。",
+      "reservation_note": "大会参加は特設サイトから事前エントリー必須。ワークショップは整理券配布予定。観覧・体験の個別条件は公式特設サイトを確認。",
+      "hero_copy": "eスポーツやレトロゲーム、デジタルものづくりを一日楽しむ伊勢崎の体験フェス。",
+      "experience_cards": [
+        {
+          "title": "遊びながらデジタル体験",
+          "body": "eスポーツ大会、レトロゲーム、ワークショップ、企業ブースなど複数のプログラムが案内されています。"
+        },
+        {
+          "title": "参加条件に注意",
+          "body": "大会は事前エントリー制。ワークショップは整理券配布予定のため、参加方法を公式案内で確認してください。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月6日（日）10:00〜17:00",
+        "会場": "メガネのイタガキ文化ホール伊勢崎（大ホール・小ホール・館内各所）",
+        "内容": "eスポーツ大会、高校生選手権、レトロゲーム・デジタル体験、ワークショップ、企業ブース、表彰式、ステージ、キッチンカー等。",
+        "参加条件": "大会競技は事前エントリー必須。ワークショップは整理券配布予定。詳細は市公式ページから特設サイトを確認。",
+        "主催・共催": "ISESAKI eスポーツ実行委員会・伊勢崎市",
+        "問い合わせ": "伊勢崎市商工労働課 産業DX係 0270-27-8807"
+      },
+      "prefecture": "群馬県",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 886,
+      "title": "障害者週間イベント「いせさき福祉ふれあいフェスタ」",
+      "municipality": "伊勢崎市",
+      "venue_name": "伊勢崎市内（絣の郷・境赤レンガ倉庫・障害者センターほか）",
+      "start_date": "2026-12-03",
+      "end_date": "2026-12-12",
+      "start_time": null,
+      "end_time": null,
+      "category": "福祉・地域交流",
+      "price_note": "一部の交流プログラムは無料（催事ごとに公式案内を確認）",
+      "organizer": "伊勢崎市・伊勢崎市障害者就労支援協議会ほか",
+      "summary": "障害者週間に合わせた啓発・交流企画。公共施設のイエローライトアップ、絣の郷でのマルシェ・手話体験・ボッチャ等、境赤レンガ倉庫での地域交流行事、障害者雇用セミナー・就職面接会が日を分けて行われます。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/soshiki/hukusiko/fukushi/syougaiseisaku/22452.html",
+      "source_id": 657,
+      "source_names": "障害者週間イベント「いせさき福祉ふれあいフェスタ」（伊勢崎市公式）",
+      "notes": "2026年11月17日更新の伊勢崎市公式ページで日程と各会場の実施内容を確認。会期内に複数日・複数会場の催しがあるため、来場日ごとにプログラムを確認。公式写真の転載条件は未確認のため登録せず。",
+      "reservation_note": "会場・プログラムごとに異なります。12月12日の交流コーナーは当日直接会場へ、雇用セミナーはメール申込、就職面接会は当日直接参加と案内。詳細は公式ページを確認。",
+      "hero_copy": "マルシェや手話・ボッチャ体験を通じて、地域の福祉や交流にふれる期間企画。",
+      "experience_cards": [
+        {
+          "title": "日を分けた複数企画",
+          "body": "12月3〜9日の公共施設ライトアップ、12月5日の境にこにこフェスタ、12月10・11日の就労関連企画、12日の絣の郷会場などが予定されています。"
+        },
+        {
+          "title": "参加方法は企画ごとに確認",
+          "body": "直接参加できる交流企画のほか、申込みが必要なセミナーもあります。会場・時間・対象を公式ページで確認してください。"
+        }
+      ],
+      "visitor_info": {
+        "期間": "2026年12月3日〜12月12日（企画ごとに開催日・時間が異なります）",
+        "主な企画": "公共施設のイエローライトアップ、絣の郷での福祉ふれあいマルシェ・交流コーナー・音楽ライブ、境にこにこフェスタ、障害者雇用セミナー、就職面接会。",
+        "会場": "旧時報鐘楼・いせさき明治館・障害者センター・くわまるプラザ、絣の郷、境赤レンガ倉庫など。",
+        "参加方法": "企画ごとに異なるため伊勢崎市の最新案内を確認。",
+        "問い合わせ": "伊勢崎市障害者センター 0270-75-5530"
+      },
+      "prefecture": "群馬県",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 887,
+      "title": "伊勢崎の魅力はあなたがつくる～映画プロデューサーと考える伊勢崎の魅力の見つけ方・伝え方～",
+      "municipality": "伊勢崎市",
+      "venue_name": "いせさきガーデンズ Komorebiエリア",
+      "address": "群馬県伊勢崎市宮子町3406-3",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-12",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "category": "トークイベント・地域文化",
+      "price_note": "無料",
+      "organizer": "伊勢崎市",
+      "summary": "映画プロデューサーの西尾友子さんと、書道家・教育者の栗原正峰さんが伊勢崎の魅力の見つけ方や伝え方を語るトークショー。会場の特設ボードでは市内の好きな場所や風景の投稿も募集します。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kurashi_tetsuzuki/sumai_seikatsu/24059.html",
+      "source_id": 658,
+      "source_names": "映画プロデューサー×書道家のシティプロモーショントークショー（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで日時・会場・参加費・申込期間を確認。事前申込者には整理券を送付、事前申込なしでも当日参加可と記載。事前申込者向けトートバッグ特典は数量限定。",
+      "reservation_note": "事前申込期間は2026年12月4日17時まで。事前申込なしでも当日参加可能と公式案内。特典は事前申込者向け・数量限定。",
+      "hero_copy": "映画と書の視点から、伊勢崎の好きな場所や風景の見つけ方を考えるトークショー。",
+      "experience_cards": [
+        {
+          "title": "異なる視点で地域を語る",
+          "body": "映画プロデューサーと伊勢崎を拠点に活動する書道家が、街の魅力の見つけ方・伝え方を話します。"
+        },
+        {
+          "title": "事前申込なしでも参加可",
+          "body": "事前申込は12月4日17時まで。申し込みなしの当日参加も可能と市が案内しています。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月12日（土）14:00〜15:00",
+        "会場": "いせさきガーデンズ Komorebiエリア（伊勢崎市宮子町3406-3）",
+        "料金": "無料",
+        "申込": "事前申込は12月4日（金）17時まで。事前申込なしでも当日参加可。",
+        "関連企画": "市内の好きな場所・風景を書き込む特設ボードを12月5〜12日に会場へ設置。",
+        "問い合わせ": "伊勢崎市広報プロモーション課 0270-27-2711"
+      },
+      "prefecture": "群馬県",
+      "area_label": "伊勢崎市",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 888,
+      "title": "田島弥平旧宅「別荘」特別公開（2026年12月）",
+      "municipality": "伊勢崎市",
+      "venue_name": "田島弥平旧宅",
+      "start_date": "2026-12-20",
+      "end_date": "2026-12-20",
+      "start_time": "09:00",
+      "end_time": "16:00",
+      "category": "歴史・文化財",
+      "price_note": null,
+      "organizer": "伊勢崎市",
+      "summary": "通常は公開していない田島弥平旧宅の「別荘」を、毎月第3日曜日の特別公開として見学できます。個人宅のため、都合により中止となる場合があります。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17364.html",
+      "source_id": 659,
+      "source_names": "田島弥平旧宅 主屋1階上段の間及び別荘の公開（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページの令和8年度公開予定日で12月20日（偶数月・別荘）を確認。通常非公開の場所。個人宅のため中止の場合あり。",
+      "reservation_note": "通常申込の記載はなし。個人宅のため中止の場合があるので来場前に公式ページを確認。",
+      "hero_copy": "世界遺産・田島弥平旧宅で、通常非公開の「別荘」を見学する特別公開。",
+      "experience_cards": [
+        {
+          "title": "偶数月は別荘を公開",
+          "body": "毎月第3日曜日の特別公開。偶数月は整備工事が完了した「別荘」が対象です。"
+        },
+        {
+          "title": "公開状況を確認",
+          "body": "公開時間は9時〜16時。個人宅のため都合により中止される場合があります。"
+        }
+      ],
+      "visitor_info": {
+        "公開日": "2026年12月20日（日）",
+        "公開時間": "9:00〜16:00（田島弥平旧宅の見学時間内）",
+        "公開場所": "田島弥平旧宅「別荘」",
+        "駐車場": "島村蚕のふるさと公園または田島弥平旧宅案内所の駐車場",
+        "注意": "個人宅のため都合により中止の場合があります。来場前に市公式ページを確認。"
+      },
+      "prefecture": "群馬県",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 889,
+      "title": "令和8年度 空き家セミナー（第2回）",
+      "municipality": "伊勢崎市",
+      "venue_name": "伊勢崎市役所 東館5階 第一会議室",
+      "address": "群馬県伊勢崎市今泉町二丁目410番地",
+      "start_date": "2027-01-09",
+      "end_date": "2027-01-09",
+      "start_time": "13:00",
+      "end_time": "14:50",
+      "category": "講座・セミナー",
+      "price_note": "無料",
+      "organizer": "伊勢崎市",
+      "summary": "空き家の発生予防や放置リスク、今後の活用について事例を交えて学ぶ市民向けセミナー。「空き家になる前に、空き家になってしまったら」をテーマに開催されます。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kurashi_tetsuzuki/sumai_seikatsu/akiyataisaku/19286.html",
+      "source_id": 660,
+      "source_names": "令和8年度 空き家セミナー（第2回）（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで日時・会場・対象・定員・費用・申込期間を確認。申込期間は2026年11月9日〜2027年1月8日。定員100人程度、当日空きがあれば参加可能。",
+      "reservation_note": "事前申込が必要。申込期間は2026年11月9日〜2027年1月8日。定員100人程度（先着順）、当日空きがあれば参加可能。",
+      "hero_copy": "空き家になる前の備えから、すでにある空き家の活用までを事例で考える無料セミナー。",
+      "experience_cards": [
+        {
+          "title": "空き家の予防と活用を学ぶ",
+          "body": "空き家の発生予防、放置リスク、今後の活用を事例とともに取り上げます。"
+        },
+        {
+          "title": "申込期間と定員",
+          "body": "事前申込期間は2026年11月9日〜2027年1月8日。先着100人程度で、当日空きがあれば参加できます。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2027年1月9日（土）13:00〜14:50（開場12:30）",
+        "会場": "伊勢崎市役所 東館5階 第一会議室（伊勢崎市今泉町二丁目410番地）",
+        "対象": "市内に空き家を所有する人、市内在住・在勤・在学の人、地域おこしを考える事業者・団体等。",
+        "定員": "100人程度（先着順）",
+        "料金": "無料",
+        "申込": "2026年11月9日〜2027年1月8日。事前申込必要。当日空きがあれば参加可。",
+        "問い合わせ": "伊勢崎市住宅課 空家対策係 0270-27-2797"
+      },
+      "prefecture": "群馬県",
+      "area_label": "伊勢崎市",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 890,
+      "title": "綾-aya-高校生バンドコンテスト",
+      "venue_name": "メガネのイタガキ文化ホール伊勢崎 小ホール",
+      "start_date": "2027-01-24",
+      "end_date": "2027-01-24",
+      "start_time": null,
+      "end_time": null,
+      "category": "音楽・コンテスト",
+      "price_note": "参加無料（観覧条件は公式案内で要確認）",
+      "organizer": "伊勢崎市",
+      "summary": "伊勢崎市公認テーマソング「綾」を課題曲とする高校生軽音楽系バンドのコンテスト。午前にリハーサル、午後に本番を予定し、事前審査を通過した8組程度が出演します。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/bunka_geijutsu/24064.html",
+      "source_id": 661,
+      "source_names": "綾-aya-高校生バンドコンテスト出演バンド募集（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで2027年1月24日の開催、会場、参加資格、出演バンド募集締切11月30日を確認。募集案内ページのため観覧方法・観覧受付は要確認。",
+      "reservation_note": "出演者募集は2026年11月30日まで。高校生のみのバンド（ソロ可）、事前審査あり。観覧条件は市公式ページ・募集要項で確認。",
+      "hero_copy": "伊勢崎市公認テーマソング「綾」を高校生バンドが演奏するコンテスト。",
+      "experience_cards": [
+        {
+          "title": "高校生のバンド表現",
+          "body": "課題曲「綾」と自由曲を演奏するコンテスト。事前審査を通過した8組程度が出演予定です。"
+        },
+        {
+          "title": "開催と応募",
+          "body": "2027年1月24日開催。出演バンドの募集締切は2026年11月30日で、事前審査があります。観覧条件は公式案内をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2027年1月24日（日）",
+        "会場": "メガネのイタガキ文化ホール伊勢崎 小ホール（伊勢崎市昭和町3918）",
+        "内容": "伊勢崎市公認テーマソング「綾」を課題曲とする高校生バンドコンテスト。午前リハーサル、午後コンテスト。",
+        "出演": "事前審査通過の8組程度。応募資格はメンバー全員が高校生。",
+        "応募締切": "2026年11月30日",
+        "参加費": "無料（出演者）",
+        "注意": "観覧の受付・条件は公式ページで確認。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 891,
+      "title": "はつらつウオークラリー（伊勢崎市）",
+      "venue_name": "ラブリバーうぬきハマサカパーク〜くわまるプラザ",
+      "address": "群馬県伊勢崎市安堀町1292番地（集合場所）",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "start_time": "09:00",
+      "end_time": "10:15",
+      "category": "ウォーキング・健康",
+      "price_note": "無料",
+      "organizer": "伊勢崎市保健センター",
+      "summary": "はつらつウオーキング教室に関するクイズに挑戦しながら史跡を歩く健康イベント。小雨決行で、約5.5kmを往復します。健康まつりと合同開催です。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/sportstaikai_event/7030.html",
+      "source_id": 662,
+      "source_names": "はつらつウオークラリー（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで日程・受付枠・集合解散場所・対象・定員・無料・申込期限を確認。定員到達で締切の場合あり。",
+      "reservation_note": "事前申込が必要。申込期間は2026年10月15日〜11月20日、200人先着。定員到達時は期間内でも締切。受付枠に空きがあるか要確認。",
+      "hero_copy": "クイズを楽しみながら伊勢崎の史跡を歩く、健康まつり合同のウォークラリー。",
+      "experience_cards": [
+        {
+          "title": "約5.5kmのコース",
+          "body": "ラブリバーうぬきハマサカパークからくわまるプラザまで片道約2.7km、往復約5.5kmを歩きます。"
+        },
+        {
+          "title": "申込と天候",
+          "body": "小学生以上が対象で事前申込制。小雨決行ですが、悪天候時は中止の可能性があります。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月28日（土）",
+        "受付": "9:00〜10:15、15分刻みで5グループに分けて順次スタート",
+        "集合": "ラブリバーうぬきハマサカパーク下流・多目的広場（伊勢崎市安堀町1292）",
+        "到着": "くわまるプラザ（伊勢崎市保健センター）",
+        "対象・定員": "医師から運動制限のない小学生以上、200人（先着）",
+        "費用": "無料",
+        "申込締切": "2026年11月20日。定員到達時は早期締切。",
+        "持ち物": "タオル、飲み物、健康ポイントカード（所持者）。運動しやすい服装と靴。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 892,
+      "title": "「言葉をつなぐ、人と地域」セミナー",
+      "venue_name": "伊勢崎市役所 本館5階 第1会議室",
+      "address": "群馬県伊勢崎市今泉町二丁目410番地",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "start_time": "13:30",
+      "end_time": "15:00",
+      "category": "講演会・多文化共生",
+      "price_note": "無料",
+      "organizer": "伊勢崎市",
+      "summary": "本市初の日本語学院を立ち上げた講師が、多文化共生や多様性の推進について講演するセミナー。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/gyoseijoho/heiwa_jinken/13818.html",
+      "source_id": 663,
+      "source_names": "「言葉をつなぐ、人と地域」セミナー（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで開催日時・会場・定員・費用・申込期限を確認。申込締切は11月25日、定員50人先着。現時点の残席は未確認。",
+      "reservation_note": "申込期間は2026年10月8日〜11月25日。50人先着、現時点の残席数は未確認。",
+      "hero_copy": "多文化共生や多様性を「言葉をつなぐ、人と地域」の視点から考える無料講演会。",
+      "experience_cards": [
+        {
+          "title": "多文化共生を考える",
+          "body": "伊勢崎市で日本語学院を立ち上げた講師が、地域と言葉、多様性について話します。"
+        },
+        {
+          "title": "申込制・先着50人",
+          "body": "無料ですが事前申込制です。申込締切は11月25日、最新の受付状況は市にご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月28日（土）13:30〜15:00",
+        "会場": "伊勢崎市役所 本館5階 第1会議室",
+        "演題": "「言葉をつなぐ、人と地域」",
+        "講師": "船橋洋子さん（つむぎ日本語学院 校長）",
+        "定員": "50人（先着順）",
+        "料金": "無料",
+        "申込": "2026年11月25日まで。電子申請、直接または電話で人権課へ。",
+        "問い合わせ": "伊勢崎市人権課 男女共同参画係 0270-27-2730"
+      },
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 893,
+      "title": "スケート教室（伊勢崎市・2026年12月）",
+      "venue_name": "伊勢崎スケートセンター",
+      "start_date": "2026-12-02",
+      "end_date": "2026-12-18",
+      "start_time": "18:30",
+      "end_time": "20:00",
+      "category": "スポーツ教室",
+      "price_note": "4,000円（貸し靴代など）",
+      "organizer": "伊勢崎市",
+      "summary": "伊勢崎スケートセンターで開かれる全8回のスケート教室。市内在住・在勤・在学の小学生以上が対象です。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/sportskyoshitsu_koshukai/kyoshitsu/15425.html",
+      "source_id": 664,
+      "source_names": "スケート教室 12月開催（伊勢崎市公式）",
+      "notes": "伊勢崎市公式ページで日程範囲・月水金の全8回・会場・対象・定員・参加料・申込期限を確認。申込期限後の追加受付・残席は未確認。",
+      "reservation_note": "申込期間は2026年11月9日〜20日。30人先着、現在の空き状況および期限後の追加受付は未確認。",
+      "hero_copy": "平日夕方に全8回、スケートの基礎を学ぶ伊勢崎市の教室。",
+      "experience_cards": [
+        {
+          "title": "全8回のスケート教室",
+          "body": "12月2日から18日までの月・水・金曜日に、18時30分〜20時で開催予定です。"
+        },
+        {
+          "title": "対象と申込",
+          "body": "市内在住・在勤・在学の小学生以上が対象。定員30人の先着申込で、参加料は貸し靴代などを含み4,000円です。"
+        }
+      ],
+      "visitor_info": {
+        "開催期間": "2026年12月2日〜18日の月曜日・水曜日・金曜日（全8回）",
+        "時間": "18:30〜20:00",
+        "会場": "伊勢崎スケートセンター（伊勢崎市今井町）",
+        "対象": "市内在住または在勤・在学の小学生以上",
+        "定員": "30人（先着順）",
+        "参加料": "4,000円（貸し靴代など）",
+        "申込": "2026年11月9日〜20日に専用ページから申込。追加受付状況は未確認。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 894,
+      "title": "ISESAKIまちなかイルミネーション 2026",
+      "venue_name": "伊勢崎駅南口駅前広場・大手町パティオ",
+      "start_date": "2026-12-01",
+      "end_date": "2026-12-25",
+      "start_time": "16:30",
+      "end_time": "21:00",
+      "category": "イルミネーション",
+      "price_note": "無料",
+      "organizer": "伊勢崎市",
+      "summary": "伊勢崎駅南口駅前広場などで冬のまちなかを彩るイルミネーション。伊勢崎市は12月1日から25日までの開催と点灯時間を公式に案内しています。",
+      "canonical_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/23963.html",
+      "source_id": 665,
+      "source_names": "ISESAKIまちなかイルミネーション（伊勢崎市公式）",
+      "notes": "伊勢崎市公式のステージ活用募集案内および市公式11月チラシから開催期間・点灯時間・会場・無料を確認。2026年度の装飾内容の詳細は未確認。",
+      "reservation_note": "イルミネーション鑑賞は無料。駅前ステージの催事は別途主催者の案内を確認。",
+      "hero_copy": "伊勢崎駅前で冬の夕方から楽しめる、まちなかイルミネーション。",
+      "experience_cards": [
+        {
+          "title": "駅前を彩る冬の光",
+          "body": "伊勢崎駅南口駅前広場を中心に、12月1日から25日まで点灯予定です。"
+        },
+        {
+          "title": "点灯時間",
+          "body": "点灯時間は16時30分〜21時。駅前ステージで行われる催事は個別の開催案内をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "開催期間": "2026年12月1日（火）〜12月25日（金）",
+        "点灯時間": "16:30〜21:00",
+        "会場": "伊勢崎駅南口駅前広場・大手町パティオ",
+        "料金": "無料",
+        "注意": "ステージ活用イベントは企画者ごとに開催日・内容が異なります。公式ページで最新案内を確認。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "area_label": "伊勢崎市",
+      "address": null,
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null
+    },
+    {
+      "id": 895,
+      "title": "ぐんまウェルネスDay！2026",
+      "city": "前橋市",
+      "venue": "けやきウォーク前橋 けやきコート",
+      "address": "群馬県前橋市文京町2丁目1-1",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "st": "10:00",
+      "et": "15:00",
+      "cat": "食・健康",
+      "price": "無料",
+      "org": "群馬県",
+      "url": "https://www.pref.gunma.jp/site/houdou/780283.html",
+      "source": "ぐんまウェルネスDay！2026（群馬県公式）",
+      "summary": "減塩やバランスのよい食事について楽しく学ぶ県主催イベント。FM GUNMAの公開生放送、トークショー、参画企業ブースでの商品紹介や野菜摂取チェック体験を予定しています。",
+      "notes": "群馬県公式報道提供ページで開催日時・会場・内容・無料を確認。",
+      "reserve": "事前申込の記載なし。各企画の実施状況は県公式ページで確認。",
+      "hero": "公開生放送やトークショー、食と健康のブースを楽しみながら減塩や食事バランスを学ぶ。",
+      "cards": [
+        [
+          "ステージと公開放送",
+          "FM GUNMA公開生放送は12:00〜12:55、トークショーは13:30〜14:30。"
+        ],
+        [
+          "食の体験ブース",
+          "減塩商品の紹介や野菜摂取チェック体験を予定。入場・参加は無料です。"
+        ]
+      ],
+      "info": {
+        "日時": "2026年12月12日（土）10:00〜15:00",
+        "会場": "けやきウォーク前橋 けやきコート（前橋市文京町2丁目1-1）",
+        "主な内容": "FM GUNMA公開生放送（12:00〜12:55）、トークショー（13:30〜14:30）、減塩商品の紹介・野菜摂取チェック体験など",
+        "料金": "無料",
+        "問い合わせ": "群馬県健康長寿社会づくり推進課 027-226-2602"
+      },
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "けやきウォーク前橋 けやきコート",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-12",
+      "start_time": "10:00",
+      "end_time": "15:00",
+      "category": "食・健康",
+      "price_note": "無料",
+      "organizer": "群馬県",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.pref.gunma.jp/site/houdou/780283.html",
+      "source_id": 666,
+      "source_names": "ぐんまウェルネスDay！2026（群馬県公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "事前申込の記載なし。各企画の実施状況は県公式ページで確認。",
+      "hero_copy": "公開生放送やトークショー、食と健康のブースを楽しみながら減塩や食事バランスを学ぶ。",
+      "experience_cards": [
+        {
+          "title": "ステージと公開放送",
+          "body": "FM GUNMA公開生放送は12:00〜12:55、トークショーは13:30〜14:30。"
+        },
+        {
+          "title": "食の体験ブース",
+          "body": "減塩商品の紹介や野菜摂取チェック体験を予定。入場・参加は無料です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月12日（土）10:00〜15:00",
+        "会場": "けやきウォーク前橋 けやきコート（前橋市文京町2丁目1-1）",
+        "主な内容": "FM GUNMA公開生放送（12:00〜12:55）、トークショー（13:30〜14:30）、減塩商品の紹介・野菜摂取チェック体験など",
+        "料金": "無料",
+        "問い合わせ": "群馬県健康長寿社会づくり推進課 027-226-2602"
+      }
+    },
+    {
+      "id": 896,
+      "title": "ぐんまインクルーシブフェスタ2026～知ろう、学ぼう、みんなのこと～",
+      "city": "前橋市",
+      "venue": "群馬県庁",
+      "address": "群馬県前橋市大手町1丁目1-1",
+      "start": "2026-12-04",
+      "end": "2026-12-08",
+      "st": null,
+      "et": null,
+      "cat": "教育・福祉・体験",
+      "price": "無料",
+      "org": "群馬県",
+      "url": "https://www.pref.gunma.jp/site/houdou/780399.html",
+      "source": "ぐんまインクルーシブフェスタ2026（群馬県公式）",
+      "summary": "特別支援学校の児童生徒作品展、作業製品販売・体験、和太鼓や吹奏楽の発表、インクルーシブ教育をテーマとしたシンポジウムなどを行います。企画ごとに日時・会場が異なります。",
+      "notes": "群馬県公式報道提供資料（2026年11月17日更新）で各企画の日程・時間・会場・無料・申込不要を確認。",
+      "reserve": "12月5日のシンポジウムは申込不要。ほかの企画の対象条件・当日の変更は公式案内を確認。",
+      "hero": "作品展や作業体験、ステージ発表を通してインクルーシブな学びを知る県庁のイベント。",
+      "cards": [
+        [
+          "県庁で作品展",
+          "12月4〜8日に特別支援学校の児童生徒作品展を開催。最終日は14時までです。"
+        ],
+        [
+          "体験とシンポジウム",
+          "12月4日は作業製品づくり体験やステージ発表、12月5日は申込不要・無料のシンポジウムを予定。"
+        ]
+      ],
+      "info": {
+        "会期": "2026年12月4日（金）〜8日（火）",
+        "作品展": "10:00〜17:00（最終日14:00まで）、県庁1階北側・2階県民ギャラリー",
+        "12月4日": "10:00〜14:00、県庁1階南側で販売・無料体験・ステージ発表",
+        "12月5日": "13:30〜15:50、県庁2階ビジターセンターでシンポジウム。申込不要、無料。",
+        "料金": "無料"
+      },
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "群馬県庁",
+      "start_date": "2026-12-04",
+      "end_date": "2026-12-08",
+      "start_time": null,
+      "end_time": null,
+      "category": "教育・福祉・体験",
+      "price_note": "無料",
+      "organizer": "群馬県",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.pref.gunma.jp/site/houdou/780399.html",
+      "source_id": 667,
+      "source_names": "ぐんまインクルーシブフェスタ2026（群馬県公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "12月5日のシンポジウムは申込不要。ほかの企画の対象条件・当日の変更は公式案内を確認。",
+      "hero_copy": "作品展や作業体験、ステージ発表を通してインクルーシブな学びを知る県庁のイベント。",
+      "experience_cards": [
+        {
+          "title": "県庁で作品展",
+          "body": "12月4〜8日に特別支援学校の児童生徒作品展を開催。最終日は14時までです。"
+        },
+        {
+          "title": "体験とシンポジウム",
+          "body": "12月4日は作業製品づくり体験やステージ発表、12月5日は申込不要・無料のシンポジウムを予定。"
+        }
+      ],
+      "visitor_info": {
+        "会期": "2026年12月4日（金）〜8日（火）",
+        "作品展": "10:00〜17:00（最終日14:00まで）、県庁1階北側・2階県民ギャラリー",
+        "12月4日": "10:00〜14:00、県庁1階南側で販売・無料体験・ステージ発表",
+        "12月5日": "13:30〜15:50、県庁2階ビジターセンターでシンポジウム。申込不要、無料。",
+        "料金": "無料"
+      }
+    },
+    {
+      "id": 897,
+      "title": "サイサタ プラス「鉱物の万華鏡をつくろう」",
+      "city": "富岡市",
+      "venue": "群馬県立自然史博物館 実験室",
+      "address": "群馬県富岡市上黒岩1674-1",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "st": "14:00",
+      "et": "15:00",
+      "cat": "科学・工作",
+      "price": "無料（入館には観覧券が必要）",
+      "org": "群馬県立自然史博物館",
+      "url": "https://www.gmnh.pref.gunma.jp/event/id13296/",
+      "source": "サイサタ プラス「鉱物の万華鏡をつくろう」（群馬県立自然史博物館公式）",
+      "summary": "鉱物を使って万華鏡を作る小学生以上向けのワークショップ。定員12組の抽選制で、会場に入る人は全員観覧券の提示が必要です。",
+      "notes": "博物館公式案内で日時・対象・定員・抽選制・参加費・申込期限を確認。11月17日時点でページに「受付中」と表示。",
+      "reserve": "申込は2026年11月21日（土）まで、12組の抽選制。会場に入る人は全員観覧券が必要。",
+      "hero": "鉱物を使った万華鏡づくりに挑戦する、博物館の小学生向けワークショップ。",
+      "cards": [
+        [
+          "鉱物を使った工作",
+          "鉱物の見え方や模様を楽しめる万華鏡を作ります。"
+        ],
+        [
+          "抽選申込と観覧券",
+          "12組の抽選制で申込は11月21日まで。参加費は無料ですが、会場入室者には観覧券が必要です。"
+        ]
+      ],
+      "info": {
+        "日時": "2026年12月5日（土）14:00〜15:00",
+        "会場": "群馬県立自然史博物館 実験室（富岡市上黒岩1674-1）",
+        "対象": "小学生以上。小学1〜3年生は保護者同伴。未就学児は付添として入室。",
+        "定員": "12組（抽選）",
+        "参加費": "無料。入室者全員に博物館観覧券が必要。",
+        "申込": "2026年11月21日まで。1回の申込は参加者1〜3人・付添1〜3人。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "富岡市",
+      "area_label": "富岡市",
+      "venue_name": "群馬県立自然史博物館 実験室",
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-05",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "category": "科学・工作",
+      "price_note": "無料（入館には観覧券が必要）",
+      "organizer": "群馬県立自然史博物館",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.gmnh.pref.gunma.jp/event/id13296/",
+      "source_id": 668,
+      "source_names": "サイサタ プラス「鉱物の万華鏡をつくろう」（群馬県立自然史博物館公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込は2026年11月21日（土）まで、12組の抽選制。会場に入る人は全員観覧券が必要。",
+      "hero_copy": "鉱物を使った万華鏡づくりに挑戦する、博物館の小学生向けワークショップ。",
+      "experience_cards": [
+        {
+          "title": "鉱物を使った工作",
+          "body": "鉱物の見え方や模様を楽しめる万華鏡を作ります。"
+        },
+        {
+          "title": "抽選申込と観覧券",
+          "body": "12組の抽選制で申込は11月21日まで。参加費は無料ですが、会場入室者には観覧券が必要です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年12月5日（土）14:00〜15:00",
+        "会場": "群馬県立自然史博物館 実験室（富岡市上黒岩1674-1）",
+        "対象": "小学生以上。小学1〜3年生は保護者同伴。未就学児は付添として入室。",
+        "定員": "12組（抽選）",
+        "参加費": "無料。入室者全員に博物館観覧券が必要。",
+        "申込": "2026年11月21日まで。1回の申込は参加者1〜3人・付添1〜3人。"
+      }
+    },
+    {
+      "id": 898,
+      "title": "クリスマスin上野村2026",
+      "city": "上野村",
+      "venue": "自然体験学習の家 木森れ陽 ほか",
+      "address": "群馬県多野郡上野村",
+      "start": "2026-12-12",
+      "end": "2026-12-13",
+      "st": null,
+      "et": null,
+      "cat": "親子・宿泊体験",
+      "price": "中学生以上15,000円、小学生8,000円、3歳以上未就学児3,000円、0〜2歳無料",
+      "org": "上野村産業情報センター",
+      "url": "https://uenomura-kankonavi.jp/event/event-3950/",
+      "source": "クリスマスin上野村2026（上野村観光Navi公式）",
+      "summary": "親子限定の1泊2日宿泊イベント。ケーキデコレーションやドライフラワー体験、スカイブリッジのイルミネーション見学、ダム・発電所見学、しいたけ収穫体験を予定しています。",
+      "notes": "上野村観光Navi公式案内で日程・内容・料金・定員・申込期間・送迎を確認。4組限定で先着、最少催行2組。",
+      "reserve": "親子参加限定、4組限定の先着順。申込期間は11月9〜30日、満員時早期終了。11月17日時点の空き状況は未確認。",
+      "hero": "ケーキ作りやイルミネーション見学、ダム・発電所の見学を楽しむ親子向け冬の1泊旅行。",
+      "cards": [
+        [
+          "1泊2日の親子プログラム",
+          "ケーキデコレーションやドライフラワー体験、イルミネーション見学、しいたけ収穫など。"
+        ],
+        [
+          "定員4組・先着申込",
+          "親子参加限定。4組に達し次第締切。参加料金は年齢区分で異なります。"
+        ]
+      ],
+      "info": {
+        "日程": "2026年12月12日（土）〜13日（日）",
+        "宿泊": "自然体験学習の家 木森れ陽",
+        "内容": "ケーキ・ドライフラワー体験、上野スカイブリッジイルミネーション、上野ダム・神流川発電所見学、しいたけ収穫など",
+        "定員": "親子4組限定（先着、最少催行2組）",
+        "料金": "中学生以上15,000円、小学生8,000円、3歳以上未就学児3,000円、0〜2歳無料",
+        "申込": "2026年11月9〜30日、WEB申込。高崎駅から無料送迎あり（希望者）。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "area_label": "上野村",
+      "venue_name": "自然体験学習の家 木森れ陽 ほか",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-13",
+      "start_time": null,
+      "end_time": null,
+      "category": "親子・宿泊体験",
+      "price_note": "中学生以上15,000円、小学生8,000円、3歳以上未就学児3,000円、0〜2歳無料",
+      "organizer": "上野村産業情報センター",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://uenomura-kankonavi.jp/event/event-3950/",
+      "source_id": 669,
+      "source_names": "クリスマスin上野村2026（上野村観光Navi公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "親子参加限定、4組限定の先着順。申込期間は11月9〜30日、満員時早期終了。11月17日時点の空き状況は未確認。",
+      "hero_copy": "ケーキ作りやイルミネーション見学、ダム・発電所の見学を楽しむ親子向け冬の1泊旅行。",
+      "experience_cards": [
+        {
+          "title": "1泊2日の親子プログラム",
+          "body": "ケーキデコレーションやドライフラワー体験、イルミネーション見学、しいたけ収穫など。"
+        },
+        {
+          "title": "定員4組・先着申込",
+          "body": "親子参加限定。4組に達し次第締切。参加料金は年齢区分で異なります。"
+        }
+      ],
+      "visitor_info": {
+        "日程": "2026年12月12日（土）〜13日（日）",
+        "宿泊": "自然体験学習の家 木森れ陽",
+        "内容": "ケーキ・ドライフラワー体験、上野スカイブリッジイルミネーション、上野ダム・神流川発電所見学、しいたけ収穫など",
+        "定員": "親子4組限定（先着、最少催行2組）",
+        "料金": "中学生以上15,000円、小学生8,000円、3歳以上未就学児3,000円、0〜2歳無料",
+        "申込": "2026年11月9〜30日、WEB申込。高崎駅から無料送迎あり（希望者）。"
+      }
+    },
+    {
+      "id": 899,
+      "title": "上野スカイブリッジイルミネーション2026-2027",
+      "city": "上野村",
+      "venue": "上野スカイブリッジ",
+      "address": "群馬県多野郡上野村川和665付近",
+      "start": "2026-12-01",
+      "end": "2027-02-28",
+      "st": "17:30",
+      "et": "21:00",
+      "cat": "イルミネーション",
+      "price": "中学生以上1,000円、小学生500円、未就学児無料",
+      "org": "上野村産業情報センター／天空回廊 まほーばの森",
+      "url": "https://uenomura-kankonavi.jp/event/event-3939/",
+      "source": "上野スカイブリッジイルミネーション2026-2027（上野村観光Navi公式）",
+      "summary": "全長225mの上野スカイブリッジを約95万球のLEDで彩る冬のイルミネーション。会場へ車両は乗り入れできず、無料シャトルバスの利用が案内されています。",
+      "notes": "上野村観光Navi公式イベントページで期間・点灯時間・入場料・シャトルバスを確認。シャトルの運行時刻などは公式チラシ参照。",
+      "reserve": "入場料あり。会場へ車両乗り入れ不可、ヴィラせせらぎ発着の無料シャトルバスを利用。運行時刻は公式チラシで確認。",
+      "hero": "約95万球の光に包まれる全長225mの上野スカイブリッジを渡る冬の夜。",
+      "cards": [
+        [
+          "光のトンネル",
+          "橋を彩る青い光のトンネルやハートのオブジェが見どころとして案内されています。"
+        ],
+        [
+          "シャトルバスでアクセス",
+          "会場に車両は乗り入れできません。ヴィラせせらぎとの無料シャトルバスを利用します。"
+        ]
+      ],
+      "info": {
+        "開催期間": "2026年12月1日〜2027年2月28日",
+        "点灯時間": "17:30〜21:00",
+        "会場": "上野スカイブリッジ",
+        "入場料": "中学生以上1,000円、小学生500円、未就学児無料",
+        "アクセス": "車両乗り入れ不可。ヴィラせせらぎ〜会場の無料シャトルバスを運行。詳細時刻は公式チラシ参照。",
+        "問い合わせ": "天空回廊 まほーばの森 0274-59-2146"
+      },
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "area_label": "上野村",
+      "venue_name": "上野スカイブリッジ",
+      "start_date": "2026-12-01",
+      "end_date": "2027-02-28",
+      "start_time": "17:30",
+      "end_time": "21:00",
+      "category": "イルミネーション",
+      "price_note": "中学生以上1,000円、小学生500円、未就学児無料",
+      "organizer": "上野村産業情報センター／天空回廊 まほーばの森",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://uenomura-kankonavi.jp/event/event-3939/",
+      "source_id": 670,
+      "source_names": "上野スカイブリッジイルミネーション2026-2027（上野村観光Navi公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "入場料あり。会場へ車両乗り入れ不可、ヴィラせせらぎ発着の無料シャトルバスを利用。運行時刻は公式チラシで確認。",
+      "hero_copy": "約95万球の光に包まれる全長225mの上野スカイブリッジを渡る冬の夜。",
+      "experience_cards": [
+        {
+          "title": "光のトンネル",
+          "body": "橋を彩る青い光のトンネルやハートのオブジェが見どころとして案内されています。"
+        },
+        {
+          "title": "シャトルバスでアクセス",
+          "body": "会場に車両は乗り入れできません。ヴィラせせらぎとの無料シャトルバスを利用します。"
+        }
+      ],
+      "visitor_info": {
+        "開催期間": "2026年12月1日〜2027年2月28日",
+        "点灯時間": "17:30〜21:00",
+        "会場": "上野スカイブリッジ",
+        "入場料": "中学生以上1,000円、小学生500円、未就学児無料",
+        "アクセス": "車両乗り入れ不可。ヴィラせせらぎ〜会場の無料シャトルバスを運行。詳細時刻は公式チラシ参照。",
+        "問い合わせ": "天空回廊 まほーばの森 0274-59-2146"
+      }
+    },
+    {
+      "id": 900,
+      "title": "AGTS農業展 in 群馬",
+      "city": "高崎市",
+      "venue": "Gメッセ群馬 展示ホール",
+      "address": "群馬県高崎市岩押町12-24",
+      "start": "2026-12-09",
+      "end": "2026-12-11",
+      "st": null,
+      "et": null,
+      "cat": "農業・産業展示会",
+      "price": "無料（事前登録制）",
+      "org": "AGTS農業展 in 群馬 実行委員会",
+      "url": "https://www.g-messe-gunma.jp/visitor-event.html",
+      "source": "Gメッセ群馬イベント情報（公式）",
+      "summary": "Gメッセ群馬の展示ホールで開かれる農業関連展示会。公式会場案内では無料・事前登録と記載されています。",
+      "notes": "Gメッセ群馬公式来場者向けイベントカレンダーで会期・時間・会場・無料・事前登録制を確認。対象者や登録条件は主催者へ確認。",
+      "reserve": "無料だが事前登録制。来場対象・登録方法は主催者（03-6812-9426）へ確認。",
+      "hero": "農業に関する製品や技術を紹介する、事前登録制の展示会。",
+      "cards": [
+        [
+          "3日間開催",
+          "12月9・10日は10:00〜17:00、11日は10:00〜16:00。"
+        ],
+        [
+          "無料・事前登録制",
+          "Gメッセ公式カレンダーでは無料、事前登録と表示。参加対象等は主催者情報を確認してください。"
+        ]
+      ],
+      "info": {
+        "開催日": "2026年12月9日（水）〜11日（金）",
+        "時間": "12月9・10日 10:00〜17:00、11日 10:00〜16:00",
+        "会場": "Gメッセ群馬 展示ホール（高崎市岩押町12-24）",
+        "料金・申込": "無料・事前登録制。対象条件や登録方法は主催者へ確認。",
+        "主催者問い合わせ": "AGTS農業展 in 群馬 実行委員会 03-6812-9426"
+      },
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "Gメッセ群馬 展示ホール",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-11",
+      "start_time": null,
+      "end_time": null,
+      "category": "農業・産業展示会",
+      "price_note": "無料（事前登録制）",
+      "organizer": "AGTS農業展 in 群馬 実行委員会",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.g-messe-gunma.jp/visitor-event.html",
+      "source_id": 671,
+      "source_names": "Gメッセ群馬イベント情報（公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "無料だが事前登録制。来場対象・登録方法は主催者（03-6812-9426）へ確認。",
+      "hero_copy": "農業に関する製品や技術を紹介する、事前登録制の展示会。",
+      "experience_cards": [
+        {
+          "title": "3日間開催",
+          "body": "12月9・10日は10:00〜17:00、11日は10:00〜16:00。"
+        },
+        {
+          "title": "無料・事前登録制",
+          "body": "Gメッセ公式カレンダーでは無料、事前登録と表示。参加対象等は主催者情報を確認してください。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年12月9日（水）〜11日（金）",
+        "時間": "12月9・10日 10:00〜17:00、11日 10:00〜16:00",
+        "会場": "Gメッセ群馬 展示ホール（高崎市岩押町12-24）",
+        "料金・申込": "無料・事前登録制。対象条件や登録方法は主催者へ確認。",
+        "主催者問い合わせ": "AGTS農業展 in 群馬 実行委員会 03-6812-9426"
+      }
+    },
+    {
+      "id": 901,
+      "title": "サンリオキャラクターフェス in Gメッセ群馬",
+      "city": "高崎市",
+      "venue": "Gメッセ群馬 展示ホールC",
+      "address": "群馬県高崎市岩押町12-24",
+      "start": "2026-12-29",
+      "end": "2027-01-07",
+      "st": "10:00",
+      "et": "19:00",
+      "cat": "キャラクターイベント",
+      "price": "有料（料金未発表）",
+      "org": "Gメッセ運営共同事業体・株式会社上毛新聞TR",
+      "url": "https://www.g-messe-gunma.jp/visitor-event.html",
+      "source": "Gメッセ群馬イベント情報（公式）",
+      "summary": "群馬県内初開催として告知された、Gメッセ群馬の有料キャラクターイベント。開催日と会場、営業時間は会場公式カレンダーで案内されています。",
+      "notes": "Gメッセ群馬公式カレンダーで開催期間・営業時間・会場・有料を確認。2026年11月2日の公式告知ではイベント詳細・チケット情報は順次公開予定。個別内容・料金は調査時点で未発表。",
+      "reserve": "有料。会場公式告知ではチケット情報は順次公開予定。販売開始日・料金は最新案内を確認。",
+      "hero": "年末年始にGメッセ群馬で開催される、県内初開催のサンリオキャラクターフェス。",
+      "cards": [
+        [
+          "10日間の開催",
+          "2026年12月29日〜2027年1月7日、10:00〜19:00。会場は展示ホールCです。"
+        ],
+        [
+          "チケット情報を確認",
+          "有料イベントですが、詳細やチケット料金は順次発表予定と会場が案内。来場前に公式情報をご確認ください。"
+        ]
+      ],
+      "info": {
+        "期間": "2026年12月29日（火）〜2027年1月7日（木）",
+        "時間": "10:00〜19:00（会場カレンダー表記）",
+        "会場": "Gメッセ群馬 展示ホールC（高崎市岩押町12-24）",
+        "料金": "有料。料金・券種は確認時点で未発表。",
+        "主催": "Gメッセ運営共同事業体・株式会社上毛新聞TR",
+        "注意": "会場公式発表によると詳細・チケット情報は順次公開予定。"
+      },
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "Gメッセ群馬 展示ホールC",
+      "start_date": "2026-12-29",
+      "end_date": "2027-01-07",
+      "start_time": "10:00",
+      "end_time": "19:00",
+      "category": "キャラクターイベント",
+      "price_note": "有料（料金未発表）",
+      "organizer": "Gメッセ運営共同事業体・株式会社上毛新聞TR",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://www.g-messe-gunma.jp/visitor-event.html",
+      "source_id": 666,
+      "source_names": "Gメッセ群馬イベント情報（公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "有料。会場公式告知ではチケット情報は順次公開予定。販売開始日・料金は最新案内を確認。",
+      "hero_copy": "年末年始にGメッセ群馬で開催される、県内初開催のサンリオキャラクターフェス。",
+      "experience_cards": [
+        {
+          "title": "10日間の開催",
+          "body": "2026年12月29日〜2027年1月7日、10:00〜19:00。会場は展示ホールCです。"
+        },
+        {
+          "title": "チケット情報を確認",
+          "body": "有料イベントですが、詳細やチケット料金は順次発表予定と会場が案内。来場前に公式情報をご確認ください。"
+        }
+      ],
+      "visitor_info": {
+        "期間": "2026年12月29日（火）〜2027年1月7日（木）",
+        "時間": "10:00〜19:00（会場カレンダー表記）",
+        "会場": "Gメッセ群馬 展示ホールC（高崎市岩押町12-24）",
+        "料金": "有料。料金・券種は確認時点で未発表。",
+        "主催": "Gメッセ運営共同事業体・株式会社上毛新聞TR",
+        "注意": "会場公式発表によると詳細・チケット情報は順次公開予定。"
+      }
+    },
+    {
+      "id": 902,
+      "title": "2026秋 しいたけフェス",
+      "city": "上野村",
+      "venue": "道の駅上野",
+      "address": "群馬県多野郡上野村勝山甲131",
+      "start": "2026-11-22",
+      "end": "2026-11-23",
+      "st": null,
+      "et": null,
+      "cat": "グルメ・農産物",
+      "price": null,
+      "org": "上野村きのこセンター",
+      "url": "https://uenomura-kankonavi.jp/event/event-3967/",
+      "source": "2026秋 しいたけフェス（上野村観光Navi公式）",
+      "summary": "上野村産しいたけの加工品販売や詰め放題、焼きしいたけ・スープなどのイベントグルメを楽しむ2日間。上野村漁業協同組合による鮎の塩焼きも販売予定です。",
+      "notes": "上野村観光Navi公式イベントページで開催日・会場・販売内容を確認。販売品は売切れ等の可能性があるため当日状況は未確認。",
+      "reserve": "申込案内はなし。商品・グルメは売切れの場合あり。",
+      "hero": "上野村産しいたけを使ったグルメや加工品に出会う秋の道の駅イベント。",
+      "cards": [
+        [
+          "しいたけづくしの出店",
+          "乾しいたけ詰め放題や加工品販売、焼きしいたけ、フランク、スープ等を予定。"
+        ],
+        [
+          "会場は道の駅上野",
+          "11月22・23日に開催。鮎の塩焼き販売も案内されています。"
+        ]
+      ],
+      "info": {
+        "開催日": "2026年11月22日（日）・23日（月・祝）",
+        "会場": "道の駅上野（上野村勝山甲131）",
+        "内容": "乾しいたけ詰め放題、しいたけ加工品販売、焼きしいたけ・フランク・スープ等の販売、鮎の塩焼きなど",
+        "問い合わせ": "上野村きのこセンター 0274-20-7121（平日8:00〜17:00）"
+      },
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "area_label": "上野村",
+      "venue_name": "道の駅上野",
+      "start_date": "2026-11-22",
+      "end_date": "2026-11-23",
+      "start_time": null,
+      "end_time": null,
+      "category": "グルメ・農産物",
+      "price_note": null,
+      "organizer": "上野村きのこセンター",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://uenomura-kankonavi.jp/event/event-3967/",
+      "source_id": 673,
+      "source_names": "2026秋 しいたけフェス（上野村観光Navi公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込案内はなし。商品・グルメは売切れの場合あり。",
+      "hero_copy": "上野村産しいたけを使ったグルメや加工品に出会う秋の道の駅イベント。",
+      "experience_cards": [
+        {
+          "title": "しいたけづくしの出店",
+          "body": "乾しいたけ詰め放題や加工品販売、焼きしいたけ、フランク、スープ等を予定。"
+        },
+        {
+          "title": "会場は道の駅上野",
+          "body": "11月22・23日に開催。鮎の塩焼き販売も案内されています。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月22日（日）・23日（月・祝）",
+        "会場": "道の駅上野（上野村勝山甲131）",
+        "内容": "乾しいたけ詰め放題、しいたけ加工品販売、焼きしいたけ・フランク・スープ等の販売、鮎の塩焼きなど",
+        "問い合わせ": "上野村きのこセンター 0274-20-7121（平日8:00〜17:00）"
+      }
+    },
+    {
+      "id": 903,
+      "title": "ウッディー上野村銘木工芸館 新春初売りセール",
+      "city": "上野村",
+      "venue": "ウッディー上野村銘木工芸館",
+      "address": "群馬県多野郡上野村勝山127",
+      "start": "2027-01-03",
+      "end": "2027-01-05",
+      "st": "09:00",
+      "et": "16:30",
+      "cat": "初売り・買い物",
+      "price": null,
+      "org": "ウッディー上野村銘木工芸館",
+      "url": "https://uenomura-kankonavi.jp/event/event-3983/",
+      "source": "ウッディー上野村銘木工芸館 新春初売りセール（上野村観光Navi公式）",
+      "summary": "銘木工芸館の新春セール。自社製品を定価の10％引きで販売するほか、家具の特価販売を予定しています（仕入・委託品、オンラインショップは対象外）。",
+      "notes": "上野村観光Navi公式案内で期間・営業時間・割引対象外条件・会場を確認。",
+      "reserve": "予約の記載なし。仕入・委託品およびオンラインショップは割引対象外。",
+      "hero": "上野村の銘木工芸品や家具を新春セールで見る・買う機会。",
+      "cards": [
+        [
+          "自社製品が10％引き",
+          "期間中、自社製品を定価から10％引き。家具の特価販売も予定されています。"
+        ],
+        [
+          "営業時間に注意",
+          "1月3〜5日の9:00〜16:30。水曜定休ですが、開催期間は日曜から火曜です。"
+        ]
+      ],
+      "info": {
+        "期間": "2027年1月3日（日）〜5日（火）",
+        "営業時間": "9:00〜16:30",
+        "会場": "ウッディー上野村銘木工芸館（上野村勝山127）",
+        "内容": "自社製品を定価の10％引き、家具の特価販売。仕入・委託品・オンラインショップは対象外。",
+        "問い合わせ": "0274-59-2019"
+      },
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "area_label": "上野村",
+      "venue_name": "ウッディー上野村銘木工芸館",
+      "start_date": "2027-01-03",
+      "end_date": "2027-01-05",
+      "start_time": "09:00",
+      "end_time": "16:30",
+      "category": "初売り・買い物",
+      "price_note": null,
+      "organizer": "ウッディー上野村銘木工芸館",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-17",
+      "last_verified_at": "2026-11-17",
+      "canonical_url": "https://uenomura-kankonavi.jp/event/event-3983/",
+      "source_id": 674,
+      "source_names": "ウッディー上野村銘木工芸館 新春初売りセール（上野村観光Navi公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "予約の記載なし。仕入・委託品およびオンラインショップは割引対象外。",
+      "hero_copy": "上野村の銘木工芸品や家具を新春セールで見る・買う機会。",
+      "experience_cards": [
+        {
+          "title": "自社製品が10％引き",
+          "body": "期間中、自社製品を定価から10％引き。家具の特価販売も予定されています。"
+        },
+        {
+          "title": "営業時間に注意",
+          "body": "1月3〜5日の9:00〜16:30。水曜定休ですが、開催期間は日曜から火曜です。"
+        }
+      ],
+      "visitor_info": {
+        "期間": "2027年1月3日（日）〜5日（火）",
+        "営業時間": "9:00〜16:30",
+        "会場": "ウッディー上野村銘木工芸館（上野村勝山127）",
+        "内容": "自社製品を定価の10％引き、家具の特価販売。仕入・委託品・オンラインショップは対象外。",
+        "問い合わせ": "0274-59-2019"
+      }
+    },
+    {
+      "id": 904,
+      "title": "第18回 キングオブパスタ2026",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "もてなし広場",
+      "address": "群馬県高崎市高松町1",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-15",
+      "start_time": "10:00",
+      "end_time": "15:30",
+      "category": "グルメ・食イベント",
+      "price_note": "チケット制（料金・入場時間は公式案内参照）",
+      "organizer": "キングオブパスタ実行委員会",
+      "summary": "高崎市内18店が群馬県産食材を使った特別メニューを出品し、来場者の投票でキングを決める高崎のパスタイベント。2026年は11月15日に開催され、公式サイトで投票結果が発表されています。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.kingofpasta.jp/",
+      "notes": "キングオブパスタ公式サイトと広報高崎2026年11月号で開催日（11月15日）、10:00〜15:30、もてなし広場、市内18店の出店を確認。公式サイトは11月15日に投票結果を掲載。2026-11-18時点で終了済みの記録として追加。 詳細日時・会場は広報高崎公式PDFでも照合: https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf",
+      "source_names": "キングオブパスタ2026公式サイト、広報高崎2026年11月号",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "2026年11月15日開催済み。チケット制イベント。次回開催の予定は未発表。",
+      "hero_copy": "群馬県産食材を使う高崎市内18店のパスタを食べ比べ、投票で今年のキングを決める一日。",
+      "experience_cards": [
+        {
+          "title": "18店の創作パスタ",
+          "body": "高崎市内18店が群馬県産食材を活かした特別メニューを出品。"
+        },
+        {
+          "title": "来場者投票で決定",
+          "body": "食べ比べの後、来場者の投票で優勝店を決定。2026年の結果は公式サイトで発表済みです。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月15日（日）",
+        "開催時間": "10:00〜15:30",
+        "会場": "もてなし広場（高崎市高松町1）",
+        "内容": "高崎市内18店のパスタ出店、来場者投票、音楽センター前でドルチェ広場を同時開催。",
+        "開催状況": "終了（2026年11月15日開催済み）"
+      },
+      "source_id": 675
+    },
+    {
+      "id": 905,
+      "title": "桐生西宮神社秋季大祭・桐生えびす講",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "area_label": "桐生市",
+      "venue_name": "桐生西宮神社・周辺道路",
+      "address": "群馬県桐生市宮本町2丁目1-3",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-20",
+      "start_time": "07:00",
+      "end_time": "22:00",
+      "category": "祭り・伝統行事",
+      "price_note": null,
+      "organizer": "桐生西宮神社",
+      "summary": "商売繁盛・家内安全を願う桐生西宮神社の秋季大祭。神社へ続く周辺道路に熊手など縁起物の露店が並び、11月20日朝には抽選制の福男選び神事も行われます。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
+      "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。",
+      "source_names": "えびす講（桐生市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "一般参詣の事前申込案内はなし。福男選び神事は抽選参加。現地交通規制とバス停休止・迂回運行を確認して来場。",
+      "hero_copy": "桐生西宮神社のえびす講で、熊手など縁起物の露店と福男選び神事に出会う。",
+      "experience_cards": [
+        {
+          "title": "二日間の秋季大祭",
+          "body": "11月19日7時から夜通し、20日22時まで。桐生駅から徒歩約15分と市が案内。"
+        },
+        {
+          "title": "交通規制に注意",
+          "body": "参道・本町通りの一部が歩行者用道路に。おりひめバスの迂回・停留所休止も案内されています。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月19日（木）・20日（金）",
+        "時間": "19日7:00から夜通し、20日22:00まで",
+        "会場": "桐生西宮神社（桐生市宮本町2丁目1-3）および周辺道路",
+        "内容": "商売繁盛・家内安全祈願、縁起物の露店。20日6:00開始の福男選び神事は抽選制。",
+        "アクセス": "JR桐生駅から徒歩約15分。周辺道路の交通規制、おりひめバスの迂回運行あり。",
+        "問い合わせ": "桐生西宮神社 0277-22-4395"
+      },
+      "source_id": 676
+    },
+    {
+      "id": 906,
+      "title": "第98回 高崎えびす講市",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "高崎市中心市街地・美保大國神社（高崎神社境内）",
+      "address": "群馬県高崎市中心市街地・赤坂町",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "start_time": "10:00",
+      "end_time": "17:00",
+      "category": "祭り・市",
+      "price_note": null,
+      "organizer": "高崎商工会議所ほか",
+      "summary": "商都高崎の初冬の風物詩として中心市街地で開かれるえびす講市。縁起物の販売や抽選会、キッズフリマ、氷彫刻大会、ダンスフェス、こども縁日、まんぷくフェスタなどを予定しています。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf",
+      "notes": "高崎市公式「広報高崎」2026年11月号掲載の行事案内で11月21・22日、10:00〜17:00、中心市街地・美保大國神社、高崎商工会議所問合せ先を確認。掲載PDFには交通規制予定や複数催事の内容も記載。",
+      "source_names": "広報高崎2026年11月号「第98回 高崎えびす講市」（高崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "事前申込の記載なし。中心市街地の交通規制、個別催事の当日変更・販売状況は公式案内で確認。",
+      "hero_copy": "中心市街地の歩行者天国に露店や催しが並ぶ、高崎の初冬のえびす講市。",
+      "experience_cards": [
+        {
+          "title": "市街地に多彩な催し",
+          "body": "縁起物販売、キッズフリマ、氷彫刻、企業対抗綱引き、ダンス、こども縁日などを予定。"
+        },
+        {
+          "title": "両日10時から17時",
+          "body": "11月21・22日に開催。市街地の交通規制時間も確認してお出かけを。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月21日（土）・22日（日）",
+        "時間": "10:00〜17:00",
+        "会場": "高崎市中心市街地・美保大國神社（高崎神社境内、赤坂町）",
+        "内容": "縁起物販売・抽選会、キッズフリマ、氷彫刻大会、綱引き、ダンス、こども縁日、まんぷくフェスタ等。",
+        "交通規制": "両日11:00〜17:00、会場となる中心市街地で実施予定。",
+        "問い合わせ": "高崎商工会議所 027-386-6850"
+      },
+      "source_id": 677
+    },
+    {
+      "id": 907,
+      "title": "第39回 高崎市農業まつり",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "もてなし広場",
+      "address": "群馬県高崎市高松町1",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "start_time": "10:00",
+      "end_time": "15:00",
+      "category": "農業・食イベント",
+      "price_note": null,
+      "organizer": "高崎市農業まつり実行委員会",
+      "summary": "新鮮野菜や農畜産物加工品、高崎うどんなどの販売、パン焼き・ますのつかみ取り・木工クラフト・バター作りなどの体験を予定。高崎産食材を使う「たかさき秋のパンまつり」も初開催されます。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.takasaki.gunma.jp/site/digital/101018.html",
+      "notes": "高崎市公式デジタル広報（2026-11-17更新）で11月21〜22日10:00〜15:00、もてなし広場、出店・体験・ステージ内容を確認。",
+      "source_names": "えびす講・販売甲子園・農業まつり（高崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "申込不要の市カレンダー表示あり。農業ガチャ等の参加条件は会場・公式案内で確認。",
+      "hero_copy": "地元農産物の買い物やパン焼き体験、農業機械展示などを楽しむ高崎の秋まつり。",
+      "experience_cards": [
+        {
+          "title": "高崎の農産物と食",
+          "body": "新鮮野菜、加工品、高崎うどん、乳製品、キッチンカーなどを販売予定。"
+        },
+        {
+          "title": "体験・ステージ",
+          "body": "パン焼き、ますのつかみ取り、木工、バター作り、農業機械展示、ステージ催事を実施予定。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月21日（土）・22日（日）",
+        "時間": "10:00〜15:00",
+        "会場": "もてなし広場（高崎市高松町1）",
+        "内容": "農産物・加工品販売、パン焼き・ますのつかみ取り・木工・バター作り等の体験、ステージ。たかさき秋のパンまつりを初開催。",
+        "問い合わせ": "高崎市農政課 027-321-1317"
+      },
+      "source_id": 678
+    },
+    {
+      "id": 908,
+      "title": "熱血！高校生販売甲子園2026",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "area_label": "高崎市",
+      "venue_name": "大手前通り",
+      "address": "群馬県高崎市中心市街地",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "start_time": null,
+      "end_time": null,
+      "category": "学生・販売イベント",
+      "price_note": null,
+      "organizer": "熱血！高校生販売甲子園実行委員会",
+      "summary": "高校生チームが商品を企画・仕入れ・販売し、売上や利益、接客、一般投票などで競うイベント。高崎市公式広報によると、大手前通りで2日間開催されます。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.takasaki.gunma.jp/site/digital/101018.html",
+      "notes": "高崎市公式デジタル広報（2026-11-17更新）で開催日時・会場・大会概要・問合せ先を確認。",
+      "source_names": "えびす講・販売甲子園・農業まつり（高崎市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "来場者の事前申込案内はなし。参加チーム向けの募集は大会公式サイトへ確認。",
+      "hero_copy": "高校生チームの企画商品や接客を見て、一般投票で応援する販売イベント。",
+      "experience_cards": [
+        {
+          "title": "高校生チームが販売で競う",
+          "body": "商品企画・仕入れ・販売に取り組み、売上や接客、一般投票などを総合評価。"
+        },
+        {
+          "title": "大手前通りで2日間",
+          "body": "11月21日午後と22日午後に開催。会場周辺のえびす講市・交通規制情報にも注意。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）13:00〜16:00、22日（日）12:30〜15:30",
+        "会場": "大手前通り（高崎市中心市街地）",
+        "内容": "高校生チームが企画・仕入れした商品を販売。売上、利益、接客、一般投票等で競う。",
+        "問い合わせ": "熱血！高校生販売甲子園実行委員会 hanbaikoshien@gmail.com"
+      },
+      "source_id": 678
+    },
+    {
+      "id": 909,
+      "title": "まえばし学校フェスタ2026",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "ミヤケン元気21（前橋プラザ元気21）",
+      "address": "群馬県前橋市本町2丁目12-1",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-15",
+      "start_time": "10:00",
+      "end_time": "16:00",
+      "category": "子ども・教育・文化",
+      "price_note": null,
+      "organizer": "前橋市教育委員会",
+      "summary": "市内の小中学校、特別支援学校、幼稚園、市立前橋高校の子どもたちが、学校や園での文化活動を発表するイベント。作品展示、ステージ発表、読み聞かせ、展示・ブース発表などを行います。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/3/6/5/23410.html",
+      "notes": "前橋市公式ページで11月14・15日10:00〜16:00、ミヤケン元気21、各階の企画内容、駐車場混雑への注意を確認。2026-11-18時点で終了済みの地域大型行事として追補。",
+      "source_names": "まえばし学校フェスタ2026（前橋市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "イベント自体の事前申込案内なし。マイ・チャレンジ企画は募集終了と市が記載。駐車場混雑に注意。",
+      "hero_copy": "子どもたちの作品展示やステージ発表を通して、前橋の学校文化に触れる2日間。",
+      "experience_cards": [
+        {
+          "title": "展示・ステージ発表",
+          "body": "図工美術作品展、読み聞かせ、ステージ・展示・ブース発表などを実施。"
+        },
+        {
+          "title": "元気21の各フロアで開催",
+          "body": "1階にぎわいホール、2階こども図書館、3階中央公民館を会場に開催。"
+        }
+      ],
+      "visitor_info": {
+        "開催日": "2026年11月14日（土）・15日（日）",
+        "時間": "10:00〜16:00",
+        "会場": "ミヤケン元気21（前橋プラザ元気21、前橋市本町2-12-1）",
+        "内容": "図工美術作品展、リレーおはなし会、ステージ発表、展示・ブース発表など。",
+        "開催状況": "終了（2026年11月14・15日開催済み）",
+        "問い合わせ": "前橋市教育委員会 学務管理課 027-898-5865"
+      },
+      "source_id": 679
+    },
+    {
+      "id": 910,
+      "title": "まえばしこどもエコフェスタ",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "area_label": "前橋市",
+      "venue_name": "前橋市児童文化センター",
+      "address": "群馬県前橋市西片貝町5-8",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "start_time": "10:00",
+      "end_time": "15:00",
+      "category": "子ども・環境・体験",
+      "price_note": "無料",
+      "organizer": "前橋市環境政策課",
+      "summary": "EVトラックやバスなどの車両展示、エネルギー・農業・生きものについて学ぶブース体験、工作やスタンプラリーを楽しめる環境教育イベント。会場は前橋市児童文化センターで、参加無料・申込不要です。",
+      "recommended_for": null,
+      "best_scenes": null,
+      "status": "verified",
+      "confidence": "high",
+      "discovered_at": "2026-11-18",
+      "last_verified_at": "2026-11-18",
+      "canonical_url": "https://www.city.maebashi.gunma.jp/soshiki/kankyo/kankyoseisaku/oshirase/51324.html",
+      "notes": "前橋市公式案内で2026年11月21日10:00〜15:00、児童文化センター、無料・申込不要、展示と各体験を確認。天候等により内容変更・中止の場合あり。ノベルティ等は数量限定。",
+      "source_names": "まえばしこどもエコフェスタ（前橋市公式）",
+      "images": [],
+      "primary_image_url": null,
+      "google_place_id": null,
+      "parking_note": null,
+      "reservation_note": "事前申込不要・参加無料。商品購入は有料。各ブースの景品・スタンプラリー景品は先着・数量限定。天候等による変更・中止に注意。",
+      "hero_copy": "車両展示や工作、自然・エネルギーの体験を親子で巡る無料の環境イベント。",
+      "experience_cards": [
+        {
+          "title": "乗り物・環境を体験",
+          "body": "バスやEVトラックの展示、車両体験、環境クイズ、スライム作りなど。"
+        },
+        {
+          "title": "無料・申込不要",
+          "body": "11月21日10:00〜15:00。ブースやスタンプラリー特典は数量限定です。"
+        }
+      ],
+      "visitor_info": {
+        "日時": "2026年11月21日（土）10:00〜15:00",
+        "会場": "前橋市児童文化センター（前橋市西片貝町5-8）",
+        "対象": "どなたでも。コンテンツによって子どものみ対象の場合あり。",
+        "料金": "参加無料。キッチンカー等の商品購入は有料。",
+        "申込": "不要。",
+        "内容": "車両展示、環境・エネルギー・農業・生物多様性を学ぶ体験、工作、スタンプラリー。",
+        "注意": "天候等で内容変更・中止の可能性あり。景品は数量限定。"
+      },
+      "source_id": 680
     }
   ],
   "child_play_places": [
@@ -108504,6 +110869,413 @@ window.EVENT_DATA = {
       "reliability": "official",
       "crawl_priority": 2,
       "notes": "開催当時の市広報。開催後の記録として掲載。"
+    },
+    {
+      "id": 644,
+      "name": "第17回群馬県からくり工夫展（群馬県公式）",
+      "url": "https://www.pref.gunma.jp/page/782275.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "prefecture_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "県内イベント発見・開催日時・会場・入場料・内容を確認。ページ見出しの回数と本文に不整合あり。"
+    },
+    {
+      "id": 645,
+      "name": "第28回「群馬の絹」展（群馬県立日本絹の里）",
+      "url": "https://www.nippon-kinunosato.or.jp/exhibition/11722/",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "museum_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "会期・催し・参加条件・中止告知を含む主催館公式案内。"
+    },
+    {
+      "id": 646,
+      "name": "特別展「まゆクラフトと絹の作品展」（群馬県立日本絹の里）",
+      "url": "https://www.nippon-kinunosato.or.jp/exhibition/11742/",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "museum_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "会期・展示内容・関連体験の条件を含む主催館公式案内。"
+    },
+    {
+      "id": 647,
+      "name": "ひろがる、ほんトモまえばし（前橋市立図書館）",
+      "url": "https://www.city.maebashi.gunma.jp/library/event/51596.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "library_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "ポイント付与期間・交換期間・参加方法を確認した市立図書館の公式企画案内。"
+    },
+    {
+      "id": 648,
+      "name": "上州伊勢崎冬牛蒡「甘久郎」フェア（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/soshiki/nousei/nosei/suisin/5785.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "開催期間・販売店・内容を確認した市公式案内。"
+    },
+    {
+      "id": 649,
+      "name": "伊勢崎シティマラソン（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/soshiki/kensui/sport/sportssinkou/event/7280.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "大会日程・種目・受付期間を確認した市公式案内。"
+    },
+    {
+      "id": 650,
+      "name": "いせさき楽市（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "11月21日の楽市と同日開催催しの市公式案内。"
+    },
+    {
+      "id": 651,
+      "name": "第64回伊勢崎市農業まつり（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/sangyo_nyusatsu_kaihatsu/nogyo_ringyo_suisangyo/nogyo/oshirase/19254.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "開催日・時刻・会場・問合せを確認した市公式案内。"
+    },
+    {
+      "id": 652,
+      "name": "1％まちづくり事業のイベント（太田市公式）",
+      "url": "https://www.city.ota.gunma.jp/page/1052623.html",
+      "prefecture": "群馬県",
+      "municipality": "太田市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "DOYOU ILLUMI OTAの日程を確認した市公式案内。"
+    },
+    {
+      "id": 653,
+      "name": "桐生の店と人を巡るツアー（桐生市公式）",
+      "url": "https://www.city.kiryu.lg.jp/shisei/machi/iinekiryu/event/1027811.html",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "日程・集合場所・参加費・募集要件・締切を確認。"
+    },
+    {
+      "id": 654,
+      "name": "古民家リノベーションワークショップ体感ツアー（桐生市公式）",
+      "url": "https://www.city.kiryu.lg.jp/shisei/machi/iinekiryu/event/1027797.html",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "日程・内容・費用・締切を確認した市公式案内。"
+    },
+    {
+      "id": 655,
+      "name": "青少年野外活動センター主催事業（桐生市公式）",
+      "url": "https://www.city.kiryu.lg.jp/kosodate/ikusei/yagai/1001674.html",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "冬の親子キャンプの内容・申込期間を確認。"
+    },
+    {
+      "id": 656,
+      "name": "第3回デジスポISESAKIフェス（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/21190.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで日程と主要条件を照合（2026-11-17）。"
+    },
+    {
+      "id": 657,
+      "name": "障害者週間イベント「いせさき福祉ふれあいフェスタ」（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/soshiki/hukusiko/fukushi/syougaiseisaku/22452.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで日程と主要条件を照合（2026-11-17）。"
+    },
+    {
+      "id": 658,
+      "name": "映画プロデューサー×書道家のシティプロモーショントークショー（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kurashi_tetsuzuki/sumai_seikatsu/24059.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで日程と主要条件を照合（2026-11-17）。"
+    },
+    {
+      "id": 659,
+      "name": "田島弥平旧宅 主屋1階上段の間及び別荘の公開（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17364.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで日程と主要条件を照合（2026-11-17）。"
+    },
+    {
+      "id": 660,
+      "name": "令和8年度 空き家セミナー（第2回）（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kurashi_tetsuzuki/sumai_seikatsu/akiyataisaku/19286.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで日程と主要条件を照合（2026-11-17）。"
+    },
+    {
+      "id": 661,
+      "name": "綾-aya-高校生バンドコンテスト出演バンド募集（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/bunka_geijutsu/24064.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで開催日程・主要条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 662,
+      "name": "はつらつウオークラリー（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/sportstaikai_event/7030.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで開催日程・主要条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 663,
+      "name": "「言葉をつなぐ、人と地域」セミナー（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/gyoseijoho/heiwa_jinken/13818.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで開催日程・主要条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 664,
+      "name": "スケート教室 12月開催（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/sports/sportskyoshitsu_koshukai/kyoshitsu/15425.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで開催日程・主要条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 665,
+      "name": "ISESAKIまちなかイルミネーション（伊勢崎市公式）",
+      "url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/23963.html",
+      "prefecture": "群馬県",
+      "municipality": "伊勢崎市",
+      "source_type": "city_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "伊勢崎市公式ページで開催日程・主要条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 666,
+      "name": "Gメッセ群馬イベント情報（公式）",
+      "url": "https://www.pref.gunma.jp/site/houdou/780283.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "prefecture_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "Gメッセ群馬公式来場者向けイベントカレンダーでAGTS農業展およびサンリオキャラクターフェスの会期・会場・公開条件を確認（2026-11-17）。"
+    },
+    {
+      "id": 667,
+      "name": "ぐんまインクルーシブフェスタ2026（群馬県公式）",
+      "url": "https://www.pref.gunma.jp/site/houdou/780399.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "prefecture_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 668,
+      "name": "サイサタ プラス「鉱物の万華鏡をつくろう」（群馬県立自然史博物館公式）",
+      "url": "https://www.gmnh.pref.gunma.jp/event/id13296/",
+      "prefecture": "群馬県",
+      "municipality": "富岡市",
+      "source_type": "prefecture_event",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 669,
+      "name": "クリスマスin上野村2026（上野村観光Navi公式）",
+      "url": "https://uenomura-kankonavi.jp/event/event-3950/",
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "source_type": "tourism_official",
+      "reliability": "official_tourism",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 670,
+      "name": "上野スカイブリッジイルミネーション2026-2027（上野村観光Navi公式）",
+      "url": "https://uenomura-kankonavi.jp/event/event-3939/",
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "source_type": "tourism_official",
+      "reliability": "official_tourism",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 671,
+      "name": "Gメッセ群馬イベント情報（公式）",
+      "url": "https://www.g-messe-gunma.jp/visitor-event.html",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "tourism_official",
+      "reliability": "official_tourism",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 673,
+      "name": "2026秋 しいたけフェス（上野村観光Navi公式）",
+      "url": "https://uenomura-kankonavi.jp/event/event-3967/",
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "source_type": "tourism_official",
+      "reliability": "official_tourism",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 674,
+      "name": "ウッディー上野村銘木工芸館 新春初売りセール（上野村観光Navi公式）",
+      "url": "https://uenomura-kankonavi.jp/event/event-3983/",
+      "prefecture": "群馬県",
+      "municipality": "上野村",
+      "source_type": "tourism_official",
+      "reliability": "official_tourism",
+      "crawl_priority": 1,
+      "notes": "公式主催者・会場・地域観光情報ページで確認（2026-11-17）。"
+    },
+    {
+      "id": 675,
+      "name": "第18回 キングオブパスタ2026（公式）",
+      "url": "https://www.kingofpasta.jp/",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "official_event_site",
+      "reliability": "official",
+      "crawl_priority": 1,
+      "notes": "公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 676,
+      "name": "えびす講（桐生市公式）",
+      "url": "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
+      "prefecture": "群馬県",
+      "municipality": "桐生市",
+      "source_type": "government",
+      "reliability": "official",
+      "crawl_priority": 1,
+      "notes": "公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 677,
+      "name": "広報高崎2026年11月号「第98回 高崎えびす講市」（高崎市公式）",
+      "url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "government_site",
+      "reliability": "official",
+      "crawl_priority": 1,
+      "notes": "公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 678,
+      "name": "えびす講・販売甲子園・農業まつり（高崎市公式）",
+      "url": "https://www.city.takasaki.gunma.jp/site/digital/101018.html",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "government_site",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "自治体公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 679,
+      "name": "まえばし学校フェスタ2026（前橋市公式）",
+      "url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/3/6/5/23410.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "government_site",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "自治体公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 680,
+      "name": "まえばしこどもエコフェスタ（前橋市公式）",
+      "url": "https://www.city.maebashi.gunma.jp/soshiki/kankyo/kankyoseisaku/oshirase/51324.html",
+      "prefecture": "群馬県",
+      "municipality": "前橋市",
+      "source_type": "government_site",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "自治体公式イベント案内で開催情報を確認（2026-11-18）。"
+    },
+    {
+      "id": 681,
+      "name": "広報高崎2026年11月号・キングオブパスタ掲載",
+      "url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf",
+      "prefecture": "群馬県",
+      "municipality": "高崎市",
+      "source_type": "government_site",
+      "reliability": "official_government",
+      "crawl_priority": 1,
+      "notes": "第18回キングオブパスタの開催日・時間・会場・出店内容を確認。"
     }
   ],
   "facets": {
