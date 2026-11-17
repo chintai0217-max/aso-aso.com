@@ -398,7 +398,7 @@ def image_tag(url, alt):
     )
 
 
-def collect_gallery_images(record, alt, limit=14):
+def collect_gallery_images(record, alt, limit=20):
     items = []
     seen = set()
     primary = record.get("primary_image_url")
