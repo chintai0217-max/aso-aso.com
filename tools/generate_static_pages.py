@@ -398,7 +398,7 @@ def image_tag(url, alt):
     )
 
 
-def collect_gallery_images(record, alt, limit=10):
+def collect_gallery_images(record, alt, limit=14):
     items = []
     seen = set()
     primary = record.get("primary_image_url")
@@ -463,12 +463,11 @@ def detail_hero_html(record, alt):
     if not images:
         return '<p class="static-detail-image-note">写真は準備中です。</p>'
     references = [image for image in images if image.get("reference_photo")]
-    historical = any("2011年" in (image.get("reference_photo_label") or "") for image in references)
     note = (
-        '<p class="static-detail-image-note">'
-        + ("2011年撮影の写真を含みます。現在の設備と異なる場合があります。" if historical else
-           f'{html(references[0].get("reference_photo_label") or "会場・施設の参考写真")}を含みます。')
-        + (' 催しの写真は準備中です。' if record.get('title') and len(references) == len(images) else '')
+        '<p class="static-detail-image-note">参考写真：'
+        + html(references[0].get("reference_photo_label") or "会場・施設の参考写真")
+        + '。'
+        + ('イベント当日の写真は未確保です。' if record.get('title') and len(references) == len(images) else '写真は撮影当時の記録です。現在の設備・景観と異なる場合があります。')
         + ' 写真の出典はページ末尾をご確認ください。</p>'
     ) if references else ""
     if len(images) == 1:

@@ -7842,10 +7842,10 @@
   },
   "place:1": {
     "content_status": "施設公式案内で開館・開園時間、料金、利用条件を照合。",
-    "image_status": "Wikimedia Commonsの参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。 Wikimedia Commonsの参考写真をさらに2枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "Wikimedia Commonsの参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。 Wikimedia Commonsの参考写真をさらに2枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。 Wikimedia Commonsの施設・園内参考写真を今回2枚追加。撮影時期・著作者・ライセンス条件を確認済み。場所により対象の遊具・設備そのものを写していない写真を含み、現在の状態は未確認です。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://gunma-kodomonokuni.jp/",
-    "notes": "利用条件未確認の公式画像は保留。既存の園内写真と記事を維持。 追加写真の出典・撮影時期は各画像の表示欄を参照。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
+    "notes": "利用条件未確認の公式画像は保留。既存の園内写真と記事を維持。 追加写真の出典・撮影時期は各画像の表示欄を参照。 追加写真の出典・撮影時期は各画像の表示欄を参照。 今回の追加写真は施設・園内の参考写真です。写真ごとの撮影日・著作者・ライセンス・対象範囲は画像の表示欄と出典ページを参照。",
     "candidate_photos": [
       {
         "id": 246,
@@ -7950,9 +7950,11 @@
       "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(20).jpg",
       "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(23).jpg",
       "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(9).jpg",
-      "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(11).jpg"
+      "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(11).jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(1).jpg",
+      "https://commons.wikimedia.org/wiki/File:%E3%81%90%E3%82%93%E3%81%BE%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD_-_panoramio_(14).jpg"
     ],
-    "image_reviewed_at": "2026-11-13"
+    "image_reviewed_at": "2026-11-17"
   },
   "place:27": {
     "content_status": "施設公式の料金・営業案内で利用条件を照合。",
@@ -13866,11 +13868,17 @@
   },
   "place:90": {
     "content_status": "公園公式の概要・施設案内と利用条件を照合。",
-    "image_status": "Ebiebi2、パブリックドメイン、2007年8月19日撮影。広場そのものではなく西口の参考写真。",
+    "image_status": "Ebiebi2、パブリックドメイン、2007年8月19日撮影。広場そのものではなく西口の参考写真。 Wikimedia Commonsの施設・園内参考写真を今回3枚追加。撮影時期・著作者・ライセンス条件を確認済み。場所により対象の遊具・設備そのものを写していない写真を含み、現在の状態は未確認です。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.park-tochigi.com/mikamo/overview",
-    "notes": "わんぱく広場 https://www.park-tochigi.com/mikamo/facility/wanpaku 写真出典 https://commons.wikimedia.org/wiki/File:Mikamoyama_park_west_entrance,_Tochigi_prefecture,_Japan.jpg。写真は撮影時点の参考。",
-    "candidate_photos": []
+    "notes": "わんぱく広場 https://www.park-tochigi.com/mikamo/facility/wanpaku 写真出典 https://commons.wikimedia.org/wiki/File:Mikamoyama_park_west_entrance,_Tochigi_prefecture,_Japan.jpg。写真は撮影時点の参考。 今回の追加写真は施設・園内の参考写真です。写真ごとの撮影日・著作者・ライセンス・対象範囲は画像の表示欄と出典ページを参照。",
+    "candidate_photos": [],
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Mikamo_Herb_Garden,_Sano,_Tochigi_-_Nov_3,_2025.jpg",
+      "https://commons.wikimedia.org/wiki/File:Mikamoyama_katakuri.jpg",
+      "https://commons.wikimedia.org/wiki/File:MikamoMountain.jpg"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "place:86": {
     "content_status": "公式案内で設備・時間・料金・利用条件を照合。",
@@ -13940,10 +13948,10 @@
   },
   "place:93": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。一部料金は未確認。",
-    "image_status": "今回Wikimedia Commonsの参考写真を6枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。",
+    "image_status": "今回Wikimedia Commonsの参考写真を6枚追加。撮影日・著作者・再利用条件を確認済み。現在の設備・景観は未確認。 Wikimedia Commonsの施設・園内参考写真を今回4枚追加。撮影時期・著作者・ライセンス条件を確認済み。場所により対象の遊具・設備そのものを写していない写真を含み、現在の状態は未確認です。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001586.html",
-    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 駐車場閉鎖予定 https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001581.html 。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
+    "notes": "写真の撮影日・利用条件はWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 駐車場閉鎖予定 https://www.parks.or.jp/tokorozawa-kokuu/guide/001/001581.html 。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を3枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。 今回の追加写真は施設・園内の参考写真です。写真ごとの撮影日・著作者・ライセンス・対象範囲は画像の表示欄と出典ページを参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Tokorozawa_Aviation_Commemorative_Park.jpg",
@@ -13955,9 +13963,13 @@
       "https://commons.wikimedia.org/wiki/File:Koku-koen_Dog-run_Tokorozawa_09.jpg",
       "https://commons.wikimedia.org/wiki/File:Saisho-tei_sign_Koku-koen_Tokorozawa.jpg",
       "https://commons.wikimedia.org/wiki/File:Koku-koen-Tokorozawa-Muse.jpg",
-      "https://commons.wikimedia.org/wiki/File:Lovely_family-Tokorozawa_Aviation_Memorial_Park.jpg"
+      "https://commons.wikimedia.org/wiki/File:Lovely_family-Tokorozawa_Aviation_Memorial_Park.jpg",
+      "https://commons.wikimedia.org/wiki/File:Saisho-tei_Japanese_garden_1.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kokukoen-AviationPark-AerialView.jpg",
+      "https://commons.wikimedia.org/wiki/File:Tokorozawa_Koukuukoen_Baseball_field.JPG",
+      "https://commons.wikimedia.org/wiki/File:Accompany_each_other-Tokorozawa_Aviation_Memorial_Park.jpg"
     ],
-    "image_reviewed_at": "2026-11-13"
+    "image_reviewed_at": "2026-11-17"
   },
   "place:94": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。一部料金は未確認。",
@@ -14001,10 +14013,10 @@
   },
   "place:96": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
-    "image_status": "今回Wikimedia Commonsの施設参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。",
+    "image_status": "今回Wikimedia Commonsの施設参考写真を5枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・展示・飼育動物の状況は未確認。 Wikimedia Commonsの施設・園内参考写真を今回4枚追加。撮影時期・著作者・ライセンス条件を確認済み。場所により対象の遊具・設備そのものを写していない写真を含み、現在の状態は未確認です。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.hitachi.lg.jp/zoo/",
-    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
+    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 2026-11-12: Wikimedia Commonsのファイルページで著作者・撮影日・再利用条件を確認し、実景参考写真を4枚追加。 追加写真の出典・撮影時期は各画像の表示欄を参照。 今回の追加写真は施設・園内の参考写真です。写真ごとの撮影日・著作者・ライセンス・対象範囲は画像の表示欄と出典ページを参照。",
     "candidate_photos": [],
     "image_source_urls": [
       "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_01.jpg",
@@ -14016,21 +14028,26 @@
       "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_05.jpg",
       "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_06.jpg",
       "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_07.jpg",
-      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_09.jpg"
+      "https://commons.wikimedia.org/wiki/File:Kamine_Park,_Ibaraki_09.jpg",
+      "https://commons.wikimedia.org/wiki/File:HitachiZooKodomo.jpg",
+      "https://commons.wikimedia.org/wiki/File:Chimpanzeesha.jpg",
+      "https://commons.wikimedia.org/wiki/File:Penguinshakaminezoo.jpg",
+      "https://commons.wikimedia.org/wiki/File:Saruyama.jpg"
     ],
-    "image_reviewed_at": "2026-11-13"
+    "image_reviewed_at": "2026-11-17"
   },
   "place:97": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
-    "image_status": "参考写真：Abasaa / Wikimedia Commons、Public domain、2016年11月13日撮影。 Wikimedia Commonsの参考写真をさらに1枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。",
+    "image_status": "参考写真：Abasaa / Wikimedia Commons、Public domain、2016年11月13日撮影。 Wikimedia Commonsの参考写真をさらに1枚追加。追加分の撮影時期・著作者・再利用条件を確認済み。現在の設備・様子は未確認。 Wikimedia Commonsの施設・園内参考写真を今回1枚追加。撮影時期・著作者・ライセンス条件を確認済み。場所により対象の遊具・設備そのものを写していない写真を含み、現在の状態は未確認です。",
     "reviewed_at": "2026-11-02",
     "source_url": "https://www.city.kasama.lg.jp/page/page000122.html",
-    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 追加写真の出典・撮影時期は各画像の表示欄を参照。",
+    "notes": "写真の撮影日・ライセンスはWikimedia Commons APIのimageinfoで確認。写真は撮影時点の参考。 追加写真の出典・撮影時期は各画像の表示欄を参照。 今回の追加写真は施設・園内の参考写真です。写真ごとの撮影日・著作者・ライセンス・対象範囲は画像の表示欄と出典ページを参照。",
     "candidate_photos": [],
     "image_source_urls": [
-      "https://commons.wikimedia.org/wiki/File:Kasama_Geijutsunomori_Park_02.JPG"
+      "https://commons.wikimedia.org/wiki/File:Kasama_Geijutsunomori_Park_02.JPG",
+      "https://commons.wikimedia.org/wiki/File:%E7%AC%A0%E9%96%93%E8%8A%B8%E8%A1%93%E3%81%AE%E6%A3%AE_-_panoramio.jpg"
     ],
-    "image_reviewed_at": "2026-11-13"
+    "image_reviewed_at": "2026-11-17"
   },
   "place:98": {
     "content_status": "公式施設案内で設備・時間・利用条件を照合。",
@@ -20052,10 +20069,10 @@
   },
   "event:120": {
     "content_status": "主催者または自治体の開催案内を照合・未確認事項あり",
-    "image_status": "画像候補は撮影時期・利用条件の再確認中",
+    "image_status": "Wikimedia Commonsの会場・地域参考写真を1枚追加。撮影時期・著作者・CCライセンスを確認済み。イベント当日の写真は未確保。撮影年代が古いため現在の会場状況と異なる場合があります。",
     "reviewed_at": "2026-11-06",
     "source_url": "https://www.city.kanuma.tochigi.jp/0761/info-0000011621-0.html",
-    "notes": "開催日・内容を公式案内と照合。既存画像は撮影時期・利用条件の再確認まで掲載保留。 公式案内を再照合。催し当日の写真は未確保。",
+    "notes": "開催日・内容を公式案内と照合。既存画像は撮影時期・利用条件の再確認まで掲載保留。 公式案内を再照合。催し当日の写真は未確保。 今回追加した写真は会場・地域の参考画像で、開催当日の記録写真ではありません。撮影日・著作者・ライセンスは各画像の出典ページで照合。 2007年撮影の花木センター写真は旧景観で、現状の会場案内としては使用せず歴史的参考写真と明記。",
     "image_candidates": [
       {
         "id": 2781,
@@ -20075,7 +20092,11 @@
         "last_verified_at": "2026-10-22",
         "notes": "公式・準公式ページ上で写真として確認。ポスター・チラシ・サイト共通画像は選外。"
       }
-    ]
+    ],
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Kanuma-kabokucenter.jpg"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "event:115": {
     "content_status": "公式案内を照合・未確認事項あり",
@@ -23390,9 +23411,14 @@
   "event:346": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
     "source_url": "https://www.city.takasaki.gunma.jp/page/2529.html",
-    "image_status": "実際の催しの写真は未確保",
+    "image_status": "Wikimedia Commonsの会場・地域参考写真を2枚追加。撮影時期・著作者・CCライセンスを確認済み。イベント当日の写真は未確保。撮影年代が古いため現在の会場状況と異なる場合があります。",
     "reviewed_at": "2026-11-06",
-    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日、高崎市公式案内で開催内容と条件を再照合。催しの実写写真は未確保。"
+    "notes": "複数回の時間は本文に記載。公式資料に明記のない料金等は未確認。 2026年11月6日、高崎市公式案内で開催内容と条件を再照合。催しの実写写真は未確保。 今回追加した写真は会場・地域の参考画像で、開催当日の記録写真ではありません。撮影日・著作者・ライセンスは各画像の出典ページで照合。",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Mount_Ushibuse_(Gunma).jpg",
+      "https://commons.wikimedia.org/wiki/File:Mount_Ushibuse_(Gunma)_summit_1.jpg"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "event:459": {
     "content_status": "施設または市の公式案内で日時・内容・参加条件を照合。最新の受付状況は未確認",
@@ -23433,9 +23459,9 @@
   "event:161": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
     "source_url": "https://www.city.isesaki.lg.jp/soshiki/siminbu/tabunka/kyoseisuishin/19277.html",
-    "image_status": "実際の催しの写真は未確保",
+    "image_status": "Wikimedia Commonsの会場・地域参考写真を1枚追加。撮影時期・著作者・CCライセンスを確認済み。イベント当日の写真は未確保。撮影年代が古いため現在の会場状況と異なる場合があります。",
     "reviewed_at": "2026-11-06",
-    "notes": "案内に明記のない料金や時刻等は未確認。既存画像の転載条件と撮影時期が未確認のため表示から除外。 市公式案内で開催日時・催しの内容と参加条件を再照合。実際の催しの写真は未確保。",
+    "notes": "案内に明記のない料金や時刻等は未確認。既存画像の転載条件と撮影時期が未確認のため表示から除外。 市公式案内で開催日時・催しの内容と参加条件を再照合。実際の催しの写真は未確保。 今回追加した写真は会場・地域の参考画像で、開催当日の記録写真ではありません。撮影日・著作者・ライセンスは各画像の出典ページで照合。",
     "image_candidates": [
       {
         "id": 2824,
@@ -23455,7 +23481,11 @@
         "last_verified_at": "2026-10-23",
         "notes": "伊勢崎市公式イベントページ掲載の文化紹介写真。"
       }
-    ]
+    ],
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Kasurinosato_Isesaki_001.JPG"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "event:162": {
     "content_status": "市公式案内で日時・内容・参加条件を照合。最新の受付・開催状況は未確認",
@@ -23747,16 +23777,24 @@
   "event:553": {
     "content_status": "自治体または主催者の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
     "source_url": "https://www.city.fujioka.gunma.jp/soshiki/kikakubu/chiikizukuri/6/chiikidukuricenter-onishi/kakushukyoushitsu/11751.html",
-    "image_status": "実際の催しの写真は未確保",
+    "image_status": "Wikimedia Commonsの会場・地域参考写真を1枚追加。撮影時期・著作者・CCライセンスを確認済み。イベント当日の写真は未確保。撮影年代が古いため現在の会場状況と異なる場合があります。",
     "reviewed_at": "2026-11-06",
-    "notes": "公式案内に明記のない料金や時刻等は未確認。 2026年11月6日、主催者・自治体の公式案内で内容と参加条件を再照合。催しの利用可能な実写写真は未確保。"
+    "notes": "公式案内に明記のない料金や時刻等は未確認。 2026年11月6日、主催者・自治体の公式案内で内容と参加条件を再照合。催しの利用可能な実写写真は未確保。 今回追加した写真は会場・地域の参考画像で、開催当日の記録写真ではありません。撮影日・著作者・ライセンスは各画像の出典ページで照合。",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:%E9%AC%BC%E7%9F%B3%E7%94%BA%E5%A4%9A%E7%9B%AE%E7%9A%84%E3%83%9B%E3%83%BC%E3%83%AB_-_panoramio.jpg"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "event:555": {
     "content_status": "自治体または主催者の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
     "source_url": "https://prtimes.jp/main/html/rd/p/000000017.000178849.html",
-    "image_status": "実際の催しの写真は未確保",
+    "image_status": "Wikimedia Commonsの会場・地域参考写真を1枚追加。撮影時期・著作者・CCライセンスを確認済み。イベント当日の写真は未確保。撮影年代が古いため現在の会場状況と異なる場合があります。",
     "reviewed_at": "2026-11-06",
-    "notes": "公式案内に明記のない料金や時刻等は未確認。 主催者の発表・個別案内で内容と参加条件を再照合。実写写真は未確保。"
+    "notes": "公式案内に明記のない料金や時刻等は未確認。 主催者の発表・個別案内で内容と参加条件を再照合。実写写真は未確保。 今回追加した写真は会場・地域の参考画像で、開催当日の記録写真ではありません。撮影日・著作者・ライセンスは各画像の出典ページで照合。",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Nakanojo_Gardens.jpg"
+    ],
+    "image_reviewed_at": "2026-11-17"
   },
   "event:557": {
     "content_status": "自治体または主催者の公式案内で日時・内容・対象を照合。最新の受付状況は未確認",
