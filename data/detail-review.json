@@ -26975,10 +26975,14 @@
   },
   "event:878": {
     "content_status": "公式一次情報で確認済み",
-    "image_status": "イベント写真未確保。転載条件未確認の公式画像は登録せず",
+    "image_status": "Wikimedia Commonsの利用条件と撮影時期を確認した会場・施設の参考写真を掲載。催し当日の写真ではない旨を画像欄に明記。",
     "reviewed_at": "2026-11-17",
     "source_url": "https://www.city.isesaki.lg.jp/kanko_bunka_sports/event/17279.html",
-    "notes": "出演者・時間・会場は伊勢崎市の11月楽市公式チラシで確認。"
+    "notes": "出演者・時間・会場は伊勢崎市の11月楽市公式チラシで確認。 参考写真の出典・撮影日・ライセンスを確認して追加。",
+    "image_reviewed_at": "2026-11-18",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Isesaki_Station_south_2020-11.jpg"
+    ]
   },
   "event:879": {
     "content_status": "公式一次情報で確認済み",
@@ -27168,24 +27172,33 @@
   },
   "event:905": {
     "content_status": "公式情報で確認済み",
-    "image_status": "開催時の写真未確保。転載条件が確認できない画像は登録せず",
+    "image_status": "Wikimedia Commonsの利用条件と撮影時期を確認した会場・施設の参考写真を掲載。催し当日の写真ではない旨を画像欄に明記。",
     "reviewed_at": "2026-11-18",
     "source_url": "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
-    "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。",
+    "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。 参考写真の出典・撮影日・ライセンスを確認して追加。 参考写真の出典・撮影日・ライセンスを確認して追加。",
     "source_urls": [
       "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
       "https://www.city.kiryu.lg.jp/kurashi/kotsu/bus/1010446.html"
+    ],
+    "image_reviewed_at": "2026-11-18",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja%2C_sandou-1.jpg",
+      "https://commons.wikimedia.org/wiki/File:Kiryu_Nishinomiya_Shrine.JPG"
     ]
   },
   "event:906": {
     "content_status": "公式情報で確認済み",
-    "image_status": "開催時の写真未確保。転載条件が確認できない画像は登録せず",
+    "image_status": "Wikimedia Commonsの利用条件と撮影時期を確認した会場・施設の参考写真を掲載。催し当日の写真ではない旨を画像欄に明記。",
     "reviewed_at": "2026-11-18",
     "source_url": "https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf",
-    "notes": "高崎市公式「広報高崎」2026年11月号掲載の行事案内で11月21・22日、10:00〜17:00、中心市街地・美保大國神社、高崎商工会議所問合せ先を確認。掲載PDFには交通規制予定や複数催事の内容も記載。",
+    "notes": "高崎市公式「広報高崎」2026年11月号掲載の行事案内で11月21・22日、10:00〜17:00、中心市街地・美保大國神社、高崎商工会議所問合せ先を確認。掲載PDFには交通規制予定や複数催事の内容も記載。 参考写真の出典・撮影日・ライセンスを確認して追加。",
     "source_urls": [
       "https://www.city.takasaki.gunma.jp/site/digital/101018.html",
       "https://www.city.takasaki.gunma.jp/uploaded/attachment/44701.pdf"
+    ],
+    "image_reviewed_at": "2026-11-18",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Takasaki_Shrine.jpg"
     ]
   },
   "event:907": {
@@ -27204,10 +27217,14 @@
   },
   "event:909": {
     "content_status": "公式情報で確認済み",
-    "image_status": "開催時の写真未確保。転載条件が確認できない画像は登録せず",
+    "image_status": "Wikimedia Commonsの利用条件と撮影時期を確認した会場・施設の参考写真を掲載。催し当日の写真ではない旨を画像欄に明記。",
     "reviewed_at": "2026-11-18",
     "source_url": "https://www.city.maebashi.gunma.jp/kosodate_kyoiku/3/6/5/23410.html",
-    "notes": "前橋市公式ページで11月14・15日10:00〜16:00、ミヤケン元気21、各階の企画内容、駐車場混雑への注意を確認。2026-11-18時点で終了済みの地域大型行事として追補。"
+    "notes": "前橋市公式ページで11月14・15日10:00〜16:00、ミヤケン元気21、各階の企画内容、駐車場混雑への注意を確認。2026-11-18時点で終了済みの地域大型行事として追補。 参考写真の出典・撮影日・ライセンスを確認して追加。",
+    "image_reviewed_at": "2026-11-18",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Maebashi_Plaza_Genki_21_building.JPG"
+    ]
   },
   "event:910": {
     "content_status": "公式情報で確認済み",
