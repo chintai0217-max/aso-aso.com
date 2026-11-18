@@ -47527,7 +47527,7 @@ window.EVENT_DATA = {
           "notes": "Wikimedia Commonsのファイル説明ページで写真の対象、撮影日、著作者、ライセンスを確認。会場・施設の参考写真でイベント当日の記録ではありません。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Isesaki%20Station%20south%202020-11.jpg/1280px-Isesaki%20Station%20south%202020-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Isesaki_Station_south_2020-11.jpg/1280px-Isesaki_Station_south_2020-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "観覧無料。事前申込の記載なし。",
@@ -49210,7 +49210,7 @@ window.EVENT_DATA = {
           "notes": "Wikimedia Commonsのファイル説明ページで写真の対象、撮影日、著作者、ライセンスを確認。会場・施設の参考写真でイベント当日の記録ではありません。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Kiryu-nishinomiya-jinja%2C%20sandou-1.jpg/1280px-Kiryu-nishinomiya-jinja%2C%20sandou-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Kiryu-nishinomiya-jinja%2C_sandou-1.jpg/1280px-Kiryu-nishinomiya-jinja%2C_sandou-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "一般参詣の事前申込案内はなし。福男選び神事は抽選参加。現地交通規制とバス停休止・迂回運行を確認して来場。",
@@ -49283,7 +49283,7 @@ window.EVENT_DATA = {
           "notes": "Wikimedia Commonsのファイル説明ページで写真の対象、撮影日、著作者、ライセンスを確認。会場・施設の参考写真でイベント当日の記録ではありません。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Takasaki%20Shrine.jpg/1280px-Takasaki%20Shrine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Takasaki_Shrine.jpg/1280px-Takasaki_Shrine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "事前申込の記載なし。中心市街地の交通規制、個別催事の当日変更・販売状況は公式案内で確認。",
@@ -49455,7 +49455,7 @@ window.EVENT_DATA = {
           "notes": "Wikimedia Commonsのファイル説明ページで写真の対象、撮影日、著作者、ライセンスを確認。会場・施設の参考写真でイベント当日の記録ではありません。"
         }
       ],
-      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi%20Plaza%20Genki%2021%20building.JPG/1280px-Maebashi%20Plaza%20Genki%2021%20building.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "primary_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Maebashi_Plaza_Genki_21_building.JPG/1280px-Maebashi_Plaza_Genki_21_building.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "イベント自体の事前申込案内なし。マイ・チャレンジ企画は募集終了と市が記載。駐車場混雑に注意。",
