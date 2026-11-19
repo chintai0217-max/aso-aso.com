@@ -463,13 +463,23 @@ def detail_hero_html(record, alt):
     if not images:
         return '<p class="static-detail-image-note">写真は準備中です。</p>'
     references = [image for image in images if image.get("reference_photo")]
-    note = (
-        '<p class="static-detail-image-note">参考写真：'
-        + html(references[0].get("reference_photo_label") or "会場・施設の参考写真")
-        + '。'
-        + ('イベント当日の写真は未確保です。' if record.get('title') and len(references) == len(images) else '写真は撮影当時の記録です。現在の設備・景観と異なる場合があります。')
-        + ' 写真の出典はページ末尾をご確認ください。</p>'
-    ) if references else ""
+    historical_events = [image for image in references if image.get("image_kind") == "historical_event_photo"]
+    if historical_events:
+        year = (record.get("start_date") or "")[:4]
+        year_note = f"{year}年開催当日の写真ではありません。" if year else "今回の開催当日の写真ではありません。"
+        note = (
+            '<p class="static-detail-image-note">過去開催の記録写真を掲載しています。'
+            + html(year_note)
+            + ' 写真の撮影時期・出典・利用条件はページ末尾をご確認ください。</p>'
+        )
+    else:
+        note = (
+            '<p class="static-detail-image-note">参考写真：'
+            + html(references[0].get("reference_photo_label") or "会場・施設の参考写真")
+            + '。'
+            + ('イベント当日の写真は未確保です。' if record.get('title') and len(references) == len(images) else '写真は撮影当時の記録です。現在の設備・景観と異なる場合があります。')
+            + ' 写真の出典はページ末尾をご確認ください。</p>'
+        ) if references else ""
     if len(images) == 1:
         return image_tag(images[0].get("image_url"), images[0].get("alt_text") or alt) + note
     slides = []

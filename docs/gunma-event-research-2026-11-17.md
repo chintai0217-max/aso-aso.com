@@ -56,3 +56,10 @@
 
 - [群馬県イベント再調査CSV](gunma-event-research-2026-11-17.csv)
 - 公式URLと個別の確認メモはCSVおよび`data/detail-review.json`に記録。
+
+
+## 実際の開催写真の追加（2026-11-19）
+
+- 大胡祇園まつり（大胡神社祇園祭）の過去開催記録写真を2点追加。「暴れ獅子」「天王さま」、いずれも2007年7月撮影、著作者Ks8823、CC BY-SA 3.0。
+- [暴れ獅子（Wikimedia Commons）](https://commons.wikimedia.org/wiki/File:Ogo-gion-shishi.jpg)・[天王さま（Wikimedia Commons）](https://commons.wikimedia.org/wiki/File:Ogo-gion-tenno.jpg)の説明・撮影時期・ライセンスを確認。2026年開催当日の写真ではないことを詳細ページに明記。
+- 参考写真だった大胡駅の画像は取り下げ、実際の祭り写真に置き換えた。

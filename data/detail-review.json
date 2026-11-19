@@ -18937,7 +18937,7 @@
   },
   "event:27": {
     "content_status": "前橋市の公式案内で2026年日程・関連行事・アクセスを照合、開催時間等は未確認",
-    "image_status": "参考写真：会場近くの大胡駅（2004年2月撮影）。祭りの様子ではありません。",
+    "image_status": "大胡神社祇園祭の過去開催写真（2007年7月撮影）2点を掲載。CC BY-SA 3.0と撮影時期を確認。2026年開催当日の写真は未確保。",
     "reviewed_at": "2026-11-12",
     "source_url": "https://www.city.maebashi.gunma.jp/soshiki/shimin/ogo/gyomu/1/2120.html",
     "notes": "市の案内で7月25・26日、関連行事「天王様、暴れ獅子」は26日・雨天中止なし、駐車場なし・大胡駅から徒歩約3分を確認。祭り全体の16〜22時を公式本文では確認できず空欄化。実施結果と画像権利・撮影時期は未確認。 公式案内を再確認し、条件と過去開催の区別を紹介文に反映。",
@@ -18962,8 +18962,13 @@
         "notes": "auto_collected_score=158"
       }
     ],
-    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ogo_sta.jpg",
-    "image_research_note": "前橋市の公式案内で会場まで大胡駅から徒歩約3分と確認。"
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Ogo-gion-shishi.jpg",
+    "image_research_note": "Commonsのファイル説明・撮影時期・著作者・CC BY-SA 3.0を確認した大胡神社祇園祭の過去開催写真2点を使用。2026年の開催当日写真ではないことを画像欄とページで明記。会場近くの大胡駅参考写真は、実際の祭り写真が得られたため画像一覧から外した。",
+    "image_reviewed_at": "2026-11-19",
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Ogo-gion-shishi.jpg",
+      "https://commons.wikimedia.org/wiki/File:Ogo-gion-tenno.jpg"
+    ]
   },
   "event:12": {
     "content_status": "開催案内を照合済み・開催結果未確認",
