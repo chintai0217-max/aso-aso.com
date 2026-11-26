@@ -49167,8 +49167,28 @@ window.EVENT_DATA = {
       "canonical_url": "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
       "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。",
       "source_names": "えびす講（桐生市公式）",
-      "images": [],
-      "primary_image_url": null,
+      "images": [
+        {
+          "id": 30324,
+          "entity_type": "event",
+          "entity_id": 905,
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Kiryu-nishinomiya-jinja%2C_sandou-2.jpg/1280px-Kiryu-nishinomiya-jinja%2C_sandou-2.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja,_sandou-2.jpg",
+          "title": "Kiryu-nishinomiya-jinja, sandou-2.jpg",
+          "alt_text": "桐生西宮神社の参道（2022年撮影。祭り当日の写真ではありません）",
+          "image_kind": "reference",
+          "credit": "Saigen Jiro / Wikimedia Commons",
+          "license_note": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "reference_photo": true,
+          "reference_photo_label": "桐生西宮神社の参道（2022年8月25日撮影。2026年のえびす講当日の写真ではありません）",
+          "status": "verified",
+          "confidence": "high",
+          "last_verified_at": "2026-11-26",
+          "notes": "Commonsの説明・撮影日・著作者・CC0 1.0を確認。イベント会場である桐生西宮神社の参道を写した参考写真で、祭り当日の写真ではない。"
+        }
+      ],
+      "primary_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Kiryu-nishinomiya-jinja%2C_sandou-2.jpg/1280px-Kiryu-nishinomiya-jinja%2C_sandou-2.jpg",
       "google_place_id": null,
       "parking_note": null,
       "reservation_note": "一般参詣の事前申込案内はなし。福男選び神事は抽選参加。現地交通規制とバス停休止・迂回運行を確認して来場。",
@@ -103917,6 +103937,24 @@ window.EVENT_DATA = {
       "confidence": "high",
       "last_verified_at": "2026-11-19",
       "notes": "Wikimedia Commonsの説明で大胡神社祇園祭の「天王さま」と確認。2007年7月撮影。著作者Ks8823、CC BY-SA 3.0。現行開催の記録写真ではなく過去開催の写真。"
+    },
+    {
+      "id": 30324,
+      "entity_type": "event",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Kiryu-nishinomiya-jinja%2C_sandou-2.jpg/1280px-Kiryu-nishinomiya-jinja%2C_sandou-2.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja,_sandou-2.jpg",
+      "title": "Kiryu-nishinomiya-jinja, sandou-2.jpg",
+      "alt_text": "桐生西宮神社の参道（2022年撮影。祭り当日の写真ではありません）",
+      "image_kind": "reference",
+      "credit": "Saigen Jiro / Wikimedia Commons",
+      "license_note": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "reference_photo": true,
+      "reference_photo_label": "桐生西宮神社の参道（2022年8月25日撮影。2026年のえびす講当日の写真ではありません）",
+      "status": "verified",
+      "confidence": "high",
+      "last_verified_at": "2026-11-26",
+      "notes": "Commonsの説明・撮影日・著作者・CC0 1.0を確認。イベント会場である桐生西宮神社の参道を写した参考写真で、祭り当日の写真ではない。"
     }
   ],
   "sources": [

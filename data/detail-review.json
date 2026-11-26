@@ -27173,13 +27173,40 @@
   },
   "event:905": {
     "content_status": "公式情報で確認済み",
-    "image_status": "開催時の写真未確保。転載条件が確認できない画像は登録せず",
+    "image_status": "桐生西宮神社の参道を写した会場参考写真を1枚追加（2022年8月25日撮影・CC0 1.0）。2026年の祭り当日の写真は未確保。",
     "reviewed_at": "2026-11-18",
     "source_url": "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
-    "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。",
+    "notes": "桐生市公式ページで2026年11月19〜20日、19日7時から夜通し・20日22時まで、桐生西宮神社、周辺の交通規制を確認。別の桐生市公式交通案内では11月18〜20日のバス迂回運行を告知。会場参考写真はCommonsで参道・撮影日・著作者Saigen Jiro・CC0 1.0を確認。神社参道の参考写真であり、祭り当日の写真ではない旨を表示。",
     "source_urls": [
       "https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html",
       "https://www.city.kiryu.lg.jp/kurashi/kotsu/bus/1010446.html"
+    ],
+    "image_source_urls": [
+      "https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja,_sandou-2.jpg"
+    ],
+    "image_reviewed_at": "2026-11-26",
+    "image_candidates": [
+      {
+        "id": 30324,
+        "entity_type": "event",
+        "entity_id": 905,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja,_sandou-2.jpg",
+        "title": "Kiryu-nishinomiya-jinja, sandou-2.jpg",
+        "alt_text": "桐生西宮神社の参道（2022年撮影。祭り当日の写真ではありません）",
+        "image_kind": "reference",
+        "credit": "Saigen Jiro / Wikimedia Commons",
+        "license_note": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "reference_photo": true,
+        "reference_photo_label": "桐生西宮神社の参道（2022年8月25日撮影。2026年のえびす講当日の写真ではありません）",
+        "status": "verified",
+        "confidence": "high",
+        "last_verified_at": "2026-11-26",
+        "notes": "Commonsの説明・撮影日・著作者・CC0 1.0を確認。イベント会場である桐生西宮神社の参道を写した参考写真で、祭り当日の写真ではない。",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Kiryu-nishinomiya-jinja%2C_sandou-2.jpg/1280px-Kiryu-nishinomiya-jinja%2C_sandou-2.jpg",
+        "width": 5568,
+        "height": 3712
+      }
     ]
   },
   "event:906": {

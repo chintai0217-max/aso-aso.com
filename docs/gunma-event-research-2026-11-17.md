@@ -63,3 +63,10 @@
 - 大胡祇園まつり（大胡神社祇園祭）の過去開催記録写真を2点追加。「暴れ獅子」「天王さま」、いずれも2007年7月撮影、著作者Ks8823、CC BY-SA 3.0。
 - [暴れ獅子（Wikimedia Commons）](https://commons.wikimedia.org/wiki/File:Ogo-gion-shishi.jpg)・[天王さま（Wikimedia Commons）](https://commons.wikimedia.org/wiki/File:Ogo-gion-tenno.jpg)の説明・撮影時期・ライセンスを確認。2026年開催当日の写真ではないことを詳細ページに明記。
 - 参考写真だった大胡駅の画像は取り下げ、実際の祭り写真に置き換えた。
+
+## 会場参考写真の追加（2026-11-26）
+
+- 桐生西宮神社秋季大祭・桐生えびす講（イベントID 905）に、会場そのものの参道写真を1点追加。
+- [Kiryu-nishinomiya-jinja, sandou-2.jpg（Wikimedia Commons）](https://commons.wikimedia.org/wiki/File:Kiryu-nishinomiya-jinja,_sandou-2.jpg)：撮影日は2022年8月25日、作者はSaigen Jiro、ライセンスはCC0 1.0。Commonsのファイル説明・撮影日時・権利表示を確認。
+- 祭り開催時の写真と誤認されないよう、詳細ページでは「会場参考写真」「2026年のえびす講当日の写真ではありません」と明記。2026年開催時の写真は未確保のまま記録。
+- 開催地は[桐生市公式のえびす講案内](https://www.city.kiryu.lg.jp/kankou/event/1010673/1001889.html)で桐生西宮神社と確認。
